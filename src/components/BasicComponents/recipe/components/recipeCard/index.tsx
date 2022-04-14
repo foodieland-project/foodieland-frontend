@@ -18,7 +18,6 @@ const RecipeCard = ({ title, image }: propsType) => {
                     {
                         like ? icons.whiteHeat() : icons.redHeat()
                     }
-
                 </span>
             </div>
             <p className="font-semibold text-2xl mb-6">{title}</p>
