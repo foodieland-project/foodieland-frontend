@@ -4,6 +4,7 @@ module.exports = {
   darkMode: "media", // or 'class'
   theme: {
     screens: {
+      "2sm": "360px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -11,6 +12,7 @@ module.exports = {
       "2xl": "1536px",
     },
     colors: ({ colors }) => ({
+      primary: "#E7F9FD",
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
@@ -353,6 +355,8 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
+      inter: ["Inter"],
+      lobster: ["Lobster"],
       sans: [
         "ui-sans-serif",
         "system-ui",
