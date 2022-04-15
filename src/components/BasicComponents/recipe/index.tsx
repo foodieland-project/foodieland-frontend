@@ -51,7 +51,7 @@ const Recipe = () => {
         {
             category: "banner",
             title: 'Don’t forget to eat healthy food',
-            img: 'images/recipes/food-20.png',
+            img: 'images/Star-1.png',
         },
         {
             category: "product",
@@ -79,12 +79,12 @@ const Recipe = () => {
         },
     ]
     return (
-        <div className='flex flex-col justify-center'>
+        <div className='flex flex-col justify-center mb-[240px]'>
             <div className='flex flex-col justify-center items-center'>
-                <h2 className='font-semibold text-5xl mb-[24px]'>Simple and tasty recipes</h2>
-                <p className=' font-normal text-base mb-[96px]'>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
+                <h2 className='font-semibold text-center text-5xl mb-[24px]'>Simple and tasty recipes</h2>
+                <p className=' font-normal text-center text-base mb-[96px] sm:mb-[80px]'>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
             </div>
-            <div className='flex flex-row flex-wrap mx-[80px] lg:justify-start md:justify-center '>
+            <div className='flex flex-row flex-wrap justify-center gap-10'>
                 {
                     RecipeData.map(({ title, img, category }, index) => (
                         category === "product" ?

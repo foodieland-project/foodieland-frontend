@@ -10,7 +10,7 @@ const RecipeCard = ({ title, image }: propsType) => {
 
     const [like, setLike] = React.useState(true);
     return (
-        <div className='m-[20px] w-[400px] h-[434px] flex flex-col justify-start items-center
+        <div className='w-[400px] h-[434px] flex flex-col justify-start items-center
     bg-gradient-to-b from-white to-blue-50 rounded-3xl p-[16px] font-inter relative'>
             <img className='w-[368px] h-[250px] rounded-3xl mb-6' src={image} alt="" />
             <div className='w-[48px] h-[48px] bg-white rounded-full flex justify-center items-center absolute top-[32px] right-[36px]'>
@@ -18,7 +18,6 @@ const RecipeCard = ({ title, image }: propsType) => {
                     {
                         like ? icons.whiteHeat() : icons.redHeat()
                     }
-
                 </span>
             </div>
             <p className="font-semibold text-2xl mb-6">{title}</p>
