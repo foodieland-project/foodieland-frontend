@@ -1,52 +1,78 @@
 import "./carousel.css";
+import icons from "../../../utils/icons.tsx";
 function Carousel() {
+  const timerIcon = icons.timer();
+  const forkIcon = icons.fork();
+  const knifeIcon = icons.knife();
+  const playCircleIcon = icons.playCircle();
   return (
-    <div>
-      <div className="flex">
-        <div className="basis-1/2">
-          <div>
-            <img src="./images/image 14.png" alt="hot-recipes" />
-            <span>Hot Recipes</span>
+    <div className="mt-20">
+      <div className="carousel-item flex rounded-3xl w-5/6 mx-auto overflow-hidden">
+        <div className="md:basis-1/2 bg-lameBlue p-7 lg:p-9">
+          <div className="bg-white w-28 lg:w-36 rounded-2xl p-2 text-center">
+            <img
+              src="./images/image 14.png"
+              alt="hot-recipes"
+              className="inline-block w-1/5"
+            />
+            <span className="font-bold text-xs lg:text-sm ml-2 ">
+              Hot Recipes
+            </span>
           </div>
-          <div>
-            <h2>Spicy delicious chicken wings</h2>
+          <div className="mt-4 mb-6 lg:mt-6 lg:mb-10">
+            <h2 className="carousel-title text-4xl lg:text-5xl xl:text-6xl font-semibold ">
+              Spicy delicious chicken wings
+            </h2>
           </div>
-          <div>
+          <div className="carousel-gray-text-color text-xs lg:text-sm">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti
               placeat facere quaerat aperiam molestiae est sed quisquam animi
               quia numquam.
             </p>
           </div>
-          <div className=" ">
-            <div>
-              <span></span>
-              <span>30 Minutes</span>
+          <div className=" flex lg:text-sm text-xs  font-medium mt-4 mb-8 lg:mt-6 lg:mb-12">
+            <div className="carousel-icon flex items-center rounded-3xl px-4 py-2 lg:py-2.5">
+              <span>
+                <i>{timerIcon}</i>
+              </span>
+              <span className="ml-2">30 Minutes</span>
             </div>
-            <div>
-              <span></span>
-              <span>Chicken</span>
+            <div className="carousel-icon flex items-center rounded-3xl px-4 py-2 lg:py-2.5 ml-4 ">
+              <span className="flex ">
+                <i>{forkIcon}</i>
+                <i>{knifeIcon}</i>
+              </span>
+              <span className="ml-2">Chicken</span>
             </div>
           </div>
-          <div>
-            <div>
+          <div className="flex justify-between ">
+            <div className="flex ">
               <div>
-                <img src="./Elipse 2.png" alt="chief" />
+                <img
+                  src="./images/Ellipse 2.png"
+                  alt="chief"
+                  className="mx-auto w-4/5"
+                />
               </div>
-              <div>
-                <span>John Smith</span>
-                <span>12 March 2022</span>
+              <div className="ml-2">
+                <span className="font-bold block text-sm lg:text-base">
+                  John Smith
+                </span>
+                <span className="carousel-gray-text-color text-xs lg:text-sm font-medium">
+                  12 March 2022
+                </span>
               </div>
             </div>
-            <div className="">
-              <span>View Recipes</span>
-              <span></span>
+            <div className="bg-black text-white rounded-2xl px-3 lg:px-6 text-xs lg:text-sm flex items-center">
+              <span className="font-semibold">View Recipes</span>
+              <span className="ml-1 lg:ml-2">{playCircleIcon}</span>
             </div>
           </div>
         </div>
-        <div className="basis-1/2">
+        <div className="hidden md:block basis-1/2">
           <div
-            className="carousel-bg bg-no-repeat bg-cover w-full h-full"
+            className="carousel-bg bg-no-repeat bg-cover w-full h-full bg-center"
             style={{
               backgroundImage: "url(./images/baked-chicken-wings.png)",
             }}
