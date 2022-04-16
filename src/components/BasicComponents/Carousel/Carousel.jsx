@@ -1,84 +1,76 @@
+import { useState } from "react";
 import "./carousel.css";
-import icons from "../../../utils/icons.tsx";
+import CarouselItem from "./CarouselItem";
+import { icons } from "../../../utils/icons";
+
 function Carousel() {
-  const timerIcon = icons.timer();
-  const forkIcon = icons.fork();
-  const knifeIcon = icons.knife();
-  const playCircleIcon = icons.playCircle();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const arrowLeft = icons.arrowLeft();
+  const arrowRight = icons.arrowRight();
+
+  const carouselData = [
+    {
+      title: "Spicy delicious chicken wings",
+      imageUrl: "./images/baked-chicken-wings.png",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delenitiplaceat facere quaerat aperiam molestiae est sed quisquam animi quia numquam.",
+      id: 1,
+    },
+    {
+      title: "Spicy delicious chicken wings",
+      imageUrl: "./images/baked-chicken-wings.png",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delenitiplaceat facere quaerat aperiam molestiae est sed quisquam animi quia numquam.",
+      id: 2,
+    },
+    {
+      title: "Spicy delicious chicken wings",
+      imageUrl: "./images/baked-chicken-wings.png",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delenitiplaceat facere quaerat aperiam molestiae est sed quisquam animi quia numquam.",
+      id: 3,
+    },
+  ];
+  const nextSlide = () => {
+    setCurrentIndex(
+      currentIndex === carouselData.length - 1 ? 0 : currentIndex + 1
+    );
+  };
+  const prevSlide = () => {
+    setCurrentIndex(
+      currentIndex === 0 ? carouselData.length - 1 : currentIndex - 1
+    );
+  };
   return (
-    <div className="mt-20">
-      <div className="carousel-item flex rounded-3xl w-5/6 mx-auto overflow-hidden">
-        <div className="md:basis-1/2 bg-lameBlue p-7 lg:p-9">
-          <div className="bg-white w-28 lg:w-36 rounded-2xl p-2 text-center">
-            <img
-              src="./images/image 14.png"
-              alt="hot-recipes"
-              className="inline-block w-1/5"
-            />
-            <span className="font-bold text-xs lg:text-sm ml-2 ">
-              Hot Recipes
-            </span>
-          </div>
-          <div className="mt-4 mb-6 lg:mt-6 lg:mb-10">
-            <h2 className="carousel-title text-4xl lg:text-5xl xl:text-6xl font-semibold ">
-              Spicy delicious chicken wings
-            </h2>
-          </div>
-          <div className="carousel-gray-text-color text-xs lg:text-sm">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti
-              placeat facere quaerat aperiam molestiae est sed quisquam animi
-              quia numquam.
-            </p>
-          </div>
-          <div className=" flex lg:text-sm text-xs  font-medium mt-4 mb-8 lg:mt-6 lg:mb-12">
-            <div className="carousel-icon flex items-center rounded-3xl px-4 py-2 lg:py-2.5">
-              <span>
-                <i>{timerIcon}</i>
-              </span>
-              <span className="ml-2">30 Minutes</span>
-            </div>
-            <div className="carousel-icon flex items-center rounded-3xl px-4 py-2 lg:py-2.5 ml-4 ">
-              <span className="flex ">
-                <i>{forkIcon}</i>
-                <i>{knifeIcon}</i>
-              </span>
-              <span className="ml-2">Chicken</span>
-            </div>
-          </div>
-          <div className="flex justify-between ">
-            <div className="flex ">
-              <div>
-                <img
-                  src="./images/Ellipse 2.png"
-                  alt="chief"
-                  className="mx-auto w-4/5"
-                />
-              </div>
-              <div className="ml-2">
-                <span className="font-bold block text-sm lg:text-base">
-                  John Smith
-                </span>
-                <span className="carousel-gray-text-color text-xs lg:text-sm font-medium">
-                  12 March 2022
-                </span>
-              </div>
-            </div>
-            <div className="bg-black text-white rounded-2xl px-3 lg:px-6 text-xs lg:text-sm flex items-center">
-              <span className="font-semibold">View Recipes</span>
-              <span className="ml-1 lg:ml-2">{playCircleIcon}</span>
-            </div>
-          </div>
-        </div>
-        <div className="hidden md:block basis-1/2">
-          <div
-            className="carousel-bg bg-no-repeat bg-cover w-full h-full bg-center"
-            style={{
-              backgroundImage: "url(./images/baked-chicken-wings.png)",
-            }}
-          ></div>
-        </div>
+    <div className="my-20  relative">
+      <div
+        onClick={prevSlide}
+        className="carousel-arrow absolute top-1/2 left-0 md:left-2 cursor-pointer "
+      >
+        {arrowLeft}
       </div>
+      <div
+        className="carousel-arrow absolute top-1/2 right-0 md:right-2 cursor-pointer "
+        onClick={nextSlide}
+      >
+        {arrowRight}
+      </div>
+      {carouselData.map(({ title, imageUrl, description, id }, index) => {
+        return (
+          <div
+            className={index === currentIndex ? "slide active" : "slide"}
+            key={id}
+          >
+            {index === currentIndex && (
+              <CarouselItem
+                title={title}
+                imageUrl={imageUrl}
+                description={description}
+              />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
