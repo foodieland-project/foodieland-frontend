@@ -9,6 +9,7 @@ function App() {
       <Carousel />
       <Recipe />
       <Cooker />
+      <MoreRecipe/>
     </div>
   );
 }
