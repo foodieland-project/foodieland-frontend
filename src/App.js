@@ -1,5 +1,3 @@
-// <<<<<<< HEAD
-// import React from "react";
 import React from "react";
 import Carousel from "./components/BasicComponents/Carousel/Carousel";
 import Recipe from "./components/BasicComponents/recipe";
