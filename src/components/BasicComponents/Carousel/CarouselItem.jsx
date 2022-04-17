@@ -7,7 +7,7 @@ function CarouselItem({ title, imageUrl, description }) {
   const knifeIcon = icons.knife();
   const playCircleIcon = icons.playCircle();
   return (
-    <div className="carousel-item flex rounded-3xl w-11/12 2xl:w-5/6  mx-auto overflow-hidden font-inter ">
+    <div className="carousel-item flex rounded-3xl w-11/12  mx-auto overflow-hidden font-inter ">
       <div className="md:basis-1/2 bg-lameBlue p-5 sm:p-7 lg:p-9">
         <div className="bg-white w-32 lg:w-36 rounded-2xl p-2 text-center">
           <img
