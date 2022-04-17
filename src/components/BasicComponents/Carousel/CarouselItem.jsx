@@ -7,8 +7,8 @@ function CarouselItem({ title, imageUrl, description }) {
   const knifeIcon = icons.knife();
   const playCircleIcon = icons.playCircle();
   return (
-    <div className="carousel-item flex rounded-3xl w-5/6  mx-auto overflow-hidden font-inter ">
-      <div className="md:basis-1/2 bg-lameBlue p-7 lg:p-9">
+    <div className="carousel-item flex rounded-3xl w-11/12 2xl:w-5/6  mx-auto overflow-hidden font-inter ">
+      <div className="md:basis-1/2 bg-lameBlue p-5 sm:p-7 lg:p-9">
         <div className="bg-white w-32 lg:w-36 rounded-2xl p-2 text-center">
           <img
             src="./images/image 14.png"
@@ -27,7 +27,7 @@ function CarouselItem({ title, imageUrl, description }) {
         <div className="carousel-gray-text-color text-xs lg:text-sm">
           <p>{description}</p>
         </div>
-        <div className=" flex lg:text-sm text-xs  font-medium mt-4 mb-8 lg:mt-8 lg:mb-14 xl:mb-20">
+        <div className=" flex lg:text-sm text-xs  font-medium mt-4 mb-0 sm:mb-8 lg:mt-8 lg:mb-14 xl:mb-20">
           <div className="carousel-icon flex items-center rounded-3xl px-4 py-2 lg:py-2.5">
             <span>
               <i>{timerIcon}</i>
@@ -42,7 +42,7 @@ function CarouselItem({ title, imageUrl, description }) {
             <span className="ml-2">Chicken</span>
           </div>
         </div>
-        <div className="flex justify-between ">
+        <div className=" justify-between hidden sm:flex">
           <div className="flex ">
             <div>
               <img
