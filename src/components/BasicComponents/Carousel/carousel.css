@@ -10,3 +10,16 @@
   .carousel-arrow{
       transform: translateY(-50%);
   }
+  .carousel-arrow svg{
+    width: 40px;
+  }
+  @media screen and (min-width:768px) {
+    .carousel-arrow svg{
+      width: 54px;
+    } 
+  }
+  @media screen and (min-width:1024px) {
+    .carousel-arrow svg{
+      width: 64px;
+    } 
+  }
