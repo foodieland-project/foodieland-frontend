@@ -1,11 +1,11 @@
 import React,{useState} from 'react';
-import {icons} from "../../../../utils/icons.js"
+import {icons} from "../../../../../utils/icons.js"
 
 
-const MoreRecipeCard=({recipeData})=> {
+const MoreRecipeCard=({recipeData}:any)=> {
 
     const [like, setLike] = useState(true);
-    const{img,title,Meal,time,liked}=recipeData;
+    const{img,title,Meal,time}=recipeData;
 
   return (
     <div className='flex flex-col lg:w-[24%] h-[316px] md:w-[46%] sm:w-[100%] sm:justify-center my-2 rounded-3xl relative'>
