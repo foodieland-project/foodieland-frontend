@@ -8,7 +8,7 @@ import Categories from "./components/BasicComponents/Categories/Categories";
 
 function App() {
   return (
-    <div>
+    <div className="max-w-[1280px] mx-auto">
       <Carousel />
       <Categories />
       <Recipe />
