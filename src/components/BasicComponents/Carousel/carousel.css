@@ -1,0 +1,12 @@
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+  }
+  .carousel-arrow{
+      transform: translateY(-50%);
+  }
