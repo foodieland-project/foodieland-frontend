@@ -42,7 +42,7 @@ function Carousel() {
     );
   };
   return (
-    <div className="my-20  relative">
+    <div className="my-10  relative ">
       <div
         onClick={prevSlide}
         className="carousel-arrow absolute top-1/2 left-0 md:left-2 cursor-pointer "
