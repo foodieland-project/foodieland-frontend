@@ -782,6 +782,7 @@ module.exports = {
       12: "12deg",
       45: "45deg",
       90: "90deg",
+      135: "135deg",
       180: "180deg",
     },
     saturate: {
