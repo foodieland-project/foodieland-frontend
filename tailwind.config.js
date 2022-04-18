@@ -41,6 +41,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       lameBlue: "#E7FAFE",
+      secondary: "rgba(0, 0, 0, 0.6)",
     }),
     columns: {
       auto: "auto",
@@ -155,6 +156,8 @@ module.exports = {
         "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 100%)",
       "gradient-brown":
         "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 100%)",
+      "gradient-blueSky":
+        " linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, rgba(231, 249, 253, 1) 100%)",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {

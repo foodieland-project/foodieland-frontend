@@ -1,0 +1,112 @@
+import { icons } from "../../../utils/icons";
+import "./foodieland-instagram.css";
+
+function FoodielandInstagram() {
+  const instagramIcon = icons.whiteInstagram();
+  const instagramLike = icons.instagramLike();
+  const instagramComment = icons.instagramComment();
+  const instagramShare = icons.instagramShare();
+  const instagramSave = icons.instagramSave();
+  const instagramMore = icons.instagramMore();
+  const foodielandInstagramData = [
+    {
+      id: 1,
+      imageUrl: "./images/instagram-foods/food-9.png",
+      caption:
+        "The vegetables dishes need to have certain vitamin for those people",
+      date: "September 13",
+    },
+    {
+      id: 2,
+      imageUrl: "./images/instagram-foods/food-10.png",
+      caption:
+        "Sweet food can bring someon into happiness as long as they don’t eat to much",
+      date: "September 19",
+    },
+    {
+      id: 3,
+      imageUrl: "./images/instagram-foods/food-11.png",
+      caption:
+        " What are you doing before start cooking? prepare the tools or ingredients?",
+      date: "September 17",
+    },
+    {
+      id: 4,
+      imageUrl: "./images/instagram-foods/food-12.png",
+      caption:
+        "Steak never be wrong, it’s suitable for you who want romantic dinner",
+      date: "September 15",
+    },
+  ];
+  return (
+    <section className="mt-20 font-inter">
+      <div className="bg-gradient-blueSky">
+        <div className="text-center">
+          <div className="mb-10">
+            <h2 className="font-semibold text-5xl">
+              Check out @foodieland on Instagram
+            </h2>
+          </div>
+          <div>
+            <p className="w-2/3 text-secondary mx-auto">
+              Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
+              minim
+            </p>
+          </div>
+        </div>
+        <div className="flex mt-16 justify-center w-11/12 mx-auto">
+          {foodielandInstagramData.map(({ id, imageUrl, caption, date }) => (
+            <div>
+              <div className="flex">
+                <div>
+                  <div>
+                    <img src="" alt="" />
+                  </div>
+                  <div>
+                    <span>Foodieland</span>
+                    <span>tokyo,japan</span>
+                  </div>
+                </div>
+                <div>
+                  <span>{instagramMore}</span>
+                </div>
+              </div>
+              <div>
+                <img src={`${imageUrl}`} alt="" />
+              </div>
+              <div className="flex">
+                <a href="">
+                  <span>{instagramLike}</span>
+                </a>
+                <a href="">
+                  <span>{instagramComment}</span>
+                </a>
+                <a href="">
+                  <span>{instagramShare}</span>
+                </a>
+                <a href="">
+                  <span>{instagramSave}</span>
+                </a>
+              </div>
+              <div>
+                Foodieland: <span>{caption}</span>
+              </div>
+              <div>
+                <span>{date}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-16 pb-20">
+          <button className="text-white bg-black py-5 px-6 mx-auto rounded-2xl flex ">
+            <span>Visit Our Instagram</span>
+            <span className="ml-4">{instagramIcon}</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default FoodielandInstagram;

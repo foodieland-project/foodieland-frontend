@@ -7,9 +7,4 @@
 .carousel-icon{
     background-color: rgba(0, 0, 0, 0.05);
 }
-.carousel-gray-text-color{
-    color: rgba(0, 0, 0, 0.6);
-}
-@media screen and(max-width:640px) {
-    
-}
+

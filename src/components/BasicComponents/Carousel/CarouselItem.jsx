@@ -24,7 +24,7 @@ function CarouselItem({ title, imageUrl, description }) {
             {title}
           </h2>
         </div>
-        <div className="carousel-gray-text-color text-xs lg:text-sm">
+        <div className="text-secondary text-xs lg:text-sm">
           <p>{description}</p>
         </div>
         <div className=" flex lg:text-sm text-xs  font-medium mt-4 mb-0 sm:mb-8 lg:mt-8 lg:mb-14 xl:mb-20">
