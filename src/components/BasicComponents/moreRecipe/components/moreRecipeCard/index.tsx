@@ -8,8 +8,8 @@ const MoreRecipeCard=({recipeData}:any)=> {
     const{img,title,Meal,time}=recipeData;
 
   return (
-    <div className='flex flex-col xl:w-[290px] h-[316px] lg:w-[32%] md:w-[46%] sm:w-[100%] sm:justify-center my-2 rounded-3xl relative'>
-        <div className='h-[200px] rounded-3xl w-full mb-3'>
+    <div className='flex flex-col w-[290px] h-[316px]  justify-center rounded-3xl relative'>
+        <div className='h-[200px] rounded-3xl w-full'>
             <img src={img} alt="product" className=' block w-full h-full rounded-3xl object-fit'/>
         </div>
         <div className='w-[48px] h-[48px] bg-white rounded-full flex justify-center items-center absolute top-[32px] right-[36px] '>
