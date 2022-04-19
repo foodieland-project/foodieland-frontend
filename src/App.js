@@ -5,7 +5,8 @@ import Cooker from "./components/BasicComponents/cooker";
 import MoreRecipe from "./components/BasicComponents/moreRecipe";
 import SubscribeCard from "./components/BasicComponents/subscribeCard"
 import Categories from "./components/BasicComponents/Categories/Categories";
-import Header from "./components/BasicComponents/header"
+import Header from "./components/BasicComponents/header";
+import SubscribeCard from "./components/BasicComponents/subscribeCard";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Recipe />
       <Cooker />
       <MoreRecipe />
-      <SubscribeCard/>
+      <SubscribeCard />
     </div>
   );
 }
