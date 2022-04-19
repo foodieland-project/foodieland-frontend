@@ -78,18 +78,18 @@ const MoreRecipe = () => {
         },
     ]
     return (
-        <div className='container mx-auto flex flex-col py-2 px-2'>
+        <div className='container flex flex-col py-2 px-2 mx-auto  my-20'>
             <div className='my-8 flex items-center justify-between'>
-                <div className='w-[620px]'>
-                    <h1 className='font-bold text-4xl mb-2'>Try this delicious recipe to make your day</h1>
+                <div className='w-[507px] h-[116px]'>
+                    <h1 className='font-semibold text-5xl mb-2 leading-[58px] tracking-[-0.04em] text-black'>Try this delicious recipe to make your day</h1>
                 </div>
-                <div className='w-[507px]'>
-                    <p className='text-sm text-slate-500'>
+                <div className='w-[620px] h-[56px]'>
+                    <p className='text-xs font-normal leading-7 text-[rgba(0,0,0,0.6)]'>
                         Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
                     </p>
                 </div>
             </div>
-            <div className='flex justify-between items-center w-full flex-wrap'>
+            <div className='flex justify-between items-center w-full flex-wrap mt-8'>
                 {
                     MoreRecipeData.map((data, id) => <MoreRecipeCard key={id} recipeData={data} />)
                 }
