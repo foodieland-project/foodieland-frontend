@@ -53,7 +53,7 @@ function Carousel() {
         className="carousel-arrow absolute top-1/2 right-0 md:right-2 cursor-pointer "
         onClick={nextSlide}
       >
-        <span>{arrowRight}</span>
+        {arrowRight}
       </div>
       {carouselData.map(({ title, imageUrl, description, id }, index) => {
         return (
