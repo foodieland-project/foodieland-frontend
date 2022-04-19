@@ -41,6 +41,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       lameBlue: "#E7FAFE",
+      secondary: "rgba(0, 0, 0, 0.6)",
     }),
     columns: {
       auto: "auto",
@@ -155,6 +156,8 @@ module.exports = {
         "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 100%)",
       "gradient-brown":
         "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 100%)",
+      "gradient-blueSky":
+        " linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, rgba(231, 249, 253, 1) 100%)",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {
@@ -406,6 +409,8 @@ module.exports = {
       ],
     },
     fontSize: {
+      "3xs": ["0.5rem", { lineHeight: "1rem" }],
+      "2xs": ["0.65rem", { lineHeight: "1rem" }],
       xs: ["0.75rem", { lineHeight: "1rem" }],
       sm: ["0.875rem", { lineHeight: "1.25rem" }],
       base: ["1rem", { lineHeight: "1.5rem" }],
