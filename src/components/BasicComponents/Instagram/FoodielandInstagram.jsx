@@ -1,13 +1,9 @@
 import { icons } from "../../../utils/icons";
-import "./foodieland-instagram.css";
+import InstagramItem from "./InstagramItem";
 
 function FoodielandInstagram() {
   const instagramIcon = icons.whiteInstagram();
-  const instagramLike = icons.instagramLike();
-  const instagramComment = icons.instagramComment();
-  const instagramShare = icons.instagramShare();
-  const instagramSave = icons.instagramSave();
-  const instagramMore = icons.instagramMore();
+
   const foodielandInstagramData = [
     {
       id: 1,
@@ -39,67 +35,34 @@ function FoodielandInstagram() {
     },
   ];
   return (
-    <section className="mt-20 font-inter">
+    <section className="my-12 md:my-20 font-inter">
       <div className="bg-gradient-blueSky">
         <div className="text-center">
-          <div className="mb-10">
-            <h2 className="font-semibold text-5xl">
+          <div className="mb-5 md:mb-10">
+            <h2 className="font-semibold text-3xl md:text-5xl">
               Check out @foodieland on Instagram
             </h2>
           </div>
           <div>
-            <p className="w-2/3 text-secondary mx-auto">
+            <p className="w-2/3 text-secondary mx-auto text-xs md:text-base">
               Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
               minim
             </p>
           </div>
         </div>
-        <div className="flex mt-16 justify-center w-11/12 mx-auto">
+        <div className="flex flex-wrap gap-5 xl:gap-8 mt-10 md:mt-16 justify-center w-4/5     md:w-8/12 lg:w-11/12 mx-auto">
           {foodielandInstagramData.map(({ id, imageUrl, caption, date }) => (
-            <div>
-              <div className="flex">
-                <div>
-                  <div>
-                    <img src="" alt="" />
-                  </div>
-                  <div>
-                    <span>Foodieland</span>
-                    <span>tokyo,japan</span>
-                  </div>
-                </div>
-                <div>
-                  <span>{instagramMore}</span>
-                </div>
-              </div>
-              <div>
-                <img src={`${imageUrl}`} alt="" />
-              </div>
-              <div className="flex">
-                <a href="">
-                  <span>{instagramLike}</span>
-                </a>
-                <a href="">
-                  <span>{instagramComment}</span>
-                </a>
-                <a href="">
-                  <span>{instagramShare}</span>
-                </a>
-                <a href="">
-                  <span>{instagramSave}</span>
-                </a>
-              </div>
-              <div>
-                Foodieland: <span>{caption}</span>
-              </div>
-              <div>
-                <span>{date}</span>
-              </div>
-            </div>
+            <InstagramItem
+              key={id}
+              imageUrl={imageUrl}
+              caption={caption}
+              date={date}
+            />
           ))}
         </div>
         <div className="mt-16 pb-20">
-          <button className="text-white bg-black py-5 px-6 mx-auto rounded-2xl flex ">
+          <button className="text-white bg-black text-xs md:text-base py-4 items-center md:py-5 px-4 md:px-6 mx-auto rounded-2xl flex ">
             <span>Visit Our Instagram</span>
             <span className="ml-4">{instagramIcon}</span>
           </button>
