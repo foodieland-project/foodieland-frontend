@@ -1,8 +1,6 @@
 import React from 'react';
 
-const SubscribeCard=()=> {
-
- 
+const SubscribeCard=()=> { 
   return (
     <section className=' w-4/5 md:w-11/12 lg:w-full  mx-auto overflow-hidden rounded-[60px]    text-center bg-[#E7F9FD] my-10'>
         <div className='text-black flex flex-col items-center'>
