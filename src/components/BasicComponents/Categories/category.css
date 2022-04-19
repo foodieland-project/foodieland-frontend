@@ -1,0 +1,9 @@
+
+.category-item{
+    flex-basis: 24%;
+}    
+@media screen and (min-width:1024px) {
+    .category-item{
+        flex-basis: 14%;
+    }    
+}
