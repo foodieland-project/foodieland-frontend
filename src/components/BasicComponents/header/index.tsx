@@ -24,14 +24,14 @@ const Header = () => {
 
 
     return (
-        <div className="flex mx-[80px] py-[46px] lg:justify-between sm:flex-row-reverse 2sm:flex-col sm:justify-between sm:items-center">
+        <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse 2sm:flex-col sm:justify-between sm:items-center border-b-[1px] border-gray-300">
             <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px] 2sm:mb-[40px]">
                 <span className="flex justify-center">{icons.instagram()}</span>
                 <span className="flex justify-center ml-[40px]">{icons.twitter()}</span>
                 <span className="flex justify-center ml-[40px]">{icons.facebook()}</span>
             </div>
             <div className=" lg:order-[0] sm:order-[-1] 2sm:order-[1] 2sm:relative 2sm:items-center">
-                <ul onClick={() => setOpen(prev => prev == true ? false : true)} className={`cursor-pointer items-center lg:hidden 2sm:flex 2sm:flex-col ${open ? "h-[36px]" : ""}`}>
+                <ul onClick={() => setOpen(prev => prev === true ? false : true)} className={`cursor-pointer items-center lg:hidden 2sm:flex 2sm:flex-col ${open ? "h-[36px]" : ""}`}>
                     <li className={`w-[30px] h-[8px] bg-black rounded-md inline mb-1 transition-all	 ${open ? "2sm:rotate-45 2sm:absolute" : ""}`}></li>
                     <li className={`w-[30px] h-[8px] bg-black rounded-md inline mb-1  transition-all ${open ? "2sm:rotate-135" : ""}`}></li>
                     <li className={`w-[30px] h-[8px] bg-black rounded-md inline mb-1 transition-all ${open ? "2sm:hidden rotate-90" : ""}`}></li>

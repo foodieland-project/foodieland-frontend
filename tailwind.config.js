@@ -369,6 +369,7 @@ module.exports = {
     fontFamily: {
       inter: ["Inter"],
       lobster: ["Lobster"],
+      eudoxus: ["Eudoxus"],
       sans: [
         "ui-sans-serif",
         "system-ui",
