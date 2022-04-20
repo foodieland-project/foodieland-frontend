@@ -1,7 +1,7 @@
 import "./carousel-item.css";
-import { icons } from "../../../utils/icons";
+import { icons } from "../../../../utils/icons";
 
-function CarouselItem({ title, imageUrl, description }) {
+function CarouselCard({ title, imageUrl, description }) {
   const timerIcon = icons.timer();
   const forkIcon = icons.fork();
   const knifeIcon = icons.knife();
@@ -79,4 +79,4 @@ function CarouselItem({ title, imageUrl, description }) {
   );
 }
 
-export default CarouselItem;
+export default CarouselCard;

@@ -1,6 +1,6 @@
-import { icons } from "../../../utils/icons";
+import { icons } from "../../../../utils/icons";
 
-function InstagramItem({ imageUrl, caption, date }) {
+function InstagramCard({ imageUrl, caption, date }) {
   const instagramLike = icons.instagramLike();
   const instagramComment = icons.instagramComment();
   const instagramShare = icons.instagramShare();
@@ -52,4 +52,4 @@ function InstagramItem({ imageUrl, caption, date }) {
   );
 }
 
-export default InstagramItem;
+export default InstagramCard;
