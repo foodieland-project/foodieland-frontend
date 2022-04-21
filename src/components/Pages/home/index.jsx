@@ -5,7 +5,7 @@ import Cooker from "../../BasicComponents/cooker";
 import MoreRecipe from "../../BasicComponents/moreRecipe";
 import SubscribeCard from "../../BasicComponents/subscribeCard";
 import Categories from "../../BasicComponents/categories";
-import FoodieLandInstagram from "../../BasicComponents/Instagram/FoodieLandInstagram";
+import FoodieLandInstagram from "../../BasicComponents/instagram";
 
 function Home() {
   return (
