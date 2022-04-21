@@ -1,28 +1,33 @@
 import React from "react";
-import Carousel from "./components/BasicComponents/Carousel/Carousel";
-import Recipe from "./components/BasicComponents/recipe";
-import Cooker from "./components/BasicComponents/cooker";
-import MoreRecipe from "./components/BasicComponents/moreRecipe";
-import SubscribeCard from "./components/BasicComponents/subscribeCard"
-import Categories from "./components/BasicComponents/Categories/Categories";
-import FoodielandInstagram from "./components/BasicComponents/Instagram/FoodielandInstagram";
-import Header from "./components/BasicComponents/header"
-import Footer from "./components/BasicComponents/footer";
+import AboutUs from "./components/Pages/aboutUs";
+import Blog from "./components/Pages/blog";
+import Contact from "./components/Pages/contact";
+import Home from "./components/Pages/home"
+import Recipes from "./components/Pages/recipes"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Layout from "./components/layout";
 
 function App() {
   return (
     <>
-      <div className="max-w-[1280px] mx-auto">
-        <Header />
-        <Carousel />
-        <Categories />
-        <Recipe />
-        <Cooker />
-        <MoreRecipe />
-        <FoodielandInstagram />
-        <SubscribeCard />
-        <Footer />
-      </div>
+      <Router>
+        <Layout>
+          <div className="max-w-[1280px] mx-auto">
+            <Routes>
+              <Route path="/" element={<Home />} exact />
+              <Route path="/aboutUs" element={<AboutUs />} exact />
+              <Route path="/blog" element={<Blog />} exact />
+              <Route path="/contact" element={<Contact />} exact />
+              <Route path="/recipes" element={<Recipes />} exact />
+              {/* <Route path='*' element={<NotFound />} /> */}
+            </Routes>
+          </div>
+        </Layout>
+      </Router>
     </>
   );
 }
