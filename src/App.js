@@ -3,7 +3,7 @@ import AboutUs from "./components/Pages/aboutUs";
 import Blog from "./components/Pages/blog";
 import Contact from "./components/Pages/contact";
 import Home from "./components/Pages/home"
-import Recipes from "./components/Pages/recipes"
+import Recipes from "./components/Pages/Recipes"
 import {
   BrowserRouter as Router,
   Routes,
