@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { icons } from 'utils/icons'
+import {
+    Link
+} from "react-router-dom";
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -7,24 +10,29 @@ const Header = () => {
     const manu = [
         {
             name: 'Home',
+            to: '/'
         },
         {
             name: 'Recipes',
+            to: '/recipes'
         },
         {
             name: 'Blog',
+            to: '/blog'
         },
         {
             name: 'Contact',
+            to: '/contact'
         },
         {
-            name: 'About us',
+            name: 'About Us',
+            to: '/aboutUs'
         },
     ]
 
 
     return (
-        <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse 2sm:flex-col sm:justify-between sm:items-center border-b-[1px] border-gray-300">
+        <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse 2sm:flex-col sm:justify-between sm:items-center border-b-[1px] border-gray-300 2sm:mx-[80px] ">
             <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px] 2sm:mb-[40px]">
                 <span className="flex justify-center">{icons.instagram()}</span>
                 <span className="flex justify-center ml-[40px]">{icons.twitter()}</span>
@@ -40,9 +48,9 @@ const Header = () => {
                  sm:right-[120px] lg:right-auto lg:translate-x-0 2sm:right-[50%] translate-x-[50%] 2sm:text-black 2sm:flex-col 2sm:none lg:relative
                   2sm:z-30 2sm:absolute 2sm:mt-[20px] 2sm:bg-yellow-50 2sm:rounded-md ${open || "2sm:hidden"}`}>
                     {
-                        manu.map(({ name }) => {
+                        manu.map(({ name, to }) => {
                             return (
-                                <li className="flex lg:ml-[60px] lg:py-[0px] 2sm:ml-[0px] 2sm:py-[20px] lg:w-auto 2sm:w-[250px] justify-center">{name}</li>
+                                <Link to={`${to}`} className="flex lg:ml-[60px] lg:py-[0px] 2sm:ml-[0px] 2sm:py-[20px] lg:w-auto 2sm:w-[250px] justify-center">{name} </Link>
                             )
                         })
                     }

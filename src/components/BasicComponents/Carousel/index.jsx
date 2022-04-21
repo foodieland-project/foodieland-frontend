@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./carousel.css";
-import CarouselItem from "./CarouselItem";
+import CarouselCard from "./instagramCard";
 import { icons } from "../../../utils/icons";
 
 function Carousel() {
@@ -62,7 +62,7 @@ function Carousel() {
             key={id}
           >
             {index === currentIndex && (
-              <CarouselItem
+              <CarouselCard
                 title={title}
                 imageUrl={imageUrl}
                 description={description}
