@@ -1,7 +1,7 @@
 import { icons } from "../../../utils/icons";
 import InstagramCard from "./instagramCard";
 
-function FoodielandInstagram() {
+function FoodieLandInstagram() {
   const instagramIcon = icons.whiteInstagram();
 
   const foodielandInstagramData = [
@@ -72,4 +72,4 @@ function FoodielandInstagram() {
   );
 }
 
-export default FoodielandInstagram;
+export default FoodieLandInstagram;
