@@ -17,7 +17,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className='flex md:flex-row 2sm:flex-col 2sm:justify-center 2sm:mb-[10px] h-[190px] justify-between items-center border-t-[1px] border-gray-300'>
-                <p className='font-eudoxus font-normal text-lg mx-auto 2sm:mb-[40px]'>© 2020 Flowbase. Powered by <span className='text-red-300'>Webflow</span> </p>
+                <p className='flex items-center justify-center lg:mb-0 font-eudoxus font-normal text-lg mx-auto 2sm:mb-[40px]'>© 2020 Flowbase. Powered by <span className='text-red-300'>Webflow</span> </p>
                 <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px] 2sm:mb-[40px]">
                     <span className="flex justify-center">{icons.instagram()}</span>
                     <span className="flex justify-center ml-[40px]">{icons.twitter()}</span>
