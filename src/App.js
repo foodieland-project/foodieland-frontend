@@ -1,12 +1,12 @@
 import React from "react";
-import Carousel from "./components/BasicComponents/Carousel/Carousel";
+import Carousel from "./components/BasicComponents/carousel/";
 import Recipe from "./components/BasicComponents/recipe";
 import Cooker from "./components/BasicComponents/cooker";
 import MoreRecipe from "./components/BasicComponents/moreRecipe";
-import SubscribeCard from "./components/BasicComponents/subscribeCard"
-import Categories from "./components/BasicComponents/Categories/Categories";
-import FoodielandInstagram from "./components/BasicComponents/Instagram/FoodielandInstagram";
-import Header from "./components/BasicComponents/header"
+import SubscribeCard from "./components/BasicComponents/subscribeCard";
+import Categories from "./components/BasicComponents/categories";
+import FoodielandInstagram from "./components/BasicComponents/instagram";
+import Header from "./components/BasicComponents/header";
 import Footer from "./components/BasicComponents/footer";
 
 function App() {

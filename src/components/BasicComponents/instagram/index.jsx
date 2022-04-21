@@ -1,5 +1,5 @@
 import { icons } from "../../../utils/icons";
-import InstagramItem from "./InstagramItem";
+import InstagramCard from "./instagramCard";
 
 function FoodielandInstagram() {
   const instagramIcon = icons.whiteInstagram();
@@ -53,7 +53,7 @@ function FoodielandInstagram() {
         </div>
         <div className="flex flex-wrap gap-5 xl:gap-8 mt-10 md:mt-16 justify-center w-4/5     md:w-8/12 lg:w-11/12 mx-auto">
           {foodielandInstagramData.map(({ id, imageUrl, caption, date }) => (
-            <InstagramItem
+            <InstagramCard
               key={id}
               imageUrl={imageUrl}
               caption={caption}
