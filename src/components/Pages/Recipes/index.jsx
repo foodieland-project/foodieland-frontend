@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import RecommendedRecipes from "../../BasicComponents/recommendedRecipes";
 
 const Recipes = () => {
   return (
-    <div>Recipes</div>
-  )
-}
+    <div>
+      <RecommendedRecipes />
+    </div>
+  );
+};
 
-export default Recipes
+export default Recipes;
