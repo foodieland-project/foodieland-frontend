@@ -46,7 +46,7 @@ function RecommendedRecipes() {
         </h2>
       </div>
       <div className="flex gap-6 justify-center items-center w-full flex-wrap">
-        {recommendedRecipesData.map((data) => (
+        {recommendedRecipesData.slice(0, 4).map((data) => (
           <MoreRecipeCard key={data.id} recipeData={data} />
         ))}
       </div>
