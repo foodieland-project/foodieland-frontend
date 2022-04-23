@@ -1,6 +1,4 @@
-import { useRef, useState } from "react";
-import { icons } from "../../../utils/icons";
-import "./categories.css";
+import "./directions.css";
 import DirectionCard from "./directionCard";
 function Directions() {
   const directionsData = [
@@ -41,6 +39,7 @@ function Directions() {
             ({ id, title, description, imageUrl, imageDesc }, index) => (
               <DirectionCard
                 key={id}
+                id={id}
                 title={title}
                 description={description}
                 number={index}

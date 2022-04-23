@@ -1,0 +1,10 @@
+[type="checkbox"]:checked+label .custom-checkbox > svg{
+    width: 20px;
+    height: 20px;
+}
+@media screen and (min-width:768px) {
+    [type="checkbox"]:checked+label .custom-checkbox > svg{
+        width: 24px;
+        height: 24px;
+    }
+}
