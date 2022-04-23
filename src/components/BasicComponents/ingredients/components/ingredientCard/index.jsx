@@ -4,7 +4,6 @@ import { icons } from "../../../../../utils/icons";
 function IngredientCard({ id, text }) {
   const [checked, setChecked] = useState(false);
   const checkedIcon = icons.checked();
-  console.log(id);
   return (
     <div className=" border-b border-gray-300 border-solid flex gap-4 py-6">
       <div className="pt-1 relative">

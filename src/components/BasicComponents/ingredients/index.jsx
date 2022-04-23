@@ -113,8 +113,8 @@ function Ingredients() {
 
   return (
     <section>
-      <div className="flex gap-10 font-inter my-20">
-        <div className="basis-[66%]">
+      <div className="w-11/12 xl:w-full mx-auto flex flex-wrap lg:flex-nowrap gap-10 font-inter my-10 lg:my-20">
+        <div className="basis-[100%] lg:basis-[66%]">
           <div className="mb-14">
             <h2 className="font-semibold text-3xl md:text-4xl">Ingredients</h2>
           </div>
@@ -135,7 +135,7 @@ function Ingredients() {
             ))}
           </div>
         </div>
-        <div className="basis-[33%]">
+        <div className="basis-[100%] lg:basis-[33%]">
           <div className="mb-10">
             <h2 className="font-semibold text-3xl md:text-4xl">
               Other Recipes
@@ -146,7 +146,7 @@ function Ingredients() {
               <OtherRecipes key={id} img={img} title={title} chef={chef} />
             ))}
           </div>
-          <div className="relative  bg-green-900 mt-20 bg-contain bg-no-repeat">
+          <div className="relative hidden lg:block bg-green-900 mt-20 bg-contain bg-no-repeat">
             <p className="font-lobster text-2xl text-white absolute top-10 left-[100px] w-1/2 text-center">
               Don’t forget to eat healthy food
             </p>
