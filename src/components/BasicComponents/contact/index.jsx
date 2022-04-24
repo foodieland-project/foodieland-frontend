@@ -15,12 +15,12 @@ const options = [
 const Contact = (props) => {
     return ( 
         <>
-        <div className='grid grid-cols-3 w-full my-20' >
+        <div className='flex justify-center lg:grid lg:grid-cols-3 w-full my-20' >
             <h2 className="text-6xl font-semibold tracking-tight col-start-2" >Contact us</h2>
         </div>
-        <div className="grid grid-cols-3 mb-44" >
-        <img src="http://localhost:3000/images/cooker/Cook-contact.png" alt="Cook" className='h-5/6'/>
-            <form className='grid grid-cols-2 grid-rows-4 gap-x-10 col-span-2  '>
+        <div className="flex flex-col lg:grid lg:grid-cols-3 mb-44" >
+        <img src="http://localhost:3000/images/cooker/Cook-contact.png" alt="Cook" className='mb-16 justify-self-center self-center lg:h-5/6 ml-3'/>
+            <form className=' flex flex-col px-10 sm:px-32 lg:grid lg:grid-cols-2 lg:grid-rows-4 gap-x-10 lg:col-span-2 lg:px-5  '>
                 <Input id="name" label="NAME" type="text" placeholder="Enter your name..." />
                 <Input id="email" label="EMAIL ADDRESS" type="text" placeholder="Enter your email..." />
                 <Input id="subject" label="SUBJECT" type="text" placeholder="Enter subject..." />
