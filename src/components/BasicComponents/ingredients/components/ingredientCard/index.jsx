@@ -13,10 +13,12 @@ function IngredientCard({ id, text }) {
           className="w-6 h-6 absolute opacity-0 cursor-pointer"
           onClick={() => setChecked(!checked)}
         />
-        <label htmlFor={`${id}`} className="flex">
-          <span className="w-5 h-5 md:w-6 md:h-6 rounded-[50%] border-2 border-solid border-gray-400"></span>
+        <label htmlFor={`${id}`} className="flex cursor-pointer">
+          <span className="w-5 h-5 md:w-6 md:h-6 rounded-[50%] border-2 border-solid border-gray-400 "></span>
           {checked && (
-            <span className="custom-checkbox absolute ">{checkedIcon}</span>
+            <span className="custom-checkbox absolute cursor-pointer">
+              {checkedIcon}
+            </span>
           )}
         </label>
       </div>
