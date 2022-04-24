@@ -14,7 +14,7 @@ const Contact = (props) => {
     return ( 
         <>
         <h2 className="" >Contact us</h2>
-        <form className='grid grid-cols-2 grid-rows-3 gap-x-10 '>
+        <form className='grid grid-cols-2 grid-rows-4 gap-x-10 '>
             <Input id="name" label="NAME" type="text" placeholder="Enter your name..." />
             <Input id="email" label="EMAIL ADDRESS" type="text" placeholder="Enter your email..." />
             <Input id="subject" label="SUBJECT" type="text" placeholder="Enter subject..." />
