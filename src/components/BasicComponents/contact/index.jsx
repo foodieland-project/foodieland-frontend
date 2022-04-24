@@ -14,11 +14,11 @@ const Contact = (props) => {
     return ( 
         <>
         <h2 className="" >Contact us</h2>
-        <form className='grid grid-cols-2 grid-rows-3 gap-x-10'>
+        <form className='grid grid-cols-2 grid-rows-3 gap-x-10 '>
             <Input id="name" label="NAME" type="text" placeholder="Enter your name..." />
             <Input id="name" label="NAME" type="text" placeholder="Enter your name..." />
             <Input id="name" label="NAME" type="text" placeholder="Enter your name..." />
-            <Select id="type" options={options} />    
+            <Select id="type" label="ENQUIRY TYPE" options={options} />    
             <Input id="name" label="NAME" type="text" placeholder="Enter your name..." />
         </form>
         </>
