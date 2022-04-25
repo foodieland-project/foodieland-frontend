@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { icons } from 'utils/icons'
+import React, { useState } from 'react';
+import { icons } from '../../../utils/icons';
 import {
     Link
 } from "react-router-dom";
@@ -32,7 +32,8 @@ const Header = () => {
 
 
     return (
-        <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse  flex-col sm:justify-between sm:items-center border-b-[1px] border-gray-300  mx-[80px] ">
+        <section className='border-b border-gray-300'>
+        <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse  flex-col sm:justify-between sm:items-center   mx-[80px] ">
             <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px]  mb-[40px]">
                 <span className="flex justify-center">{icons.instagram()}</span>
                 <span className="flex justify-center ml-[40px]">{icons.twitter()}</span>
@@ -58,6 +59,7 @@ const Header = () => {
             </div>
             <p className="flex flex-row items-center justify-center font-lobster font-normal text-[24px] sm:mb-[0px]  mb-[40px]">Foodieland.</p>
         </div>
+        </section>
     )
 }
 

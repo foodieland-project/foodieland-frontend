@@ -40,10 +40,10 @@ function Categories() {
   ];
   return (
     <section>
-      <div className="w-11/12 md:w-9/12 xl:w-full font-inter mx-auto my-20 lg:my-40">
+      <div className="w-full font-inter mx-auto my-20 lg:my-40">
         <div className="flex flex-col justify-center text-center md:flex-row md:justify-around lg:justify-between mb-20  ">
           <div className="mb-8 md:mb-0">
-            <h1 className="font-semibold text-5xl">Categories</h1>
+            <h1 className="font-semibold text-4xl lg:text-5xl">Categories</h1>
           </div>
           <div>
             <button className="bg-lameBlue font-semibold text-base p-2 rounded-2xl w-48 h-14">
