@@ -22,6 +22,6 @@
     "**/*.tsx",
     "src/components/basicComponents/modals/loginConfirmationModal/services/index.tsx",
     "src/components/basicComponents/panelStreamStats/Components/chartStats/components/chart/index.jsx"
-  ],
+, "src/components/Pages/post/index.jsx", "src/components/Pages/post/index.jsx"  ],
   "exclude": ["node_modules"]
 }
