@@ -12,6 +12,7 @@ const options = [
 
 const Contact = (props) => {
   const [inputValue, setInputValue] = useState({});
+  const [selectValue, setSelectValue] = useState({});
   const [submitError, setSubmitError] = useState(false);
 
   const inputChangeHandler = (data) => {
@@ -27,7 +28,7 @@ const Contact = (props) => {
   };
 
   const selectChangeHandler = (data) => {
-    setInputValue((prevState) => {
+    setSelectValue((prevState) => {
       return {
         ...prevState,
         [data.id]: {
@@ -54,6 +55,16 @@ const Contact = (props) => {
       setSubmitError(true);
       return;
     }
+
+    const formData = {
+      name: inputValue.name.value,
+      email: inputValue.email.value,
+      message: inputValue.message.value,
+      subject: inputValue.subject.value,
+      category: selectValue.category.value,
+    };
+
+    console.log(formData);
   };
 
   return (
@@ -100,7 +111,7 @@ const Contact = (props) => {
 
           <Select
             onChange={selectChangeHandler}
-            id="type"
+            id="category"
             label="ENQUIRY TYPE"
             options={options}
           />
