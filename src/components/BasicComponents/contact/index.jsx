@@ -12,6 +12,7 @@ const options = [
 
 const Contact = (props) => {
   const [inputValue, setInputValue] = useState({});
+  const [submitError, setSubmitError] = useState(false);
 
   const inputChangeHandler = (data) => {
     setInputValue((prevState) => {
@@ -25,7 +26,35 @@ const Contact = (props) => {
     });
   };
 
-  console.log(inputValue);
+  const selectChangeHandler = (data) => {
+    setInputValue((prevState) => {
+      return {
+        ...prevState,
+        [data.id]: {
+          value: data.value,
+        },
+      };
+    });
+  };
+
+  const formIsValid = () => {
+    let isValid = true;
+    for (let key in inputValue) {
+      if (!inputValue[key].isValid) {
+        isValid = false;
+      }
+    }
+    return isValid;
+  };
+
+  const formSubmitHandler = (event) => {
+    event.preventDefault();
+
+    if (!formIsValid()) {
+      setSubmitError(true);
+      return;
+    }
+  };
 
   return (
     <>
@@ -40,8 +69,12 @@ const Contact = (props) => {
           alt="Cook"
           className="mb-16 justify-self-center self-center lg:h-5/6 ml-3"
         />
-        <form className=" flex flex-col px-10 sm:px-32 lg:grid lg:grid-cols-2 lg:grid-rows-4 gap-x-10 lg:col-span-2 lg:px-5  ">
+        <form
+          onSubmit={formSubmitHandler}
+          className=" flex flex-col px-10 sm:px-32 lg:grid lg:grid-cols-2 lg:grid-rows-4 gap-x-10 lg:col-span-2 lg:px-5  "
+        >
           <Input
+            onSubmit={submitError}
             onChange={inputChangeHandler}
             id="name"
             label="NAME"
@@ -49,6 +82,7 @@ const Contact = (props) => {
             placeholder="Enter your name..."
           />
           <Input
+            onSubmit={submitError}
             onChange={inputChangeHandler}
             id="email"
             label="EMAIL ADDRESS"
@@ -56,6 +90,7 @@ const Contact = (props) => {
             placeholder="Enter your email..."
           />
           <Input
+            onSubmit={submitError}
             onChange={inputChangeHandler}
             id="subject"
             label="SUBJECT"
@@ -64,12 +99,13 @@ const Contact = (props) => {
           />
 
           <Select
-            onChange={inputChangeHandler}
+            onChange={selectChangeHandler}
             id="type"
             label="ENQUIRY TYPE"
             options={options}
           />
           <TextArea
+            onSubmit={submitError}
             onChange={inputChangeHandler}
             id="message"
             label="MESSAGES"

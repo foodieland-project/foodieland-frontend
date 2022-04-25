@@ -15,7 +15,7 @@ const TextArea = (props) => {
     setIsTouched(true);
   };
 
-  const hasError = !isValid && isTouched;
+  const hasError = !isValid && (isTouched || props.onSubmit);
 
   useEffect(() => {
     setIsValid(isNotEmpty(enteredValue));

@@ -16,7 +16,7 @@ const Input = (props) => {
     setIsTouched(true);
   };
 
-  const hasError = !isValid && isTouched;
+  const hasError = !isValid && (isTouched || props.onSubmit);
 
   useEffect(() => {
     if (props.id === "email") {
