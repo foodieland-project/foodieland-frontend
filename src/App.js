@@ -11,6 +11,7 @@ import {
   Route,
 } from "react-router-dom";
 import Layout from "./components/layout";
+import NotFound from "./components/Pages/notFound";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
               <Route path="/contact" element={<Contact />} exact />
               <Route path="/recipes" element={<Recipes />} exact />
               <Route path="/post/:id" element={<Post />} exact />
-              {/* <Route path='*' element={<NotFound />} /> */}
+              <Route path='*' element={<NotFound />} />
             </Routes>
           </div>
         </Layout>
