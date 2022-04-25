@@ -62,7 +62,13 @@ const Contact = (props) => {
             type="text"
             placeholder="Enter subject..."
           />
-          <Select id="type" label="ENQUIRY TYPE" options={options} />
+
+          <Select
+            onChange={inputChangeHandler}
+            id="type"
+            label="ENQUIRY TYPE"
+            options={options}
+          />
           <TextArea
             onChange={inputChangeHandler}
             id="message"
