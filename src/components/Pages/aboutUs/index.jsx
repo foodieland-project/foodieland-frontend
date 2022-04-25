@@ -1,14 +1,15 @@
-import SubscribeCard from "../../BasicComponents/subscribeCard"
-import React from 'react'
-import { icons } from "../../../utils/icons"
-import RecipeVideoCard from '../../BasicComponents/recipeVideoCard'
-import RecommendedRecipes from '../../BasicComponents/recommendedRecipes'
-import Galleries from '../../BasicComponents/galleries'
+import SubscribeCard from "../../BasicComponents/subscribeCard";
+import React from "react";
+import { icons } from "../../../utils/icons";
+import RecipeVideoCard from "../../BasicComponents/recipeVideoCard";
+import RecommendedRecipes from "../../BasicComponents/recommendedRecipes";
+import Galleries from "../../BasicComponents/galleries";
+import Chefs from "../../BasicComponents/chefs";
 
 const Post = () => {
   return (
     <>
-      <h1 className='font-medium text-4xl md:text-3xl mt-5 sm:mt-10 text-center justify-center items-center lg:mt-20 mb-3 md:mb-6 sm:leading-[58px]'>About Us</h1>
+      {/* <h1 className='font-medium text-4xl md:text-3xl mt-5 sm:mt-10 text-center justify-center items-center lg:mt-20 mb-3 md:mb-6 sm:leading-[58px]'>About Us</h1>
       <p className="text-center items-center m-auto w-[80%] mb-[71px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam,
         at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.</p>
       <div className='sm:mx-[80px] mx-[10px] mb-[71px]'>
@@ -22,12 +23,13 @@ const Post = () => {
             and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
             at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.</p>
         </div>
-      </div>
-      <Galleries />
+      </div> */}
+      {/* <Galleries /> */}
+      <Chefs />
       <SubscribeCard />
       <RecommendedRecipes />
     </>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;
