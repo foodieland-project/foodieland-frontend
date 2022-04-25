@@ -1,11 +1,12 @@
 import SubscribeCard from 'components/BasicComponents/subscribeCard'
 import React from 'react'
 import { icons } from "../../../utils/icons"
+import RecommendedRecipes from '../../BasicComponents/recommendedRecipes'
 
 const Post = () => {
   return (
     <>
-      <h1 className="flex justify-center text-inter font-semibold text-center font-[64px] w-[80%] m-auto mt-[80px] mb-[44px] ">Full Guide to Becoming a Professional Chef</h1>
+      <h1 className="flex justify-center text-inter font-semibold text-center font-[64px] md:w-[100%] w-[80%] m-auto mt-[80px] mb-[44px] ">Full Guide to Becoming a Professional Chef</h1>
       <div className="flex 2sm:flex-row flex-col justify-center mb-[44px]">
         <div className="flex items-center justify-center 2sm:mb-auto mb-[20px]">
           <div className="w-[40px] h-40px ">
@@ -61,6 +62,7 @@ const Post = () => {
         </div>
       </div>
       <SubscribeCard />
+      <RecommendedRecipes />
     </>
   )
 }

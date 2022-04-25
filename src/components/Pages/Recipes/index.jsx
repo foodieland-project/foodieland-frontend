@@ -12,7 +12,10 @@ const Recipes = () => {
       <Ingredients />
       <Directions />
       <SubscribeCard />
-      <RecommendedRecipes />
+      <RecommendedRecipes
+        title={"You may like these recipes too "}
+        length={4}
+      />
     </div>
   );
 };
