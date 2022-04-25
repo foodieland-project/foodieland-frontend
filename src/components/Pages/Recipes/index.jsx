@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import RecommendedRecipes from "../../BasicComponents/recommendedRecipes";
+import SubscribeCard from "../../BasicComponents/subscribeCard";
 
 const Recipes = () => {
   return (
-    <div>Recipes</div>
-  )
-}
+    <div>
+      <SubscribeCard />
+      <RecommendedRecipes />
+    </div>
+  );
+};
 
-export default Recipes
+export default Recipes;

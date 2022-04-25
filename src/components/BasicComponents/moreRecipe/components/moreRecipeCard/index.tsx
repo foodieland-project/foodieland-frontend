@@ -26,7 +26,7 @@ const MoreRecipeCard=({recipeData}:any)=> {
         </div>
         <div className='flex items-center absolute bottom-2 mt-3 font-medium text-sm leading-[17px] tracking-[-0.02em] text-[rgba(0,0,0,0.6)]'>
             <div className='flex items-center mr-3'><span className='inline-block pr-2'>{icons.timer()}</span>{time}</div>
-            <div><span className='inline-block '>{icons.fork()}</span><span className='inline-block pr-2'>{icons.knife()}</span>{Meal}</div>
+            <div className='flex items-center'><span className='inline-block '>{icons.fork()}</span><span className='inline-block pr-2'>{icons.knife()}</span>{Meal}</div>
         </div>
 
     </div>
