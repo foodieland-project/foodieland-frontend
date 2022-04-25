@@ -1,6 +1,6 @@
 function ChefCard({ name, role, imageUrl }) {
   return (
-    <div className=" basis-[40%] md:basis-[22%]">
+    <div className=" basis-[35%] md:basis-[18%]">
       <img src={`${imageUrl}`} alt="chef-img" className="rounded-[50%]" />
       <div className="text-center mt-6">
         <h4 className="font-semibold text-lg lg:text-xl">{name}</h4>
