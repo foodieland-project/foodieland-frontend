@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./carousel.css";
-import CarouselCard from "./instagramCard";
+import CarouselCard from "./carouselCard";
 import { icons } from "../../../utils/icons";
 
 function Carousel() {

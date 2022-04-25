@@ -40,7 +40,7 @@ function RecipeDetails() {
     <section>
       <div className="w-11/12 xl:w-full mx-auto mt-20 flex flex-wrap gap-4 font-inter">
         <div className="basis-full   lg:basis-[66%] ">
-          <div className="text-center">
+          <div className="text-center lg:text-left">
             <h1 className="font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl ">
               Health Japanese Fried Rice
             </h1>

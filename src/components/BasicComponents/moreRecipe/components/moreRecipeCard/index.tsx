@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {icons} from "../../../../../utils/icons.js"
+import {icons} from '../../../../../utils/icons'
 
 
 const MoreRecipeCard=({recipeData}:any)=> {
@@ -9,9 +9,8 @@ const MoreRecipeCard=({recipeData}:any)=> {
 
   return (
     <div className='flex flex-col basis-[85%] sm:basis-[40%] lg:basis-[30%] xl:basis-[23%] h-[300px] pb-8  rounded-3xl relative'>
-    {/* <div className='flex flex-col w-[290px] h-[316px]  justify-center rounded-3xl relative'> */}
         <div className='h-[200px] rounded-3xl w-full'>
-            <img src={img} alt="product" className=' block w-full h-full rounded-3xl object-fit'/>
+            <img src={img} alt="product" className=' block w-full h-full rounded-3xl object-cover'/>
         </div>
         <div className='w-[48px] h-[48px] bg-white rounded-full flex justify-center items-center absolute top-[12px] right-[16px] '>
                 <span onClick={() => setLike((prev) => !prev)} className="w-[20.25px] h-[18px] inline-block cursor-pointer">

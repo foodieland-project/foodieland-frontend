@@ -20,7 +20,7 @@ function CarouselCard({ title, imageUrl, description }) {
           </span>
         </div>
         <div className="mt-4 mb-6 lg:mt-6 lg:mb-10">
-          <h2 className="carousel-title text-4xl lg:text-5xl xl:text-6xl font-semibold ">
+          <h2 className="carousel-title text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold ">
             {title}
           </h2>
         </div>
