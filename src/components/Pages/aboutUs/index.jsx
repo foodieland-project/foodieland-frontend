@@ -1,21 +1,9 @@
-import SubscribeCard from "../../BasicComponents/subscribeCard";
-import React from "react";
-import { icons } from "../../../utils/icons";
-import RecipeVideoCard from "../../BasicComponents/recipeVideoCard";
-import RecommendedRecipes from "../../BasicComponents/recommendedRecipes";
-import Galleries from "../../BasicComponents/galleries";
-import Chefs from "../../BasicComponents/chefs";
-import AboutUsInfo from "../../BasicComponents/aboutUsInfo/index.";
+import React from 'react'
 
-const Post = () => {
+const AboutUs = () => {
   return (
-    <>
-      <AboutUsInfo />
-      <Chefs />
-      <SubscribeCard />
-      <RecommendedRecipes title={"Check out the delicious recipe"} length={4} />
-    </>
-  );
-};
+    <p>AboutUs</p>
+  )
+}
 
-export default Post;
+export default AboutUs

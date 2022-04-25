@@ -9,91 +9,73 @@ const Recipe = () => {
 
     const RecipeData = [
         {
-            id:1,
             category: "product",
             title: 'Big and Juicy Wagyu Beef Cheeseburger',
             img: 'images/recipes/food-13.png',
             Meal: 'Breakfast',
             time: '30 Minutes',
             liked: false,
-            chef:"Andreas Paula"
         },
         {
-            id:2,
             category: "product",
             title: 'Fresh Lime Roasted Salmon with Ginger Sauce',
             img: 'images/recipes/food-14.png',
             Meal: 'Breakfast',
             time: '30 Minutes',
             liked: false,
-            chef:"Andreas Paula"
         },
         {
-            id:3,
             category: "product",
             title: 'Strawberry Oatmeal Pancake with Honey Syrup',
             img: 'images/recipes/food-15.png',
             Meal: 'Breakfast',
             time: '30 Minutes',
             liked: false,
-            chef:"Andreas Paula"
         },
         {
-            id:4,
             category: "product",
             title: 'Fresh and Healthy Mixed Mayonnaise Salad',
             img: 'images/recipes/food-16.png',
             Meal: 'Breakfast',
             time: '30 Minutes',
             liked: false,
-            chef:"Andreas Paula"
         },
         {
-            id:5,
             category: "product",
             title: 'Chicken Meatballs with Cream Cheese',
             img: 'images/recipes/food-17.png',
             Meal: 'Breakfast',
             time: '30 Minutes',
             liked: false,
-            chef:"Andreas Paula"
         },
         {
-            id:6,
             category: "banner",
             title: 'Don’t forget to eat healthy food',
             img: 'images/Star-1.png',
-            chef:"Andreas Paula"
         },
         {
-            id:7,
             category: "product",
             title: 'Strawberry Oatmeal Pancake with Honey Syrup',
             img: 'images/recipes/food-18.png',
             Meal: 'Breakfast',
             time: '30 Minutes',
             liked: false,
-            chef:"Andreas Paula"
         },
         {
-            id:8,
             category: "product",
             title: 'Strawberry Oatmeal Pancake with Honey Syrup',
             img: 'images/recipes/food-19.png',
             Meal: 'Breakfast',
             time: '30 Minutes',
             liked: false,
-            chef:"Andreas Paula"
         },
         {
-            id:9,
             category: "product",
             title: 'The Creamiest Creamy Chicken and Bacon Pasta',
             img: 'images/recipes/food-20.png',
             Meal: 'Breakfast',
             time: '30 Minutes',
             liked: false,
-            chef:"Andreas Paula"
         },
     ]
     return (

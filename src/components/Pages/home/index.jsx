@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "../../BasicComponents/carousel";
+import Carousel from "../../BasicComponents/Carousel";
 import Recipe from "../../BasicComponents/recipe";
 import Cooker from "../../BasicComponents/cooker";
 import MoreRecipe from "../../BasicComponents/moreRecipe";
