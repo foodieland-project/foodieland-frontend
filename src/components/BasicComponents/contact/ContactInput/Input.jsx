@@ -24,17 +24,17 @@ const Input = (props) => {
       props.onChange({
         id: props.id,
         value: enteredValue,
-        isValid: hasError,
+        isValid,
       });
     } else {
       setIsValid(isNotEmpty(enteredValue));
       props.onChange({
         id: props.id,
         value: enteredValue,
-        isValid: hasError,
+        isValid,
       });
     }
-  }, [enteredValue, hasError]);
+  }, [enteredValue, isValid]);
 
   const inputClasses = `border p-5 rounded-2xl text-sm mb-6 text-black/60 ${
     hasError
