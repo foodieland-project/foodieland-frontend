@@ -13,7 +13,7 @@ const Post = () => {
       <AboutUsInfo />
       <Chefs />
       <SubscribeCard />
-      <RecommendedRecipes />
+      <RecommendedRecipes title={"Check out the delicious recipe"} length={4} />
     </>
   );
 };
