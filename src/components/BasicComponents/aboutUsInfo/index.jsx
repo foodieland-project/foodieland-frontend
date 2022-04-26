@@ -29,7 +29,7 @@ function AboutUsInfo() {
         </div>
         <div className="basis[100%] lg:basis-[46%]">
           <img
-            src="http://localhost:3000/images/our-experience.jpg"
+            src="/images/our-experience.jpg"
             alt="experience-img"
             className="rounded-xl object-cover h-full"
           />

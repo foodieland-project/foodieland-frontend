@@ -1,6 +1,6 @@
-import { icons } from "../../../utils/icons";
 import InstagramCard from "./instagramCard";
 import React from 'react'
+import { icons } from "../../../utils/icons";
 
 function FoodieLandInstagram() {
   const instagramIcon = icons.whiteInstagram();

@@ -1,8 +1,8 @@
 import React from 'react'
-import { icons } from '../../../utils/icons'
 import {
     Link
 } from "react-router-dom";
+import { icons } from '../../../utils/icons';
 
 const Footer = () => {
     const manu = [

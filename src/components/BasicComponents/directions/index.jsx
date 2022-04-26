@@ -1,6 +1,4 @@
-import { useRef, useState } from "react";
 import React from 'react'
-import { icons } from "../../../utils/icons";
 import "./categories.css";
 import DirectionCard from "./directionCard";
 function Directions() {

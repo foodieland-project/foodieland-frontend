@@ -77,7 +77,7 @@ const Contact = (props) => {
       </div>
       <div className="flex flex-col lg:grid lg:grid-cols-3 mb-44">
         <img
-          src="http://localhost:3000/images/cooker/Cook-contact.png"
+          src="/images/cooker/Cook-contact.png"
           alt="Cook"
           className="mb-16 justify-self-center self-center lg:h-5/6 ml-3"
         />

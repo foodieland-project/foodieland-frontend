@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { icons } from "../../../../utils/icons.js";
+import { icons } from "../../../../utils/icons";
 
 const MoreRecipeCard = ({ recipeData }) => {
   const [like, setLike] = useState(true);

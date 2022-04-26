@@ -1,5 +1,5 @@
-import "./carousel-item.css";
 import { icons } from "../../../../utils/icons";
+import "./carousel-item.css";
 
 function CarouselCard({ title, imageUrl, description }) {
   const timerIcon = icons.timer();
