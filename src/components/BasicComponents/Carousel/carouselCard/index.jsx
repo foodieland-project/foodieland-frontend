@@ -1,4 +1,5 @@
 import "./carousel-item.css";
+import React from 'react'
 import { icons } from "../../../../utils/icons";
 
 function CarouselCard({ title, imageUrl, description }) {

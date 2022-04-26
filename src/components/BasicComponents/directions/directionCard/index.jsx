@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from 'react'
 
 function DirectionCard({ title, description, number, imageUrl, imageDesc }) {
   const [isChecked, setChecked] = useState(false);
@@ -14,9 +15,8 @@ function DirectionCard({ title, description, number, imageUrl, imageDesc }) {
         />
         <label htmlFor="1" className="flex ">
           <span
-            className={`${
-              isChecked ? "custom-checkbox" : ""
-            } w-5 h-5 md:w-6 md:h-6 rounded-[50%] border-2 border-solid border-black `}
+            className={`${isChecked ? "custom-checkbox" : ""
+              } w-5 h-5 md:w-6 md:h-6 rounded-[50%] border-2 border-solid border-black `}
           ></span>
         </label>
       </div>

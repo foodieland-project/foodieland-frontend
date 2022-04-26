@@ -1,4 +1,5 @@
 import Category from "./categoriesCard";
+import React from 'react'
 function Categories() {
   const categoriesData = [
     {

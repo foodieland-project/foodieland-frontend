@@ -1,0 +1,10 @@
+.carousel-item{
+    line-height: 1.1    ;
+}
+.carousel-title{
+    word-spacing: -4px;
+}
+.carousel-icon{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+

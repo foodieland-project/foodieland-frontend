@@ -1,13 +1,18 @@
-import SubscribeCard from "../../BasicComponents/subscribeCard";
 import React from "react";
+import SubscribeCard from "../../BasicComponents/subscribeCard";
 import RecommendedRecipes from "../../BasicComponents/recommendedRecipes";
 import Chefs from "../../BasicComponents/chefs";
-import AboutUsInfo from "../../BasicComponents/aboutUsInfo/index.";
+import AboutUsInfo from "../../BasicComponents/aboutUsInfo";
 
-const AboutUs = () => {
+const Post = () => {
   return (
-    <p>AboutUs</p>
-  )
-}
+    <>
+      <AboutUsInfo />
+      <Chefs />
+      <SubscribeCard />
+      <RecommendedRecipes />
+    </>
+  );
+};
 
-export default AboutUs
+export default Post;

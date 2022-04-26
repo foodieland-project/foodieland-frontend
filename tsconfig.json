@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,14 +17,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "src/components/basicComponents/modals/loginConfirmationModal/services/index.tsx",
-    "src/components/basicComponents/panelStreamStats/Components/chartStats/components/chart/index.jsx"
-  ],
-  "exclude": ["node_modules"]
+    "src/components/basicComponents/panelStreamStats/Components/chartStats/components/chart/index.jsx",
+    "src/components/panel/moderator/components/members/index.jsx"
+, "src/components/BasicComponents/subscribeCard/index.jsx", "src/components/layout/header/index.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
