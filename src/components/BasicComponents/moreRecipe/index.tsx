@@ -1,8 +1,7 @@
-import React from 'react';
-import MoreRecipeCard from './components/moreRecipeCard';
+import React from "react";
+import MoreRecipeCard from "./components/moreRecipeCard";
 
 const MoreRecipe = () => {
-
     const MoreRecipeData = [
         {
             category: "product",
@@ -94,10 +93,15 @@ const MoreRecipe = () => {
                     MoreRecipeData.map((data, id) => <MoreRecipeCard key={id} recipeData={data} />)
                 }
             </div>
-
-
         </div>
-    )
-}
+      </div>
+      <div className="flex gap-6 justify-center items-center w-full flex-wrap">
+        {MoreRecipeData.map((data, id) => (
+          <MoreRecipeCard key={id} recipeData={data} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default MoreRecipe;

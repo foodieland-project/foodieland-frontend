@@ -1,12 +1,9 @@
 import React,{useState} from 'react';
 import {icons} from '../../../../../utils/icons'
 
-
-const MoreRecipeCard=({recipeData}:any)=> {
-
-    const [like, setLike] = useState(true);
-    const{img,title,Meal,time}=recipeData;
-
+const MoreRecipeCard = ({ recipeData }: any) => {
+  const [like, setLike] = useState(true);
+  const { img, title, Meal, time } = recipeData;
   return (
     <div className='flex flex-col basis-[85%] sm:basis-[40%] lg:basis-[30%] xl:basis-[23%] h-[300px] pb-8  rounded-3xl relative'>
         <div className='h-[200px] rounded-3xl w-full'>
@@ -17,7 +14,6 @@ const MoreRecipeCard=({recipeData}:any)=> {
                     {
                         like ? icons.whiteHeat() : icons.redHeat()
                     }
-
                 </span>
         </div>
         <div>
@@ -27,9 +23,9 @@ const MoreRecipeCard=({recipeData}:any)=> {
             <div className='flex items-center mr-3'><span className='inline-block pr-2'>{icons.timer()}</span>{time}</div>
             <div className='flex items-center'><span className='inline-block '>{icons.fork()}</span><span className='inline-block pr-2'>{icons.knife()}</span>{Meal}</div>
         </div>
-
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default MoreRecipeCard;
