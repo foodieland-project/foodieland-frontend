@@ -8,8 +8,8 @@ import SubscribeCard from "../../BasicComponents/subscribeCard";
 const Recipes = () => {
   return (
     <div>
-      {/* <RecipeDetails />
-      <Ingredients /> */}
+      <RecipeDetails />
+      <Ingredients />
       <Directions />
       <SubscribeCard />
       <RecommendedRecipes
