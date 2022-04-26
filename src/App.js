@@ -16,7 +16,7 @@ function App() {
     <>
       <Router>
         <Layout>
-          <div className="max-w-[1280px] mx-auto">
+          <div className="w-11/12 sm:container mx-auto">
             <Routes>
               <Route path="/" element={<Home />} exact />
               <Route path="/aboutUs" element={<AboutUs />} exact />
