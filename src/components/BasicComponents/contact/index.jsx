@@ -31,6 +31,7 @@ const Contact = (props) => {
     setSelectValue((prevState) => {
       return {
         ...prevState,
+
         [data.id]: {
           value: data.value,
         },
