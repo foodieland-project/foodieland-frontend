@@ -1,16 +1,19 @@
-import React from 'react'
-import ContactSection from '../../BasicComponents/contact/index';
-import SubscribeCard from '../../BasicComponents/subscribeCard/index';
-import MoreRecipe from '../../BasicComponents/moreRecipe/index';
+import React from "react";
+import ContactSection from "../../BasicComponents/contact/index";
+import SubscribeCard from "../../BasicComponents/subscribeCard/index";
+import RecommendedRecipes from "../../BasicComponents/recommendedRecipes/index";
 
 const Contact = () => {
   return (
-      <>
+    <>
       <ContactSection />
       <SubscribeCard />
-      <MoreRecipe />
-      </>
-  )
-}
+      <RecommendedRecipes
+        title={"Check out the delicious recipe "}
+        length={4}
+      />
+    </>
+  );
+};
 
-export default Contact
+export default Contact;
