@@ -1,7 +1,8 @@
 import React from "react";
-import ContactSection from "../../BasicComponents/contact/index";
-import SubscribeCard from "../../BasicComponents/subscribeCard/index";
-import RecommendedRecipes from "../../BasicComponents/recommendedRecipes/index";
+import ContactSection from "../../BasicComponents/contact";
+import SubscribeCard from "../../BasicComponents/subscribeCard";
+import RecoommendedRecipes from "../../BasicComponents/recommendedRecipes/index";
+
 
 const Contact = () => {
   return (
