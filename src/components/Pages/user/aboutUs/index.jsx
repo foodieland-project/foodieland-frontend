@@ -3,14 +3,19 @@ import SubscribeCard from "../../../BasicComponents/subscribeCard";
 import RecommendedRecipes from "../../../BasicComponents/recommendedRecipes";
 import Chefs from "../../../BasicComponents/chefs";
 import AboutUsInfo from "../../../BasicComponents/aboutUsInfo";
+import UserLayout from "../../../layout/userLayout";
 
 const Post = () => {
   return (
     <>
-      <AboutUsInfo />
-      <Chefs />
-      <SubscribeCard />
-      <RecommendedRecipes />
+      <UserLayout>
+        <div className="w-11/12 sm:container mx-auto">
+          <AboutUsInfo />
+          <Chefs />
+          <SubscribeCard />
+          <RecommendedRecipes />
+        </div>
+      </UserLayout>
     </>
   );
 };

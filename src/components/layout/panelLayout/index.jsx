@@ -2,7 +2,7 @@ import React from 'react'
 
 const Panel = () => {
     return (
-        <p>dfsffffffffffffffffffffffff</p>
+        <div>Panel</div>
     )
 }
 

@@ -6,17 +6,22 @@ import MoreRecipe from "../../../BasicComponents/moreRecipe";
 import SubscribeCard from "../../../BasicComponents/subscribeCard";
 import Categories from "../../../BasicComponents/categories";
 import FoodieLandInstagram from "../../../BasicComponents/instagram";
+import UserLayout from "../../../layout/userLayout";
 
 function Home() {
   return (
     <>
-      <Carousel />
-      <Categories />
-      <Recipe />
-      <Cooker />
-      <MoreRecipe />
-      <FoodieLandInstagram />
-      <SubscribeCard />
+      <UserLayout>
+        <div className="w-11/12 sm:container mx-auto">
+          <Carousel />
+          <Categories />
+          <Recipe />
+          <Cooker />
+          <MoreRecipe />
+          <FoodieLandInstagram />
+          <SubscribeCard />
+        </div>
+      </UserLayout>
     </>
   );
 }

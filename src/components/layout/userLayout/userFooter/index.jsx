@@ -2,9 +2,9 @@ import React from 'react'
 import {
     Link
 } from "react-router-dom";
-import { icons } from '../../../utils/icons';
+import { icons } from '../../../../utils/icons';
 
-const Footer = () => {
+const UserFooter = () => {
     const manu = [
         {
             name: 'Home',
@@ -57,4 +57,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default UserFooter
