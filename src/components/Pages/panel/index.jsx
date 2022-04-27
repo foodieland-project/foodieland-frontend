@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import PanelLayout from "../../layout/panelLayout";
 
 const Panel = () => {
-    return (
-        <p>dfsffffffffffffffffffffffff</p>
-    )
-}
+  return (
+    <PanelLayout>
+      <p></p>
+    </PanelLayout>
+  );
+};
 
-export default Panel
+export default Panel;
