@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import Layout from "./components/layout";
+import Singleblog from "./components/Pages/blog/Singleblog";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/" element={<Home />} exact />
               <Route path="/aboutUs" element={<AboutUs />} exact />
               <Route path="/blog" element={<Blog />} exact />
+              <Route path="/blog/:id" element={<Singleblog/>}  />
               <Route path="/contact" element={<Contact />} exact />
               <Route path="/recipes" element={<Recipes />} exact />
               {/* <Route path='*' element={<NotFound />} /> */}
