@@ -678,7 +678,7 @@ module.exports = {
       max: "max-content",
       fit: "fit-content",
       prose: "65ch",
-      ...breakpoints(theme("screens")),
+      ...breakpoints(theme("screens")), 
     }),
     minHeight: {
       0: "0px",

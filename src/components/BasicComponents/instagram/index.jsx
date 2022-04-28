@@ -10,7 +10,7 @@ function FoodieLandInstagram() {
       id: 1,
       imageUrl: "./images/instagram-foods/food-9.png",
       caption:
-        "The vegetables dishes need to have certain vitamin for those people",
+        "The vegetables dishes need to have certain vitamin for those people", 
       date: "September 13",
     },
     {
