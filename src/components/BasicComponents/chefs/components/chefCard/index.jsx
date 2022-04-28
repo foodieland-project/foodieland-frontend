@@ -1,3 +1,5 @@
+import React from 'react';
+
 function ChefCard({ name, role, imageUrl }) {
   return (
     <div className=" basis-[35%] md:basis-[18%]">

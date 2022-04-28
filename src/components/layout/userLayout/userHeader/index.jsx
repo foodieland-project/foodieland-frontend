@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { icons } from 'utils/icons'
 import {
     Link
 } from "react-router-dom";
+import { icons } from '../../../../utils/icons';
 
-const Header = () => {
+const UserHeader = () => {
     const [open, setOpen] = useState(false)
 
     const manu = [
@@ -61,4 +61,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default UserHeader

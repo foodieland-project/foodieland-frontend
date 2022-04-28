@@ -1,4 +1,5 @@
-import "./directions.css";
+import React from 'react'
+import "./categories.css";
 import DirectionCard from "./directionCard";
 function Directions() {
   const directionsData = [
@@ -29,7 +30,7 @@ function Directions() {
     },
   ];
   return (
-    <section className="my-8 lg:my-16 md:my-24 flex w-11/12 mx-auto xl:w-full font-inter">
+    <section className="my-16 md:my-24 flex w-11/12 mx-auto xl:w-full font-inter">
       <div className="basis-[100%] lg:basis-[66%]">
         <div className="my-12">
           <h2 className="font-semibold text-3xl md:text-4xl">Directions</h2>
@@ -39,7 +40,6 @@ function Directions() {
             ({ id, title, description, imageUrl, imageDesc }, index) => (
               <DirectionCard
                 key={id}
-                id={id}
                 title={title}
                 description={description}
                 number={index}

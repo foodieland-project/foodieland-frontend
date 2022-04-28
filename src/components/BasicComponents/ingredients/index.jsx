@@ -1,3 +1,4 @@
+import React from 'react'
 import IngredientCard from "./components/ingredientCard";
 import OtherRecipes from "./components/otherRecipes";
 import "./ingredients.css";

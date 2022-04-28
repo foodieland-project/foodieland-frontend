@@ -1,5 +1,6 @@
-import { icons } from "../../../utils/icons";
 import InstagramCard from "./instagramCard";
+import React from 'react'
+import { icons } from "../../../utils/icons";
 
 function FoodieLandInstagram() {
   const instagramIcon = icons.whiteInstagram();
@@ -44,7 +45,7 @@ function FoodieLandInstagram() {
             </h2>
           </div>
           <div>
-            <p className="w-2/3 text-secondary mx-auto text-xs md:text-base">
+            <p className="w-2/3 text-secondary mx-auto text-sm md:text-base">
               Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
               minim

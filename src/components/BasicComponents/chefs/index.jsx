@@ -1,4 +1,5 @@
 import ChefCard from "./components/chefCard";
+import React from 'react'
 
 function Chefs() {
   const chefsData = [
