@@ -7,25 +7,25 @@ function Chefs() {
       id: 1,
       name: "Marcellus H. Waddell",
       role: "Senior Chef",
-      imageUrl: "./images/chefs/chef-1.png",
+      imageUrl: " /images/chefs/chef-1.png",
     },
     {
       id: 2,
       name: "Ronald W. Robison",
       role: "Senior Chef",
-      imageUrl: "./images/chefs/chef-2.png",
+      imageUrl: "/images/chefs/chef-2.png",
     },
     {
       id: 3,
       name: "Kenneth B. Deshazo",
       role: "Senior Chef",
-      imageUrl: "./images/chefs/chef-3.png",
+      imageUrl: "/images/chefs/chef-3.png",
     },
     {
       id: 4,
       name: "Robert H. Houston",
       role: "Senior Chef",
-      imageUrl: "./images/chefs/chef-4.png",
+      imageUrl: "/images/chefs/chef-4.png",
     },
   ];
   return (
