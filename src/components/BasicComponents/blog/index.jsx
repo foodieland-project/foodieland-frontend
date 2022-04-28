@@ -1,7 +1,7 @@
-import React, {useState } from 'react'
-import { Link} from 'react-router-dom';
-import Pagination from './Pagination';
-import { RecipeData } from './Maindata'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+import Pagination from './pagination';
+import { RecipeData } from './maindata'
 
 const categoriesData = [
   {
@@ -10,7 +10,6 @@ const categoriesData = [
     title: 'The Creamiest Creamy Chicken and Bacon Pasta',
     profile: 'images/recipes/food-20.png',
     name: "wade wentern",
-
   },
   {
     id: 2,
@@ -71,9 +70,7 @@ const Blog = () => {
       </div>
 
       {/* ///////SearchBar //////////*/}
-
       <div className='w-full h-max flex justify-center align-center my-16'>
-
         <div className='xl:w-1/2 w-full h-20 rounded-[20px] 2sm:ml-5  text-center relative border-2'>
           <input onChange={handlechangle} className=' w-full h-full outline-none xl:p-8 2sm:p-3 rounded-[20px]' placeholder='Search article,news or recipe...' />
           <button className='w-1/5 h-3/4 bg-black text-white rounded-[20px] absolute right-2 hover:bg-gray-900 text-center  top-[9px] xl:text-md text-xs '>Search</button>
