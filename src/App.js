@@ -5,7 +5,7 @@ import AboutUs from "./components/Pages/user/aboutUs";
 import Blog from "./components/Pages/user/blog";
 import Contact from "./components/Pages/user/contact";
 import Home from "./components/Pages/user/home";
-import Recipes from "./components/Pages/user/recipes";
+import Recipes from "./components/Pages/user/Recipes";
 import Post from "./components/Pages/user/aboutUs";
 import NotFound from "./components/Pages/user/notFound";
 //panel routes

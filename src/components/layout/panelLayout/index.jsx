@@ -1,7 +1,7 @@
 import React from "react";
 import PanelFooter from "./panelFooter";
 import PanelHeader from "./panelHeader";
-import PanelSidebar from "./panelSideBar";
+import PanelSidebar from "./panelSidebar/index"
 
 const PanelLayout = ({ children }) => {
   return (
