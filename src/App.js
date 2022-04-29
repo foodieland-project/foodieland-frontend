@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./components/Pages/user/notFound";
 // import Singleblog from "./components/Pages/user/singleBlog";
 import Panel from "./components/Pages/panel";
-import Post from "./components/Pages/user/post";
+import Singleblog from "./components/Pages/user/singleblog";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<Post />} />
+          <Route path="/blog/:id" element={<Singleblog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="*" element={<NotFound />} />

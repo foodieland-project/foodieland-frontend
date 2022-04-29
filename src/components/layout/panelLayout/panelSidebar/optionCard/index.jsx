@@ -1,4 +1,4 @@
-import { icons } from "../../../../../utils/icons";
+import { icons } from "../../../../Pages/user/utils/icons";
 
 function OptionCard({ id, option, icon, selected, selectHandler }) {
   return (

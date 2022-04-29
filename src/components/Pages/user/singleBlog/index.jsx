@@ -1,6 +1,6 @@
 import React from 'react'
 import UserLayout from '../../../layout/userLayout'
-import SingleBlog from '../../../BasicComponents/singleBlog'
+import SingleBlog from '../../../BasicComponents/singleBlog/indexBk'
 
 const singleBlog = () => {
   return (
