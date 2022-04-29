@@ -5,45 +5,51 @@ function PanelSidebar() {
   const sidebarOptions = [
     {
       id: 1,
-      option: "email",
+      option: "statistic",
       icon: "email",
       selected: false,
+      route: "../panel/statistic"
     },
     {
       id: 2,
-      option: "post",
+      option: "posts",
       icon: "email",
       selected: true,
+      route: "../panel/posts"
     },
     {
       id: 3,
-      option: "reset password",
+      option: "New Post",
       icon: "email",
-      selected: false,
+      selected: true,
+      route: "../panel/newPost"
     },
     {
       id: 4,
-      option: "contact us",
+      option: "contact",
       icon: "email",
       selected: false,
+      route: "../panel/contact"
     },
     {
       id: 5,
-      option: "Email",
+      option: "option",
       icon: "email",
       selected: false,
+      route: "../panel/option"
     },
   ];
 
   return (
     <div>
-      {sidebarOptions.map(({ id, option, icon, selected }) => (
+      {sidebarOptions.map(({ route, id, option, icon, selected }) => (
         <OptionCard
           key={id}
           option={option}
           id={id}
           icon={icon}
           selected={selected}
+          route={route}
         />
       ))}
     </div>

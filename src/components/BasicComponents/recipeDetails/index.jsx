@@ -1,7 +1,7 @@
 import RecipeVideoCard from "../recipeVideoCard";
 import NutritionInfoCard from "./components/nutritionInfoCard";
 import React from 'react'
-import { icons } from "../../../utils/icons";
+import { icons } from "../../Pages/user/utils/icons";
 
 function RecipeDetails() {
   const timerIcon = icons.timer();

@@ -1,6 +1,6 @@
 import InstagramCard from "./instagramCard";
 import React from 'react'
-import { icons } from "../../../utils/icons";
+import { icons } from "../../Pages/user/utils/icons";
 
 function FoodieLandInstagram() {
   const instagramIcon = icons.whiteInstagram();

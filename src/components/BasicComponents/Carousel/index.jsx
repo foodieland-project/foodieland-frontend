@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from 'react'
 import "./carousel.css";
 import CarouselCard from "./carouselCard";
-import { icons } from "../../../utils/icons";
+import { icons } from "../../Pages/user/utils/icons";
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);

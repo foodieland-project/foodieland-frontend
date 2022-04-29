@@ -1,14 +1,14 @@
 import React from "react";
 import PanelLayout from "../../../layout/panelLayout";
 
-const NewPost = () => {
+const Contacts = () => {
   return (
     <PanelLayout>
           <p>
-              NewPost
+          Contacts
       </p>
     </PanelLayout>
   );
 };
 
-export default NewPost;
+export default Contacts;

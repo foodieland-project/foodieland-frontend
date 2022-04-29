@@ -1,14 +1,14 @@
 import React from "react";
-import PanelLayout from "../../layout/panelLayout";
+import PanelLayout from "../../../layout/panelLayout";
 
-const Login = () => {
+const Option = () => {
   return (
     <PanelLayout>
           <p>
-              Login
+              Option
       </p>
     </PanelLayout>
   );
 };
 
-export default Login;
+export default Option;

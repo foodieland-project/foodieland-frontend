@@ -1,5 +1,5 @@
 import React from "react";
-import PanelLayout from "../../layout/panelLayout";
+import PanelLayout from "../../../layout/panelLayout";
 
 const Notice = () => {
   return (

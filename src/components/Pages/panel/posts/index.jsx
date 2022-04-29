@@ -1,14 +1,14 @@
 import React from "react";
-import PanelLayout from "../../layout/panelLayout";
+import PanelLayout from "../../../layout/panelLayout";
 
-const Login = () => {
+const Posts = () => {
   return (
     <PanelLayout>
           <p>
-              Login
+              Posts
       </p>
     </PanelLayout>
   );
 };
 
-export default Login;
+export default Posts;
