@@ -1,21 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //user routes
-import AboutUs from "./components/Pages/user/aboutUs";
-import Blog from "./components/Pages/user/blog";
-import Contact from "./components/Pages/user/contact";
-import Home from "./components/Pages/user/home";
-import Recipes from "./components/Pages/user/recipes";
-import Post from "./components/Pages/user/aboutUs";
-import NotFound from "./components/Pages/user/notFound";
+import AboutUs from "./components/pages/user/aboutUs";
+import Blog from "./components/pages/user/blog";
+import Contact from "./components/pages/user/contact";
+import Home from "./components/pages/user/home";
+import Recipes from "./components/pages/user/recipes";
+import NotFound from "./components/pages/user/notFound";
+import SingleBlog from "./components/pages/user/singleBlog";
 //panel routes
-import Login from "./components/Pages/panel/login";
-import NewPost from "./components/Pages/panel/newPost";
-import Notice from "./components/Pages/panel/notice";
-import Option from "./components/Pages/panel/option";
-import Posts from "./components/Pages/panel/posts";
-import Statistic from "./components/Pages/panel/statistic";
-import Contacts from "./components/Pages/panel/contacts";
+import Login from "./components/pages/panel/login";
+import NewPost from "./components/pages/panel/newPost";
+import Notice from "./components/pages/panel/notice";
+import Option from "./components/pages/panel/option";
+import Posts from "./components/pages/panel/posts";
+import Statistic from "./components/pages/panel/statistic";
+import Contacts from "./components/pages/panel/contacts";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<Post />} />
+          <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="*" element={<NotFound />} />

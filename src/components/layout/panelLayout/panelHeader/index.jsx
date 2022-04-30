@@ -1,4 +1,4 @@
-import { icons } from "../../../Pages/user/utils/icons";
+import { icons } from "../../../pages/user/utils/icons";
 function PanelHeader() {
   return (
     <section className="bg-lightPurple">

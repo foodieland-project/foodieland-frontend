@@ -1,17 +1,17 @@
 import React from 'react'
 import UserLayout from '../../../layout/userLayout'
-import SingleBlog from '../../../BasicComponents/singleBlog/indexBk'
+import SingleBlogCp from "../../../BasicComponents/singleBlogCp"
 
-const singleBlog = () => {
-  return (
-    <>
-      <UserLayout>
-        <div className="w-11/12 sm:container mx-auto">
-          <SingleBlog />
-        </div>
-      </UserLayout>
-    </>
-  )
+const SingleBlog = () => {
+    return (
+        <>
+            <UserLayout>
+                <div className="w-11/12 sm:container mx-auto">
+                    <SingleBlogCp />
+                </div>
+            </UserLayout>
+        </>
+    )
 }
 
-export default singleBlog
+export default SingleBlog
