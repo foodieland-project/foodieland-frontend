@@ -18,28 +18,28 @@ import Statistic from "./components/pages/panel/statistic";
 import Contacts from "./components/pages/panel/contacts";
 
 function App() {
-  return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<SingleBlog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/recipes" element={<Recipes />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="panel/posts" element={<Posts />} />
-          <Route path="panel/newPost" element={<NewPost />} />
-          <Route path="panel/notice" element={<Notice />} />
-          <Route path="panel/option" element={<Option />} />
-          <Route path="panel/statistic" element={<Statistic />} />
-          <Route path="panel/login" element={<Login />} exact />
-          <Route path="panel/contact" element={<Contacts />} exact />
-        </Routes>
-      </Router>
-    </>
-  );
+    return (
+        <>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} exact />
+                    <Route path="/aboutUs" element={<AboutUs />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:id" element={<SingleBlog />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/recipes" element={<Recipes />} />
+                    <Route path="*" element={<NotFound />} />
+                    <Route path="panel/posts" element={<Posts />} />
+                    <Route path="panel/newPost" element={<NewPost />} />
+                    <Route path="panel/notice" element={<Notice />} />
+                    <Route path="panel/option" element={<Option />} />
+                    <Route path="panel/statistic" element={<Statistic />} />
+                    <Route path="panel/login" element={<Login />} exact />
+                    <Route path="panel/contact" element={<Contacts />} exact />
+                </Routes>
+            </Router>
+        </>
+    );
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React from 'react'
-import ContactSection from '../../../BasicComponents/contact';
-import SubscribeCard from '../../../BasicComponents/subscribeCard';
-import RecommendedRecipesData from "../../../BasicComponents/recommendedRecipes";
+import ContactSection from '../../../basicComponents/contact';
+import SubscribeCard from '../../../basicComponents/subscribeCard';
+import RecommendedRecipesData from "../../../basicComponents/recommendedRecipes";
 import UserLayout from '../../../layout/userLayout';
 
 const Contact = () => {

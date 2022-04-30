@@ -1,6 +1,6 @@
 import React from 'react'
 import UserLayout from '../../../layout/userLayout'
-import SingleBlogCp from "../../../BasicComponents/singleBlogCp"
+import SingleBlogCp from "../../../basicComponents/singleBlogCp"
 
 const SingleBlog = () => {
     return (
