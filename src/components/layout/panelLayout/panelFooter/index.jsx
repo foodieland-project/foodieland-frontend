@@ -5,7 +5,7 @@ function PanelFooter() {
         <div className="text-center">
           <span className="text-gray-700">
             © 2022, Made with ❤️ by{" "}
-            <a className="text-darkPurple">ThemeSelection</a>
+            <a className="text-darkPurple">Foodieland</a>
           </span>
         </div>
         <div className="text-darkPurple text-center ">
