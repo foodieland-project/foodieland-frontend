@@ -39,12 +39,12 @@ function RegisterBox() {
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Password" />
             <div className="flex justify-between mb-4 w-full">
-              <div className="cursor-pointer">
-                <input type="checkbox" className="mx-2" />
-                <span className="text-slate-700">
+              <label class="cursor-pointer select-none">
+                <input class="mx-2" type="checkbox" />
+                <span class="text-slate-600">
                   i Agree to privacy policy & terms
                 </span>
-              </div>
+              </label>
             </div>
             <Button prop="login" />
           </form>
