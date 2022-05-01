@@ -1,6 +1,6 @@
 import React from 'react'
 import UserLayout from '../../../layout/userLayout'
-import BlogComponent from '../../../BasicComponents/blog'
+import BlogComponent from '../../../basicComponents/blog'
 
 const Blog = () => {
   return (

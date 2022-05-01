@@ -1,8 +1,8 @@
 import React from "react";
-import SubscribeCard from "../../../BasicComponents/subscribeCard";
-import RecommendedRecipes from "../../../BasicComponents/recommendedRecipes";
-import Chefs from "../../../BasicComponents/chefs";
-import AboutUsInfo from "../../../BasicComponents/aboutUsInfo";
+import SubscribeCard from "../../../basicComponents/subscribeCard";
+import RecommendedRecipes from "../../../basicComponents/recommendedRecipes";
+import Chefs from "../../../basicComponents/chefs";
+import AboutUsInfo from "../../../basicComponents/aboutUsInfo";
 import UserLayout from "../../../layout/userLayout";
 
 const Post = () => {

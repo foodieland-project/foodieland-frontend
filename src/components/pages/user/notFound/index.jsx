@@ -1,6 +1,6 @@
-import SubscribeCard from "../../../BasicComponents/subscribeCard"
+import SubscribeCard from "../../../basicComponents/subscribeCard"
 import React from 'react'
-import RecommendedRecipes from '../../../BasicComponents/recommendedRecipes'
+import RecommendedRecipes from '../../../basicComponents/recommendedRecipes'
 import UserLayout from "../../../layout/userLayout"
 
 const NotFound = () => {

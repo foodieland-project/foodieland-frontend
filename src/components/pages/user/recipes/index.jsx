@@ -1,9 +1,9 @@
 import React from "react";
-import Directions from "../../../BasicComponents/directions";
-import RecipeDetails from "../../../BasicComponents/recipeDetails"
-import Ingredients from "../../../BasicComponents/ingredients"
-import RecommendedRecipes from "../../../BasicComponents/recommendedRecipes";
-import SubscribeCard from "../../../BasicComponents/subscribeCard";
+import Directions from "../../../basicComponents/directions";
+import RecipeDetails from "../../../basicComponents/recipeDetails"
+import Ingredients from "../../../basicComponents/ingredients"
+import RecommendedRecipes from "../../../basicComponents/recommendedRecipes";
+import SubscribeCard from "../../../basicComponents/subscribeCard";
 import UserLayout from "../../../layout/userLayout";
 
 const Recipes = () => {
