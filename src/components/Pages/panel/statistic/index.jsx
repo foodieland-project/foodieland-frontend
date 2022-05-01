@@ -129,12 +129,11 @@ const MonthData = [
 const Statistic = () => {
   return (
     <PanelLayout>
-      <Card/>
-      <section className="flex flex-col md:justify-between md:flex-row p-5">
-        
+     {/*<Card/>*/} 
+     <section className="flex flex-col md:justify-between md:flex-row basis-[97%] items-center p-5">
         <WeeklyCart data={MonthData} title="Monthly Analytics"/>
         <Chart data={weeklyData} title="Weekly Analytics"/>
-      </section>
+     </section>
     </PanelLayout>
   );
 };

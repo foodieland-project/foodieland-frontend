@@ -1,0 +1,16 @@
+.areaChart{
+    width: 400px;
+}
+
+@media (max-width:1020px) {
+.areaChart{
+    width:400px
+}
+}
+
+
+@media (max-width:500px) {
+.areaChart{
+    width:300px
+}
+}
