@@ -12,7 +12,7 @@ function PanelHeader() {
         <div className="flex items-center basis-[80%] justify-end">
           <span>{icons.notificationBell()}</span>
           <div className="ml-4 relative">
-            <img src="./images/panel/Avatar.png" alt="avatar" />
+            <img src="/images/panel/Avatar.png" alt="avatar" />
             <span className="bg-green-500 rounded-3xl absolute bottom-0 right-0 w-[12px] h-[12px] border-2 border-white"></span>
           </div>
         </div>

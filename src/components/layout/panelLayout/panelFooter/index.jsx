@@ -1,11 +1,11 @@
 function PanelFooter() {
   return (
-    <section className=" bg-lightPurple  w-full py-4 lg:px-6 font-inter">
+    <section className=" bg-lightPurple  w-full py-4 lg:px-6 font-inter absolute bottom-0">
       <div className="mr-auto lg:mr-0 w-[97%] sm:w-[80%] md:w-[95%] lg:w-[80%] ml-auto flex justify-between gap-4 text-xs md:text-base">
         <div className="text-center">
           <span className="text-gray-700">
             © 2022, Made with ❤️ by{" "}
-            <a className="text-darkPurple">ThemeSelection</a>
+            <a className="text-darkPurple">Foodieland</a>
           </span>
         </div>
         <div className="text-darkPurple text-center ">
