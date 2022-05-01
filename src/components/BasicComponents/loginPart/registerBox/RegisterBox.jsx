@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../button/Button";
 import Input from "../input/Input";
 import { icons } from "../../../Pages/user/utils/icons";
+import { Link } from "react-router-dom";
 
 function RegisterBox() {
   const facebookIcon = icons.facebookBlue();
@@ -46,7 +47,7 @@ function RegisterBox() {
                 </span>
               </label>
             </div>
-            <Button prop="login" />
+            <Button prop="login" type="submit"/>
           </form>
           <div className="text-center my-2 w-full">
             <div className="w-full flex justify-evenly">
@@ -54,7 +55,7 @@ function RegisterBox() {
                 Already have an account?
               </span>
               <span className="text-purple-500 cursor-pointer">
-                Sign in instead
+                <Link to="/login">Sign in instead</Link>
               </span>
             </div>
             <div className="my-4 mx-6 relative mb-6">

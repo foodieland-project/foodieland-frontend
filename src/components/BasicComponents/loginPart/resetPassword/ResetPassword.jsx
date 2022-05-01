@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../button/Button";
 import Input from "../input/Input";
 import { icons } from "../../../Pages/user/utils/icons";
+import { Link } from "react-router-dom";
 
 
 function ResetPassword() {
@@ -40,7 +41,7 @@ function ResetPassword() {
           <div className="flex justify-center items-center">
             <span>{arrowLeft}</span>
             <span className="text-purple-500 cursor-pointer my-4 mx-2">
-              Back to login
+              <Link to="/login">Back to login</Link>
             </span>
           </div>
         </div>

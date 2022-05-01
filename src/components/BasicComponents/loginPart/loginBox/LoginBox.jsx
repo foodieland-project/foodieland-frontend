@@ -2,6 +2,7 @@ import React from "react";
 import Input from "../input/Input";
 import Button from "../button/Button";
 import { icons } from "../../../Pages/user/utils/icons";
+import { Link } from "react-router-dom";
 
 function LoginBox() {
   const facebookIcon = icons.facebookBlue();
@@ -43,10 +44,10 @@ function LoginBox() {
                 <span class="text-slate-600">Remember Me</span>
               </label>
               <span className="text-purple-500 cursor-pointer">
-                Forgot Password?
+                <Link to="/password/forgot">Forgot Password?</Link>
               </span>
             </div>
-            <Button prop="login" />
+            <Button prop="login" type="submit"/>
           </form>
           <div className="text-center my-2 w-full">
             <div className="w-full flex justify-evenly">
@@ -54,7 +55,7 @@ function LoginBox() {
                 New on our platform?
               </span>
               <span className="text-purple-500 cursor-pointer">
-                Create an account
+                <Link to="/register">Create an account</Link>
               </span>
             </div>
             <div className="my-4 mx-6 relative mb-6">
