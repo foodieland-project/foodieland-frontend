@@ -1,10 +1,11 @@
 import React from "react";
-import { FaLock } from "react-icons/fa";
-import { IoIosArrowBack } from "react-icons/fa";
 import Button from "../button/Button";
 import Input from "../input/Input";
+import { icons } from "../../../Pages/user/utils/icons";
 
 function ForgotPassword() {
+  const arrowLeft = icons.arrowLeftPurple();
+
   return (
     <>
       <div className="h-full flex justify-center items-center">
@@ -36,7 +37,7 @@ function ForgotPassword() {
             <Button prop="login" />
           </form>
           <div className="flex justify-center items-center">
-            <IoIosArrowBack size={20} className="text-purple-500" />
+            <span>{arrowLeft}</span>
             <span className="text-purple-500 cursor-pointer my-4 mx-2">
               Back to login
             </span>
