@@ -1,11 +1,14 @@
 import React from "react";
-import { ImTwitter, ImFacebook, ImGoogle } from "react-icons/im";
-import { BsGithub } from "react-icons/bs";
-import { MdWavingHand } from "react-icons/md";
 import Input from "../input/Input";
 import Button from "../button/Button";
+import { icons } from "../../../Pages/user/utils/icons";
 
 function LoginBox() {
+  const facebookIcon = icons.facebookBlue();
+  const twitterIcon = icons.twitterBlue();
+  const githubIcon = icons.github();
+  const googleIcon = icons.google();
+
   return (
     <>
       <div className="h-full flex justify-center items-center">
@@ -25,7 +28,7 @@ function LoginBox() {
               <h2 className="text-2xl font-semibold">
                 Welcome To Materialize!
               </h2>
-              <MdWavingHand className="ml-2 mt-1 text-2xl text-[#d0ce48]" />
+              {/* <MdWavingHand className="ml-2 mt-1 text-2xl text-[#d0ce48]" /> */}
             </div>
             <p className="text-gray-400 text-sm mt-1">
               Please sign-in to your account and start the advandture
@@ -61,10 +64,10 @@ function LoginBox() {
               </span>
             </div>
             <div className="flex justify-center text-2xl mb-4 w-full">
-              <ImFacebook className="mx-4 cursor-pointer text-[#497CE2]" />
-              <ImTwitter className="mx-4 cursor-pointer text-[#1DA1F2]" />
-              <BsGithub className="mx-4 cursor-pointer" />
-              <ImGoogle className="mx-4 cursor-pointer text-[#DB4437]" />
+              <span className="mx-4 cursor-pointer">{facebookIcon}</span>
+              <span className="mx-4 cursor-pointer">{twitterIcon}</span>
+              <span className="mx-4 cursor-pointer">{githubIcon}</span>
+              <span className="mx-4 cursor-pointer">{googleIcon}</span>
             </div>
           </div>
         </div>
