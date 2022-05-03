@@ -1,9 +1,7 @@
 import React from "react";
-
+import Chart from "../../../basicComponents/statistic/components/chart";
+import WeeklyCart from "../../../basicComponents/statistic/components/weeklyCart";
 import PanelLayout from "../../../layout/panelLayout";
-import Chart from "../../../BasicComponents/statistic/components/Weekly/index.jsx";
-import WeeklyCart from "../../../BasicComponents/statistic/components/Monthly/index.jsx";
-import Card from "../../../BasicComponents/statistic/components/postCard";
 const weeklyData = [
   {
     "name": "1-8",
@@ -47,7 +45,7 @@ const weeklyData = [
     "pv": 4300,
     "amt": 2100
   },
-  
+
 ];
 
 const MonthData = [
@@ -129,11 +127,11 @@ const MonthData = [
 const Statistic = () => {
   return (
     <PanelLayout>
-     {/*<Card/>*/} 
-     <section className="flex flex-col md:justify-between md:flex-row basis-[97%] items-center p-5">
-        <WeeklyCart data={MonthData} title="Monthly Analytics"/>
-        <Chart data={weeklyData} title="Weekly Analytics"/>
-     </section>
+      {/*<Card/>*/}
+      <section className="flex flex-col md:justify-between md:flex-row basis-[97%] items-center p-5">
+        <WeeklyCart data={MonthData} title="Monthly Analytics" />
+        <Chart data={weeklyData} title="Weekly Analytics" />
+      </section>
     </PanelLayout>
   );
 };

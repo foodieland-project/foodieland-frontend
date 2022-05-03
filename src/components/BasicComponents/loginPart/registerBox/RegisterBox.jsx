@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../button/Button";
 import { Link } from "react-router-dom";
 import { icons } from "../../../../utils/icons";
+import Input from "../input";
 
 function RegisterBox() {
   const facebookIcon = icons.facebookBlue();

@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../button/Button";
-import Input from "../input/Input";
+import Input from "../input";
 import { Link } from "react-router-dom";
 import { icons } from "../../../../utils/icons";
 
@@ -26,7 +26,7 @@ function ForgotPassword() {
               <h2 className="text-2xl font-semibold text-slate-600">
                 Forgot Password
               </h2>
-              <FaLock className="ml-2 mt-1 text-2xl" />
+              {/* <FaLock className="ml-2 mt-1 text-2xl" /> */}
             </div>
             <p className="text-gray-400 text-sm mt-1">
               Enter your email and we'll send you instructions to reset your
