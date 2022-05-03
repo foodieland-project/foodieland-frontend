@@ -1,6 +1,6 @@
-import React from 'react'
-import UserLayout from '../../../layout/userLayout'
-import BlogComponent from '../../../basicComponents/blog'
+import React from "react";
+import UserLayout from "../../../layout/userLayout";
+import BlogComponent from "../../../basicComponents/blog";
 
 const Blog = () => {
   return (
@@ -11,7 +11,7 @@ const Blog = () => {
         </div>
       </UserLayout>
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
