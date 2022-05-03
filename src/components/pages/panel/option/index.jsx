@@ -1,12 +1,11 @@
 import React from "react";
 import PanelLayout from "../../../layout/panelLayout";
+import PanelNav from "../../../layout/panelLayout/panelOptionNavbar/index.jsx";
 
 const Option = () => {
   return (
     <PanelLayout>
-          <p>
-              Option
-      </p>
+      <PanelNav />
     </PanelLayout>
   );
 };
