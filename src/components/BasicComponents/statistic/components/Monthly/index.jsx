@@ -3,17 +3,18 @@ import { BarChart, Bar,  XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsiv
 import "./monthly.css"
 function WeeklyCart({data,title}) {
   return (
-    <div className="shadow-2xl md:w-[47%] w-full">
+    <div className="md:w-[60%] w-full">
       <h3 className='p-5 font-medium'>{title}</h3>
        <div className='w-full'>
-          <BarChart
-         
-         height={300}
+       
+            <BarChart
+         width={550}
+         height={250}
           data={data}
           margin={{
             top: 20,
             right: 30,
-            left: 20,
+            left: 0,
             bottom: 0,
           }}
          className="barChart">
@@ -21,11 +22,11 @@ function WeeklyCart({data,title}) {
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Legend />
-          <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-          <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+          <Bar dataKey="uv" stackId="a" fill="#C6A7FE" />
+          <Bar dataKey="pv" stackId="a" fill="#82ca9d" />
         </BarChart>
       
+   
       </div>
     </div>
   )

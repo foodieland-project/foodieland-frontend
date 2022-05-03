@@ -3,12 +3,13 @@ import { Area,YAxis, XAxis , CartesianGrid, Tooltip,AreaChart,ResponsiveContaine
 import "./weekly.css"
 function Chart({data,title}) {
   return (
-    <div className="shadow-2xl md:w-[47%] w-full">
+    <div className="md:w-[60%] w-full">
       <h3 className='p-5 font-medium'>{title}</h3>
       <div className='w-full'>
-         <AreaChart height={300}
+         
+         <AreaChart width={550} height={250}
           data={data}
-          margin={{ top: 20, right: 30, left: 0, bottom: 0 }} 
+          margin={{ top: 20, right: 30, left:0, bottom: 0 }} 
           className="areaChart">
         <defs>
         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -24,9 +25,10 @@ function Chart({data,title}) {
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+        <Area type="monotone" dataKey="uv" stroke="#C6A7FE" fillOpacity={1} fill="url(#colorUv)" />
         <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
         </AreaChart>
+        
      </div>
     </div>
   )

@@ -1,21 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-function Card() {
+
+function Card({data,title}) {
   return (
-    <section className='flex flex-col md:justify-between md:flex-row basis-[97%] items-center justify-center p-4'>
-        <div className='shadow-2xl border  border-solid border-black md:w-[31%] w-full mr-1 ml-1 h-[200px] mb-2'>
-            <h2>user</h2>
-            <p>$ 20</p>
+        <div className='shadow-2xl  md:w-[31%] w-full h-[250px] mb-3 flex flex-col justify-center items-center ml-4'>
+          <p className='text-left mb-3'>{title}</p>
+          <h2 className='text-6xl font-semibold text-[#C6A7FE] text-left'>{data}</h2>
         </div>
-        <div className='shadow-2xl border  border-solid border-black  md:w-[31%] w-full ml-1 mr-1 h-[200px] mb-2'>
-            <h2>user</h2>
-            <p>$ 20</p>
-        </div>
-        <div className='shadow-2xl border  border-solid border-black md:w-[31%] w-full ml-1 mr-1 h-[200px] mb-2'>
-            <h2>user</h2>
-            <p>$ 20</p>
-        </div>
-    </section>
+  
   )
 }
 
