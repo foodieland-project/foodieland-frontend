@@ -4,7 +4,7 @@ import PanelOptionNavbar from "../../../layout/panelLayout/panelOptionNavbar/ind
 
 const Option = () => {
   return (
-    <PanelLayout>
+    <PanelLayout title={"Option"}>
       <PanelOptionNavbar />
     </PanelLayout>
   );

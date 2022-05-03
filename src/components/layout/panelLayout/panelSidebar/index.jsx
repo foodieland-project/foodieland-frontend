@@ -10,35 +10,35 @@ function PanelSidebar() {
       option: "statistic",
       icon: "email",
       selected: false,
-      route: "../panel/statistic",
+      route: "/panel/statistic",
     },
     {
       id: 2,
       option: "posts",
       icon: "email",
       selected: true,
-      route: "../panel/posts",
+      route: "/panel/posts",
     },
     {
       id: 3,
       option: "New Post",
       icon: "email",
       selected: true,
-      route: "../panel/newPost",
+      route: "/panel/newPost",
     },
     {
       id: 4,
       option: "contact",
       icon: "email",
       selected: false,
-      route: "../panel/contact",
+      route: "/panel/contact",
     },
     {
       id: 5,
       option: "option",
       icon: "email",
       selected: false,
-      route: "../panel/option",
+      route: "/panel/option",
     },
   ];
 
@@ -46,24 +46,20 @@ function PanelSidebar() {
     <div>
       <ul
         onClick={() => setOpen((prev) => !prev)}
-        className={`cursor-pointer option-selected active justify-center h-[50px] my-4 items-center md:hidden  flex  flex-col ${
-          open ? "h-[36px]" : ""
-        }`}
+        className={`cursor-pointer option-selected active justify-center h-[50px] my-4 items-center md:hidden  flex  flex-col ${open ? "h-[36px]" : ""
+          }`}
       >
         <li
-          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1 transition-all ${
-            open ? " hidden rotate-90" : ""
-          }`}
+          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1 transition-all ${open ? " hidden rotate-90" : ""
+            }`}
         ></li>
         <li
-          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1 transition-all	 ${
-            open ? " rotate-45  absolute" : ""
-          }`}
+          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1 transition-all	 ${open ? " rotate-45  absolute" : ""
+            }`}
         ></li>
         <li
-          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1  transition-all ${
-            open ? " rotate-135" : ""
-          }`}
+          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1  transition-all ${open ? " rotate-135" : ""
+            }`}
         ></li>
       </ul>
 

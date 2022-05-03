@@ -5,7 +5,7 @@ const listClasses = `${styles["nav__links"]} mx-8 cursor-pointer flex items-cent
 
 const PanelOptionNavbar = (props) => {
   return (
-    <main className="w-5/6 mx-5 my-3 h-5/6 bg-white shadow-xl ">
+    <>
       <nav className="border-b-2 border-slate-300 py-3">
         <ul className="flex justify-start">
           <li className={listClasses}>
@@ -22,8 +22,10 @@ const PanelOptionNavbar = (props) => {
           </li>
         </ul>
       </nav>
-      <section></section>
-    </main>
+      <section>
+        zcdfdfsa
+      </section>
+    </>
   );
 };
 

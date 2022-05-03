@@ -126,7 +126,7 @@ const MonthData = [
 
 const Statistic = () => {
   return (
-    <PanelLayout>
+    <PanelLayout title={"Statistic"}>
       {/*<Card/>*/}
       <section className="flex flex-col md:justify-between md:flex-row basis-[97%] items-center p-5">
         <WeeklyCart data={MonthData} title="Monthly Analytics" />
