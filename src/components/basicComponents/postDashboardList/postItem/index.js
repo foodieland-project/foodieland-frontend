@@ -1,6 +1,6 @@
 import React from 'react'
 
-function postItem({title,category,time,view,comments}) {
+function PostItem({title,category,time,view,comments}) {
     return (
         <div className="flex flex-row justify-between flex-1 border-darkPurple border-[1px] h-[30px] p-[20px] rounded-md items-center my-1 ">
             <p className="w-[50%] text-center">{title}</p>
@@ -12,4 +12,4 @@ function postItem({title,category,time,view,comments}) {
     );
 }
 
-export default postItem
+export default PostItem
