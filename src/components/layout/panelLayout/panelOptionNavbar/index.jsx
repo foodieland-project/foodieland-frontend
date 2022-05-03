@@ -1,9 +1,9 @@
-import { icons } from "../../../pages/user/utils/icons";
+import { icons } from "../../../../utils/icons";
 import styles from "./index.module.css";
 
 const listClasses = `${styles["nav__links"]} mx-8 cursor-pointer flex items-center`;
 
-const PanelNav = (props) => {
+const PanelOptionNavbar = (props) => {
   return (
     <main className="w-5/6 mx-5 my-3 h-5/6 bg-white shadow-xl ">
       <nav className="border-b-2 border-slate-300 py-3">
@@ -27,4 +27,4 @@ const PanelNav = (props) => {
   );
 };
 
-export default PanelNav;
+export default PanelOptionNavbar;
