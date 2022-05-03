@@ -1,5 +1,5 @@
 import React from 'react'
-import { icons } from '../../pages/user/utils/icons'
+import { icons } from '../../../utils/icons'
 import RecommendedRecipes from '../recommendedRecipes'
 import SubscribeCard from '../subscribeCard'
 

@@ -1,7 +1,7 @@
 import React from "react";
 import PanelLayout from "../../../layout/panelLayout";
-import LoginLayout from "../../../BasicComponents/loginPart/loginLayout/LoginLayout";
-import LoginBox from "../../../BasicComponents/loginPart/loginBox/LoginBox";
+import LoginLayout from "../../../basicComponents/loginPart/loginLayout";
+import LoginBox from "../../../basicComponents/loginPart/loginBox";
 
 const Login = () => {
   return (
@@ -12,7 +12,7 @@ const Login = () => {
 
         {/* if route was '/login' then render*/}
         <LoginBox />
-        
+
         {/* ========= else others ========= */}
         {/* <RegisterBox /> */}
         {/* <ForgotPassword /> */}

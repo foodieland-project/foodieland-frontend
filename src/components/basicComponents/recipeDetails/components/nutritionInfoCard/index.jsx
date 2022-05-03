@@ -1,5 +1,6 @@
 import NutritionItem from "./nutrionItem";
 
+
 function NutritionInfoCard({ nutritionInfo }) {
   return (
     <div className="h-[450px] xl:h-[600px] bg-lameBlue rounded-2xl p-6 ">

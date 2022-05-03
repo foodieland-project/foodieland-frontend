@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {
     Link
 } from "react-router-dom";
-import { icons } from '../../../pages/user/utils/icons';
+import { icons } from '../../../../utils/icons';
 
 const UserHeader = () => {
     const [open, setOpen] = useState(false)

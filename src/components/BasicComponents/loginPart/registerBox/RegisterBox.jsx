@@ -1,8 +1,7 @@
 import React from "react";
 import Button from "../button/Button";
-import Input from "../input/Input";
-import { icons } from "../../../Pages/user/utils/icons";
 import { Link } from "react-router-dom";
+import { icons } from "../../../../utils/icons";
 
 function RegisterBox() {
   const facebookIcon = icons.facebookBlue();
@@ -47,7 +46,7 @@ function RegisterBox() {
                 </span>
               </label>
             </div>
-            <Button prop="login" type="submit"/>
+            <Button prop="login" type="submit" />
           </form>
           <div className="text-center my-2 w-full">
             <div className="w-full flex justify-evenly">

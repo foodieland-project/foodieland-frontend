@@ -1,7 +1,7 @@
-import { icons } from "../../../../pages/user/utils/icons";
 import {
   Link
 } from "react-router-dom";
+import { icons } from "../../../../../utils/icons";
 
 function OptionCard({ id, option, icon, selected, selectHandler, route }) {
   return (

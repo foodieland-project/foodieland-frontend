@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../button/Button";
 import Input from "../input/Input";
-import { icons } from "../../../Pages/user/utils/icons";
+import { icons } from "../../../utils/icons";
 import { Link } from "react-router-dom";
 
 
