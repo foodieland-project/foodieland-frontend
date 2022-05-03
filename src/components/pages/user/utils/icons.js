@@ -525,8 +525,6 @@ export const icons = {
       </>
     );
   },
-
-  /* ================ Added icons for login part ================= */
   facebookBlue: function () {
     return (
       <>
