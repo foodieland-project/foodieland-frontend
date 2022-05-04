@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import "./monthly.css";
+
 function MonthlyChart({ data, title }) {
   return (
     <div className=" shadow-2xl md:w-auto overflow-hidden">
