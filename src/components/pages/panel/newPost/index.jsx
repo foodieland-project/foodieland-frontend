@@ -3,12 +3,11 @@ import { icons } from "../../../../utils/icons";
 import PanelLayout from "../../../layout/panelLayout";
 import styles from "./index.module.css";
 
-
 const NewPost = () => {
   const listClasses = `${styles["nav__links"]} mx-8 cursor-pointer flex items-center`;
 
   return (
-    <PanelLayout title={"New Post"}>
+    <PanelLayout>
       <>
         <nav className="border-b-2 border-slate-300 py-3">
           <ul className="flex justify-start">
@@ -22,9 +21,7 @@ const NewPost = () => {
             </li>
           </ul>
         </nav>
-        <section>
-          zcdfdfsa
-        </section>
+        <section>zcdfdfsa</section>
       </>
     </PanelLayout>
   );

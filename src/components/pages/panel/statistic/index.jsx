@@ -125,13 +125,13 @@ const MonthData = [
 
 const Statistic = () => {
   return (
-    <PanelLayout title={"Statistic"}>
-      <section className="p-6 font-inter">
-        <div className="flex mb-16 gap-6">
+    <PanelLayout>
+      <section className="p-4 lg:px-6 lg:py-10 font-inter">
+        <div className="flex flex-col md:flex-row justify-center mb-12 gap-4 lg:gap-6">
           <StatisticCard numbers={2000} />
           <MonthlyChart data={MonthData} title="Monthly Analytics" />
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row justify-center gap-4 lg:gap-6">
           <StatisticCard numbers={500} />
           <WeeklyChart data={weeklyData} title="Weekly Analytics" />
         </div>

@@ -3,7 +3,7 @@ import PanelFooter from "./panelFooter";
 import PanelHeader from "./panelHeader";
 import PanelSidebar from "./panelSidebar";
 
-const PanelLayout = ({ children, title }) => {
+const PanelLayout = ({ children }) => {
   return (
     <div className="relative min-h-screen md:h-screen flex flex-col  bg-lightPurple">
       <PanelHeader />
@@ -12,9 +12,8 @@ const PanelLayout = ({ children, title }) => {
           <PanelSidebar />
         </div>
         <div className="basis-[97%]  max-h-full sm:basis-[80%] mx-auto overflow-auto">
-          <div className="flex flex-col items-center justify-center py-[20px]">
-            <h2 className="font-medium text-[24px] font-inter">{title}</h2>
-            <main className="w-5/6 mx-5 my-3 h-5/6 bg-white shadow-xl rounded-md">
+          <div className="flex  justify-center py-[20px]">
+            <main className="w-11/12 mx-5 my-3 h-5/6 bg-white shadow-xl rounded-md">
               {children}
             </main>
           </div>

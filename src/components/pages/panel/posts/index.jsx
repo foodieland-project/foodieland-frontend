@@ -4,13 +4,11 @@ import PostDashboardList from "../../../basicComponents/postDashboardList";
 import PanelLayout from "../../../layout/panelLayout";
 import styles from "./index.module.css";
 
-
-
 const Posts = () => {
   const listClasses = `${styles["nav__links"]} mx-8 cursor-pointer flex items-center`;
 
   return (
-    <PanelLayout title="Posts">
+    <PanelLayout>
       <>
         <nav className="border-b-2 border-slate-300 py-3">
           <ul className="flex justify-start">
