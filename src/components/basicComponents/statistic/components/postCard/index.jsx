@@ -1,22 +1,14 @@
-import React from 'react'
+import React from "react";
 
-function Card() {
+function StatisticCard({ numbers }) {
   return (
-    <section className='flex flex-col md:justify-between md:flex-row basis-[97%] items-center justify-center p-4'>
-        <div className='shadow-2xl border  border-solid border-black md:w-[31%] w-full mr-1 ml-1 h-[200px] mb-2'>
-            <h2>user</h2>
-            <p>$ 20</p>
-        </div>
-        <div className='shadow-2xl border  border-solid border-black  md:w-[31%] w-full ml-1 mr-1 h-[200px] mb-2'>
-            <h2>user</h2>
-            <p>$ 20</p>
-        </div>
-        <div className='shadow-2xl border  border-solid border-black md:w-[31%] w-full ml-1 mr-1 h-[200px] mb-2'>
-            <h2>user</h2>
-            <p>$ 20</p>
-        </div>
-    </section>
-  )
+    <div className="basis-[30%]">
+      <div className="w-full h-full shadow-2xl flex flex-col justify-center items-center ">
+        <h2 className="mb-3">users</h2>
+        <p className="text-darkPurple text-4xl font-semibold"> {numbers}</p>
+      </div>
+    </div>
+  );
 }
 
-export default Card;
+export default StatisticCard;
