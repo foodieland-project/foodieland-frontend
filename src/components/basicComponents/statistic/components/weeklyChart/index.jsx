@@ -8,7 +8,7 @@ import {
   AreaChart,
   ResponsiveContainer,
 } from "recharts";
-import "./weekly.css";
+
 function WeeklyChart({ data, title }) {
   return (
     <div className="shadow-2xl md:w-auto overflow-hidden">
