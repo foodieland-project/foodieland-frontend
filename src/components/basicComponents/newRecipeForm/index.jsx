@@ -31,9 +31,15 @@ function NewRecipeForm() {
             <h4>Ingredients</h4>
             <span className="w-8 ml-4 cursor-pointer">{icons.plus()}</span>
           </div>
-          <div>
-            <label htmlFor=""></label>
-            <input type="text" />
+          <div className="mt-2">
+            <label htmlFor="title" className="pb-2 px-2">
+              1.
+            </label>
+            <input
+              type="text"
+              name="title"
+              className=" w-[40%] border border-gray-500  rounded-2xl py-2 px-6"
+            />
           </div>
         </div>
       </form>
