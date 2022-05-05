@@ -128,11 +128,11 @@ const Statistic = () => {
     <PanelLayout>
       <section className="p-4 lg:px-6 lg:py-10 font-inter">
         <div className="flex flex-col md:flex-row justify-center mb-12 gap-4 lg:gap-6">
-          <StatisticCard numbers={2000} />
+          <StatisticCard numbers={2000} title={"Monthly Chart"} />
           <MonthlyChart data={MonthData} title="Monthly Analytics" />
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-4 lg:gap-6">
-          <StatisticCard numbers={500} />
+          <StatisticCard numbers={500} title={"Weekly Chart"} />
           <WeeklyChart data={weeklyData} title="Weekly Analytics" />
         </div>
       </section>
