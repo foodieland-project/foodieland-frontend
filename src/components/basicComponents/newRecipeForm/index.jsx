@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { icons } from "../../../utils/icons";
-import "./new-recipe-form.css";
 
 function NewRecipeForm() {
   const [ingredientList, setIngredientList] = useState([]);
-  const [enteredTitle, setEnteredTitle] = useState("");
+
   function ingredientHandler(event) {
     let array = [];
     for (let i = 1; i <= event.target.value; i++) {
@@ -12,16 +10,10 @@ function NewRecipeForm() {
     }
     setIngredientList(array);
   }
-  function enteredTitleHandler(event) {
-    setEnteredTitle(event.target.value);
-  }
 
-  function submitHandler(event) {
-    event.preventDefault();
-  }
   return (
     <div className="p-4">
-      <form action="" onSubmit={submitHandler}>
+      <form action="">
         <div className="flex flex-col">
           <label htmlFor="title" className="pb-2 pl-2">
             Title
@@ -29,9 +21,7 @@ function NewRecipeForm() {
           <input
             type="text"
             name="title"
-            value={enteredTitle}
-            className=" md:w-[60%] lg:w-[40%] border border-gray-500  rounded-2xl py-2 px-6"
-            onChange={enteredTitleHandler}
+            className={` md:w-[60%] lg:w-[40%] border border-gray-500  rounded-2xl py-2 px-6 `}
           />
         </div>
         <div className="flex flex-col mt-4">
@@ -57,6 +47,7 @@ function NewRecipeForm() {
               className=" w-1/4 sm:w-[15%] border border-gray-500  rounded-2xl py-2 px-6"
               defaultValue={0}
               max={10}
+              min={0}
               onChange={ingredientHandler}
             />
           </div>
