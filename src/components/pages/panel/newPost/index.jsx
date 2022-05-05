@@ -1,5 +1,6 @@
 import React from "react";
 import { icons } from "../../../../utils/icons";
+import NewRecipeForm from "../../../basicComponents/newRecipeForm";
 import PanelLayout from "../../../layout/panelLayout";
 import styles from "./index.module.css";
 
@@ -21,7 +22,9 @@ const NewPost = () => {
             </li>
           </ul>
         </nav>
-        <section>zcdfdfsa</section>
+        <section className="font-inter">
+          <NewRecipeForm />
+        </section>
       </>
     </PanelLayout>
   );
