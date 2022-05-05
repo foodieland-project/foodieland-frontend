@@ -11,14 +11,14 @@ function NewRecipeForm() {
           <input
             type="text"
             name="title"
-            className=" w-[40%] border border-gray-500  rounded-2xl py-2 px-6"
+            className=" md:w-[60%] lg:w-[40%] border border-gray-500  rounded-2xl py-2 px-6"
           />
         </div>
         <div className="flex flex-col mt-4">
           <label htmlFor="" className="pb-2 pl-2">
             Description
           </label>
-          <textarea className=" border border-gray-500  rounded-2xl h-32" />
+          <textarea className="p-4 border border-gray-500  rounded-2xl h-32" />
         </div>
         <div className="flex flex-col mt-4">
           <label htmlFor="" className="pb-2 pl-2">
@@ -38,7 +38,7 @@ function NewRecipeForm() {
             <input
               type="text"
               name="title"
-              className=" w-[40%] border border-gray-500  rounded-2xl py-2 px-6"
+              className="md:w-[60%] lg:w-[40%] border border-gray-500  rounded-2xl py-2 px-6"
             />
           </div>
         </div>
