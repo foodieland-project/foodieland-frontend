@@ -26,6 +26,6 @@
     "src/components/panel/moderator/components/members/index.jsx",
     "src/components/basicComponents/subscribeCard/index.jsx",
     "src/components/layout/header/index.jsx"
-  ],
+, "src/components/basicComponents/postDashboardList/search/index.jsx"  ],
   "exclude": ["node_modules"]
 }
