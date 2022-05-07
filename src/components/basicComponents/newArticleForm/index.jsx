@@ -17,14 +17,14 @@ function NewArticleForm() {
         <div className="flex flex-col mt-4">
           <TextEditor />
         </div>
-        <div className="flex justify-between">
-          <div className="flex flex-col mt-4">
+        <div className="flex flex-col sm:flex-row  sm:justify-between">
+          <div className="flex flex-col w-full sm:w-1/2 mt-4">
             <label htmlFor="" className="pb-2 pl-2">
               Upload Cooking image
             </label>
             <input type="file" className="pl-2" />
           </div>
-          <div className="flex flex-col mt-4">
+          <div className="flex flex-col w-full sm:w-1/2 mt-4">
             <label htmlFor="" className="pb-2 pl-2">
               Upload date of publication
             </label>

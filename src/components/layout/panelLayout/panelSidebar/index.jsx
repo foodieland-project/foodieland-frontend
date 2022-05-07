@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { icons } from "../../../../utils/icons";
 import OptionCard from "./optionCard";
 import "./panel-sidebar.css";
+import SidebarHeader from "./sidebarHeader";
 
 function PanelSidebar() {
   const [open, setOpen] = useState(false);
@@ -45,12 +45,7 @@ function PanelSidebar() {
 
   return (
     <div>
-      <div className="flex justify-between items-center py-3 w-[97%] sm:w-4/5 mx-auto md:w-full md:pl-6  font-lobster">
-        <a href="" className="font-bold text-2xl ">
-          <span>Foodieland.</span>
-        </a>
-        <span>{icons.radioButtonChecked()}</span>
-      </div>
+      <SidebarHeader />
       <ul
         onClick={() => setOpen((prev) => !prev)}
         className={`cursor-pointer option-selected active justify-center h-[50px] my-4 items-center md:hidden  flex  flex-col ${

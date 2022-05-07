@@ -1,7 +1,7 @@
 function PanelFooter() {
   return (
-    <section className=" bg-lightPurple  w-full py-4 lg:px-6 font-inter absolute bottom-0">
-      <div className="mr-auto lg:mr-0 w-[97%] sm:w-[80%] md:w-[95%] lg:w-[80%] ml-auto flex justify-between gap-4 text-xs md:text-base">
+    <section className=" bg-lightPurple  w-full py-4 lg:px-6 font-inter absolute bottom-0 mt-10">
+      <div className=" ml-auto flex justify-between gap-4 text-xs md:text-sm lg:text-base">
         <div className="text-center">
           <span className="text-gray-700">
             © 2022, Made with ❤️ by{" "}
