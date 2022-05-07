@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { icons } from "../../../../utils/icons";
 import OptionCard from "./optionCard";
 import "./panel-sidebar.css";
 
@@ -44,22 +45,32 @@ function PanelSidebar() {
 
   return (
     <div>
+      <div className="flex justify-between items-center py-3 w-[97%] sm:w-4/5 mx-auto md:w-full md:pl-6  font-lobster">
+        <a href="" className="font-bold text-2xl ">
+          <span>Foodieland.</span>
+        </a>
+        <span>{icons.radioButtonChecked()}</span>
+      </div>
       <ul
         onClick={() => setOpen((prev) => !prev)}
-        className={`cursor-pointer option-selected active justify-center h-[50px] my-4 items-center md:hidden  flex  flex-col ${open ? "h-[36px]" : ""
-          }`}
+        className={`cursor-pointer option-selected active justify-center h-[50px] my-4 items-center md:hidden  flex  flex-col ${
+          open ? "h-[36px]" : ""
+        }`}
       >
         <li
-          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1 transition-all ${open ? " hidden rotate-90" : ""
-            }`}
+          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1 transition-all ${
+            open ? " hidden rotate-90" : ""
+          }`}
         ></li>
         <li
-          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1 transition-all	 ${open ? " rotate-45  absolute" : ""
-            }`}
+          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1 transition-all	 ${
+            open ? " rotate-45  absolute" : ""
+          }`}
         ></li>
         <li
-          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1  transition-all ${open ? " rotate-135" : ""
-            }`}
+          className={`w-[30px] h-[5px] bg-white  rounded-md inline mb-1  transition-all ${
+            open ? " rotate-135" : ""
+          }`}
         ></li>
       </ul>
 
