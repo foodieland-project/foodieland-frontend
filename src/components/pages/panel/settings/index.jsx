@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import SettingsForm from "../../../basicComponents/settingsForm";
+import SettingsAccountForm from "../../../basicComponents/settingsAccountForm";
+import SettingsSecurity from "../../../basicComponents/settingsSecurity";
 import PanelLayout from "../../../layout/panelLayout";
 import PanelSettingsNavbar from "../../../layout/panelLayout/panelSettingsNavbar/index.jsx";
 
@@ -15,7 +16,8 @@ const Settings = () => {
         activePage={activePage}
         activePageHandler={activePageHandler}
       />
-      <SettingsForm />
+      {activePage === "account" && <SettingsAccountForm />}
+      {activePage === "security" && <SettingsSecurity />}
     </PanelLayout>
   );
 };
