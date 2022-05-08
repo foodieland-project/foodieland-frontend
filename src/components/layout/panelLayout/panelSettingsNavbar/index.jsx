@@ -1,28 +1,40 @@
 import { icons } from "../../../../utils/icons";
-import styles from "./index.module.css";
+import "./index.css";
 
-const listClasses = `${styles["nav__links"]} mx-8 cursor-pointer flex items-center`;
-
-const PanelSettingsNavbar = (props) => {
+const PanelSettingsNavbar = ({ activePageHandler, activePage }) => {
   return (
     <>
       <nav className="border-b-2 border-slate-300 py-3">
         <ul className="flex justify-start">
-          <li className={listClasses}>
+          <li
+            className={`nav__links ${
+              activePage === "account" && "active"
+            } mx-8 cursor-pointer flex items-center`}
+            onClick={() => activePageHandler("account")}
+          >
             <span className="mr-2 fill-slate-800">{icons.search()}</span>{" "}
             <p>ACCOUNT</p>
           </li>
-          <li className={listClasses}>
+          <li
+            className={`nav__links ${
+              activePage === "security" && "active"
+            } mx-8 cursor-pointer flex items-center`}
+            onClick={() => activePageHandler("security")}
+          >
             <span className="mr-2 fill-slate-800">{icons.security()}</span>{" "}
             <p>SECURITY</p>
           </li>
-          <li className={listClasses}>
+          <li
+            className={`nav__links ${
+              activePage === "info" && "active"
+            } mx-8 cursor-pointer flex items-center`}
+            onClick={() => activePageHandler("info")}
+          >
             <span className="mr-2 fill-slate-800">{icons.info()}</span>{" "}
             <p>INFO</p>
           </li>
         </ul>
       </nav>
-      <section>zcdfdfsa</section>
     </>
   );
 };
