@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 
 const listClasses = `${styles["nav__links"]} mx-8 cursor-pointer flex items-center`;
 
-const PanelOptionNavbar = (props) => {
+const PanelSettingsNavbar = (props) => {
   return (
     <>
       <nav className="border-b-2 border-slate-300 py-3">
@@ -22,11 +22,9 @@ const PanelOptionNavbar = (props) => {
           </li>
         </ul>
       </nav>
-      <section>
-        zcdfdfsa
-      </section>
+      <section>zcdfdfsa</section>
     </>
   );
 };
 
-export default PanelOptionNavbar;
+export default PanelSettingsNavbar;

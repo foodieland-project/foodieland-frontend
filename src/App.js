@@ -18,33 +18,45 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Contacts from "./components/pages/panel/contacts";
 
 import {
-    AboutUs, Blog, Contact, Home, Recipes, NotFound, SingleBlog,
-    Posts, NewPost, Notice, Option, Statistic, Contacts, Login
+  AboutUs,
+  Blog,
+  Contact,
+  Home,
+  Recipes,
+  NotFound,
+  SingleBlog,
+  Posts,
+  NewPost,
+  Notice,
+  Settings,
+  Statistic,
+  Contacts,
+  Login,
 } from "./utils/routes";
 
 function App() {
-    return (
-        <>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Home />} exact />
-                    <Route path="/aboutUs" element={<AboutUs />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/blog/:id" element={<SingleBlog />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/recipes" element={<Recipes />} />
-                    <Route path="*" element={<NotFound />} />
-                    <Route path="panel/posts" element={<Posts />} />
-                    <Route path="panel/newPost" element={<NewPost />} />
-                    <Route path="panel/notice" element={<Notice />} />
-                    <Route path="panel/option" element={<Option />} />
-                    <Route path="panel/statistic" element={<Statistic />} />
-                    <Route path="panel/login" element={<Login />} exact />
-                    <Route path="panel/contact" element={<Contacts />} exact />
-                </Routes>
-            </Router>
-        </>
-    );
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<SingleBlog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="panel/posts" element={<Posts />} />
+          <Route path="panel/newPost" element={<NewPost />} />
+          <Route path="panel/notice" element={<Notice />} />
+          <Route path="panel/settings" element={<Settings />} />
+          <Route path="panel/statistic" element={<Statistic />} />
+          <Route path="panel/login" element={<Login />} exact />
+          <Route path="panel/contact" element={<Contacts />} exact />
+        </Routes>
+      </Router>
+    </>
+  );
 }
 
 export default App;

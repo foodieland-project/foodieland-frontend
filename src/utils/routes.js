@@ -10,25 +10,24 @@ import SingleBlog from "../components/pages/user/singleBlog";
 import Login from "../components/pages/panel/login";
 import NewPost from "../components/pages/panel/newPost";
 import Notice from "../components/pages/panel/notice";
-import Option from "../components/pages/panel/option";
+import Settings from "../components/pages/panel/settings";
 import Posts from "../components/pages/panel/posts";
 import Statistic from "../components/pages/panel/statistic";
 import Contacts from "../components/pages/panel/contacts";
 
-
 export {
-    AboutUs,
-    Blog,
-    Contact,
-    Home,
-    Recipes,
-    NotFound,
-    SingleBlog,
-    Login,
-    NewPost,
-    Notice,
-    Option,
-    Posts,
-    Statistic,
-    Contacts
-}
+  AboutUs,
+  Blog,
+  Contact,
+  Home,
+  Recipes,
+  NotFound,
+  SingleBlog,
+  Login,
+  NewPost,
+  Notice,
+  Settings,
+  Posts,
+  Statistic,
+  Contacts,
+};

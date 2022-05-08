@@ -36,10 +36,10 @@ function PanelSidebar() {
     },
     {
       id: 5,
-      option: "option",
+      option: "settings",
       icon: "email",
       selected: false,
-      route: "/panel/option",
+      route: "/panel/settings",
     },
   ];
 
