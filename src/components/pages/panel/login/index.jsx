@@ -1,24 +1,27 @@
 import React from "react";
-import PanelLayout from "../../../layout/panelLayout";
-import LoginLayout from "../../../basicComponents/loginPart/loginLayout";
-import LoginBox from "../../../basicComponents/loginPart/loginBox";
+import LoginLayout from "../../../basicComponents/login/loginLayout";
+import LoginBox from "../../../basicComponents/login/loginBox";
+import { useLocation } from "react-router-dom";
+import ForgotPassword from "../../../basicComponents/login/forgotPassword";
+import ResetPassword from "../../../basicComponents/login/resetPassword";
 
 const Login = () => {
+  const { pathname } = useLocation();
   return (
-    <PanelLayout>
-      <div className="h-[100vh] bg-[#F4F5FA]">
-        {/* This is background of login */}
-        <LoginLayout />
+    <div className="h-[100vh] bg-[#F4F5FA]">
+      {/* This is background of login */}
+      <LoginLayout />
 
-        {/* if route was '/login' then render*/}
-        <LoginBox />
+      {/* if route was '/login' then render*/}
+      {pathname === "/panel/login" && <LoginBox />}
 
-        {/* ========= else others ========= */}
-        {/* <RegisterBox /> */}
-        {/* <ForgotPassword /> */}
-        {/* <ResetPassword /> */}
-      </div>
-    </PanelLayout>
+      {pathname === "/panel/login/forgetPassword" && <ForgotPassword />}
+      {pathname === "/panel/login/resetPassword" && <ResetPassword />}
+      {/* ========= else others ========= */}
+      {/* <RegisterBox /> */}
+      {/* <ForgotPassword /> */}
+      {/* <ResetPassword /> */}
+    </div>
   );
 };
 

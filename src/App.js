@@ -52,6 +52,8 @@ function App() {
           <Route path="panel/settings" element={<Settings />} />
           <Route path="panel/statistic" element={<Statistic />} />
           <Route path="panel/login" element={<Login />} exact />
+          <Route path="panel/login/forgetPassword" element={<Login />} exact />
+          <Route path="panel/login/resetPassword" element={<Login />} exact />
           <Route path="panel/contact" element={<Contacts />} exact />
         </Routes>
       </Router>
