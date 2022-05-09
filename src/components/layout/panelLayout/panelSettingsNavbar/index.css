@@ -21,3 +21,12 @@
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0px 1px 0px rgb(145, 85, 253);
 }
+.nav__links svg {
+  width: 14px;
+}
+
+@media screen and (min-width: 640px) {
+  .nav__links svg {
+    width: 20px;
+  }
+}

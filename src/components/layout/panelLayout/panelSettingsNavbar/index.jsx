@@ -9,29 +9,29 @@ const PanelSettingsNavbar = ({ activePageHandler, activePage }) => {
           <li
             className={`nav__links ${
               activePage === "account" && "active"
-            } mx-8 cursor-pointer flex items-center`}
+            }  mx-4 sm:mx-8 cursor-pointer flex items-center`}
             onClick={() => activePageHandler("account")}
           >
             <span className="mr-2 fill-slate-800">{icons.search()}</span>{" "}
-            <p>ACCOUNT</p>
+            <p className="text-sm sm:text-base">ACCOUNT</p>
           </li>
           <li
             className={`nav__links ${
               activePage === "security" && "active"
-            } mx-8 cursor-pointer flex items-center`}
+            }  mx-4 sm:mx-8 cursor-pointer flex items-center`}
             onClick={() => activePageHandler("security")}
           >
             <span className="mr-2 fill-slate-800">{icons.security()}</span>{" "}
-            <p>SECURITY</p>
+            <p className="text-sm sm:text-base">SECURITY</p>
           </li>
           <li
             className={`nav__links ${
               activePage === "info" && "active"
-            } mx-8 cursor-pointer flex items-center`}
+            } mx-4 sm:mx-8 cursor-pointer flex items-center`}
             onClick={() => activePageHandler("info")}
           >
             <span className="mr-2 fill-slate-800">{icons.info()}</span>{" "}
-            <p>INFO</p>
+            <p className="text-sm sm:text-base">INFO</p>
           </li>
         </ul>
       </nav>
