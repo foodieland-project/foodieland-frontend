@@ -7,6 +7,7 @@ type propsType = {
 }
 
 const RecipeCard = ({ title, image }: propsType) => {
+    
 
     const [like, setLike] = React.useState(true);
     return (
