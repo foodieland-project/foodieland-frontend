@@ -3,7 +3,7 @@ import React from "react";
 const Input = (props) => (
   <div className="flex flex-col font-inter">
     <label
-      className="text-md font-medium my-2 tracking-wide"
+      className="text-md font-medium my-2 tracking-wide text-slate-500"
       htmlFor={props.type}
     >
       {props.label}

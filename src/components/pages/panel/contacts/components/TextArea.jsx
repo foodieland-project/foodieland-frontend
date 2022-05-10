@@ -6,7 +6,7 @@ const TextArea = (props) => {
       /*  ================ Here is the problem =================== */
         <div className="flex flex-col font-inter col-span-2 row-span-2 my-2 tracking-wide bg-slate-400 ">
           <label
-            className="w-full rounded-md mb-4 text-md font-medium"
+            className="w-full rounded-md mb-4 text-md font-medium text-slate-500"
             htmlFor={props.id}
           >
             {props.label}{" "}

@@ -29,7 +29,7 @@ const Contacts = () => {
   return (
     <PanelLayout>
       <div className="text-center my-4">
-        <h2 className="text-4xl font-semibold">Contact us</h2>
+        <h2 className="text-4xl font-semibold text-[#9155fd] font-inter">Contact us</h2>
       </div>
 
       <form className="flex flex-col px-10 sm:px-32 lg:px-5">
