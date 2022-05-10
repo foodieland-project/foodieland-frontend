@@ -1,13 +1,14 @@
 const TextArea = (props) => {
     return (
-        <div className="text-md font-medium my-3 tracking-wide">
+        <div className="flex flex-col font-inter col-span-2 row-span-2 my-2 tracking-wide">
           <label
-            className="w-full border-2 rounded-md p-3 mb-4 outline-none"
+            className="w-full rounded-md mb-4 text-md font-medium"
             htmlFor={props.id}
           >
             {props.label}{" "}
           </label>
           <textarea
+            className="border p-5 rounded-md text-sm mb-6 outline-none "
             id={props.id}
             placeholder={props.placeholder}
             /* onChange={valueChangeHandler}

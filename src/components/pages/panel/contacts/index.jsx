@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PanelLayout from "../../../layout/panelLayout";
 import Input from "./contactInput/Input";
 import Select, { SelectList } from "./contactInput/Select";
+import TextArea from "./contactInput/TextArea";
 
 const options = [
   { id: "Advertising", name: "Advertising" },
@@ -60,8 +61,16 @@ const Contacts = () => {
           <Select
             onChange={selectChangeHandler}
             id="category"
-            label="ENQUIRY TYPE"
+            label="Enqyiry Type"
             options={options}
+          />
+
+          <TextArea
+            /* onSubmit={submitError}
+            onChange={inputChangeHandler} */
+            label="Message"
+            id="message"
+            placeholder="Enter your Message..."
           />
         </div>
       </form>
