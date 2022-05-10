@@ -29,19 +29,34 @@ function RegisterBox() {
           />
 
           <form className="w-[85%] mx-6 my-4">
-            <Input type="text" placeholder="Username" />
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
-            <div className="flex justify-between mb-4 w-full">
-              <label class="cursor-pointer select-none">
-                <input class="mx-2" type="checkbox" />
-                <span class="text-slate-600  text-sm">
-                  i Agree to privacy policy & terms
-                </span>
-              </label>
-            </div>
-            <Button type={"submit"}>Sign Up</Button>
-          </form>
+              <Input
+                type="text"
+                placeholder="Username"
+                validators={[VALIDATOR_MINLENGTH(4), VALIDATOR_MAXLENGTH(12)]}
+                errorText="username must be valid"
+              />
+              <Input
+                type="email"
+                placeholder="Email"
+                validators={[VALIDATOR_EMAIL()]}
+                errorText="email must be valid"
+              />
+              <Input
+                type="password"
+                placeholder="Password"
+                validators={[VALIDATOR_PASSWORD()]}
+                errorText="password must be valid"
+              />
+              <div className="flex justify-between mb-4 w-full">
+                <label class="cursor-pointer select-none">
+                  <input class="mx-2" type="checkbox" />
+                  <span class="text-slate-600">
+                    i Agree to privacy policy & terms
+                  </span>
+                </label>
+              </div>
+              <Button type="submit">sign up</Button>
+            </form>
           <div className="text-center my-2  w-[85%] sm:w-full">
             <div className="w-full flex justify-between sm:justify-evenly">
               <span className="text-gray  text-gray-500">
