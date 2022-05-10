@@ -1,7 +1,7 @@
 import React from "react";
 
 const Input = (props) => (
-  <div className="flex flex-col">
+  <div className="flex flex-col font-inter">
     <label
       className="text-md font-medium my-3 tracking-wide"
       htmlFor={props.type}
