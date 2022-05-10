@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import PanelLayout from "../../../layout/panelLayout";
-import Input from "./contactInput/Input";
-import Select, { SelectList } from "./contactInput/Select";
-import TextArea from "./contactInput/TextArea";
+import Button from "./components/button";
+import Input from "./components/Input";
+import Select from "./components/Select";
+import TextArea from "./components/TextArea";
 
 const options = [
   { id: "Advertising", name: "Advertising" },
@@ -12,7 +13,6 @@ const options = [
 
 const Contacts = () => {
   const [selectValue, setSelectValue] = useState({});
-
 
   const selectChangeHandler = (data) => {
     setSelectValue((prevState) => {
@@ -29,14 +29,11 @@ const Contacts = () => {
   return (
     <PanelLayout>
       <div className="text-center my-4">
-        <h2 className="text-4xl font-semibold">
-          Contact us
-        </h2>
+        <h2 className="text-4xl font-semibold">Contact us</h2>
       </div>
 
-
-      <form className="flex flex-col px-10 sm:px-32 lg:px-5 ">
-        <div className=" lg:grid lg:grid-cols-2 lg:grid-rows-4 gap-x-10 lg:col-span-2">
+      <form className="flex flex-col px-10 sm:px-32 lg:px-5">
+        <div className=" lg:grid lg:grid-cols-2 lg:grid-rows-4 gap-x-8 lg:col-span-2">
           <Input
             label="Name"
             placeholder="Enter your name"
@@ -72,6 +69,8 @@ const Contacts = () => {
             id="message"
             placeholder="Enter your Message..."
           />
+
+          <Button type={"submit"}>submit</Button>
         </div>
       </form>
     </PanelLayout>
