@@ -1,3 +1,6 @@
+import { useState, useEffect } from "react";
+
+
 const TextArea = (props) => {
     return (
       /*  ================ Here is the problem =================== */
