@@ -1,37 +1,226 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Pagination from "./pagination";
-import { RecipeData } from "./maindata";
 import SubscribeCard from "../subscribeCard";
-
-const categoriesData = [
+import OtherRecipes from "../ingredients/components/otherRecipes";
+import BlogHeader from "./components/blogHeader";
+import BlogCard from "./components/blogCard";
+import BlogSearchBox from "./components/blogSearchBox";
+const RecipeData = [
   {
     id: 1,
-    category: "Breakfast",
-    title: "The Creamiest Creamy Chicken and Bacon Pasta",
-    profile: "images/recipes/food-20.png",
-    name: "wade wentern",
+    category: "product",
+    title: "Big and Juicy Wagyu Beef Cheeseburger",
+    img: "images/recipes/food-13.png",
+    Meal: "Breakfast",
+    time: "30 Minutes",
+    liked: false,
+    chef: "Andreas Paula",
   },
   {
     id: 2,
-    category: "Vegan",
-    title: "Strawberry Oatmeal Pancake with Honey Syrup",
-    profile: "images/recipes/food-18.png",
-    name: "wade wentern",
+    category: "product",
+    title: "Fresh Lime Roasted Salmon with Ginger Sauce",
+    img: "images/recipes/food-14.png",
+    Meal: "Breakfast",
+    time: "30 Minutes",
+    liked: false,
+    chef: "Andreas Paula",
   },
   {
     id: 3,
-    category: "Meat",
-    profile: "images/recipes/food-17.png",
+    category: "product",
+    title: "Strawberry Oatmeal Pancake with Honey Syrup",
+    img: "images/recipes/food-15.png",
+    Meal: "Breakfast",
+    time: "30 Minutes",
+    liked: false,
+    chef: "Andreas Paula",
+  },
+  {
+    id: 4,
+    category: "product",
+    title: "Fresh and Healthy Mixed Mayonnaise Salad",
+    img: "images/recipes/food-16.png",
+    Meal: "Breakfast",
+    time: "30 Minutes",
+    liked: false,
+    chef: "Andreas Paula",
+  },
+  {
+    id: 5,
+    category: "product",
     title: "Chicken Meatballs with Cream Cheese",
-    name: "wade wentern",
+    img: "images/recipes/food-17.png",
+    Meal: "Breakfast",
+    time: "30 Minutes",
+    liked: false,
+    chef: "Andreas Paula",
+  },
+  {
+    id: 6,
+    category: "banner",
+    title: "Don’t forget to eat healthy food",
+    img: "images/Star-1.png",
+    chef: "Andreas Paula",
+  },
+  {
+    id: 7,
+    category: "product",
+    title: "Strawberry Oatmeal Pancake with Honey Syrup",
+    img: "images/recipes/food-18.png",
+    Meal: "Breakfast",
+    time: "30 Minutes",
+    liked: false,
+    chef: "Andreas Paula",
+  },
+  {
+    id: 8,
+    category: "product",
+    title: "Strawberry Oatmeal Pancake with Honey Syrup",
+    img: "images/recipes/food-19.png",
+    Meal: "Breakfast",
+    time: "30 Minutes",
+    liked: false,
+    chef: "Andreas Paula",
+  },
+  {
+    id: 9,
+    category: "product",
+    title: "The Creamiest Creamy Chicken and Bacon Pasta",
+    img: "images/recipes/food-20.png",
+    Meal: "Breakfast",
+    time: "30 Minutes",
+    liked: false,
+    chef: "Andreas Paula",
+  },
+];
+
+const articleData = [
+  {
+    id: 1,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 2,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 3,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 4,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 5,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 6,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 7,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 8,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 9,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 10,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 11,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
+  },
+  {
+    id: 12,
+    title: "Big and Juicy Wagyu Beef ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
+    img: "images/recipes/food-13.png",
+    date: "12 November 2022",
+    writer: "Wade warren",
+    profile: "images/Ellipse 3.png",
   },
 ];
 
 const Blog = () => {
-  // All Data
-  const [filtered, setfiltered] = useState(RecipeData);
-
+  const [filtered, setfiltered] = useState(articleData);
   ///////////PAGINATION//////////
 
   const [currentPage, setcurrentPage] = useState(1);
@@ -48,9 +237,9 @@ const Blog = () => {
   ///////////PAGINATION//////////
 
   // Search and filtering data
-  const handlechangle = (event) => {
+  const handleChange = (event) => {
     let keyword = event.target.value;
-    let data = RecipeData.filter((item) => {
+    let data = articleData.filter((item) => {
       return (
         item.category.toLowerCase().indexOf(keyword) > -1 ||
         item.title.toLowerCase().indexOf(keyword) > -1
@@ -62,84 +251,31 @@ const Blog = () => {
 
   return (
     <>
-      {/*/////////// TOP TITLE AND EXCERP////////// */}
+      <BlogHeader />
 
-      <div className="mt-10 ">
-        <p className="text-center font-bold 2sm:ml-5  xl:text-5xl text-3xl">
-          Blog & Article
-        </p>
-        <p className="text-center text-gray-600 2sm:ml-5  text-md mt-5">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam,
-          eaque
-        </p>
-      </div>
+      <BlogSearchBox handleChange={handleChange} />
 
-      {/* ///////SearchBar //////////*/}
+      <div className="">
+        <section className="w-11/12 xl:w-full mx-auto flex flex-wrap lg:flex-nowrap gap-10 font-inter my-10 lg:my-20  ">
+          <div className=" basis-[100%] lg:basis-[66%] relative ">
+            {currentPosts.map(
+              ({ id, title, content, img, date, writer, profile }, index) => (
+                <Link to={`/blog/${id + 1}`}>
+                  {" "}
+                  <BlogCard
+                    key={id}
+                    id={id}
+                    title={title}
+                    content={content}
+                    img={img}
+                    date={date}
+                    writer={writer}
+                    profile={profile}
+                  />
+                </Link>
+              )
+            )}
 
-      <div className="w-full lg:w-[60%] sm:w-[90%] xl:w-full md:w-[70%] mx-auto h-max flex justify-center align-center my-16">
-        <div className="xl:w-1/2 w-full h-20 rounded-[20px] 2sm:ml-5  text-center relative border-2">
-          <input
-            onChange={handlechangle}
-            className=" w-full h-full outline-none xl:p-8 2sm:p-3 rounded-[20px]"
-            placeholder="Search article,news or recipe..."
-          />
-          <button className="w-1/5 h-3/4 bg-black text-white rounded-2xl absolute right-2 hover:bg-gray-900 text-center  top-[9px] xl:text-md text-sm font-semibold">
-            Search
-          </button>
-        </div>
-      </div>
-
-      {/* //////////BOTTOM PART /////////////////*/}
-
-      <div className="xl:px-10 sm:px-10 w-full h-max  overflow-hidden">
-        <section className="w-full h-full xl:flex  grid">
-          {/*//////// LIST OF RECIPIES ///////  */}
-
-          <article className=" xl:w-2/3 h-full   xl:h-[1250px] relative ">
-            {currentPosts.map((item, index) => (
-              <Link to={`/blog/${index + 1}`}>
-                {" "}
-                <article
-                  key={index}
-                  className="w-full  bg-white  flex hover:opacity-90 mb-3 transition-all  cursor-pointer"
-                >
-                  <div className="xl:w-1/4 2sm:w-[250px] h-full bg-white flex justify-center align-center  ">
-                    <img
-                      src={`${item.img}`}
-                      alt="food"
-                      className="w-full h-full rounded-[15px]"
-                    />
-                  </div>
-                  <div className="w-2/3 2sm:w-1/2 flex-col relative ml-4">
-                    <p className="text-xl font-bold m-1">{item.title}</p>
-                    <p className="text-gray-700 m-2 text-xs ">
-                      Lorem, ipsum dol Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Et provident error repellendus tenetur.
-                    </p>
-
-                    <div className="w-60 h-10  2sm:mb-8 xl:mt-1 ml-2 flex items-center mt-1">
-                      <div className="w-1/2 h-full flex  items-center border-r-2  ">
-                        {/* img */}
-                        <img
-                          src={`${item.profile}`}
-                          alt=""
-                          className="w-8 h-8  rounded-[50%]"
-                        />
-
-                        <p className="m-[2px] ml-2 font-bold">
-                          {item.category}
-                        </p>
-                      </div>
-                      <p className="ml-6 text-gray-500 text-xs text-center ">
-                        {item.date}{" "}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </Link>
-            ))}
-
-            {/* ////////////////Pagination////////// */}
             <div className="w-auto">
               <Pagination
                 postPerPage={PostPerPage}
@@ -149,48 +285,13 @@ const Blog = () => {
                 setcurrentPage={setcurrentPage}
               />
             </div>
+          </div>
 
-            {/* ////////////////Pagination////////// */}
-          </article>
-
-          {/*////////// TASTY RECIPIES//////////// */}
-
-          <article className="xl:w-1/3 w-1/2 xl:h-[400px]  2sm:w-full cursor-pointer xl:mr-8 mb-4">
-            <p className="font-bold text-2xl text-center  xl:text-left xl:m-2">
-              Tasty Recipies
-            </p>
-
-            <div className="h-full w-full xl:grid 2sm:flex py-4">
-              {categoriesData?.map((item, index) => (
-                <article
-                  key={index}
-                  className="w-full  bg-white my-2 xl:flex hover:opacity-90 lg:mr-4"
-                >
-                  <div className="xl:w-1/2 2sm:w-[80%] xl:h-full bg-white ">
-                    <img
-                      src={`${item.profile}`}
-                      alt=""
-                      className="w-full h-full bg-cyan-900 rounded-[15px] xl:h-[85%]"
-                    />
-                  </div>
-                  <div className="w-2/3 2sm:w-full ">
-                    <p className="font-bold xl:m-2 my-2 2sm:text-md">
-                      {item.title}
-                    </p>
-                    <p className="text-gray-500 m-2 2sm:text-[13px]">
-                      {item.name}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <img
-              src="images/recipes/food-18.png"
-              alt=""
-              className="hidden xl:block"
-            />
-          </article>
+          <OtherRecipes
+            RecipeData={RecipeData}
+            number={3}
+            title={"Tasty Recipes"}
+          />
         </section>
 
         <SubscribeCard />
