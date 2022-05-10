@@ -5,6 +5,12 @@ import { icons } from "../../../utils/icons";
 import Input from "../login/components/input";
 import LoginLogo from "../login/components/loginLogo";
 import LoginHeader from "../login/components/loginHeader";
+import {
+  VALIDATOR_MAXLENGTH,
+  VALIDATOR_MINLENGTH,
+  VALIDATOR_EMAIL,
+  VALIDATOR_PASSWORD
+} from "../login/components/validator/validators";
 
 function RegisterBox() {
   const facebookIcon = icons.facebookBlue();
