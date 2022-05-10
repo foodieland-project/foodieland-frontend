@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Register from "./components/pages/panel/register";
 // //user routes
 // import AboutUs from "./components/pages/user/aboutUs";
 // import Blog from "./components/pages/user/blog";
@@ -54,6 +55,7 @@ function App() {
           <Route path="panel/login" element={<Login />} exact />
           <Route path="panel/login/forgetPassword" element={<Login />} exact />
           <Route path="panel/login/resetPassword" element={<Login />} exact />
+          <Route path="panel/register" element={<Register />} />
           <Route path="panel/contact" element={<Contacts />} exact />
         </Routes>
       </Router>

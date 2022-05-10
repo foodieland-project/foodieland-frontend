@@ -36,19 +36,19 @@ function LoginBox() {
             <Button prop="login" type="submit" />
           </form>
           <div className="text-center my-2 w-full">
-            {/* <div className="w-full flex justify-evenly">
+            <div className="w-full flex justify-evenly">
               <span className="text-gray px-4 text-gray-500">
                 New on our platform?
               </span>
               <span className="text-purple-500 cursor-pointer">
-                <Link to="/register">Create an account</Link>
+                <Link to="/panel/register">Create an account</Link>
               </span>
-            </div> */}
+            </div>
             <div className="my-4 mx-6 relative mb-6">
               <hr />
-              {/* <span className="text-gray-600 absolute left-[45%] top-[-14px] w-10 text-left pl-3 bg-white">
+              <span className="text-gray-600 absolute left-[45%] top-[-14px] w-10 text-left pl-3 bg-white">
                 or
-              </span> */}
+              </span>
             </div>
             <div className="flex justify-center text-2xl mb-4 w-full">
               <span className="mx-4 cursor-pointer">{facebookIcon}</span>
