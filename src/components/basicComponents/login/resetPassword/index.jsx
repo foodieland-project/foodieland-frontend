@@ -5,6 +5,9 @@ import { icons } from "../../../../utils/icons";
 import { Link } from "react-router-dom";
 import LoginLogo from "../components/loginLogo";
 import LoginHeader from "../components/loginHeader";
+import {
+  VALIDATOR_PASSWORD,
+} from "../components/validator/validators";
 
 function ResetPassword() {
   const arrowLeft = icons.arrowLeftPurple();
@@ -20,11 +23,21 @@ function ResetPassword() {
               " Your new password must be different from previously used passwords"
             }
           />
-          <form className="mx-6 mt-4">
-            <Input type="password" placeholder="New Password" />
-            <Input type="password" placeholder="Confirm Password" />
-            <Button type={"submit"}>Reset Password</Button>
-          </form>
+          <form className="mx-6 mt-4 w-[350px]">
+              <Input
+                type="password"
+                placeholder="New Password"
+                validators={[VALIDATOR_PASSWORD()]}
+                errorText="password must be valid"
+              />
+              <Input
+                type="password"
+                placeholder="Confirm Password"
+                validators={[VALIDATOR_PASSWORD()]}
+                errorText="password must be valid"
+              />
+              <Button type="login">login</Button>
+            </form>
           <div className="flex justify-center items-center">
             <span>{arrowLeft}</span>
             <span className="text-purple-500 cursor-pointer my-4 mx-2">
