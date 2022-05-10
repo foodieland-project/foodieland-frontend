@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { icons } from "../../../../utils/icons";
 import LoginLogo from "../components/loginLogo";
 import LoginHeader from "../components/loginHeader";
+import {
+  VALIDATOR_EMAIL,
+} from "../input/validator/validators";
 
 function ForgotPassword() {
   const arrowLeft = icons.arrowLeftPurple();
