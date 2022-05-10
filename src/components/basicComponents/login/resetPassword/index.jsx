@@ -36,7 +36,7 @@ function ResetPassword() {
                 validators={[VALIDATOR_PASSWORD()]}
                 errorText="password must be valid"
               />
-              <Button type="login">login</Button>
+              <Button type="submit">login</Button>
             </form>
           <div className="flex justify-center items-center">
             <span>{arrowLeft}</span>
