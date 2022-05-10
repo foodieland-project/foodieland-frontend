@@ -45,7 +45,7 @@ function RegisterBox() {
                 type="password"
                 placeholder="Password"
                 validators={[VALIDATOR_PASSWORD()]}
-                errorText="password must be valid"
+                errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
               />
               <div className="flex justify-between mb-4 w-full">
                 <label class="cursor-pointer select-none">

@@ -37,7 +37,7 @@ function LoginBox() {
                 type="password"
                 placeholder="Password"
                 validators={[VALIDATOR_PASSWORD()]}
-                errorText="password must be valid"
+                errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
               />
               <div className="flex justify-between w-full">
                 <label className="cursor-pointer select-none">

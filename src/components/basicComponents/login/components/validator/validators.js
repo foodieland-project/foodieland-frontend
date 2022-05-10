@@ -47,7 +47,7 @@ export const validate = (value, validators) => {
       isValid = isValid && /^\S+@\S+\.\S+$/.test(value)
     }
     if (validator.type === VALIDATOR_TYPE_PASSWORD) {
-      isValid = isValid && /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/.test(value)
+      isValid = isValid && /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/.test(value)
       /* Previous example */
       /* /^[a-zA-Z0-9!@#$%^&*]{6,16}$/ */
     }

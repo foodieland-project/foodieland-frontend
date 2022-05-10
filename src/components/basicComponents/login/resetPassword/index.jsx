@@ -28,13 +28,13 @@ function ResetPassword() {
                 type="password"
                 placeholder="New Password"
                 validators={[VALIDATOR_PASSWORD()]}
-                errorText="password must be valid"
+                errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
               />
               <Input
                 type="password"
                 placeholder="Confirm Password"
                 validators={[VALIDATOR_PASSWORD()]}
-                errorText="password must be valid"
+                errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
               />
               <Button type="submit">login</Button>
             </form>
