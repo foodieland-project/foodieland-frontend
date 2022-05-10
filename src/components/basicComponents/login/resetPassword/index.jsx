@@ -12,7 +12,7 @@ function ResetPassword() {
   return (
     <>
       <div className="h-full flex justify-center items-center">
-        <div className="flex mx-4 bg-white w-full rounded-md flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
+        <div className="flex  bg-white w-full h-full sm:h-auto justify-center rounded-md flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
           <LoginLogo />
           <LoginHeader
             title={"Reset Password"}

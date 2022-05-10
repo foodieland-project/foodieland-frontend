@@ -12,7 +12,7 @@ function ForgotPassword() {
   return (
     <>
       <div className="h-full flex justify-center items-center">
-        <div className="flex mx-4 bg-white w-full rounded-md flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
+        <div className="flex sm:mx-4 bg-white h-full sm:h-auto w-full justify-center rounded-md flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
           <LoginLogo />
           <LoginHeader
             title={"Forgot Password"}
@@ -20,7 +20,7 @@ function ForgotPassword() {
               "Enter your email and we will send you instructions to reset your password"
             }
           />
-          <form className="w-full px-6 mt-4">
+          <form className="w-[85%] mx-6 mt-4">
             <Input type="email" placeholder="Email" />
             <Button type={"submit"}>Email Me</Button>
           </form>

@@ -15,14 +15,14 @@ function RegisterBox() {
   return (
     <>
       <div className="h-full flex justify-center items-center">
-        <div className="flex mx-4 bg-white w-full rounded-md flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
+        <div className="flex  bg-white h-full sm:h-auto w-full rounded-md justify-center flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
           <LoginLogo />
           <LoginHeader
             title={"Advandture starts here"}
             text={"Make your app managment easy and fun!"}
           />
 
-          <form className="mx-6 my-4">
+          <form className="w-[85%] mx-6 my-4">
             <Input type="text" placeholder="Username" />
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Password" />
@@ -36,9 +36,9 @@ function RegisterBox() {
             </div>
             <Button type={"submit"}>Sign Up</Button>
           </form>
-          <div className="text-center my-2 w-full">
-            <div className="w-full flex justify-evenly">
-              <span className="text-gray px-4 text-gray-500">
+          <div className="text-center my-2  w-[85%] sm:w-full">
+            <div className="w-full flex justify-between sm:justify-evenly">
+              <span className="text-gray  text-gray-500">
                 Already have an account?
               </span>
               <span className="text-purple-500 cursor-pointer">

@@ -15,13 +15,13 @@ function LoginBox() {
   return (
     <>
       <div className="h-full flex justify-center items-center">
-        <div className="flex mx-4 bg-white w-full rounded-md flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
+        <div className="flex sm:mx-4 bg-white h-full sm:h-auto w-full justify-center rounded-md flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
           <LoginLogo />
           <LoginHeader
             title={"Welcome To Foodieland!"}
             text={" Please sign-in to your account and start the adventure"}
           />
-          <form className="mx-6 my-4">
+          <form className="w-[85%] mx-6 my-4">
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Password" />
             <div className="flex justify-between mb-4 w-full">
@@ -35,9 +35,9 @@ function LoginBox() {
             </div>
             <Button type={"submit"}>Login</Button>
           </form>
-          <div className="text-center my-2 w-full">
-            <div className="w-full flex justify-evenly">
-              <span className="text-gray px-4 text-gray-500">
+          <div className="text-center my-2 w-[85%] sm:w-full">
+            <div className="w-full flex justify-between sm:justify-evenly">
+              <span className="text-gray text-gray-500">
                 New on our platform?
               </span>
               <span className="text-purple-500 cursor-pointer">
