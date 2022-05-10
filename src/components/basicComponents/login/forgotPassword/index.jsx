@@ -22,7 +22,7 @@ function ForgotPassword() {
           />
           <form className="w-full px-6 mt-4">
             <Input type="email" placeholder="Email" />
-            <Button prop="login" />
+            <Button type={"submit"}>Email Me</Button>
           </form>
           <div className="flex justify-center items-center">
             <span>{arrowLeft}</span>

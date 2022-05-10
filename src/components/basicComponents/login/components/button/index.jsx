@@ -1,12 +1,12 @@
 import React from "react";
 
-function Button({ prop, type }) {
+function Button({ children, type }) {
   return (
     <button
       className="bg-[#9155FD] uppercase text-white w-full rounded-md py-2"
       type={type}
     >
-      {prop}
+      {children}
     </button>
   );
 }

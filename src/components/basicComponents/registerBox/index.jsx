@@ -34,7 +34,7 @@ function RegisterBox() {
                 </span>
               </label>
             </div>
-            <Button prop="login" type="submit" />
+            <Button type={"submit"}>Sign Up</Button>
           </form>
           <div className="text-center my-2 w-full">
             <div className="w-full flex justify-evenly">

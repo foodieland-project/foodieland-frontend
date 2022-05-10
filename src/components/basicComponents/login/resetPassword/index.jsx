@@ -23,7 +23,7 @@ function ResetPassword() {
           <form className="mx-6 mt-4">
             <Input type="password" placeholder="New Password" />
             <Input type="password" placeholder="Confirm Password" />
-            <Button prop="login" />
+            <Button type={"submit"}>Reset Password</Button>
           </form>
           <div className="flex justify-center items-center">
             <span>{arrowLeft}</span>
