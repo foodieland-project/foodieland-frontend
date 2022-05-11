@@ -5,14 +5,12 @@ const contacts = [
         subject: 'Any subject',
         role: 'user',
         message: 'this is message',
-        image: "/images/panel/Avatar.png"
     }, {
         id: 2,
         user: 'username',
         subject: 'Any subject',
         role: 'admin',
         message: 'this is message',
-        image: "/images/panel/Avatar.png"
     }
     , {
         id: 3,
@@ -20,7 +18,6 @@ const contacts = [
         subject: 'Any subject',
         role: 'user',
         message: 'this is message',
-        image: "/images/panel/Avatar.png"
     },
     {
         id: 4,
@@ -28,7 +25,6 @@ const contacts = [
         subject: 'Any subject',
         role: 'admin',
         message: 'this is message',
-        image: "/images/panel/Avatar.png"
     },
     {
         id: 5,
@@ -36,7 +32,6 @@ const contacts = [
         subject: 'Any subject',
         role: 'user',
         message: 'this is message',
-        image: "/images/panel/Avatar.png"
     },
     {
         id: 6,
@@ -44,7 +39,6 @@ const contacts = [
         subject: 'Any subject',
         role: 'admin',
         message: 'this is message',
-        image: "/images/panel/Avatar.png"
     }/* ,
     {
         id: 7,
