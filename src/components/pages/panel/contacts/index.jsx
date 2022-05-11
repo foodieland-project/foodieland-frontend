@@ -9,7 +9,7 @@ const Contacts = () => {
       <ContactHeader />
       <section className="p-4 font-inter">
         <ContactTitle />
-        </section>
+      </section>
     </PanelLayout>
   );
 };
