@@ -2,59 +2,57 @@ const contacts = [
     {
         id: 1,
         user: 'username',
-        subject: 'Any subject',
+        subject: 'subject',
         role: 'user',
-        message: 'this is message',
+        message: 'this is a message',
     }, {
         id: 2,
         user: 'username',
-        subject: 'Any subject',
+        subject: 'subject',
         role: 'admin',
-        message: 'this is message',
+        message: 'this is a message',
     }
     , {
         id: 3,
         user: 'username',
-        subject: 'Any subject',
+        subject: 'subject',
         role: 'user',
-        message: 'this is message',
+        message: 'this is a message',
     },
     {
         id: 4,
         user: 'username',
-        subject: 'Any subject',
+        subject: 'subject',
         role: 'admin',
-        message: 'this is message',
+        message: 'this is a message',
     },
     {
         id: 5,
         user: 'username',
-        subject: 'Any subject',
+        subject: 'subject',
         role: 'user',
-        message: 'this is message',
+        message: 'this is a message',
     },
     {
         id: 6,
         user: 'username',
-        subject: 'Any subject',
+        subject: 'subject',
         role: 'admin',
-        message: 'this is message',
+        message: 'this is a message',
     }/* ,
     {
         id: 7,
         user: 'username',
-        subject: 'Any subject',
+        subject: 'subject',
         role: 'user',
-        message: 'this is message',
-        image: "/images/panel/Avatar.png"
+        message: 'this is message'
     } ,
     {
         id: 8,
         user: 'username',
-        subject: 'Any subject',
+        subject: 'subject',
         role: 'user',
-        message: 'this is message',
-        image: "/images/panel/Avatar.png"
+        message: 'this is message'
     } */
 ]
 
