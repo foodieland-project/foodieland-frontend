@@ -30,9 +30,12 @@ const UserFooter = () => {
     <div className="md:mx-[80px]">
       <div className="flex lg:flex-row flex-col lg:justify-between mb-[75px] mt-[191px]  mx-[80px]">
         <div className="flex flex-col lg:items-start  items-center">
-          <p className="flex flex-row items-center justify-center font-lobster font-normal text-[24px] sm:mb-[0px]  mb-[40px]">
+          <Link
+            to="/"
+            className="flex flex-row items-center justify-center font-lobster font-normal text-[24px] sm:mb-[0px] mb-[40px] cursor-pointer"
+          >
             Foodieland.
-          </p>
+          </Link>
           <p className="flex justify-start text-center lg:text-left mb-[40px]">
             Lorem ipsum dolor sit amet, consectetuipisicing elit,{" "}
           </p>
@@ -42,7 +45,7 @@ const UserFooter = () => {
             return (
               <Link
                 to={`${to}`}
-                className="flex lg:ml-[60px] lg:py-[0px]  ml-[0px]  py-[20px] lg:w-auto  w-[250px] justify-center"
+                className="flex lg:ml-[30px] lg:py-[0px]  ml-[0px]  py-[20px] lg:w-auto  w-[250px] justify-center hover:text-blue-500 transition-all "
               >
                 {name}{" "}
               </Link>
@@ -56,11 +59,13 @@ const UserFooter = () => {
           <span className="text-red-300">Webflow</span>{" "}
         </p>
         <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px] mb-[40px]">
-          <span className="flex justify-center">{icons.instagram()}</span>
-          <span className="flex justify-center ml-[40px]">
+          <span className="flex justify-center header-icon cursor-pointer">
+            {icons.instagram()}
+          </span>
+          <span className="flex justify-center ml-[40px] header-icon cursor-pointer">
             {icons.twitter()}
           </span>
-          <span className="flex justify-center ml-[40px]">
+          <span className="flex justify-center ml-[40px] header-icon cursor-pointer">
             {icons.facebook()}
           </span>
         </div>

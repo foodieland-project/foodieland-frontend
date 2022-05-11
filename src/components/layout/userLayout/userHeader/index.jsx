@@ -32,11 +32,13 @@ const UserHeader = () => {
     <div className=" border-b-[1px] border-gray-300 ">
       <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse  flex-col sm:justify-between sm:items-center mx-[80px] ">
         <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px]  mb-[40px]">
-          <span className="flex justify-center">{icons.instagram()}</span>
-          <span className="flex justify-center ml-[40px]">
+          <span className="flex justify-center header-icon cursor-pointer    ">
+            {icons.instagram()}
+          </span>
+          <span className="flex justify-center ml-[40px] header-icon cursor-pointer">
             {icons.twitter()}
           </span>
-          <span className="flex justify-center ml-[40px]">
+          <span className="flex justify-center ml-[40px] header-icon cursor-pointer">
             {icons.facebook()}
           </span>
         </div>
@@ -74,7 +76,7 @@ const UserHeader = () => {
               return (
                 <Link
                   to={`${to}`}
-                  className="flex lg:ml-[60px] lg:py-[0px]  ml-[0px]  py-[20px] lg:w-auto  w-[250px] justify-center"
+                  className="flex lg:ml-[60px] lg:py-[0px]  ml-[0px]  py-[20px] lg:w-auto  w-[250px] justify-center hover:text-blue-500 transition-all "
                 >
                   {name}{" "}
                 </Link>
@@ -82,9 +84,12 @@ const UserHeader = () => {
             })}
           </ul>
         </div>
-        <p className="flex flex-row items-center justify-center font-lobster font-normal text-[24px] sm:mb-[0px]  mb-[40px]">
+        <Link
+          to="/"
+          className="flex flex-row items-center justify-center font-lobster font-normal text-[24px] sm:mb-[0px] mb-[40px] cursor-pointer"
+        >
           Foodieland.
-        </p>
+        </Link>
       </div>
     </div>
   );
