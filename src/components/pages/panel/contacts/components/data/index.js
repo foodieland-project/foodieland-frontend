@@ -3,7 +3,7 @@ const contacts = [
         id: 1,
         email: 'foodiland@gmail.com',
         subject: 'subject',
-        message: 'this is a message this is a messagethis is a messagethis is a messas is a messagethis is a messas is a messagethis is a messagethis is a messagethis is a message is a messagethis is ais a messagethis is ais a messagethis is a',
+        message: 'this is a message',
     }, {
         id: 2,
         email: 'foodiland@gmail.com',
@@ -27,25 +27,43 @@ const contacts = [
         email: 'foodiland@gmail.com',
         subject: 'subject',
         message: 'this is a message',
-    }/*,
+    },
     {
         id: 6,
         email: 'foodiland@gmail.com',
         subject: 'subject',
         message: 'this is a message',
-    } ,
+    },
     {
         id: 7,
-        email: 'username',
+        email: 'foodiland@gmail.com',
         subject: 'subject',
-        message: 'this is message'
-    } ,
+        message: 'this is a message',
+    },
     {
         id: 8,
-        email: 'username',
+        email: 'foodiland@gmail.com',
         subject: 'subject',
-        message: 'this is message'
-    } */
+        message: 'this is a message',
+    },
+    {
+        id: 9,
+        email: 'foodiland@gmail.com',
+        subject: 'subject',
+        message: 'this is a message',
+    },
+    {
+        id: 10,
+        email: 'foodiland@gmail.com',
+        subject: 'subject',
+        message: 'this is a message',
+    },
+    {
+        id: 11,
+        email: 'foodiland@gmail.com',
+        subject: 'subject',
+        message: 'this is a message',
+    },
 ]
 
 export default contacts;
