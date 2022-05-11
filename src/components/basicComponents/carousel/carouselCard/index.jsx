@@ -1,5 +1,5 @@
 import "./carousel-item.css";
-import React from 'react'
+import React from "react";
 import { icons } from "../../../../utils/icons";
 
 function CarouselCard({ title, imageUrl, description }) {
@@ -8,7 +8,7 @@ function CarouselCard({ title, imageUrl, description }) {
   const knifeIcon = icons.knife();
   const playCircleIcon = icons.playCircle();
   return (
-    <div className="carousel-item flex rounded-3xl w-11/12  mx-auto overflow-hidden font-inter ">
+    <div className="carousel-item flex rounded-3xl w-[92vw] sm:w-[38em] md:w-[46em] lg:w-[62em] xl:w-[78em] 2xl:w-[94em]  overflow-hidden font-inter ">
       <div className="md:basis-1/2 bg-lameBlue p-5 sm:p-7 lg:p-9">
         <div className="bg-white w-32 lg:w-36 rounded-2xl p-2 text-center">
           <img

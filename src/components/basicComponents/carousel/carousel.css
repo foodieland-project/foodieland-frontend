@@ -1,25 +1,24 @@
-.slide {
-    opacity: 0;
-    transition-duration: 1s ease;
+.slider {
+  transition: all 200ms ease-out;
+}
+
+.carousel-arrow {
+  transform: translateY(-50%);
+  background-color: rgba(256, 256, 256, 0.6);
+}
+.carousel-arrow svg {
+  fill: rgba(0, 0, 0, 0.6);
+}
+.carousel-arrow svg {
+  width: 20px;
+}
+@media screen and (min-width: 768px) {
+  .carousel-arrow svg {
+    width: 20px;
   }
-  
-  .slide.active {
-    opacity: 1;
-    transition-duration: 1s;
+}
+@media screen and (min-width: 1024px) {
+  .carousel-arrow svg {
+    width: 30px;
   }
-  .carousel-arrow{
-      transform: translateY(-50%);
-  }
-  .carousel-arrow svg{
-    width: 40px;
-  }
-  @media screen and (min-width:768px) {
-    .carousel-arrow svg{
-      width: 54px;
-    } 
-  }
-  @media screen and (min-width:1024px) {
-    .carousel-arrow svg{
-      width: 64px;
-    } 
-  }
+}
