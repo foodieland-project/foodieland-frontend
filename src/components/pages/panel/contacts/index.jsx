@@ -9,22 +9,19 @@ import { icons } from "../../../../utils/icons";
 const Contacts = () => {
   const [FormData, setFormData] = useState(contacts);
   const [currentPage, setCurrentPage] = useState(1);
-  const [contactPerPage] = useState(5);
+  const [contactPerPage] = useState(4);
   const paginationNumbers = Math.ceil(FormData.length / contactPerPage);
   const indexOfLastContact = currentPage * contactPerPage;
   const indexOfFirstContact = indexOfLastContact - contactPerPage;
   const slicedData = FormData.slice(indexOfFirstContact, indexOfLastContact);
 
   const handlePrev = (setCurrentPage, currentPage) => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
   const handleNext = (setCurrentPage, currentPage, paginationNumbers) => {
-    if (currentPage < paginationNumbers) {
-      setCurrentPage(currentPage + 1);
-    }
+    if (currentPage < paginationNumbers) setCurrentPage(currentPage + 1);
+    
   };
 
   return (

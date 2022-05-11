@@ -3,7 +3,7 @@ const contacts = [
         id: 1,
         email: 'foodiland@gmail.com',
         subject: 'subject',
-        message: 'this is a message',
+        message: 'this is a message for tohid tohid tohid tohid tohid tohid tohid tohid tohid',
     }, {
         id: 2,
         email: 'foodiland@gmail.com',
