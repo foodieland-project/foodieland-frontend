@@ -7,7 +7,7 @@ function ContactTitle({ title, category, time, view, comments }) {
       <p className="sm:w-[20%] md:[10%] text-center sm:block hidden">
         Subject
       </p>
-      <p className="md:w-[40%] text-center md:block hidden">Role</p>
+      {/* <p className="md:w-[40%] text-center md:block hidden">Role</p> */}
       <p className="w-[100%] text-center">Message</p>
     </div>
   );
