@@ -21,46 +21,31 @@ const Contacts = () => {
 
   const handleNext = (setCurrentPage, currentPage, paginationNumbers) => {
     if (currentPage < paginationNumbers) setCurrentPage(currentPage + 1);
-    
   };
 
   return (
     <PanelLayout>
+
       {/* =============== Pagination ==============*/}
-      <div className="select-none pt-4 pr-4">
+      <div className="select-none p-4 lg:pt-4 lg:pr-4">
         <div className="flex flex-row-reverse items-center">
-          <span
-            onClick={() => {
-              handleNext(setCurrentPage, currentPage, paginationNumbers);
-            }}
-            className="bg-gray-300 cursor-pointer text-darkPurple rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
-          >
-            {icons.arrowRight()}
+          <span onClick={() => { handleNext(setCurrentPage, currentPage, paginationNumbers)}}
+            className="bg-gray-300 cursor-pointer text-darkPurple rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]">{icons.arrowRight()}
           </span>
           <div className="mx-[5px]">
             <span>page </span>
-            <input
-              className="w-[30px] h-[30px] rounded-md border-[1px] border-gray-400 text-center"
-              type="text"
-              value={currentPage}
-              onChange={(e) => {
-                setCurrentPage(e.target.value);
-              }}
-            ></input>
+            <input className="w-[30px] h-[30px] rounded-md border-[1px] border-gray-400 text-center"
+              type="text" value={currentPage} onChange={(e) => { setCurrentPage(e.target.value)}}></input>
             <span>{` from ${paginationNumbers}`}</span>
           </div>
-          <span
-            onClick={() => {
-              handlePrev(setCurrentPage, currentPage, paginationNumbers);
-            }}
-            className="bg-gray-300 text-darkPurple cursor-pointer rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
-          >
+          <span onClick={() => { handlePrev(setCurrentPage, currentPage, paginationNumbers)}}className="bg-gray-300 text-darkPurple cursor-pointer rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]">
             {icons.arrowLeft()}
           </span>
         </div>
       </div>
-
       {/* =============== Pagination ==============*/}
+
+
 
       <ContactHeader />
       <section className="p-4 font-inter">
