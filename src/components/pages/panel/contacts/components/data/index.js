@@ -5,14 +5,14 @@ const contacts = [
         subject: 'Food',
         role: 'user',
         message: 'this is message',
-        img: ""
+        img: "/images/panel/Avatar.png"
     }, {
         id: 2,
         user: 'username',
         subject: 'Water',
         role: 'admin',
         message: 'this is message',
-        img: ""
+        img: "/images/panel/Avatar.png"
     }
     , {
         id: 3,
@@ -20,7 +20,7 @@ const contacts = [
         subject: 'Water',
         role: 'user',
         message: 'this is message',
-        img: ""
+        img: "/images/panel/Avatar.png"
     },
     {
         id: 4,
@@ -28,7 +28,7 @@ const contacts = [
         subject: 'Food',
         role: 'admin',
         message: 'this is message',
-        img: ""
+        img: "/images/panel/Avatar.png"
     },
     {
         id: 5,
@@ -36,7 +36,7 @@ const contacts = [
         subject: 'Food',
         role: 'user',
         message: 'this is message',
-        img: ""
+        img: "/images/panel/Avatar.png"
     },
     {
         id: 6,
@@ -44,7 +44,7 @@ const contacts = [
         subject: 'Food',
         role: 'admin',
         message: 'this is message',
-        img: ""
+        img: "/images/panel/Avatar.png"
     },
     {
         id: 7,
@@ -52,7 +52,7 @@ const contacts = [
         subject: 'Recipe',
         role: 'user',
         message: 'this is message',
-        img: ""
+        img: "/images/panel/Avatar.png"
     },
     {
         id: 8,
@@ -60,7 +60,7 @@ const contacts = [
         subject: 'Recipe',
         role: 'user',
         message: 'this is message',
-        img: ""
+        img: "/images/panel/Avatar.png"
     }
 ]
 
