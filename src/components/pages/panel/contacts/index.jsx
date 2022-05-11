@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import PanelLayout from "../../../layout/panelLayout";
 import ContactHeader from "./components/contactHeader";
 import ContactTitle from "./components/contactTitle";
@@ -13,6 +13,8 @@ const Contacts = () => {
   const indexOfLastContact = currentPage * contactPerPage;
   /* const indexOfFirstContact = indexOfLastContact - contactPerPage; */
   const paginationNumbers = Math.ceil(FormData.length / contactPerPage);
+
+  
 
   function handlePrev(currentPage, setCurrentPage) {
     if (currentPage > 1) {
