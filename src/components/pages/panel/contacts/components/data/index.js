@@ -1,55 +1,55 @@
 const contacts = [
     {
         id: 1,
-        user: 'username',
+        email: 'foodiland@gmail.com',
         subject: 'subject',
         role: 'user',
         message: 'this is a message',
     }, {
         id: 2,
-        user: 'username',
+        email: 'foodiland@gmail.com',
         subject: 'subject',
         role: 'admin',
         message: 'this is a message',
     }
     , {
         id: 3,
-        user: 'username',
+        email: 'foodiland@gmail.com',
         subject: 'subject',
         role: 'user',
         message: 'this is a message',
     },
     {
         id: 4,
-        user: 'username',
+        email: 'foodiland@gmail.com',
         subject: 'subject',
         role: 'admin',
         message: 'this is a message',
     },
     {
         id: 5,
-        user: 'username',
+        email: 'foodiland@gmail.com',
         subject: 'subject',
         role: 'user',
         message: 'this is a message',
     },
     {
         id: 6,
-        user: 'username',
+        email: 'foodiland@gmail.com',
         subject: 'subject',
         role: 'admin',
         message: 'this is a message',
     }/* ,
     {
         id: 7,
-        user: 'username',
+        email: 'username',
         subject: 'subject',
         role: 'user',
         message: 'this is message'
     } ,
     {
         id: 8,
-        user: 'username',
+        email: 'username',
         subject: 'subject',
         role: 'user',
         message: 'this is message'

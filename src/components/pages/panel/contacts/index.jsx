@@ -12,8 +12,8 @@ const Contacts = () => {
       <section className="p-4 font-inter">
         <ContactTitle />
         {/* <ContactItem key="id" id="id" user="user" subject="subject" role="role" message="message"/> */}
-        {contacts.map(({ id, user, subject, role, message }) => (
-          <ContactItem key={id} user={user} role={role} message={message} subject={subject}/>
+        {contacts.map(({ id, email, subject, role, message }) => (
+          <ContactItem key={id} email={email} role={role} message={message} subject={subject}/>
         ))}
       </section>
     </PanelLayout>
