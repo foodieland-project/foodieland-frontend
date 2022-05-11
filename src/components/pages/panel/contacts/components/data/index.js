@@ -64,6 +64,23 @@ const contacts = [
         subject: 'subject',
         message: 'this is a message',
     },
+    {
+        id: 12,
+        email: 'foodiland@gmail.com',
+        subject: 'subject',
+        message: 'this is a message',
+    },
+    {
+        id: 13,
+        email: 'foodiland@gmail.com',
+        subject: 'subject',
+        message: 'this is a message',
+    },{
+        id: 14,
+        email: 'foodiland@gmail.com',
+        subject: 'subject',
+        message: 'this is a message',
+    },
 ]
 
 export default contacts;
