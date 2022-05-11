@@ -11,6 +11,7 @@ const Contacts = () => {
       <ContactHeader />
       <section className="p-4 font-inter">
         <ContactTitle />
+        <ContactItem key="id" id="id" user="user" subject="subject" role="role" message="message"/>
       </section>
     </PanelLayout>
   );

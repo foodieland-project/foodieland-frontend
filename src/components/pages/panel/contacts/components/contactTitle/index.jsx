@@ -8,7 +8,6 @@ function ContactTitle({ title, category, time, view, comments }) {
         Subject
       </p>
       <p className="md:w-[40%] text-center md:block hidden">Role</p>
-      <p className="w-[10%] text-center xl:block hidden">View</p>
       <p className="w-[10%] text-center xl:block hidden">Comments</p>
     </div>
   );
