@@ -136,4 +136,4 @@ const contacts = [
     },
 ]
 
-export default posts
+export default contacts;
