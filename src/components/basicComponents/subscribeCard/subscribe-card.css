@@ -1,9 +1,0 @@
-.subscribe-email-input::placeholder{
-    font-size: 14px;
-}
-
-@media screen and (min-width:768px) {
-    .subscribe-email-input::placeholder{
-        font-size: 18px     ;
-    }    
-}

@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       <UserLayout>
-        <div className="w-11/12 sm:container mx-auto">
+        <div className="w-11/12 sm:container mx-auto sm:px-4">
           <Carousel />
           <Categories />
           <Recipe />

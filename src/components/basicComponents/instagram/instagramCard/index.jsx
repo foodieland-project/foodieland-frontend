@@ -1,5 +1,5 @@
-import React from 'react'
-import { icons } from '../../../../utils/icons';
+import React from "react";
+import { icons } from "../../../../utils/icons";
 
 function InstagramCard({ imageUrl, caption, date }) {
   const instagramLike = icons.instagramLike();
@@ -8,11 +8,11 @@ function InstagramCard({ imageUrl, caption, date }) {
   const instagramSave = icons.instagramSave();
   const instagramMore = icons.instagramMore();
   return (
-    <div className="bg-white basis-[55%] sm:basis-[40%] lg:basis-[22%]  pb-8  rounded-md relative">
+    <div className="bg-white basis-[48%]  lg:basis-[22%]  pb-8  rounded-md relative">
       <div className="flex justify-between items-center py-1 px-2">
         <div className="flex ">
           <div>
-            <img src="./images/instagram-img.png" alt="" />
+            <img src="./images/instagram-img.png" alt="instagram-profile" />
           </div>
           <div className="flex flex-col ml-2">
             <span className=" font-semibold text-3xs sm:text-2xs">
@@ -26,7 +26,7 @@ function InstagramCard({ imageUrl, caption, date }) {
         </div>
       </div>
       <div>
-        <img src={`${imageUrl}`} alt="" />
+        <img src={`${imageUrl}`} alt="instagram-food" className="w-full" />
       </div>
       <div className="flex items-center py-2 px-2 relative">
         <a href="" className="mr-2">

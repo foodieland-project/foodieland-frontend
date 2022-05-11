@@ -1,5 +1,5 @@
 import InstagramCard from "./instagramCard";
-import React from 'react'
+import React from "react";
 import { icons } from "../../../utils/icons";
 
 function FoodieLandInstagram() {
@@ -52,7 +52,7 @@ function FoodieLandInstagram() {
             </p>
           </div>
         </div>
-        <div className="flex flex-wrap gap-5 xl:gap-8 mt-10 md:mt-16 justify-center w-4/5     md:w-8/12 lg:w-11/12 mx-auto">
+        <div className="flex flex-wrap gap-5 xl:gap-8 mt-10 md:mt-16 justify-center w-11/12 lg:w-11/12 mx-auto">
           {foodielandInstagramData.map(({ id, imageUrl, caption, date }) => (
             <InstagramCard
               key={id}
