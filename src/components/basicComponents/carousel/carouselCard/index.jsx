@@ -61,7 +61,7 @@ function CarouselCard({ title, imageUrl, description }) {
               </span>
             </div>
           </div>
-          <div className="bg-black text-white rounded-2xl px-3 lg:px-6 text-xs lg:text-sm flex items-center">
+          <div className="bg-black text-white rounded-2xl px-3 lg:px-6 text-xs lg:text-sm flex items-center cursor-pointer ">
             <span className="font-semibold">View Recipes</span>
             <span className="ml-1 lg:ml-2">{playCircleIcon}</span>
           </div>

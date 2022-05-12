@@ -76,7 +76,7 @@ const UserHeader = () => {
               return (
                 <Link
                   to={`${to}`}
-                  className="flex lg:ml-[60px] lg:py-[0px]  ml-[0px]  py-[20px] lg:w-auto  w-[250px] justify-center hover:text-blue-500 transition-all "
+                  className="flex lg:ml-[60px] lg:py-[0px]  ml-[0px]   py-[20px] lg:w-auto  w-[250px] justify-center hover:text-blue-500 transition-all "
                 >
                   {name}{" "}
                 </Link>

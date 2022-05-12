@@ -47,7 +47,7 @@ function Categories() {
             <h1 className="font-semibold text-4xl lg:text-5xl">Categories</h1>
           </div>
           <div>
-            <button className="bg-lameBlue font-semibold text-base p-2 rounded-2xl w-48 h-14">
+            <button className="bg-lameBlue font-semibold text-base p-2 rounded-2xl w-48 h-14 cursor-pointer hover:bg-darkBlue transition-all">
               View All Categories
             </button>
           </div>

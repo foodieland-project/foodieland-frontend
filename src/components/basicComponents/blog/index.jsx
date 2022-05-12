@@ -102,7 +102,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-1.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -112,7 +112,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-2.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -122,7 +122,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-3.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -132,7 +132,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-4.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -142,7 +142,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-5.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -152,7 +152,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-6.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -162,7 +162,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-7.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -172,7 +172,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-8.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -182,7 +182,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-1.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -192,7 +192,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-2.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -202,7 +202,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-3.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -212,7 +212,7 @@ const articleData = [
     title: "Big and Juicy Wagyu Beef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
-    img: "images/recipes/food-13.png",
+    img: "images/delicious-recipe/food-4.png",
     date: "12 November 2022",
     writer: "Wade warren",
     profile: "images/Ellipse 3.png",
@@ -275,16 +275,6 @@ const Blog = () => {
                 </Link>
               )
             )}
-
-            <div className="w-auto">
-              <Pagination
-                postPerPage={PostPerPage}
-                totalposts={filtered.length}
-                paginate={paginate}
-                currentPage={currentPage}
-                setcurrentPage={setcurrentPage}
-              />
-            </div>
           </div>
 
           <OtherRecipes
@@ -293,6 +283,15 @@ const Blog = () => {
             title={"Tasty Recipes"}
           />
         </section>
+        <div className="w-auto">
+          <Pagination
+            postPerPage={PostPerPage}
+            totalposts={filtered.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            setcurrentPage={setcurrentPage}
+          />
+        </div>
 
         <SubscribeCard />
       </div>

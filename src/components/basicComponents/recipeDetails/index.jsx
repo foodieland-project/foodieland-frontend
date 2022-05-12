@@ -1,6 +1,6 @@
 import RecipeVideoCard from "../recipeVideoCard";
 import NutritionInfoCard from "./components/nutritionInfoCard";
-import React from 'react'
+import React from "react";
 import { icons } from "../../../utils/icons";
 
 function RecipeDetails() {
@@ -93,13 +93,13 @@ function RecipeDetails() {
         <div className="basis-full lg:basis-[30%] flex flex-col justify-between">
           <div className="flex justify-center lg:justify-end py-8">
             <div className="text-center">
-              <div className="bg-lameBlue rounded-[50%] mb-2 p-7">
+              <div className="bg-lameBlue rounded-[50%] mb-2 p-7 hover:bg-darkBlue transition-all cursor-pointer">
                 <span>{printerIcon}</span>
               </div>
               <span className="text-xs font-medium">PRINT</span>
             </div>
             <div className="text-center ml-4">
-              <div className="bg-lameBlue rounded-[50%] mb-2 p-7">
+              <div className="bg-lameBlue rounded-[50%] mb-2 p-7 hover:bg-darkBlue transition-all cursor-pointer">
                 <span>{shareIcon}</span>
               </div>
               <span className="text-xs font-medium">SHARE</span>

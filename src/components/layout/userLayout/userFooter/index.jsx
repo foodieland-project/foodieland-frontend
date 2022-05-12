@@ -29,7 +29,7 @@ const UserFooter = () => {
   return (
     <div className="md:mx-[80px]">
       <div className="flex lg:flex-row flex-col lg:justify-between mb-[75px] mt-[191px]  mx-[80px]">
-        <div className="flex flex-col lg:items-start  items-center">
+        <div className="flex flex-col lg:items-start  items-center  ">
           <Link
             to="/"
             className="flex flex-row items-center justify-center font-lobster font-normal text-[24px] sm:mb-[0px] mb-[40px] cursor-pointer"
@@ -45,7 +45,7 @@ const UserFooter = () => {
             return (
               <Link
                 to={`${to}`}
-                className="flex lg:ml-[30px] lg:py-[0px]  ml-[0px]  py-[20px] lg:w-auto  w-[250px] justify-center hover:text-blue-500 transition-all "
+                className="flex text-center lg:w-[80px] lg:ml-[10px] lg:py-[0px]  ml-[0px]  py-[20px]   w-[250px] justify-center hover:text-blue-500 transition-all "
               >
                 {name}{" "}
               </Link>

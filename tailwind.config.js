@@ -41,6 +41,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       lameBlue: "#E7FAFE",
+      darkBlue: "#ccf1f9",
       secondary: "rgba(0, 0, 0, 0.6)",
       lightPurple: "rgba(244, 245, 250, 1)",
       darkPurple: "rgba(145, 85, 253, 1)",
@@ -678,7 +679,7 @@ module.exports = {
       max: "max-content",
       fit: "fit-content",
       prose: "65ch",
-      ...breakpoints(theme("screens")), 
+      ...breakpoints(theme("screens")),
     }),
     minHeight: {
       0: "0px",

@@ -15,7 +15,7 @@ const Pagination = ({
 
   return (
     <div className="w-full h-20   flex justify-center items-center  mt-6">
-      <div className="xl:w-1/2 w-full h-1/2 bg-white flex ml-10">
+      <div className="xl:w-1/2 w-full h-1/2 bg-white flex ml-10 justify-center">
         {currentPage != 1 ? (
           <div
             onClick={() => setcurrentPage(currentPage - 1)}
@@ -43,7 +43,7 @@ const Pagination = ({
             onClick={() => setcurrentPage(currentPage + 1)}
             className={` w-10 h-10  mr-2 text-center flex justify-center items-center  text-black  border-gray-300  rounded-md cursor-pointer `}
           >
-            >
+            {">"}
           </div>
         ) : null}
       </div>
