@@ -1,40 +1,11 @@
 import InstagramCard from "./instagramCard";
 import React from "react";
 import { icons } from "../../../utils/icons";
+import { foodielandInstagramData } from "../../../utils/data";
 
 function FoodieLandInstagram() {
   const instagramIcon = icons.whiteInstagram();
 
-  const foodielandInstagramData = [
-    {
-      id: 1,
-      imageUrl: "./images/instagram-foods/food-9.png",
-      caption:
-        "The vegetables dishes need to have certain vitamin for those people",
-      date: "September 13",
-    },
-    {
-      id: 2,
-      imageUrl: "./images/instagram-foods/food-10.png",
-      caption:
-        "Sweet food can bring someon into happiness as long as they don’t eat to much",
-      date: "September 19",
-    },
-    {
-      id: 3,
-      imageUrl: "./images/instagram-foods/food-11.png",
-      caption:
-        " What are you doing before start cooking? prepare the tools or ingredients?",
-      date: "September 17",
-    },
-    {
-      id: 4,
-      imageUrl: "./images/instagram-foods/food-12.png",
-      caption:
-        "Steak never be wrong, it’s suitable for you who want romantic dinner",
-      date: "September 15",
-    },
-  ];
   return (
     <section className="my-12 md:my-20 font-inter">
       <div className="bg-gradient-blueSky">

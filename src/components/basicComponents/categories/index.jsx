@@ -1,44 +1,7 @@
 import Category from "./categoriesCard";
 import React from "react";
+import { categoriesData } from "../../../utils/data";
 function Categories() {
-  const categoriesData = [
-    {
-      id: 1,
-      name: "Breakfast",
-      imageUrl: "./images/categories/breakfast.png",
-      bgColor: "bg-gradient-grey",
-    },
-    {
-      id: 2,
-      name: "Vegan",
-      imageUrl: "./images/categories/vegan.png",
-      bgColor: "bg-gradient-green",
-    },
-    {
-      id: 3,
-      name: "Meat",
-      imageUrl: "./images/categories/meat.png",
-      bgColor: "bg-gradient-red",
-    },
-    {
-      id: 4,
-      name: "Dessert",
-      imageUrl: "./images/categories/dessert.png",
-      bgColor: "bg-gradient-yellow",
-    },
-    {
-      id: 5,
-      name: "Lunch",
-      imageUrl: "./images/categories/lunch.png",
-      bgColor: "bg-gradient-white",
-    },
-    {
-      id: 6,
-      name: "Chocolate",
-      imageUrl: "./images/categories/chocolate.png",
-      bgColor: "bg-gradient-brown",
-    },
-  ];
   return (
     <section>
       <div className="w-full font-inter mx-auto my-20 lg:my-40">

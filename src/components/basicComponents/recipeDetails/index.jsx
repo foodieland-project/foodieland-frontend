@@ -2,6 +2,7 @@ import RecipeVideoCard from "../recipeVideoCard";
 import NutritionInfoCard from "./components/nutritionInfoCard";
 import React from "react";
 import { icons } from "../../../utils/icons";
+import { nutritionInfo } from "../../../utils/data";
 
 function RecipeDetails() {
   const timerIcon = icons.timer();
@@ -10,33 +11,6 @@ function RecipeDetails() {
   const printerIcon = icons.printer();
   const shareIcon = icons.share();
 
-  const nutritionInfo = [
-    {
-      id: 1,
-      name: "Calories",
-      weight: "219.9 kcal",
-    },
-    {
-      id: 2,
-      name: "Total Fat",
-      weight: "10.7 g",
-    },
-    {
-      id: 3,
-      name: "Protein",
-      weight: "7.9 g",
-    },
-    {
-      id: 4,
-      name: "Carbohydrate",
-      weight: "22.3 g",
-    },
-    {
-      id: 5,
-      name: "Cholesterol",
-      weight: "37.4 mg",
-    },
-  ];
   return (
     <section>
       <div className="w-11/12 xl:w-full mx-auto mt-20 flex flex-wrap gap-4 font-inter">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { RecipeData } from '../../../utils/data'
 import BannerCard from './components/bannerCard'
 import RecipeCard from './components/recipeCard'
 
@@ -7,77 +8,7 @@ import RecipeCard from './components/recipeCard'
 
 const Recipe = () => {
 
-    const RecipeData = [
-        {
-            category: "product",
-            title: 'Big and Juicy Wagyu Beef Cheeseburger',
-            img: 'images/recipes/food-13.png',
-            Meal: 'Breakfast',
-            time: '30 Minutes',
-            liked: false,
-        },
-        {
-            category: "product",
-            title: 'Fresh Lime Roasted Salmon with Ginger Sauce',
-            img: 'images/recipes/food-14.png',
-            Meal: 'Breakfast',
-            time: '30 Minutes',
-            liked: false,
-        },
-        {
-            category: "product",
-            title: 'Strawberry Oatmeal Pancake with Honey Syrup',
-            img: 'images/recipes/food-15.png',
-            Meal: 'Breakfast',
-            time: '30 Minutes',
-            liked: false,
-        },
-        {
-            category: "product",
-            title: 'Fresh and Healthy Mixed Mayonnaise Salad',
-            img: 'images/recipes/food-16.png',
-            Meal: 'Breakfast',
-            time: '30 Minutes',
-            liked: false,
-        },
-        {
-            category: "product",
-            title: 'Chicken Meatballs with Cream Cheese',
-            img: 'images/recipes/food-17.png',
-            Meal: 'Breakfast',
-            time: '30 Minutes',
-            liked: false,
-        },
-        {
-            category: "banner",
-            title: 'Don’t forget to eat healthy food',
-            img: 'images/Star-1.png',
-        },
-        {
-            category: "product",
-            title: 'Strawberry Oatmeal Pancake with Honey Syrup',
-            img: 'images/recipes/food-18.png',
-            Meal: 'Breakfast',
-            time: '30 Minutes',
-            liked: false,
-        },
-        {
-            category: "product",
-            title: 'Strawberry Oatmeal Pancake with Honey Syrup',
-            img: 'images/recipes/food-19.png',
-            Meal: 'Breakfast',
-            time: '30 Minutes',
-            liked: false,
-        },
-        {
-            category: "product",
-            title: 'The Creamiest Creamy Chicken and Bacon Pasta',
-            img: 'images/recipes/food-20.png',
-            Meal: 'Breakfast',
-            time: '30 Minutes',
-            liked: false,
-        },
-    ]
+    
     return (
         <div className='flex flex-col justify-center mb-28 xl:mb-[240px] font-inter'>
             
