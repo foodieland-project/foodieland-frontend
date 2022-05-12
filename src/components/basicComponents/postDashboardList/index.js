@@ -79,7 +79,7 @@ const PostDashboardList = () => {
             onClick={() => {
               handlePrevious(setCurrentPage, currentPage, paginationNumbers);
             }}
-            className="bg-gray-300 text-darkPurple rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
+            className="bg-gray-300 text-mainBlue rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
           >
             {icons.arrowLeft()}
           </span>
@@ -106,7 +106,7 @@ const PostDashboardList = () => {
         </div>
       </div>
       <div className="text-[14px]">
-        <div className="flex flex-row items-center text-white bg-darkPurple border-[1px] h-[30px] p-[20px] rounded-md ">
+        <div className="flex flex-row items-center text-white bg-mainBlue border-[1px] h-[30px] p-[20px] rounded-md ">
           <p className="w-[100%] sm:w-[80%] md:[50%] text-center ">title</p>
           <p className="sm:w-[20%] md:[10%] text-center sm:block hidden">
             category

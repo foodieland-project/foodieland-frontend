@@ -3,7 +3,7 @@ import { icons } from "../../../../utils/icons";
 import NewArticleForm from "../../../basicComponents/newArticleForm";
 import NewRecipeForm from "../../../basicComponents/newRecipeForm";
 import PanelLayout from "../../../layout/panelLayout";
-import "./index.css";
+import "./new-post.css";
 
 const NewPost = () => {
   const [selectRecipe, setSelectRecipe] = useState(true);

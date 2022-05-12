@@ -6,7 +6,7 @@ import PanelLayout from "../../../layout/panelLayout";
 import PanelSettingsNavbar from "../../../layout/panelLayout/panelSettingsNavbar/index.jsx";
 
 const Settings = () => {
-  const [activePage, setActivePage] = useState("info");
+  const [activePage, setActivePage] = useState("account");
 
   function activePageHandler(page) {
     setActivePage(page);

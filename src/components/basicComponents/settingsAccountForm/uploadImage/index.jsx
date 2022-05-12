@@ -6,7 +6,7 @@ function UploadImage() {
       </div>
       <div className="flex flex-col justify-center gap-4">
         <div className=" flex flex-col md:flex-row gap-4">
-          <button className="bg-darkPurple rounded-md text-white py-2 px-4 text-sm font-medium cursor-pointer">
+          <button className="bg-mainBlue rounded-md text-white py-2 px-4 text-sm font-medium cursor-pointer">
             {" "}
             UPLOAD NEW PHOTO
           </button>

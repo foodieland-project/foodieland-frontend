@@ -42,6 +42,7 @@ module.exports = {
       rose: colors.rose,
       lameBlue: "#E7FAFE",
       darkBlue: "#ccf1f9",
+      mainBlue: "#0ec9f1",
       secondary: "rgba(0, 0, 0, 0.6)",
       lightPurple: "rgba(244, 245, 250, 1)",
       darkPurple: "rgba(145, 85, 253, 1)",

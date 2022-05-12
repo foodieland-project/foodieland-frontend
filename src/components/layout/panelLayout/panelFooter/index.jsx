@@ -4,11 +4,10 @@ function PanelFooter() {
       <div className=" ml-auto flex justify-between gap-4 text-xs md:text-sm lg:text-base">
         <div className="text-center">
           <span className="text-gray-700">
-            © 2022, Made with ❤️ by{" "}
-            <a className="text-darkPurple">Foodieland</a>
+            © 2022, Made with ❤️ by <a className="text-mainBlue">Foodieland</a>
           </span>
         </div>
-        <div className="text-darkPurple text-center ">
+        <div className="text-mainBlue text-center ">
           <a href="">License</a>
           <a href="" className="ml-2 md:ml-4">
             More Themes

@@ -4,7 +4,7 @@ function SaveButtons() {
       <div>
         <button
           type="submit"
-          className="bg-darkPurple rounded-md text-white py-2 px-4 cursor-pointer"
+          className="bg-mainBlue rounded-md text-white py-2 px-4 cursor-pointer"
         >
           SAVE CHANGES
         </button>

@@ -35,7 +35,7 @@ function NewArticleForm() {
         <div className="mt-4 flex justify-end">
           <button
             type="submit"
-            className="bg-darkPurple text-white py-2 px-6 rounded-xl cursor-pointer mr-2 w-full sm:w-auto"
+            className="bg-mainBlue text-white py-2 px-6 rounded-xl cursor-pointer mr-2 w-full sm:w-auto"
           >
             Submit
           </button>

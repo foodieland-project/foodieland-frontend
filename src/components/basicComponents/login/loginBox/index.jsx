@@ -29,7 +29,7 @@ function LoginBox() {
                 <input class="mx-2" type="checkbox" />
                 <span class="text-slate-600">Remember Me</span>
               </label>
-              <span className="text-purple-500 cursor-pointer">
+              <span className="text-mainBlue cursor-pointer">
                 <Link to="/panel/login/forgetPassword">Forgot Password?</Link>
               </span>
             </div>
@@ -40,7 +40,7 @@ function LoginBox() {
               <span className="text-gray text-gray-500">
                 New on our platform?
               </span>
-              <span className="text-purple-500 cursor-pointer">
+              <span className="text-mainBlue cursor-pointer">
                 <Link to="/panel/register">Create an account</Link>
               </span>
             </div>

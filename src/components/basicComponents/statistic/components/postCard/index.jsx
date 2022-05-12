@@ -8,7 +8,7 @@ function StatisticCard({ numbers, title }) {
           {title}
         </h3>
         <h2 className="mb-3">users</h2>
-        <p className="text-darkPurple text-3xl lg:text-4xl font-semibold">
+        <p className="text-mainBlue text-3xl lg:text-4xl font-semibold">
           {" "}
           {numbers}
         </p>

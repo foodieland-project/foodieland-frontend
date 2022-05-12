@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function ContactItem({ email, subject, message }) {
   return (
     <>
-      <div className="flex flex-row justify-between gap-4 flex-1 border-darkPurple border-[1px] mx-h-[80px] h-[90px] rounded-md items-center my-1">
+      <div className="flex flex-row justify-between gap-4 flex-1 border-mainBlue border-[1px] mx-h-[80px] h-[90px] rounded-md items-center my-1">
         <p className="w-[30%] sm:w-[100%] md:w-[50%]  break-all text-center text-sm">
           {email}
         </p>
