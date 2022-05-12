@@ -8,13 +8,13 @@ function CarouselCard({ title, imageUrl, description }) {
   const knifeIcon = icons.knife();
   const playCircleIcon = icons.playCircle();
   return (
-    <div className="carousel-item flex rounded-3xl w-[92vw] sm:w-[38em] md:w-[46em] lg:w-[62em] xl:w-[78em] 2xl:w-[94em]  overflow-hidden font-inter ">
+    <div className="carousel-item flex rounded-3xl w-[92vw] sm:w-[38em] md:w-[46em] lg:w-[62em] xl:w-[78em] 2xl:w-[92.9em]  overflow-hidden font-inter ">
       <div className="md:basis-1/2 bg-lameBlue p-5 sm:p-7 lg:p-9">
         <div className="bg-white w-32 lg:w-36 rounded-2xl p-2 text-center">
           <img
             src="./images/image 14.png"
             alt="hot-recipes"
-            className="inline-block w-1/5"
+            className="inline-block w-1/5 "
           />
           <span className="font-bold text-xs lg:text-sm ml-2 ">
             Hot Recipes
@@ -70,7 +70,7 @@ function CarouselCard({ title, imageUrl, description }) {
 
       <div className="hidden md:block basis-1/2">
         <div
-          className="carousel-bg bg-no-repeat bg-cover w-full h-full bg-center"
+          className="carousel-bg bg-no-repeat bg-cover w-full h-full bg-center 2xl:h-[600px]"
           style={{
             backgroundImage: `url(${imageUrl})`,
           }}

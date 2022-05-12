@@ -83,7 +83,7 @@ const Contact = (props) => {
         />
         <form
           onSubmit={formSubmitHandler}
-          className=" flex flex-col px-10 sm:px-32 lg:grid lg:grid-cols-2 lg:grid-rows-4 gap-x-10 lg:col-span-2 lg:px-5  "
+          className=" flex flex-col px-2  lg:grid lg:grid-cols-2 lg:grid-rows-4 gap-x-10 lg:col-span-2 lg:px-5  "
         >
           <Input
             onSubmit={submitError}

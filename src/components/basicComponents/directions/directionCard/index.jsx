@@ -1,23 +1,26 @@
 import { useState } from "react";
-import React from 'react'
+import React from "react";
+import { icons } from "../../../../utils/icons";
 
 function DirectionCard({ title, description, number, imageUrl, imageDesc }) {
-  const [isChecked, setChecked] = useState(false);
-
+  const [checked, setChecked] = useState(false);
+  const checkedIcon = icons.checked();
   return (
     <div className="flex gap-2 md:gap-6 border-b border-gray-300 border-solid mb-10 pb-16">
       <div className="relative pt-1.5">
         <input
           type="checkbox"
-          id="1"
+          id="111"
           className="w-6 h-6 absolute opacity-0 cursor-pointer"
-          onClick={() => setChecked(!isChecked)}
+          onClick={() => setChecked((prevCheck) => !prevCheck)}
         />
-        <label htmlFor="1" className="flex ">
-          <span
-            className={`${isChecked ? "custom-checkbox" : ""
-              } w-5 h-5 md:w-6 md:h-6 rounded-[50%] border-2 border-solid border-black `}
-          ></span>
+        <label htmlFor="111" className="flex ">
+          <span className="w-5 h-5 md:w-6 md:h-6 rounded-[50%] border-2 border-solid border-gray-400 "></span>
+          {checked && (
+            <span className="custom-checkbox absolute cursor-pointer">
+              {checkedIcon}
+            </span>
+          )}
         </label>
       </div>
       <div>
