@@ -5,7 +5,7 @@ import Contact from "../components/pages/user/contact";
 import Home from "../components/pages/user/home";
 import Recipes from "../components/pages/user/recipes";
 import NotFound from "../components/pages/user/notFound";
-import SingleBlog from "../components/pages/user/singleBlog";
+import BlogPost from "../components/pages/user/blogPost";
 //panel routes
 import Login from "../components/pages/panel/login";
 import NewPost from "../components/pages/panel/newPost";
@@ -22,7 +22,7 @@ export {
   Home,
   Recipes,
   NotFound,
-  SingleBlog,
+  BlogPost,
   Login,
   NewPost,
   Notice,

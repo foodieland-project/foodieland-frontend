@@ -25,7 +25,7 @@ import {
   Home,
   Recipes,
   NotFound,
-  SingleBlog,
+  BlogPost,
   Posts,
   NewPost,
   Notice,
@@ -43,7 +43,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<SingleBlog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="*" element={<NotFound />} />

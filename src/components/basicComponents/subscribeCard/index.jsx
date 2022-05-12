@@ -31,14 +31,14 @@ const SubscribeCard = () => {
         </form>
         <div className="absolute bottom-0 -left-16 lg:left-0 ">
           <img
-            src="./images/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png"
+            src="/images/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png"
             alt="salad"
             className="hidden md:block md:w-3/5 lg:w-4/5 xl:w-full"
           />
         </div>
         <div className="absolute bottom-0 right-0">
           <img
-            src="./images/photo-plate.png"
+            src="/images/photo-plate.png"
             alt="plate"
             className="hidden md:block  ml-auto md:w-2/3 lg:w-4/5 xl:w-full"
           />
