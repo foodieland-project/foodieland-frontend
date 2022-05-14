@@ -1,54 +1,59 @@
 import React from "react";
+import { icons } from "../../../../utils/icons";
+import "./pagination.css";
 
-const Pagination = ({
+function Pagination({
   postPerPage,
-  totalposts,
+  totalPosts,
   paginate,
   currentPage,
-  setcurrentPage,
-}) => {
-  const pagenumber = [];
+  setCurrentPage,
+}) {
+  const pageNumber = [];
 
-  for (let i = 1; i <= Math.ceil(totalposts / postPerPage); i++) {
-    pagenumber.push(i);
+  for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
+    pageNumber.push(i);
   }
 
   return (
     <div className="w-full h-20   flex justify-center items-center  mt-6">
-      <div className="xl:w-1/2 w-full h-1/2 bg-white flex ml-10 justify-center">
-        {currentPage != 1 ? (
-          <div
-            onClick={() => setcurrentPage(currentPage - 1)}
-            className={` w-10 h-10  mr-2 text-center flex justify-center items-center  text-black  border-gray-300  rounded-md cursor-pointer `}
-          >
-            {"<"}
-          </div>
-        ) : null}
+      <ul className="xl:w-1/2 w-full h-1/2 bg-white flex ml-10 justify-center">
+        <li
+          onClick={() => setCurrentPage(currentPage - 1)}
+          className={`${
+            currentPage === 1 && "invisible"
+          } blog-page-arrow w-10 h-10  mr-2 text-center flex justify-center items-center  text-black border-2 border-gray-200
+            rounded-md cursor-pointer hover:bg-gray-100 transition-all`}
+        >
+          {icons.arrowLeft()}
+        </li>
 
-        {pagenumber.map((number, index) => (
-          <div
+        {pageNumber.map((number, index) => (
+          <li
             key={index}
             onClick={() => paginate(number)}
-            className={` w-10 h-10  mr-1 text-center flex justify-center items-center    border-gray-300 border-2 rounded-md cursor-pointer ${
-              pagenumber[index] == currentPage &&
-              "bg-black text-white border-0 "
+            className={` w-10 flex justify-center items-center mr-2    border-gray-200 border-2 rounded-md cursor-pointer 
+            hover:bg-gray-100 transition-all ${
+              pageNumber[index] == currentPage &&
+              "bg-black text-white border-0 hover:bg-black"
             }`}
           >
             {number}
-          </div>
+          </li>
         ))}
 
-        {currentPage < pagenumber.length ? (
-          <div
-            onClick={() => setcurrentPage(currentPage + 1)}
-            className={` w-10 h-10  mr-2 text-center flex justify-center items-center  text-black  border-gray-300  rounded-md cursor-pointer `}
-          >
-            {">"}
-          </div>
-        ) : null}
-      </div>
+        <li
+          onClick={() => setCurrentPage(currentPage + 1)}
+          className={`${
+            currentPage === pageNumber.length && "invisible"
+          } blog-page-arrow w-10 h-10  mr-2 text-center flex justify-center items-center  text-black border-2  border-gray-200 
+           rounded-md cursor-pointer hover:bg-gray-100 transition-all `}
+        >
+          {icons.arrowRight()}
+        </li>
+      </ul>
     </div>
   );
-};
+}
 
 export default Pagination;

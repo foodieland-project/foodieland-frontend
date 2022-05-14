@@ -9,40 +9,31 @@ import BlogSearchBox from "./components/blogSearchBox";
 import { articleData, RecipeData } from "../../../utils/data";
 
 const Blog = () => {
-  const [filtered, setfiltered] = useState(articleData);
-  ///////////PAGINATION//////////
+  const [posts, setPosts] = useState(articleData);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [PostPerPage] = useState(6);
 
-  const [currentPage, setcurrentPage] = useState(1);
-  const [PostPerPage, setPostPerPage] = useState(6);
-
-  // get the current post pagination
   const indexOfLastPost = currentPage * PostPerPage;
   const indexOfFirstPost = indexOfLastPost - PostPerPage;
-  const currentPosts = filtered.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-  // changing page  PAGINATE
-  const paginate = (Pagenumber) => setcurrentPage(Pagenumber);
+  const paginate = (PageNumber) => setCurrentPage(PageNumber);
 
-  ///////////PAGINATION//////////
-
-  // Search and filtering data
-  const handleChange = (event) => {
+  const searchHandler = (event) => {
     let keyword = event.target.value;
     let data = articleData.filter((item) => {
-      return (
-        item.category.toLowerCase().indexOf(keyword) > -1 ||
-        item.title.toLowerCase().indexOf(keyword) > -1
-      );
+      console.log(item.title.toLowerCase().search(keyword));
+      return item.title.toLowerCase().includes(keyword);
     });
-
-    setfiltered(data);
+    console.log(data);
+    setPosts(data);
   };
 
   return (
     <>
       <BlogHeader />
 
-      <BlogSearchBox handleChange={handleChange} />
+      <BlogSearchBox searchHandler={searchHandler} />
 
       <div className="">
         <section className="w-11/12 xl:w-full mx-auto flex flex-wrap lg:flex-nowrap gap-10 font-inter my-10 lg:my-20  ">
@@ -50,7 +41,6 @@ const Blog = () => {
             {currentPosts.map(
               ({ id, title, content, img, date, writer, profile }, index) => (
                 <Link to={`/blog/${id + 1}`}>
-                  {" "}
                   <BlogCard
                     key={id}
                     id={id}
@@ -75,10 +65,10 @@ const Blog = () => {
         <div className="w-auto">
           <Pagination
             postPerPage={PostPerPage}
-            totalposts={filtered.length}
+            totalPosts={posts.length}
             paginate={paginate}
             currentPage={currentPage}
-            setcurrentPage={setcurrentPage}
+            setCurrentPage={setCurrentPage}
           />
         </div>
 
