@@ -22,10 +22,8 @@ const Blog = () => {
   const searchHandler = (event) => {
     let keyword = event.target.value;
     let data = articleData.filter((item) => {
-      console.log(item.title.toLowerCase().search(keyword));
       return item.title.toLowerCase().includes(keyword);
     });
-    console.log(data);
     setPosts(data);
   };
 

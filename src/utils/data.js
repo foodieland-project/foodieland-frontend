@@ -1,7 +1,7 @@
 export const articleData = [
   {
     id: 1,
-    title: "Big and Juicy Wagyu Beef ",
+    title: "Crochet Projects for Noodle Lovers ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
     img: "images/delicious-recipe/food-1.png",
@@ -11,7 +11,7 @@ export const articleData = [
   },
   {
     id: 2,
-    title: "Big and Juicy Wagyu Beef ",
+    title: "10 Vegetarian Recipes To Eat This Month",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
     img: "images/delicious-recipe/food-2.png",
@@ -21,7 +21,7 @@ export const articleData = [
   },
   {
     id: 3,
-    title: "Big and Juicy Wagyu Beef ",
+    title: "Full Guide to Becoming a Professional Chef ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
     img: "images/delicious-recipe/food-3.png",
@@ -31,7 +31,7 @@ export const articleData = [
   },
   {
     id: 4,
-    title: "Big and Juicy Wagyu Beef ",
+    title: "Simple & Delicious Vegetarian Lasagna ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
     img: "images/delicious-recipe/food-4.png",
@@ -41,7 +41,7 @@ export const articleData = [
   },
   {
     id: 5,
-    title: "Big and Juicy Wagyu Beef ",
+    title: "Plantain and Pinto Stew with Aji Verde ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
     img: "images/delicious-recipe/food-5.png",
@@ -51,7 +51,7 @@ export const articleData = [
   },
   {
     id: 6,
-    title: "Big and Juicy Wagyu Beef ",
+    title: "We’re Hiring a Communications Assistant! ",
     content:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ",
     img: "images/delicious-recipe/food-6.png",
