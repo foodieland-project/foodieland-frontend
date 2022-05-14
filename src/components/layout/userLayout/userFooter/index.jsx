@@ -41,9 +41,10 @@ const UserFooter = () => {
           </p>
         </div>
         <ul className="flex sm:flex-row flex-col justify-center items-center font-medium font-inter sm:right-[120px]">
-          {manu.map(({ name, to }) => {
+          {manu.map(({ name, to }, index) => {
             return (
               <Link
+                key={index}
                 to={`${to}`}
                 className="flex text-center lg:w-[80px] lg:ml-[10px] lg:py-[0px]  ml-[0px]  py-[20px]   w-[250px] justify-center hover:text-blue-500 transition-all "
               >

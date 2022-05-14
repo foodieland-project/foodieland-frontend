@@ -25,9 +25,9 @@ function LoginBox() {
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Password" />
             <div className="flex justify-between mb-4 w-full">
-              <label class="cursor-pointer select-none">
-                <input class="mx-2" type="checkbox" />
-                <span class="text-slate-600">Remember Me</span>
+              <label className="cursor-pointer select-none">
+                <input className="mx-2" type="checkbox" />
+                <span className="text-slate-600">Remember Me</span>
               </label>
               <span className="text-mainBlue cursor-pointer">
                 <Link to="/panel/login/forgetPassword">Forgot Password?</Link>

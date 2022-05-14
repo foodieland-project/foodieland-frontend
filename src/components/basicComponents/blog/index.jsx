@@ -38,9 +38,8 @@ const Blog = () => {
           <div className=" basis-[100%] lg:basis-[66%] relative ">
             {currentPosts.map(
               ({ id, title, content, img, date, writer, profile }, index) => (
-                <Link to={`/blog/${id + 1}`}>
+                <Link key={id} to={`/blog/${id + 1}`}>
                   <BlogCard
-                    key={id}
                     id={id}
                     title={title}
                     content={content}
