@@ -29,18 +29,22 @@ const UserHeader = () => {
   ];
 
   return (
-    <div className=" border-b-[1px] border-gray-300 ">
+    <div className=" border-b-[1px] border-gray-300 font-inter">
       <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse  flex-col sm:justify-between sm:items-center mx-[80px] ">
-        <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px]  mb-[40px]">
-          <span className="flex justify-center header-icon cursor-pointer    ">
-            {icons.instagram()}
-          </span>
-          <span className="flex justify-center ml-[40px] header-icon cursor-pointer">
-            {icons.twitter()}
-          </span>
-          <span className="flex justify-center ml-[40px] header-icon cursor-pointer">
-            {icons.facebook()}
-          </span>
+        <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px]  mb-[40px] font-semibold">
+          <Link to="/panel/login">
+            <span className="flex justify-center header-icon cursor-pointer hover:scale-110 transition-all    ">
+              Log In
+            </span>
+          </Link>
+          <Link to="/panel/register">
+            <span
+              className="flex justify-center ml-[10px] header-icon cursor-pointer border-2 border-black px-2 py-0.5
+             bg-lameBlue rounded-md hover:bg-darkBlue transition-all"
+            >
+              Sign Up
+            </span>
+          </Link>
         </div>
         <div className=" lg:order-[0] sm:order-[-1]  order-[1]  relative  items-center">
           <ul
