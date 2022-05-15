@@ -5,6 +5,12 @@ import { icons } from "../../../utils/icons";
 import Input from "../login/components/input";
 import LoginLogo from "../login/components/loginLogo";
 import LoginHeader from "../login/components/loginHeader";
+import {
+  VALIDATOR_MAXLENGTH,
+  VALIDATOR_MINLENGTH,
+  VALIDATOR_EMAIL,
+  VALIDATOR_PASSWORD,
+} from "../login/components/validator/validators";
 
 function RegisterBox() {
   const facebookIcon = icons.facebookBlue();
@@ -23,18 +29,33 @@ function RegisterBox() {
           />
 
           <form className="w-[85%] mx-6 my-4">
-            <Input type="text" placeholder="Username" />
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
+            <Input
+              type="text"
+              placeholder="Username"
+              validators={[VALIDATOR_MINLENGTH(4), VALIDATOR_MAXLENGTH(12)]}
+              errorText="username must be valid"
+            />
+            <Input
+              type="email"
+              placeholder="Email"
+              validators={[VALIDATOR_EMAIL()]}
+              errorText="email must be valid"
+            />
+            <Input
+              type="password"
+              placeholder="Password"
+              validators={[VALIDATOR_PASSWORD()]}
+              errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
+            />
             <div className="flex justify-between mb-4 w-full">
-              <label className="cursor-pointer select-none">
-                <input className="mx-2" type="checkbox" />
-                <span className="text-slate-600  text-sm">
+              <label class="cursor-pointer select-none">
+                <input class="mx-2" type="checkbox" />
+                <span class="text-slate-600">
                   i Agree to privacy policy & terms
                 </span>
               </label>
             </div>
-            <Button type={"submit"}>Sign Up</Button>
+            <Button type="submit">sign up</Button>
           </form>
           <div className="text-center my-2  w-[85%] sm:w-full">
             <div className="w-full flex justify-between sm:justify-evenly">

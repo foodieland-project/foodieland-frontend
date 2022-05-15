@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { icons } from "../../../../utils/icons";
 import LoginLogo from "../components/loginLogo";
 import LoginHeader from "../components/loginHeader";
+import { VALIDATOR_EMAIL } from "../components/validator/validators";
 
 function ForgotPassword() {
   const arrowLeft = icons.arrowLeftPurple();
@@ -20,13 +21,18 @@ function ForgotPassword() {
               "Enter your email and we will send you instructions to reset your password"
             }
           />
-          <form className="w-[85%] mx-6 mt-4">
-            <Input type="email" placeholder="Email" />
-            <Button type={"submit"}>Email Me</Button>
+          <form className="w-full px-6 mt-4">
+            <Input
+              type="email"
+              placeholder="Email"
+              validators={[VALIDATOR_EMAIL()]}
+              errorText="password must be valid"
+            />
+            <Button type="submit">email me</Button>
           </form>
           <div className="flex justify-center items-center">
             <span>{arrowLeft}</span>
-            <span className="text-purple-500 cursor-pointer my-4 mx-2">
+            <span className="text-mainBlue cursor-pointer my-4 mx-2">
               <Link to="/panel/login">Back to login</Link>
             </span>
           </div>
