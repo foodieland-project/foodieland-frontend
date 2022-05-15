@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
 function Category({ imageUrl, name, bgColor }) {
   return (
-    <div className="basis-[24%] lg:basis-[14%] h-[160px] md:h-[190px] xl:h-[200px] rounded-3xl overflow-hidden my-4">
+    <div className="basis-[24%] lg:basis-[14%] h-[160px] md:h-[190px] xl:h-[200px] cursor-pointer rounded-3xl overflow-hidden my-4 hover:scale-110 transition-all">
       <div>
         <img
           src={`${imageUrl}`}
