@@ -2,7 +2,11 @@ function UploadImage() {
   return (
     <div className="flex gap-6 mt-4 ">
       <div>
-        <img src="/images/panel/settings-avatar.png" alt="avatar" />
+        <img
+          src="/images/panel/blue-avatar.png"
+          alt="avatar"
+          className="w-36 rounded-[50%]"
+        />
       </div>
       <div className="flex flex-col justify-center gap-4">
         <div className=" flex flex-col md:flex-row gap-4">

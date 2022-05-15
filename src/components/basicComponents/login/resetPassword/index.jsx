@@ -27,7 +27,7 @@ function ResetPassword() {
           </form>
           <div className="flex justify-center items-center">
             <span>{arrowLeft}</span>
-            <span className="text-purple-500 cursor-pointer my-4 mx-2">
+            <span className="text-mainBlue cursor-pointer my-4 mx-2">
               <Link to="/panel/login">Back to login</Link>
             </span>
           </div>

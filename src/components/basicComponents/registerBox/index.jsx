@@ -41,7 +41,7 @@ function RegisterBox() {
               <span className="text-gray  text-gray-500">
                 Already have an account?
               </span>
-              <span className="text-purple-500 cursor-pointer">
+              <span className="text-mainBlue cursor-pointer">
                 <Link to="/panel/login">Sign in instead</Link>
               </span>
             </div>
