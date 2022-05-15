@@ -2,9 +2,10 @@ import { useState } from "react";
 import OptionCard from "./optionCard";
 import "./panel-sidebar.css";
 import SidebarHeader from "./sidebarHeader";
+import { CSSTransition } from "react-transition-group";
 
 function PanelSidebar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const sidebarOptions = [
     {
       id: 1,
@@ -49,7 +50,7 @@ function PanelSidebar() {
       <ul
         onClick={() => setOpen((prev) => !prev)}
         className={`cursor-pointer option-selected active justify-center h-[50px] my-4 items-center md:hidden  flex  flex-col ${
-          open ? "h-[36px]" : ""
+          open ? "" : ""
         }`}
       >
         <li
@@ -69,17 +70,32 @@ function PanelSidebar() {
         ></li>
       </ul>
 
-      <div className={`${open && " hidden "} `}>
-        {sidebarOptions.map(({ route, id, option, icon, selected }) => (
-          <OptionCard
-            key={id}
-            option={option}
-            id={id}
-            icon={icon}
-            selected={selected}
-            route={route}
-          />
-        ))}
+      <div className="overflow-hidden">
+        <CSSTransition
+          unmountOnExit
+          mountOnEnter
+          in={open}
+          timeout={200}
+          classNames={{
+            enter: "",
+            enterActive: "open-panel-sidebar",
+            exit: "",
+            exitActive: "close-panel-sidebar",
+          }}
+        >
+          <div>
+            {sidebarOptions.map(({ route, id, option, icon, selected }) => (
+              <OptionCard
+                key={id}
+                option={option}
+                id={id}
+                icon={icon}
+                selected={selected}
+                route={route}
+              />
+            ))}
+          </div>
+        </CSSTransition>
       </div>
     </div>
   );

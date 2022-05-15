@@ -24,3 +24,25 @@
     border-radius: 0px 50px 50px 0px;
   }
 }
+@keyframes openSidebar {
+  0% {
+    transform: translateY(-400px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes closeSidebar {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-400px);
+  }
+}
+.close-panel-sidebar {
+  animation: closeSidebar 0.3s ease-out forwards;
+}
+.open-panel-sidebar {
+  animation: openSidebar 0.3s ease-out forwards;
+}
