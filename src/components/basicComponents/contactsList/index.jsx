@@ -4,6 +4,7 @@ import ContactItem from "./components/contactItem";
 import ContactTitle from "./components/contactTitle";
 import { icons } from "../../../utils/icons";
 import { contacts } from "../../../utils/data";
+import "./contacts-list.css";
 
 function ContactsList() {
   const [FormData, setFormData] = useState(contacts);
@@ -31,7 +32,7 @@ function ContactsList() {
             onClick={() => {
               handleNext(setCurrentPage, currentPage, paginationNumbers);
             }}
-            className="bg-gray-300 cursor-pointer text-darkPurple rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
+            className="contacts-arrow bg-lameBlue hover:bg-darkBlue transition-all cursor-pointer text-darkPurple rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
           >
             {icons.arrowRight()}
           </span>
@@ -51,7 +52,7 @@ function ContactsList() {
             onClick={() => {
               handlePrev(setCurrentPage, currentPage, paginationNumbers);
             }}
-            className="bg-gray-300 text-darkPurple cursor-pointer rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
+            className="contacts-arrow bg-lameBlue hover:bg-darkBlue transition-all text-darkPurple cursor-pointer rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
           >
             {icons.arrowLeft()}
           </span>

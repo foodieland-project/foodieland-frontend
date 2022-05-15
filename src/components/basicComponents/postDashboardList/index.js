@@ -3,6 +3,7 @@ import PostItem from "./postItem";
 import { icons } from "../../../utils/icons";
 import { posts } from "../../../utils/data";
 import Search from "./search";
+import "./posts.css";
 
 const PostDashboardList = () => {
   const [FormData, setFormData] = useState(posts);
@@ -79,7 +80,7 @@ const PostDashboardList = () => {
             onClick={() => {
               handlePrevious(setCurrentPage, currentPage, paginationNumbers);
             }}
-            className="bg-gray-300 text-mainBlue rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
+            className="posts-arrow bg-lameBlue text-mainBlue hover:bg-darkBlue transition-all cursor-pointer rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
           >
             {icons.arrowLeft()}
           </span>
@@ -99,7 +100,7 @@ const PostDashboardList = () => {
             onClick={() => {
               handleNext(setCurrentPage, currentPage, paginationNumbers);
             }}
-            className="bg-gray-300 text-darkPurple rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
+            className="posts-arrow bg-lameBlue text-mainBlue hover:bg-darkBlue transition-all cursor-pointer rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]"
           >
             {icons.arrowRight()}
           </span>
