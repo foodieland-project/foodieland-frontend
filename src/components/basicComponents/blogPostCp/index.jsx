@@ -38,7 +38,7 @@ const BlogPostCp = () => {
         <img
           src={`${img}`}
           alt="article"
-          className="rounded-3xl w-full h-[400px] object-cover"
+          className="rounded-3xl w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
         />
       </div>
       <div className="flex justify-center flex-wrap">
