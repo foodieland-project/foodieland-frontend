@@ -2,3 +2,8 @@
   transition: all 200ms;
   fill: rgba(0, 0, 255, 0.623) !important;
 }
+
+.user-header-option.active {
+  transform: scale(1.1);
+  color: rgb(59 130 246);
+}

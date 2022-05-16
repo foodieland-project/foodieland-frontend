@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { icons } from "../../../../utils/icons";
+import { Link, NavLink } from "react-router-dom";
 
 const UserHeader = () => {
   const [open, setOpen] = useState(false);
@@ -77,13 +76,15 @@ const UserHeader = () => {
                    }`}
           >
             {manu.map(({ name, to }, index) => (
-              <Link
+              <NavLink
                 key={index}
                 to={`${to}`}
-                className="flex lg:ml-[60px] lg:py-[0px]  ml-[0px]   py-[20px] lg:w-auto  w-[250px] justify-center hover:text-blue-500 transition-all "
+                className={
+                  " user-header-option flex lg:ml-[60px] lg:py-[0px]  ml-[0px]   py-[20px] lg:w-auto  w-[250px] justify-center hover:scale-110 hover:text-blue-500 transition-all"
+                }
               >
                 {name}{" "}
-              </Link>
+              </NavLink>
             ))}
           </ul>
         </div>
