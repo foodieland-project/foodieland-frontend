@@ -37,8 +37,8 @@ const Blog = () => {
         <section className="w-11/12 xl:w-full mx-auto flex flex-wrap lg:flex-nowrap gap-10 font-inter my-10 lg:my-20  ">
           <div className=" basis-[100%] lg:basis-[66%] relative ">
             {currentPosts.map(
-              ({ id, title, content, img, date, writer, profile }, index) => (
-                <Link key={id} to={`/blog/${id + 1}`}>
+              ({ id, title, content, img, date, writer, profile }) => (
+                <Link key={id} to={`/blog/${id}`}>
                   <BlogCard
                     id={id}
                     title={title}

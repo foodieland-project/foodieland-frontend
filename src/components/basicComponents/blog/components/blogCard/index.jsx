@@ -18,9 +18,8 @@ function BlogCard({ img, title, writer, profile, date }) {
 
           <div className="flex items-center justify-center md:justify-start mt-4 md:mt-0 md:absolute bottom-2">
             <div className="flex items-center   ">
-              {/* img */}
               <img
-                src={`/${profile}`}
+                src={`${profile}`}
                 alt=""
                 className="w-8 h-8  rounded-[50%]"
               />
