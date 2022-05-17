@@ -1,21 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// //user routes
-// import AboutUs from "./components/pages/user/aboutUs";
-// import Blog from "./components/pages/user/blog";
-// import Contact from "./components/pages/user/contact";
-// import Home from "./components/pages/user/home";
-// import Recipes from "./components/pages/user/recipes";
-// import NotFound from "./components/pages/user/notFound";
-// import SingleBlog from "./components/pages/user/singleBlog";
-// //panel routes
-// import Login from "./components/pages/panel/login";
-// import NewPost from "./components/pages/panel/newPost";
-// import Notice from "./components/pages/panel/notice";
-// import Option from "./components/pages/panel/option";
-// import Posts from "./components/pages/panel/posts";
-// import Statistic from "./components/pages/panel/statistic";
-// import Contacts from "./components/pages/panel/contacts";
 
 import {
   AboutUs,
@@ -25,6 +9,9 @@ import {
   Recipes,
   NotFound,
   BlogPost,
+} from "./routes/user";
+
+import {
   Posts,
   NewPost,
   Notice,
@@ -33,30 +20,50 @@ import {
   Contacts,
   Login,
   Register,
-} from "./routes";
+} from "./routes/panel";
+
+import {
+  SettingsAccountForm,
+  SettingsSecurity,
+  SettingsInfo,
+  PostDashboardList,
+  ArticleDashboardList,
+  NewArticleForm,
+  NewRecipeForm,
+} from "./routes/components";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} exact />
+          <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="panel/posts" element={<Posts />} />
-          <Route path="panel/newPost" element={<NewPost />} />
+          <Route path="panel/posts/*" element={<Posts />}>
+            <Route path="recipe" element={<PostDashboardList />} />
+            <Route path="article" element={<ArticleDashboardList />} />
+          </Route>
+          <Route path="panel/newPost/*" element={<NewPost />}>
+            <Route path="recipe" element={<NewRecipeForm />} />
+            <Route path="article" element={<NewArticleForm />} />
+          </Route>
           <Route path="panel/notice" element={<Notice />} />
-          <Route path="panel/settings" element={<Settings />} />
+          <Route path="panel/settings/*" element={<Settings />}>
+            <Route path="account" element={<SettingsAccountForm />} />
+            <Route path="security" element={<SettingsSecurity />} />
+            <Route path="info" element={<SettingsInfo />} />
+          </Route>
           <Route path="panel/statistic" element={<Statistic />} />
-          <Route path="panel/login" element={<Login />} exact />
-          <Route path="panel/login/forgetPassword" element={<Login />} exact />
-          <Route path="panel/login/resetPassword" element={<Login />} exact />
+          <Route path="panel/login" element={<Login />} />
+          <Route path="panel/login/forgetPassword" element={<Login />} />
+          <Route path="panel/login/resetPassword" element={<Login />} />
           <Route path="panel/register" element={<Register />} />
-          <Route path="panel/contact" element={<Contacts />} exact />
+          <Route path="panel/contact" element={<Contacts />} />
         </Routes>
       </Router>
     </>

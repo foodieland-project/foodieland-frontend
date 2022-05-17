@@ -1,28 +1,32 @@
-import PostDashboardList from "../../../components/postDashboardList";
+import { NavLink, Outlet } from "react-router-dom";
 import PanelLayout from "../../../layouts/panelLayout";
 import { icons } from "../../../services/utils/icons";
-import styles from "./index.module.css";
+import "./index.css";
 
 const Posts = () => {
-  const listClasses = `${styles["nav__links"]} mx-8 cursor-pointer flex items-center`;
-
   return (
     <PanelLayout>
       <>
         <nav className="border-b-2 border-slate-300 py-3">
           <ul className="flex justify-start">
-            <li className={listClasses}>
+            <NavLink
+              to="recipe"
+              className={`nav__links mx-8 cursor-pointer flex items-center`}
+            >
               <span className="mr-2 fill-slate-800">{icons.search()}</span>{" "}
               <p>Recipe</p>
-            </li>
-            <li className={listClasses}>
+            </NavLink>
+            <NavLink
+              to="article"
+              className={`nav__links mx-8 cursor-pointer flex items-center`}
+            >
               <span className="mr-2 fill-slate-800">{icons.security()}</span>{" "}
               <p>Article</p>
-            </li>
+            </NavLink>
           </ul>
         </nav>
         <section className="p-[10px] font-inter">
-          <PostDashboardList />
+          <Outlet />
         </section>
       </>
     </PanelLayout>

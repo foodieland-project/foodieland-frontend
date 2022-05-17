@@ -19,14 +19,14 @@ function PanelSidebar() {
       option: "posts",
       icon: "lists",
       selected: true,
-      route: "/panel/posts",
+      route: "/panel/posts/recipe",
     },
     {
       id: 3,
       option: "New Post",
       icon: "circlePlus",
       selected: true,
-      route: "/panel/newPost",
+      route: "/panel/newPost/recipe",
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ function PanelSidebar() {
       option: "settings",
       icon: "gear",
       selected: false,
-      route: "/panel/settings",
+      route: "/panel/settings/account",
     },
   ];
 

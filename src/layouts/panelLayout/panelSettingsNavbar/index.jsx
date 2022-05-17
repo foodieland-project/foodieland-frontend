@@ -1,38 +1,33 @@
 import { icons } from "../../../services/utils/icons";
+import { NavLink } from "react-router-dom";
 import "./index.css";
 
-const PanelSettingsNavbar = ({ activePageHandler, activePage }) => {
+const PanelSettingsNavbar = () => {
   return (
     <>
       <nav className="border-b-2 border-slate-300 py-3">
         <ul className="flex justify-start">
-          <li
-            className={`nav__links ${
-              activePage === "account" && "active"
-            }  mx-4 sm:mx-8 cursor-pointer flex items-center`}
-            onClick={() => activePageHandler("account")}
+          <NavLink
+            to="account"
+            className={`nav__links  mx-4 sm:mx-8 cursor-pointer flex items-center`}
           >
             <span className="mr-2 fill-slate-800">{icons.search()}</span>{" "}
             <p className="text-sm sm:text-base">ACCOUNT</p>
-          </li>
-          <li
-            className={`nav__links ${
-              activePage === "security" && "active"
-            }  mx-4 sm:mx-8 cursor-pointer flex items-center`}
-            onClick={() => activePageHandler("security")}
+          </NavLink>
+          <NavLink
+            to="security"
+            className={`nav__links  mx-4 sm:mx-8 cursor-pointer flex items-center`}
           >
             <span className="mr-2 fill-slate-800">{icons.security()}</span>{" "}
             <p className="text-sm sm:text-base">SECURITY</p>
-          </li>
-          <li
-            className={`nav__links ${
-              activePage === "info" && "active"
-            } mx-4 sm:mx-8 cursor-pointer flex items-center`}
-            onClick={() => activePageHandler("info")}
+          </NavLink>
+          <NavLink
+            to="info"
+            className={`nav__links  mx-4 sm:mx-8 cursor-pointer flex items-center`}
           >
             <span className="mr-2 fill-slate-800">{icons.info()}</span>{" "}
             <p className="text-sm sm:text-base">INFO</p>
-          </li>
+          </NavLink>
         </ul>
       </nav>
     </>

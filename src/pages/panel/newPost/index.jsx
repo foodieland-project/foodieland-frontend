@@ -1,50 +1,32 @@
-import React, { useState } from "react";
 import { icons } from "../../../services/utils/icons";
-import NewArticleForm from "../../../components/newArticleForm";
-import NewRecipeForm from "../../../components/newRecipeForm";
 import PanelLayout from "../../../layouts/panelLayout";
 import "./new-post.css";
+import { NavLink, Outlet } from "react-router-dom";
 
 const NewPost = () => {
-  const [selectRecipe, setSelectRecipe] = useState(true);
-  const [selectArticle, setSelectArticle] = useState(false);
-
-  function selectRecipeHandler() {
-    setSelectArticle(false);
-    setSelectRecipe(true);
-  }
-  function selectArticleHandler() {
-    setSelectRecipe(false);
-    setSelectArticle(true);
-  }
   return (
     <PanelLayout>
       <>
         <nav className="border-b-2 border-slate-300 py-3">
           <ul className="flex justify-start">
-            <li
-              className={`nav__links ${
-                selectRecipe && "active"
-              } mx-8 cursor-pointer flex items-center`}
-              onClick={selectRecipeHandler}
+            <NavLink
+              to="recipe"
+              className={`nav__links mx-8 cursor-pointer flex items-center`}
             >
               <span className="mr-2 fill-slate-800">{icons.search()}</span>{" "}
               <p>Recipe</p>
-            </li>
-            <li
-              className={`nav__links ${
-                selectArticle && "active"
-              }  mx-8 cursor-pointer flex items-center`}
-              onClick={selectArticleHandler}
+            </NavLink>
+            <NavLink
+              to="article"
+              className={`nav__links  mx-8 cursor-pointer flex items-center`}
             >
               <span className="mr-2 fill-slate-800">{icons.security()}</span>{" "}
               <p>Article</p>
-            </li>
+            </NavLink>
           </ul>
         </nav>
         <section className="font-inter">
-          {selectRecipe && <NewRecipeForm />}
-          {selectArticle && <NewArticleForm />}
+          <Outlet />
         </section>
       </>
     </PanelLayout>

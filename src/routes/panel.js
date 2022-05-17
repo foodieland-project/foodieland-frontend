@@ -1,12 +1,3 @@
-//user routes
-import AboutUs from "../pages/user/aboutUs";
-import Blog from "../pages/user/blog";
-import Contact from "../pages/user/contact";
-import Home from "../pages/user/home";
-import Recipes from "../pages/user/recipes";
-import NotFound from "../pages/user/notFound";
-import BlogPost from "../pages/user/blogPost";
-//panel routes
 import Login from "../pages/panel/login";
 import Register from "../pages/panel/register";
 import NewPost from "../pages/panel/newPost";
@@ -17,13 +8,6 @@ import Statistic from "../pages/panel/statistic";
 import Contacts from "../pages/panel/contacts";
 
 export {
-  AboutUs,
-  Blog,
-  Contact,
-  Home,
-  Recipes,
-  NotFound,
-  BlogPost,
   Login,
   NewPost,
   Notice,
