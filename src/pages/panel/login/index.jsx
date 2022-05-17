@@ -1,9 +1,9 @@
 import React from "react";
-import LoginLayout from "../../../basicComponents/login/loginLayout";
-import LoginBox from "../../../basicComponents/login/loginBox";
+import LoginLayout from "../../../components/login/loginLayout";
+import LoginBox from "../../../components/login/loginBox";
 import { useLocation } from "react-router-dom";
-import ForgotPassword from "../../../basicComponents/login/forgotPassword";
-import ResetPassword from "../../../basicComponents/login/resetPassword";
+import ForgotPassword from "../../../components/login/forgotPassword";
+import ResetPassword from "../../../components/login/resetPassword";
 
 const Login = () => {
   const { pathname } = useLocation();
@@ -13,7 +13,6 @@ const Login = () => {
       {pathname === "/panel/login" && <LoginBox />}
       {pathname === "/panel/login/forgetPassword" && <ForgotPassword />}
       {pathname === "/panel/login/resetPassword" && <ResetPassword />}
-
     </div>
   );
 };

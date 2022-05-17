@@ -33,7 +33,7 @@ import {
   Statistic,
   Contacts,
   Login,
-} from "./utils/routes";
+} from "./routes";
 
 function App() {
   return (

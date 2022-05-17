@@ -1,5 +1,5 @@
-import LoginLayout from "../../../basicComponents/login/loginLayout";
-import RegisterBox from "../../../basicComponents/registerBox";
+import LoginLayout from "../../../components/login/loginLayout";
+import RegisterBox from "../../../components/registerBox";
 
 function Register() {
   return (

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import SettingsAccountForm from "../../../basicComponents/settingsAccountForm";
-import SettingsInfo from "../../../basicComponents/settingsInfo";
-import SettingsSecurity from "../../../basicComponents/settingsSecurity";
-import PanelLayout from "../../../layout/panelLayout";
-import PanelSettingsNavbar from "../../../layout/panelLayout/panelSettingsNavbar/index.jsx";
+import SettingsAccountForm from "../../../components/settingsAccountForm";
+import SettingsInfo from "../../../components/settingsInfo";
+import SettingsSecurity from "../../../components/settingsSecurity";
+import PanelLayout from "../../../layouts/panelLayout";
+import PanelSettingsNavbar from "../../../layouts/panelLayout/panelSettingsNavbar/index.jsx";
 
 const Settings = () => {
   const [activePage, setActivePage] = useState("account");

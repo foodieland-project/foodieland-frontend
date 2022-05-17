@@ -1,6 +1,6 @@
-import PanelLayout from "../../../layout/panelLayout";
+import PanelLayout from "../../../layouts/panelLayout";
 
-import ContactsList from "../../../basicComponents/contactsList";
+import ContactsList from "../../../components/contactsList";
 
 const Contacts = () => {
   return (

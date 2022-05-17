@@ -1,8 +1,8 @@
 import React from "react";
-import StatisticCard from "../../../basicComponents/statistic/components/postCard";
-import PanelLayout from "../../../layout/panelLayout";
-import WeeklyChart from "../../../basicComponents/statistic/components/weeklyChart";
-import MonthlyChart from "../../../basicComponents/statistic/components/monthlyChart";
+import StatisticCard from "../../../components/statistic/components/postCard";
+import PanelLayout from "../../../layouts/panelLayout";
+import WeeklyChart from "../../../components/statistic/components/weeklyChart";
+import MonthlyChart from "../../../components/statistic/components/monthlyChart";
 const weeklyData = [
   {
     name: "1-8",

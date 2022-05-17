@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { icons } from "../../../../utils/icons";
-import NewArticleForm from "../../../basicComponents/newArticleForm";
-import NewRecipeForm from "../../../basicComponents/newRecipeForm";
-import PanelLayout from "../../../layout/panelLayout";
+import NewArticleForm from "../../../components/newArticleForm";
+import NewRecipeForm from "../../../components/newRecipeForm";
+import PanelLayout from "../../../layouts/panelLayout";
 import "./new-post.css";
 
 const NewPost = () => {
