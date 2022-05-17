@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { icons } from "../../../../../utils/icons";
+import { icons } from "../../../../services/utils/icons";
 
 function IngredientCard({ id, text }) {
   const [checked, setChecked] = useState(false);

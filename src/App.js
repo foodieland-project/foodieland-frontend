@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Register from "./components/pages/panel/register";
 // //user routes
 // import AboutUs from "./components/pages/user/aboutUs";
 // import Blog from "./components/pages/user/blog";
@@ -33,6 +32,7 @@ import {
   Statistic,
   Contacts,
   Login,
+  Register,
 } from "./routes";
 
 function App() {

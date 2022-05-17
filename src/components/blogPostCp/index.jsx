@@ -1,6 +1,5 @@
-import React from "react";
-import { icons } from "../../../utils/icons";
-import { articleData } from "../../../utils/data";
+import { icons } from "../../services/utils/icons";
+import { articleData } from "../../services/utils/data";
 import RecommendedRecipes from "../recommendedRecipes";
 import SubscribeCard from "../subscribeCard";
 import BlogContent from "./blogPostContent";

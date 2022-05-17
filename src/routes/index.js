@@ -8,6 +8,7 @@ import NotFound from "../pages/user/notFound";
 import BlogPost from "../pages/user/blogPost";
 //panel routes
 import Login from "../pages/panel/login";
+import Register from "../pages/panel/register";
 import NewPost from "../pages/panel/newPost";
 import Notice from "../pages/panel/notice";
 import Settings from "../pages/panel/settings";
@@ -30,4 +31,5 @@ export {
   Posts,
   Statistic,
   Contacts,
+  Register,
 };

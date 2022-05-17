@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { icons } from '../../../../../utils/icons';
+import { icons } from '../../../../services/utils/icons';
 
 
 const MoreRecipeCard = ({ recipeData }: any) => {

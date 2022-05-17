@@ -1,4 +1,3 @@
-import React from "react";
 import PanelFooter from "./panelFooter";
 import PanelHeader from "./panelHeader";
 import PanelSidebar from "./panelSidebar";

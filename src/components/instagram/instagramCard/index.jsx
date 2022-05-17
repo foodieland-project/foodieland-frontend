@@ -1,5 +1,5 @@
 import React from "react";
-import { icons } from "../../../../utils/icons";
+import { icons } from "../../../services/utils/icons";
 
 function InstagramCard({ imageUrl, caption, date }) {
   const instagramLike = icons.instagramLike();

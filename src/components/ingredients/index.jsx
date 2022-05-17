@@ -1,5 +1,5 @@
 import React from "react";
-import { ingredientsData, RecipeData } from "../../../utils/data";
+import { ingredientsData, RecipeData } from "../../services/utils/data";
 import IngredientCard from "./components/ingredientCard";
 import OtherRecipes from "./components/otherRecipes";
 import "./ingredients.css";

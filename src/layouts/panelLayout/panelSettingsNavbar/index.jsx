@@ -1,4 +1,4 @@
-import { icons } from "../../../../utils/icons";
+import { icons } from "../../../services/utils/icons";
 import "./index.css";
 
 const PanelSettingsNavbar = ({ activePageHandler, activePage }) => {

@@ -1,5 +1,5 @@
 import MoreRecipeCard from "../moreRecipe/components/moreRecipeCard";
-import { MoreRecipeData } from "../../../utils/data";
+import { MoreRecipeData } from "../../services/utils/data";
 function RecommendedRecipes({ title, length }) {
   return (
     <section className="container font-inter flex flex-col py-2  mx-auto my-10 md:my-20">

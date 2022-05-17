@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { icons } from "../../../../utils/icons";
+import { icons } from "../../../services/utils/icons";
 import NewArticleForm from "../../../components/newArticleForm";
 import NewRecipeForm from "../../../components/newRecipeForm";
 import PanelLayout from "../../../layouts/panelLayout";

@@ -6,7 +6,7 @@ import OtherRecipes from "../ingredients/components/otherRecipes";
 import BlogHeader from "./components/blogHeader";
 import BlogCard from "./components/blogCard";
 import BlogSearchBox from "./components/blogSearchBox";
-import { articleData, RecipeData } from "../../../utils/data";
+import { articleData, RecipeData } from "../../services/utils/data";
 
 const Blog = () => {
   const [posts, setPosts] = useState(articleData);

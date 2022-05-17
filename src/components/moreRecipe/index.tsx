@@ -1,6 +1,6 @@
 import React from 'react';
 import MoreRecipeCard from './components/moreRecipeCard';
-import { MoreRecipeData} from '../../../utils/data'
+import { MoreRecipeData} from '../../services/utils/data'
 const MoreRecipe = () => {
     return (
         <div className=' font-inter flex flex-col py-2  mx-auto my-10 md:my-20'>

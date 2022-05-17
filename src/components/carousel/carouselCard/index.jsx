@@ -1,6 +1,6 @@
 import "./carousel-item.css";
 import React from "react";
-import { icons } from "../../../../utils/icons";
+import { icons } from "../../../services/utils/icons";
 
 function CarouselCard({ title, imageUrl, description }) {
   const timerIcon = icons.timer();

@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { icons } from "../../../../../utils/icons";
+import { icons } from "../../../../services/utils/icons";
 
 function OptionCard({ id, option, icon, selected, selectHandler, route }) {
   return (

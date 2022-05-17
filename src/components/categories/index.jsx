@@ -1,6 +1,6 @@
 import Category from "./categoriesCard";
 import React from "react";
-import { categoriesData } from "../../../utils/data";
+import { categoriesData } from "../../services/utils/data";
 function Categories() {
   return (
     <section>

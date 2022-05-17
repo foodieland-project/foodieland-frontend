@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { icons } from "../../../../utils/icons";
+import { icons } from "../../../services/utils/icons";
 
 function DirectionCard({ title, description, number, imageUrl, imageDesc }) {
   const [checked, setChecked] = useState(false);

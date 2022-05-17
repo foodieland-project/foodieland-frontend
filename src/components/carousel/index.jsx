@@ -2,8 +2,8 @@ import { useState, useRef } from "react";
 import React from "react";
 import "./carousel.css";
 import CarouselCard from "./carouselCard";
-import { icons } from "../../../utils/icons";
-import { carouselData } from "../../../utils/data";
+import { icons } from "../../services/utils/icons";
+import { carouselData } from "../../services/utils/data";
 
 function Carousel() {
   const [distance, setDistance] = useState(0);

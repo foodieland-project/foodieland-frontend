@@ -2,8 +2,8 @@ import { useState } from "react";
 import ContactHeader from "./components/contactHeader";
 import ContactItem from "./components/contactItem";
 import ContactTitle from "./components/contactTitle";
-import { icons } from "../../../utils/icons";
-import { contacts } from "../../../utils/data";
+import { icons } from "../../services/utils/icons";
+import { contacts } from "../../services/utils/data";
 import "./contacts-list.css";
 
 function ContactsList() {

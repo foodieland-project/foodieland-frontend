@@ -1,5 +1,5 @@
 import React from "react";
-import { directionsData } from "../../../utils/data";
+import { directionsData } from "../../services/utils/data";
 import "./categories.css";
 import DirectionCard from "./directionCard";
 function Directions() {

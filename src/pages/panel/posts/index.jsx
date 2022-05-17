@@ -1,7 +1,6 @@
-import React from "react";
-import { icons } from "../../../services/utils";
 import PostDashboardList from "../../../components/postDashboardList";
 import PanelLayout from "../../../layouts/panelLayout";
+import { icons } from "../../../services/utils/icons";
 import styles from "./index.module.css";
 
 const Posts = () => {

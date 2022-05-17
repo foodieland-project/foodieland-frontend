@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../login/components/button";
-import { icons } from "../../../utils/icons";
+import { icons } from "../../services/utils/icons";
 import Input from "../login/components/input";
 import LoginLogo from "../login/components/loginLogo";
 import LoginHeader from "../login/components/loginHeader";

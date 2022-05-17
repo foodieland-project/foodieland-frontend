@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../components/button";
 import Input from "../components/input";
 import { Link } from "react-router-dom";
-import { icons } from "../../../../utils/icons";
+import { icons } from "../../../services/utils/icons";
 import LoginLogo from "../components/loginLogo";
 import LoginHeader from "../components/loginHeader";
 import { VALIDATOR_EMAIL } from "../components/validator/validators";

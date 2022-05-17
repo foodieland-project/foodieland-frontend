@@ -1,5 +1,5 @@
 import React from 'react'
-import { RecipeData } from '../../../utils/data'
+import { RecipeData } from '../../services/utils/data'
 import BannerCard from './components/bannerCard'
 import RecipeCard from './components/recipeCard'
 

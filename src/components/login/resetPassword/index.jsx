@@ -1,13 +1,11 @@
 import React from "react";
 import Button from "../components/button";
 import Input from "../components/input";
-import { icons } from "../../../../utils/icons";
+import { icons } from "../../../services/utils/icons";
 import { Link } from "react-router-dom";
 import LoginLogo from "../components/loginLogo";
 import LoginHeader from "../components/loginHeader";
-import {
-  VALIDATOR_PASSWORD,
-} from "../components/validator/validators";
+import { VALIDATOR_PASSWORD } from "../components/validator/validators";
 
 function ResetPassword() {
   const arrowLeft = icons.arrowLeftPurple();
@@ -24,20 +22,20 @@ function ResetPassword() {
             }
           />
           <form className="mx-6 mt-4 w-[350px]">
-              <Input
-                type="password"
-                placeholder="New Password"
-                validators={[VALIDATOR_PASSWORD()]}
-                errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
-              />
-              <Input
-                type="password"
-                placeholder="Confirm Password"
-                validators={[VALIDATOR_PASSWORD()]}
-                errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
-              />
-              <Button type="submit">login</Button>
-            </form>
+            <Input
+              type="password"
+              placeholder="New Password"
+              validators={[VALIDATOR_PASSWORD()]}
+              errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
+            />
+            <Input
+              type="password"
+              placeholder="Confirm Password"
+              validators={[VALIDATOR_PASSWORD()]}
+              errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
+            />
+            <Button type="submit">login</Button>
+          </form>
           <div className="flex justify-center items-center">
             <span>{arrowLeft}</span>
             <span className="text-mainBlue cursor-pointer my-4 mx-2">
