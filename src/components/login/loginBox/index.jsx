@@ -25,7 +25,6 @@ function LoginBox() {
             title={"Welcome To Foodieland!"}
             text={" Please sign-in to your account and start the adventure"}
           />
-          {/* "w-[85%] mx-6 my-4" */}
           <form className="w-[85%] mx-6 my-4">
             <Input
               type="email"
@@ -44,7 +43,7 @@ function LoginBox() {
                 <input className="mx-2" type="checkbox" />
                 <span className="text-slate-600">Remember Me</span>
               </label>
-              <Link to="/panel/login/forgetPassword">
+              <Link to="/panel/login/forget-password">
                 <span className="text-mainBlue cursor-pointer">
                   Forgot Password?
                 </span>

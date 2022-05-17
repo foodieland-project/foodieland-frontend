@@ -5,6 +5,9 @@ import PostDashboardList from "../components/postDashboardList";
 import ArticleDashboardList from "../components/articleDashboardList";
 import NewArticleForm from "../components/newArticleForm";
 import NewRecipeForm from "../components/newRecipeForm";
+import LoginBox from "../components/login/loginBox";
+import ForgotPassword from "../components/login/forgotPassword";
+import ResetPassword from "../components/login/resetPassword";
 
 export {
   SettingsAccountForm,
@@ -14,4 +17,7 @@ export {
   ArticleDashboardList,
   NewArticleForm,
   NewRecipeForm,
+  LoginBox,
+  ForgotPassword,
+  ResetPassword,
 };

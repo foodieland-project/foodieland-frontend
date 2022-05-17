@@ -30,6 +30,9 @@ import {
   ArticleDashboardList,
   NewArticleForm,
   NewRecipeForm,
+  LoginBox,
+  ForgotPassword,
+  ResetPassword,
 } from "./routes/components";
 
 function App() {
@@ -59,9 +62,11 @@ function App() {
             <Route path="info" element={<SettingsInfo />} />
           </Route>
           <Route path="panel/statistic" element={<Statistic />} />
-          <Route path="panel/login" element={<Login />} />
-          <Route path="panel/login/forgetPassword" element={<Login />} />
-          <Route path="panel/login/resetPassword" element={<Login />} />
+          <Route path="panel/login/*" element={<Login />}>
+            <Route path="" element={<LoginBox />} />
+            <Route path="forget-password" element={<ForgotPassword />} />
+            <Route path="reset-password" element={<ResetPassword />} />
+          </Route>
           <Route path="panel/register" element={<Register />} />
           <Route path="panel/contact" element={<Contacts />} />
         </Routes>
