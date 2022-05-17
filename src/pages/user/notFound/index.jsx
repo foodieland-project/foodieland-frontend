@@ -1,7 +1,7 @@
-import SubscribeCard from "../../../basicComponents/subscribeCard";
+import SubscribeCard from "../../../components/subscribeCard";
 import React from "react";
-import RecommendedRecipes from "../../../basicComponents/recommendedRecipes";
-import UserLayout from "../../../layout/userLayout";
+import RecommendedRecipes from "../../../components/recommendedRecipes";
+import UserLayout from "../../../layouts/userLayout";
 
 const NotFound = () => {
   return (

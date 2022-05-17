@@ -1,12 +1,11 @@
-import React from "react";
-import Carousel from "../../../basicComponents/carousel";
-import Recipe from "../../../basicComponents/recipe";
-import Cooker from "../../../basicComponents/cooker";
-import MoreRecipe from "../../../basicComponents/moreRecipe";
-import SubscribeCard from "../../../basicComponents/subscribeCard";
-import Categories from "../../../basicComponents/categories";
-import FoodieLandInstagram from "../../../basicComponents/instagram";
-import UserLayout from "../../../layout/userLayout";
+import Carousel from "../../../components/carousel";
+import Recipe from "../../../components/recipe";
+import Cooker from "../../../components/cooker";
+import MoreRecipe from "../../../components/moreRecipe";
+import SubscribeCard from "../../../components/subscribeCard";
+import Categories from "../../../components/categories";
+import FoodieLandInstagram from "../../../components/instagram";
+import UserLayout from "../../../layouts/userLayout";
 
 function Home() {
   return (

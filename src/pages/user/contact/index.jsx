@@ -1,8 +1,7 @@
-import React from "react";
-import ContactSection from "../../../basicComponents/contact";
-import SubscribeCard from "../../../basicComponents/subscribeCard";
-import RecommendedRecipesData from "../../../basicComponents/recommendedRecipes";
-import UserLayout from "../../../layout/userLayout";
+import ContactSection from "../../../components/contact";
+import SubscribeCard from "../../../components/subscribeCard";
+import RecommendedRecipesData from "../../../components/recommendedRecipes";
+import UserLayout from "../../../layouts/userLayout";
 
 const Contact = () => {
   return (

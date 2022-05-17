@@ -1,6 +1,6 @@
 import React from "react";
-import UserLayout from "../../../layout/userLayout";
-import BlogPostCp from "../../../basicComponents/blogPostCp";
+import UserLayout from "../../../layouts/userLayout";
+import BlogPostCp from "../../../components/blogPostCp";
 
 const BlogPost = () => {
   return (

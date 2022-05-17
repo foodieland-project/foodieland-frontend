@@ -1,10 +1,9 @@
-import React from "react";
-import Directions from "../../../basicComponents/directions";
-import RecipeDetails from "../../../basicComponents/recipeDetails";
-import Ingredients from "../../../basicComponents/ingredients";
-import RecommendedRecipes from "../../../basicComponents/recommendedRecipes";
-import SubscribeCard from "../../../basicComponents/subscribeCard";
-import UserLayout from "../../../layout/userLayout";
+import Directions from "../../../components/directions";
+import RecipeDetails from "../../../components/recipeDetails";
+import Ingredients from "../../../components/ingredients";
+import RecommendedRecipes from "../../../components/recommendedRecipes";
+import SubscribeCard from "../../../components/subscribeCard";
+import UserLayout from "../../../layouts/userLayout";
 
 const Recipes = () => {
   return (
