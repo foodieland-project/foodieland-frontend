@@ -1,22 +1,68 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../login/components/button";
 import { icons } from "../../services/utils/icons";
-import Input from "../login/components/input";
 import LoginLogo from "../login/components/loginLogo";
 import LoginHeader from "../login/components/loginHeader";
-import {
-  VALIDATOR_MAXLENGTH,
-  VALIDATOR_MINLENGTH,
-  VALIDATOR_EMAIL,
-  VALIDATOR_PASSWORD,
-} from "../login/components/validator/validators";
 
 function RegisterBox() {
-  const facebookIcon = icons.facebookBlue();
-  const twitterIcon = icons.twitterBlue();
-  const githubIcon = icons.github();
-  const googleIcon = icons.google();
+  const [enteredUsername, setEnteredUsername] = useState("");
+  const [usernameTouched, setUsernameTouched] = useState(false);
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [emailTouched, setEmailTouched] = useState(false);
+  const [enteredPassword, setEnteredPassword] = useState("");
+  const [passwordTouched, setPasswordTouched] = useState(false);
+  const navigate = useNavigate();
+
+  const usernameRegex = /^[a-zA-Z0-9]+$/;
+  const usernameIsValid = usernameRegex.test(enteredUsername);
+
+  const emailRegex = /^\S+@\S+\.\S+$/;
+  const emailIsValid = emailRegex.test(enteredEmail);
+
+  let passwordError = ["password should contain at least"];
+  let passwordIsValid = true;
+
+  if (!/[a-zA-Z0-9]{6,}/.test(enteredPassword)) {
+    passwordError.push(" 6 characters");
+    passwordIsValid = false;
+  }
+  if (!/(?=.*[A-Z])/.test(enteredPassword)) {
+    passwordError.push(" one uppercase");
+    passwordIsValid = false;
+  }
+  if (!/(?=.*\d)/.test(enteredPassword)) {
+    passwordError.push(" one digit");
+    passwordIsValid = false;
+  }
+
+  const enteredUsernameHandler = (event) => {
+    setEnteredUsername(event.target.value);
+  };
+  const usernameBlurHandler = () => {
+    setUsernameTouched(true);
+  };
+
+  const enteredEmailHandler = (event) => {
+    setEnteredEmail(event.target.value);
+  };
+  const emailBlurHandler = () => {
+    setEmailTouched(true);
+  };
+
+  const enteredPasswordHandler = (event) => {
+    setEnteredPassword(event.target.value);
+  };
+  const passwordBlurHandler = () => {
+    setPasswordTouched(true);
+  };
+
+  const submitHandler = () => {
+    if (usernameIsValid && emailIsValid && passwordIsValid) {
+      console.log("success");
+      navigate("/panel/statistic", { replace: true });
+    }
+  };
 
   return (
     <>
@@ -24,33 +70,64 @@ function RegisterBox() {
         <div className="flex  bg-white h-full sm:h-auto w-full rounded-md justify-center flex-col z-10 items-center sm:w-[400px] text-center shadow-lg">
           <LoginLogo />
           <LoginHeader
-            title={"Advandture starts here"}
-            text={"Make your app managment easy and fun!"}
+            title={"Adventure starts here"}
+            text={"Make your app management easy and fun!"}
           />
 
-          <form className="w-[85%] mx-6 my-4">
-            <Input
-              type="text"
-              placeholder="Username"
-              validators={[VALIDATOR_MINLENGTH(4), VALIDATOR_MAXLENGTH(12)]}
-              errorText="username must be valid"
-            />
-            <Input
-              type="email"
-              placeholder="Email"
-              validators={[VALIDATOR_EMAIL()]}
-              errorText="email must be valid"
-            />
-            <Input
-              type="password"
-              placeholder="Password"
-              validators={[VALIDATOR_PASSWORD()]}
-              errorText="must contain at least 6 charachters, 1 uppercase, lowercase and number"
-            />
+          <form className="w-[85%] mx-6 my-4" onSubmit={submitHandler}>
+            <div className="min-h-[75px]">
+              <input
+                className="w-full border-2 rounded-md p-3 outline-none"
+                placeholder="username"
+                value={enteredUsername}
+                onChange={enteredUsernameHandler}
+                onBlur={usernameBlurHandler}
+              />
+              {!usernameIsValid && usernameTouched && (
+                <p
+                  className={`pl-1 text-left text-red-500 text-sm font-medium `}
+                >
+                  Please enter a valid username
+                </p>
+              )}
+            </div>
+            <div className="min-h-[75px]">
+              <input
+                className="w-full border-2 rounded-md p-3 outline-none"
+                placeholder="email"
+                value={enteredEmail}
+                onChange={enteredEmailHandler}
+                onBlur={emailBlurHandler}
+              />
+              {!emailIsValid && emailTouched && (
+                <p
+                  className={`pl-1 text-left text-red-500 text-sm font-medium `}
+                >
+                  Please enter a valid email
+                </p>
+              )}
+            </div>
+            <div className="min-h-[75px]">
+              <input
+                className="w-full border-2 rounded-md p-3 outline-none"
+                placeholder="password"
+                value={enteredPassword}
+                onChange={enteredPasswordHandler}
+                onBlur={passwordBlurHandler}
+              />
+              {!passwordIsValid && passwordTouched && (
+                <p
+                  className={`pl-1 text-left text-red-500 text-sm font-medium `}
+                >
+                  {passwordError.join(" ")}
+                </p>
+              )}
+            </div>
+
             <div className="flex justify-between mb-4 w-full">
-              <label class="cursor-pointer select-none">
-                <input class="mx-2" type="checkbox" />
-                <span class="text-slate-600">
+              <label className="cursor-pointer select-none">
+                <input className="mx-2" type="checkbox" />
+                <span className="text-slate-600">
                   i Agree to privacy policy & terms
                 </span>
               </label>
@@ -73,10 +150,12 @@ function RegisterBox() {
               </span>
             </div>
             <div className="flex justify-center text-2xl mb-4 w-full">
-              <span className="mx-4 cursor-pointer">{facebookIcon}</span>
-              <span className="mx-4 cursor-pointer">{twitterIcon}</span>
-              <span className="mx-4 cursor-pointer">{githubIcon}</span>
-              <span className="mx-4 cursor-pointer">{googleIcon}</span>
+              <span className="mx-4 cursor-pointer">
+                {icons.facebookBlue()}
+              </span>
+              <span className="mx-4 cursor-pointer">{icons.twitterBlue()}</span>
+              <span className="mx-4 cursor-pointer">{icons.github()}</span>
+              <span className="mx-4 cursor-pointer">{icons.google()}</span>
             </div>
           </div>
         </div>
