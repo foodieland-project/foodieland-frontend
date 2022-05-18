@@ -4,6 +4,7 @@ import Button from "../login/components/button";
 import { icons } from "../../services/utils/icons";
 import LoginLogo from "../login/components/loginLogo";
 import LoginHeader from "../login/components/loginHeader";
+import axios from "axios";
 
 function RegisterBox() {
   const [enteredUsername, setEnteredUsername] = useState("");
@@ -57,11 +58,23 @@ function RegisterBox() {
     setPasswordTouched(true);
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
-    if (usernameIsValid && emailIsValid && passwordIsValid) {
-      console.log("success");
-      navigate("/panel/statistic", { replace: true });
+    if (!usernameIsValid && !emailIsValid && !passwordIsValid) {
+      return;
+    }
+    try {
+      const user = { email: enteredEmail, password: enteredPassword };
+      const { data } = await axios.post(
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
+        JSON.stringify(user),
+        { headers: { "Content-Type": "application/json" } }
+      );
+
+      console.log(data);
+      // navigate("/panel/statistic", { replace: true });
+    } catch (error) {
+      console.log(error);
     }
   };
 
