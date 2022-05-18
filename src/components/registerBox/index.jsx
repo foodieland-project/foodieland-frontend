@@ -5,6 +5,8 @@ import { icons } from "../../services/utils/icons";
 import LoginLogo from "../login/components/loginLogo";
 import LoginHeader from "../login/components/loginHeader";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { login } from "../../features/auth/authSlice";
 
 function RegisterBox() {
   const [enteredUsername, setEnteredUsername] = useState("");
@@ -14,6 +16,7 @@ function RegisterBox() {
   const [enteredPassword, setEnteredPassword] = useState("");
   const [passwordTouched, setPasswordTouched] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const usernameRegex = /^[a-zA-Z0-9]+$/;
   const usernameIsValid = usernameRegex.test(enteredUsername);
@@ -37,27 +40,6 @@ function RegisterBox() {
     passwordIsValid = false;
   }
 
-  const enteredUsernameHandler = (event) => {
-    setEnteredUsername(event.target.value);
-  };
-  const usernameBlurHandler = () => {
-    setUsernameTouched(true);
-  };
-
-  const enteredEmailHandler = (event) => {
-    setEnteredEmail(event.target.value);
-  };
-  const emailBlurHandler = () => {
-    setEmailTouched(true);
-  };
-
-  const enteredPasswordHandler = (event) => {
-    setEnteredPassword(event.target.value);
-  };
-  const passwordBlurHandler = () => {
-    setPasswordTouched(true);
-  };
-
   const submitHandler = async (event) => {
     event.preventDefault();
     if (!usernameIsValid && !emailIsValid && !passwordIsValid) {
@@ -70,9 +52,8 @@ function RegisterBox() {
         JSON.stringify(user),
         { headers: { "Content-Type": "application/json" } }
       );
-
-      console.log(data);
-      // navigate("/panel/statistic", { replace: true });
+      dispatch(login());
+      navigate("/panel/statistic", { replace: true });
     } catch (error) {
       console.log(error);
     }
@@ -88,14 +69,14 @@ function RegisterBox() {
             text={"Make your app management easy and fun!"}
           />
 
-          <form className="w-[85%] mx-6 my-4" onSubmit={submitHandler}>
-            <div className="mb-3">
+          <form className="w-[85%] mx-6 my-3  " onSubmit={submitHandler}>
+            <div className="mb-2">
               <input
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="username"
                 value={enteredUsername}
-                onChange={enteredUsernameHandler}
-                onBlur={usernameBlurHandler}
+                onChange={(event) => setEnteredUsername(event.target.value)}
+                onBlur={() => setUsernameTouched(true)}
               />
               {!usernameIsValid && usernameTouched && (
                 <p
@@ -105,13 +86,13 @@ function RegisterBox() {
                 </p>
               )}
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <input
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="email"
                 value={enteredEmail}
-                onChange={enteredEmailHandler}
-                onBlur={emailBlurHandler}
+                onChange={(event) => setEnteredEmail(event.target.value)}
+                onBlur={() => setEmailTouched(true)}
               />
               {!emailIsValid && emailTouched && (
                 <p
@@ -121,13 +102,13 @@ function RegisterBox() {
                 </p>
               )}
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <input
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="password"
                 value={enteredPassword}
-                onChange={enteredPasswordHandler}
-                onBlur={passwordBlurHandler}
+                onChange={(event) => setEnteredPassword(event.target.value)}
+                onBlur={() => setPasswordTouched(true)}
               />
               {!passwordIsValid && passwordTouched && (
                 <p
@@ -157,13 +138,13 @@ function RegisterBox() {
                 <Link to="/panel/login">Sign in instead</Link>
               </span>
             </div>
-            <div className="my-4 mx-6 relative mb-6">
+            <div className="my-4 mx-6 relative mb-4">
               <hr />
               <span className="text-gray-600 absolute left-[45%] top-[-14px] w-10 text-left pl-3 bg-white">
                 or
               </span>
             </div>
-            <div className="flex justify-center text-2xl mb-4 w-full">
+            <div className="flex justify-center text-2xl mb-2 w-full">
               <span className="mx-4 cursor-pointer">
                 {icons.facebookBlue()}
               </span>

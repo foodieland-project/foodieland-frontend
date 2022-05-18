@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import { icons } from "../../../../services/utils/icons";
 
 function SidebarHeader() {
   return (
     <div className="flex  justify-between items-center py-3  mx-auto md:w-full pl-4 lg:pl-6  font-lobster">
-      <a href="" className="font-bold text-2xl ">
+      <Link to="/" className="font-bold text-2xl ">
         <span>Foodieland.</span>
-      </a>
+      </Link>
       <span className="hidden md:block">{icons.radioButtonChecked()}</span>
       <div className="flex items-center  md:hidden ">
         <span>{icons.notificationBell()}</span>

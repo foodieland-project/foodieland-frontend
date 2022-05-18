@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
+import { logout } from "../../../features/auth/authSlice";
 
 const UserHeader = () => {
   const [open, setOpen] = useState(false);
+  const isLogged = useSelector((state) => state.auth.isLogged);
+  const dispatch = useDispatch();
 
   const manu = [
     {
@@ -27,23 +31,41 @@ const UserHeader = () => {
     },
   ];
 
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
+
   return (
     <div className=" border-b-[1px] border-gray-300 font-inter">
       <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse  flex-col sm:justify-between sm:items-center mx-[80px] ">
         <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px]  mb-[40px] font-semibold">
-          <Link to="/panel/login">
-            <span className="flex justify-center header-icon cursor-pointer hover:scale-110 transition-all    ">
-              Log In
-            </span>
-          </Link>
-          <Link to="/panel/register">
-            <span
-              className="flex justify-center ml-[10px] header-icon cursor-pointer border-2 border-black px-2 py-0.5
+          {isLogged && (
+            <Link to="/" onClick={logoutHandler}>
+              <span
+                className="flex justify-center ml-[10px] header-icon cursor-pointer border-2 border-black px-2 py-0.5
              bg-lameBlue rounded-md hover:bg-darkBlue transition-all"
-            >
-              Sign Up
-            </span>
-          </Link>
+              >
+                Logout
+              </span>
+            </Link>
+          )}
+          {!isLogged && (
+            <Fragment>
+              <Link to="/panel/login">
+                <span className="flex justify-center header-icon cursor-pointer hover:scale-110 transition-all    ">
+                  Log In
+                </span>
+              </Link>
+              <Link to="/panel/register">
+                <span
+                  className="flex justify-center ml-[10px] header-icon cursor-pointer border-2 border-black px-2 py-0.5
+             bg-lameBlue rounded-md hover:bg-darkBlue transition-all"
+                >
+                  Sign Up
+                </span>
+              </Link>
+            </Fragment>
+          )}
         </div>
         <div className=" lg:order-[0] sm:order-[-1]  order-[1]  relative  items-center">
           <ul

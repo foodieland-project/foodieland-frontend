@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/button";
 import { icons } from "../../../services/utils/icons";
 import { Link, useNavigate } from "react-router-dom";
 import LoginLogo from "../components/loginLogo";
 import LoginHeader from "../components/loginHeader";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { login } from "../../../features/auth/authSlice";
 
 function LoginBox() {
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
+  const [showError, setShowError] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
-    navigate("panel/statistic", { replace: true });
+    try {
+      const user = { email: enteredEmail, password: enteredPassword };
+      const { data } = await axios.post(
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
+        JSON.stringify(user),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      dispatch(login());
+      navigate("/panel/statistic", { replace: true });
+    } catch (error) {
+      setShowError(true);
+      console.log(error);
+    }
   };
 
   return (
@@ -27,13 +50,22 @@ function LoginBox() {
               <input
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="email"
+                value={enteredEmail}
+                onChange={(event) => setEnteredEmail(event.target.value)}
               />
             </div>
             <div className="mb-3">
               <input
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="password"
+                value={enteredPassword}
+                onChange={(event) => setEnteredPassword(event.target.value)}
               />
+              {showError && (
+                <p className="pl-1 text-left text-red-500 text-sm font-medium ">
+                  your email or password is not correct
+                </p>
+              )}
             </div>
             <div className="flex justify-between w-full mb-1">
               <label className="cursor-pointer select-none">
