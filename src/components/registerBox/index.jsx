@@ -57,7 +57,8 @@ function RegisterBox() {
     setPasswordTouched(true);
   };
 
-  const submitHandler = () => {
+  const submitHandler = (event) => {
+    event.preventDefault();
     if (usernameIsValid && emailIsValid && passwordIsValid) {
       console.log("success");
       navigate("/panel/statistic", { replace: true });
@@ -75,7 +76,7 @@ function RegisterBox() {
           />
 
           <form className="w-[85%] mx-6 my-4" onSubmit={submitHandler}>
-            <div className="min-h-[75px]">
+            <div className="mb-3">
               <input
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="username"
@@ -91,7 +92,7 @@ function RegisterBox() {
                 </p>
               )}
             </div>
-            <div className="min-h-[75px]">
+            <div className="mb-3">
               <input
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="email"
@@ -107,7 +108,7 @@ function RegisterBox() {
                 </p>
               )}
             </div>
-            <div className="min-h-[75px]">
+            <div className="mb-3">
               <input
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="password"
