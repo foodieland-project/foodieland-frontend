@@ -7,16 +7,19 @@ import LoginHeader from "../components/loginHeader";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { login } from "../../../features/auth/authSlice";
+import Spinner from "../components/spinner";
 
 function LoginBox() {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
   const [showError, setShowError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const submitHandler = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
     try {
       const user = { email: enteredEmail, password: enteredPassword };
       const { data } = await axios.post(
@@ -29,8 +32,10 @@ function LoginBox() {
         }
       );
       dispatch(login());
+      setIsLoading(false);
       navigate("/panel/statistic", { replace: true });
     } catch (error) {
+      setIsLoading(false);
       setShowError(true);
       console.log(error);
     }
@@ -78,7 +83,7 @@ function LoginBox() {
                 </span>
               </Link>
             </div>
-            <Button type="submit">login</Button>
+            <Button type="submit">{isLoading ? <Spinner /> : "login"}</Button>
           </form>
           <div className="text-center my-2 w-[85%] sm:w-full">
             <div className="w-full flex justify-between sm:justify-evenly">

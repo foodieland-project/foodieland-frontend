@@ -7,6 +7,7 @@ import LoginHeader from "../login/components/loginHeader";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/auth/authSlice";
+import Spinner from "../login/components/spinner";
 
 function RegisterBox() {
   const [enteredUsername, setEnteredUsername] = useState("");
@@ -15,6 +16,7 @@ function RegisterBox() {
   const [emailTouched, setEmailTouched] = useState(false);
   const [enteredPassword, setEnteredPassword] = useState("");
   const [passwordTouched, setPasswordTouched] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -45,6 +47,7 @@ function RegisterBox() {
     if (!usernameIsValid && !emailIsValid && !passwordIsValid) {
       return;
     }
+    setIsLoading(true);
     try {
       const user = { email: enteredEmail, password: enteredPassword };
       const { data } = await axios.post(
@@ -52,9 +55,11 @@ function RegisterBox() {
         JSON.stringify(user),
         { headers: { "Content-Type": "application/json" } }
       );
+      setIsLoading(false);
       dispatch(login());
       navigate("/panel/statistic", { replace: true });
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
     }
   };
@@ -127,7 +132,7 @@ function RegisterBox() {
                 </span>
               </label>
             </div>
-            <Button type="submit">sign up</Button>
+            <Button type="submit">{isLoading ? <Spinner /> : "sign up"}</Button>
           </form>
           <div className="text-center my-2  w-[85%] sm:w-full">
             <div className="w-full flex justify-between sm:justify-evenly">
