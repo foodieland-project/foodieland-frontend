@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   idToken: localStorage.getItem("token") || "",
-  isLogged: false,
+  isLogged: !!localStorage.getItem("token"),
   expirationTime: localStorage.getItem("expTime") || null,
 };
 
