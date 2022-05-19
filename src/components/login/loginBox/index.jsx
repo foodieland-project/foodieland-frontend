@@ -33,7 +33,7 @@ function LoginBox() {
       );
       dispatch(login());
       setIsLoading(false);
-      navigate("/panel/statistic", { replace: true });
+      navigate("/panel/posts/recipe", { replace: true });
     } catch (error) {
       setIsLoading(false);
       setShowError(true);

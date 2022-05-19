@@ -9,38 +9,39 @@ function PanelSidebar() {
   const sidebarOptions = [
     {
       id: 1,
-      option: "statistic",
-      icon: "chart",
-      selected: false,
-      route: "/panel/statistic",
-    },
-    {
-      id: 2,
       option: "posts",
       icon: "lists",
-      selected: true,
       route: "/panel/posts/recipe",
     },
     {
-      id: 3,
+      id: 2,
       option: "New Post",
       icon: "circlePlus",
-      selected: true,
       route: "/panel/newPost/recipe",
     },
     {
-      id: 4,
+      id: 3,
       option: "contact",
       icon: "inbox",
-      selected: false,
       route: "/panel/contact",
+    },
+    {
+      id: 4,
+      option: "statistic",
+      icon: "chart",
+      route: "/panel/statistic",
     },
     {
       id: 5,
       option: "settings",
       icon: "gear",
-      selected: false,
       route: "/panel/settings/account",
+    },
+    {
+      id: 6,
+      option: "exit account",
+      icon: "exit",
+      route: "/",
     },
   ];
 
@@ -84,13 +85,12 @@ function PanelSidebar() {
           }}
         >
           <div>
-            {sidebarOptions.map(({ route, id, option, icon, selected }) => (
+            {sidebarOptions.map(({ route, id, option, icon }) => (
               <OptionCard
                 key={id}
                 option={option}
                 id={id}
                 icon={icon}
-                selected={selected}
                 route={route}
               />
             ))}

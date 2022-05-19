@@ -57,7 +57,7 @@ function RegisterBox() {
       );
       setIsLoading(false);
       dispatch(login());
-      navigate("/panel/statistic", { replace: true });
+      navigate("/panel/posts/recipe", { replace: true });
     } catch (error) {
       setIsLoading(false);
       console.log(error);
