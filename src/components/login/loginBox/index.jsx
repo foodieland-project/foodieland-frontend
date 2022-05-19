@@ -10,8 +10,8 @@ import { login } from "../../../features/auth/authSlice";
 import Spinner from "../components/spinner";
 
 function LoginBox() {
-  const [enteredEmail, setEnteredEmail] = useState("");
-  const [enteredPassword, setEnteredPassword] = useState("");
+  const [enteredEmail, setEnteredEmail] = useState("tohidebra@gmail.com");
+  const [enteredPassword, setEnteredPassword] = useState("Tohid12345");
   const [showError, setShowError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -31,7 +31,10 @@ function LoginBox() {
           },
         }
       );
-      dispatch(login());
+
+      let expirationTime = new Date().getTime() + 3600000;
+
+      dispatch(login({ token: data.idToken, expirationTime }));
       setIsLoading(false);
       navigate("/panel/posts/recipe", { replace: true });
     } catch (error) {

@@ -16,8 +16,6 @@ const PostDashboardList = () => {
   const slicedData = FormData.slice(indexOfFirstPost, indexOfLastPost);
   const [categoryOp, setCategory] = useState("");
 
-  console.log("categoryOp", categoryOp);
-
   useEffect(() => {
     if (valueSearch.length > 0) {
       const items = posts.filter(({ title }) => {

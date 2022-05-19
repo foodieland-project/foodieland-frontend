@@ -53,10 +53,17 @@ function RegisterBox() {
       const { data } = await axios.post(
         "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
         JSON.stringify(user),
-        { headers: { "Content-Type": "application/json" } }
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
+
+      let expirationTime = new Date().getTime() + 3600000;
+
+      dispatch(login({ token: data.idToken, expirationTime }));
       setIsLoading(false);
-      dispatch(login());
       navigate("/panel/posts/recipe", { replace: true });
     } catch (error) {
       setIsLoading(false);

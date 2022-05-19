@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
@@ -34,8 +34,16 @@ import {
   ForgotPassword,
   ResetPassword,
 } from "./routes/components";
+import { useDispatch, useSelector } from "react-redux";
+import { checkIsLogged } from "./features/auth/auth-actions";
 
 function App() {
+  const { idToken, expirationTime } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkIsLogged(idToken, expirationTime));
+  }, []);
   return (
     <>
       <Router>

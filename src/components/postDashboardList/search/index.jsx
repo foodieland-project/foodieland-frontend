@@ -4,8 +4,6 @@ import { icons } from "../../../services/utils/icons";
 function Search({ setValueSearch }) {
   const [inputValue, setInputValue] = useState("");
 
-  console.log("inputValue", inputValue);
-
   const handleSubmit = (e) => {
     if (e.key === "Enter") {
       setValueSearch(inputValue);
