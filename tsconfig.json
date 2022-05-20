@@ -26,6 +26,6 @@
     "src/components/panel/moderator/components/members/index.jsx",
     "src/components/basicComponents/subscribeCard/index.jsx",
     "src/components/layout/header/index.jsx"
-, "src/components/basicComponents/postDashboardList/search/index.jsx"  ],
+, "src/components/basicComponents/postDashboardList/search/index.jsx", "src/components/recipe/index.jsx", "src/components/moreRecipe/index.jsx", "src/components/moreRecipe/components/moreRecipeCard/index.jsx", "src/components/recipe/components/recipeCard/index.jsx"  ],
   "exclude": ["node_modules"]
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { ingredientsData, RecipeData } from "../../services/utils/data";
+import { ingredientsData, recipeData } from "../../services/utils/data";
 import IngredientCard from "./components/ingredientCard";
 import OtherRecipes from "./components/otherRecipes";
 import "./ingredients.css";
@@ -30,7 +30,7 @@ function Ingredients() {
           </div>
         </div>
         <OtherRecipes
-          RecipeData={RecipeData}
+          RecipeData={recipeData}
           number={3}
           title={"Other Recipes"}
         />
