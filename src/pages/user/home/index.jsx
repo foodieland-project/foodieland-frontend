@@ -9,7 +9,7 @@ import FoodieLandInstagram from "../../../components/instagram";
 import UserLayout from "../../../layouts/userLayout";
 import { useEffect } from "react";
 import axios from "axios";
-import { articleData } from "../../../services/utils/data";
+import { recipeData } from "../../../services/utils/data";
 import { useDispatch } from "react-redux";
 import { fetchRecipes } from "../../../features/recipe/recipeSlice";
 
@@ -25,8 +25,8 @@ function Home() {
           },
         }
       );
-      console.log(data["-N2VMGg6hmnexr5e1Gai"]);
-      dispatch(fetchRecipes(data["-N2VMGg6hmnexr5e1Gai"]));
+      console.log(data["-N2XVCZbEyWG1eQnVrFV"]);
+      dispatch(fetchRecipes(data["-N2XVCZbEyWG1eQnVrFV"]));
     }
     fetchData();
   }, []);
