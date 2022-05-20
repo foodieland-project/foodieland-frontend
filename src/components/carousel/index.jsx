@@ -3,13 +3,15 @@ import React from "react";
 import "./carousel.css";
 import CarouselCard from "./carouselCard";
 import { icons } from "../../services/utils/icons";
-import { carouselData } from "../../services/utils/data";
+import { useSelector } from "react-redux";
 
 function Carousel() {
   const [distance, setDistance] = useState(0);
   const arrowLeft = icons.arrowLeft();
   const arrowRight = icons.arrowRight();
   const widthRef = useRef();
+  const recipes = useSelector((state) => state.recipes.recipes);
+  const carouselData = recipes.filter((recipe) => recipe.banner !== "");
 
   const nextSlide = () => {
     let w = widthRef.current.offsetWidth;
@@ -47,14 +49,32 @@ function Carousel() {
         className="flex w-max slider"
         style={{ transform: `translateX(${distance}px)` }}
       >
-        {carouselData.map(({ title, imageUrl, description, id }) => (
-          <CarouselCard
-            key={id}
-            title={title}
-            imageUrl={imageUrl}
-            description={description}
-          />
-        ))}
+        {carouselData.map(
+          ({
+            title,
+            banner,
+            description,
+            category,
+            chef,
+            chefImg,
+            uploadDate,
+            id,
+            cook_time,
+          }) => (
+            <CarouselCard
+              key={id}
+              id={id}
+              category={category}
+              title={title}
+              banner={banner}
+              chef={chef}
+              chefImg={chefImg}
+              uploadDate={uploadDate}
+              description={description}
+              cookTime={cook_time}
+            />
+          )
+        )}
       </div>
     </div>
   );

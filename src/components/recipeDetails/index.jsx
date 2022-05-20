@@ -2,10 +2,22 @@ import RecipeVideoCard from "../recipeVideoCard";
 import NutritionInfoCard from "./components/nutritionInfoCard";
 import React from "react";
 import { icons } from "../../services/utils/icons";
-import { nutritionInfo } from "../../services/utils/data";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+let month = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "June",
+  "July",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 function RecipeDetails() {
   const timerIcon = icons.timer();
   const forkIcon = icons.fork();
@@ -23,8 +35,13 @@ function RecipeDetails() {
     prep_time: prepTime,
     nutrition,
     chef,
+    chefImg,
     category,
+    uploadDate,
   } = recipe[0];
+  const date = `${new Date(uploadDate).getDay()} ${
+    month[new Date(uploadDate).getMonth()]
+  } ${new Date(uploadDate).getFullYear()}`;
   return (
     <section>
       <div className="w-11/12 xl:w-full mx-auto mt-20 flex flex-wrap gap-4 font-inter">
@@ -38,9 +55,9 @@ function RecipeDetails() {
             <div className="basis-[44%] sm:basis-[23%] flex border-r border-gray-300 border-solid ">
               <div>
                 <img
-                  src="./images/Ellipse 2.png"
+                  src={`${chefImg}`}
                   alt="chief"
-                  className="mx-auto w-4/5"
+                  className="mx-auto w-10 h-10 object-cover rounded-[50%]"
                 />
               </div>
               <div className=" ml-2 ">
@@ -48,7 +65,7 @@ function RecipeDetails() {
                   {chef}
                 </span>
                 <span className="carousel-gray-text-color text-2xs xl:text-xs  font-medium">
-                  12 March 2022
+                  {date}
                 </span>
               </div>
             </div>
