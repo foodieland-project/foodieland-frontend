@@ -54,15 +54,11 @@ function App() {
   useEffect(() => {
     dispatch(checkIsLogged(idToken, expirationTime));
   }, []);
+
   useEffect(() => {
     async function fetchData() {
       const { data } = await axios.get(
-        "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json"
       );
       console.log(data["-N2XVCZbEyWG1eQnVrFV"]);
       dispatch(fetchRecipes(data["-N2XVCZbEyWG1eQnVrFV"]));

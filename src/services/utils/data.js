@@ -568,7 +568,7 @@ export const recipeData = [
     chef: "Marcellus H. Waddell",
     chefImg:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/chefs%2Fchef-1.png?alt=media&token=8fcd4462-7054-49b5-a5e7-fbee955bd439",
-    img: "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/recipes%2Ffood-2.png?alt=media&token=1b987acd-7f61-4806-9f06-b978c4175f8e",
+    img: "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/recipes%2Ffood-11.png?alt=media&token=1f793ed5-5e3b-4abf-ad6d-b154fea6e345",
     banner: "",
     video:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/videos%2Ffood-11.mkv?alt=media&token=6fcce54c-4244-4306-84e6-b5326c2d11f0",
@@ -1315,7 +1315,7 @@ export const recipeData = [
   {
     id: "28",
     category: "lunch",
-    title: "Stir fry with chicken and mushrooms",
+    title: "Stir fry chicken and mushrooms",
     chef: "Ronald W. Robison",
     chefImg:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/chefs%2Fchef-2.png?alt=media&token=db93f6fa-cc92-464d-ada4-4e6c73b19ca0",

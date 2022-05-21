@@ -27,11 +27,7 @@ function CarouselCard({
   uploadDate,
   cookTime,
 }) {
-  const timerIcon = icons.timer();
-  const forkIcon = icons.fork();
-  const knifeIcon = icons.knife();
-  const playCircleIcon = icons.playCircle();
-
+  const { timer, fork, knife, playCircle } = icons;
   const date = `${new Date(uploadDate).getDay()} ${
     month[new Date(uploadDate).getMonth()]
   } ${new Date(uploadDate).getFullYear()}`;
@@ -53,20 +49,20 @@ function CarouselCard({
             {title}
           </h2>
         </div>
-        <div className="text-secondary text-xs lg:text-sm">
-          <p>{description.slice(0, description.length / 2)}...</p>
+        <div className="text-secondary text-xs lg:text-sm max-h-[60px] overflow-hidden">
+          <p>{description} </p>
         </div>
         <div className=" flex lg:text-sm text-xs  font-medium mt-4 mb-0 sm:mb-8 lg:mt-8 lg:mb-14 xl:mb-20">
           <div className="carousel-icon flex items-center rounded-3xl px-4 py-2 lg:py-2.5">
             <span>
-              <i>{timerIcon}</i>
+              <i>{timer()}</i>
             </span>
             <span className="ml-2">{cookTime}</span>
           </div>
           <div className="carousel-icon flex items-center rounded-3xl px-4 py-2 lg:py-2.5 ml-4 ">
             <span className="flex ">
-              <i>{forkIcon}</i>
-              <i>{knifeIcon}</i>
+              <i>{fork()}</i>
+              <i>{knife()}</i>
             </span>
             <span className="ml-2">{category}</span>
           </div>
@@ -92,7 +88,7 @@ function CarouselCard({
           <Link to={`recipes/${id}`}>
             <div className="bg-black text-white rounded-2xl h-full px-3 lg:px-6 text-xs lg:text-sm flex items-center cursor-pointer ">
               <span className="font-semibold">View Recipes</span>
-              <span className="ml-1 lg:ml-2">{playCircleIcon}</span>
+              <span className="ml-1 lg:ml-2">{playCircle()}</span>
             </div>
           </Link>
         </div>
