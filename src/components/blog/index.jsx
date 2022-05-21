@@ -17,7 +17,7 @@ const Blog = () => {
   const indexOfFirstPost = indexOfLastPost - PostPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-  const paginate = (PageNumber) => setCurrentPage(PageNumber);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const searchHandler = (event) => {
     let keyword = event.target.value;
