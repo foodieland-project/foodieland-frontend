@@ -9,7 +9,7 @@ const RecipeCard = ({ title, img, category, id }) => {
       className="basis-[80%] sm:basis-[65%] md:basis-[45%] lg:basis-[40%] xl:basis-[30%] flex flex-col justify-start items-center
     bg-gradient-to-b from-white to-blue-50 rounded-3xl p-[16px] font-inter relative"
     >
-      <Link to={`/recipes/${id}`}>
+      <Link to={`/recipe/${id}`}>
         <div className="w-full">
           <img className="w-full rounded-3xl mb-6" src={img} alt="" />
         </div>
@@ -22,7 +22,7 @@ const RecipeCard = ({ title, img, category, id }) => {
           {like ? icons.whiteHeat() : icons.redHeat()}
         </span>
       </div>
-      <Link to={`/recipes/${id}`}>
+      <Link to={`/recipe/${id}`}>
         <p className="font-semibold text-xl md:text-2xl mb-6">{title}</p>
       </Link>
       <div className="flex justify-start w-full">

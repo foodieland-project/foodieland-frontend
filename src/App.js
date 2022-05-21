@@ -14,6 +14,7 @@ import {
   Recipes,
   NotFound,
   BlogPost,
+  Recipe,
 } from "./routes/user";
 
 import {
@@ -74,7 +75,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/recipes/:id" element={<Recipes />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/recipe/:id" element={<Recipe />} />
           <Route path="*" element={<NotFound />} />
           <Route
             path="panel/posts/*"

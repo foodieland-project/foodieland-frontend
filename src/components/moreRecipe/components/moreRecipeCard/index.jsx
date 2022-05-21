@@ -7,7 +7,7 @@ const MoreRecipeCard = ({ img, title, category, cookTime, id }) => {
 
   return (
     <div className="flex flex-col basis-[85%] md:basis-[40%] lg:basis-[30%] xl:basis-[23%] h-[320px] pb-8  rounded-3xl relative">
-      <Link to={`/recipes/${id}`}>
+      <Link to={`/recipe/${id}`}>
         <div className="h-[230px] rounded-3xl w-full">
           <img
             src={img}
@@ -24,7 +24,7 @@ const MoreRecipeCard = ({ img, title, category, cookTime, id }) => {
           {like ? icons.whiteHeat() : icons.redHeat()}
         </span>
       </div>
-      <Link to={`/recipes/${id}`}>
+      <Link to={`/recipe/${id}`}>
         <div>
           <h2 className="text-lg font-semibold mt-1 tracking-[-0.04em] leading-[26px] text-black">
             {title}
