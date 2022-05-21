@@ -16,7 +16,7 @@ const Recipe = () => {
         </p>
       </div>
       <div className="flex flex-row flex-wrap justify-center gap-10">
-        {recipes.slice(0, 9).map(({ title, img, category, id }) => (
+        {recipes.slice(0, 8).map(({ title, img, category, id }) => (
           <RecipeCard
             key={id}
             id={id}

@@ -28,7 +28,7 @@ const UserFooter = () => {
 
   return (
     <div className="md:mx-[80px]">
-      <div className="flex lg:flex-row flex-col lg:justify-between mb-[75px] mt-[191px]  mx-[80px]">
+      <div className="flex lg:flex-row flex-col lg:justify-between mb-[75px] mt-[191px]  ">
         <div className="flex flex-col lg:items-start  items-center  ">
           <Link
             to="/"

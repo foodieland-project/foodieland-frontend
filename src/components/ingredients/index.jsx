@@ -1,10 +1,12 @@
 import React from "react";
-import { ingredientsData, recipeData } from "../../services/utils/data";
+import { useSelector } from "react-redux";
+import { ingredientsData } from "../../services/utils/data";
 import IngredientCard from "./components/ingredientCard";
 import OtherRecipes from "./components/otherRecipes";
 import "./ingredients.css";
 
 function Ingredients() {
+  const recipes = useSelector((state) => state.recipes.recipes);
   return (
     <section>
       <div className="w-11/12 xl:w-full mx-auto flex flex-wrap lg:flex-nowrap gap-10 font-inter my-10 lg:my-20">
@@ -29,11 +31,7 @@ function Ingredients() {
             ))}
           </div>
         </div>
-        <OtherRecipes
-          RecipeData={recipeData}
-          number={3}
-          title={"Other Recipes"}
-        />
+        <OtherRecipes RecipeData={recipes} number={3} title={"Other Recipes"} />
       </div>
     </section>
   );
