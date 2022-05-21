@@ -31,7 +31,10 @@ const Blog = () => {
     <>
       <BlogHeader />
 
-      <BlogSearchBox searchHandler={searchHandler} />
+      <BlogSearchBox
+        searchHandler={searchHandler}
+        placeholder={"search for recipes"}
+      />
 
       <div className="">
         <section className="w-11/12 xl:w-full mx-auto flex flex-wrap lg:flex-nowrap gap-10 font-inter my-10 lg:my-20  ">
