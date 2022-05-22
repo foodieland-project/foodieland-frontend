@@ -1,13 +1,19 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { categoriesData } from "../../services/utils/data";
+import { icons } from "../../services/utils/icons";
 import BlogSearchBox from "../blog/components/blogSearchBox";
 import Pagination from "../blog/pagination";
 import MoreRecipeCard from "../moreRecipe/components/moreRecipeCard";
+import CategoryFilter from "./categoryFilter";
+import "./recipe-list.css";
+
 function RecipeList() {
   const recipesList = useSelector((state) => state.recipes.recipes);
   const [recipes, setRecipes] = useState(recipesList);
   const [currentPage, setCurrentPage] = useState(1);
-  const [recipesPerPage, setRecipesPerPage] = useState(8);
+  const [recipesPerPage] = useState(8);
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
   const indexOfLastRecipe = currentPage * recipesPerPage;
   const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
@@ -21,6 +27,30 @@ function RecipeList() {
       return item.title.toLowerCase().includes(keyword);
     });
     setRecipes(data);
+  };
+
+  const checkHandler = (name) => {
+    let categories = [...selectedCategories];
+    let indexOfCategory = categories.indexOf(name);
+
+    if (indexOfCategory > -1) {
+      categories.splice(indexOfCategory, 1);
+    } else {
+      categories.push(name);
+    }
+
+    let filteredRecipes = [];
+    for (let cat of categories) {
+      filteredRecipes.push(
+        ...recipesList.filter((recipe) => recipe.category === cat)
+      );
+    }
+
+    if (filteredRecipes.length === 0) {
+      filteredRecipes = [...recipesList];
+    }
+    setSelectedCategories(categories);
+    setRecipes(filteredRecipes);
   };
 
   return (
@@ -50,9 +80,21 @@ function RecipeList() {
             ))}
         </div>
         <div className="basis-[20%]">
-          <div>
+          <div className="mb-4">
             <h2 className="font-semibold text-3xl md:text-4xl">Filters</h2>
             <span></span>
+          </div>
+          <div>
+            <h2 className="font-medium text-xl md:text-2xl">Categories</h2>
+
+            {categoriesData.map(({ id, name }) => (
+              <CategoryFilter
+                key={id}
+                name={name}
+                id={id}
+                checkHandler={checkHandler}
+              />
+            ))}
           </div>
         </div>
       </div>

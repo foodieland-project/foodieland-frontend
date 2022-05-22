@@ -1445,37 +1445,37 @@ export const carouselData = [
 export const categoriesData = [
   {
     id: 1,
-    name: "Breakfast",
+    name: "breakfast",
     imageUrl: "./images/categories/breakfast.png",
     bgColor: "bg-gradient-grey",
   },
   {
     id: 2,
-    name: "Vegan",
+    name: "vegan",
     imageUrl: "./images/categories/vegan.png",
     bgColor: "bg-gradient-green",
   },
   {
     id: 3,
-    name: "Meat",
+    name: "meat",
     imageUrl: "./images/categories/meat.png",
     bgColor: "bg-gradient-red",
   },
   {
     id: 4,
-    name: "Dessert",
+    name: "dessert",
     imageUrl: "./images/categories/dessert.png",
     bgColor: "bg-gradient-yellow",
   },
   {
     id: 5,
-    name: "Lunch",
+    name: "lunch",
     imageUrl: "./images/categories/lunch.png",
     bgColor: "bg-gradient-white",
   },
   {
     id: 6,
-    name: "Chocolate",
+    name: "chocolate",
     imageUrl: "./images/categories/chocolate.png",
     bgColor: "bg-gradient-brown",
   },

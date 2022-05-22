@@ -11,7 +11,7 @@ function Category({ imageUrl, name, bgColor }) {
         />
       </div>
       <div className={`${bgColor}   text-center font-semibold text-lg py-11 `}>
-        <span>{name}</span>
+        <span className="capitalize">{name}</span>
       </div>
     </div>
   );
