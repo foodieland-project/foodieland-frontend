@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { categoriesData } from "../../services/utils/data";
-import { icons } from "../../services/utils/icons";
 import BlogSearchBox from "../blog/components/blogSearchBox";
 import Pagination from "../blog/pagination";
 import MoreRecipeCard from "../moreRecipe/components/moreRecipeCard";
@@ -64,8 +63,25 @@ function RecipeList() {
         searchHandler={searchHandler}
         placeholder={"search for recipes"}
       />
-      <div className="flex gap-8">
-        <div className="basis-[80%] flex gap-6 justify-center w-[70%] mx-auto xl:justify-start items-center md:w-full flex-wrap">
+      <div className="flex gap-8 flex-col lg:flex-row">
+        <div className="basis-[20%]">
+          <div className="flex flex-col items-center lg:items-start justify-between cursor-pointer ">
+            <h2 className="font-semibold text-2xl md:text-4xl mb-4">
+              Categories
+            </h2>
+            <div className="flex flex-row lg:flex-col items-start gap-4 lg:gap-0 flex-wrap  ">
+              {categoriesData.map(({ id, name }) => (
+                <CategoryFilter
+                  key={id}
+                  name={name}
+                  id={id}
+                  checkHandler={checkHandler}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="basis-[80%] flex gap-6 justify-center w-[70%] mx-auto xl:justify-start items-center md:w-full flex-wrap min-h-[600px]">
           {currentRecipes
             .slice(0, 12)
             .map(({ img, title, category, id, cook_time }) => (
@@ -79,33 +95,17 @@ function RecipeList() {
               />
             ))}
         </div>
-        <div className="basis-[20%]">
-          <div className="mb-4">
-            <h2 className="font-semibold text-3xl md:text-4xl">Filters</h2>
-            <span></span>
-          </div>
-          <div>
-            <h2 className="font-medium text-xl md:text-2xl">Categories</h2>
-
-            {categoriesData.map(({ id, name }) => (
-              <CategoryFilter
-                key={id}
-                name={name}
-                id={id}
-                checkHandler={checkHandler}
-              />
-            ))}
-          </div>
-        </div>
       </div>
       <div className="w-auto">
-        <Pagination
-          postPerPage={recipesPerPage}
-          totalPosts={recipes.length}
-          paginate={paginate}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        />
+        {recipes.length / recipesPerPage > 1 && (
+          <Pagination
+            postPerPage={recipesPerPage}
+            totalPosts={recipes.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        )}
       </div>
     </div>
   );
