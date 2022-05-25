@@ -36,7 +36,7 @@ function LoginBox() {
 
       dispatch(login({ token: data.idToken, expirationTime }));
       setIsLoading(false);
-      navigate("/panel/posts/recipe", { replace: true });
+      navigate("/panel/posts", { replace: true });
     } catch (error) {
       setIsLoading(false);
       setShowError(true);

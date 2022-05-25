@@ -11,13 +11,13 @@ function PanelSidebar() {
       id: 1,
       option: "posts",
       icon: "lists",
-      route: "/panel/posts/recipe",
+      route: "/panel/posts",
     },
     {
       id: 2,
       option: "New Post",
       icon: "circlePlus",
-      route: "/panel/newPost/recipe",
+      route: "/panel/newPost",
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ function PanelSidebar() {
       id: 5,
       option: "settings",
       icon: "gear",
-      route: "/panel/settings/account",
+      route: "/panel/settings",
     },
     {
       id: 6,

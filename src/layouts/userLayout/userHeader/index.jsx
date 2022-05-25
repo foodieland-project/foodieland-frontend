@@ -41,7 +41,7 @@ const UserHeader = () => {
         <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px]  mb-[40px] font-semibold">
           {isLogged && (
             <Fragment>
-              <Link to="/panel/posts/recipe">
+              <Link to="/panel/posts">
                 <div className="ml-4 relative">
                   <img
                     src="/images/panel/blue-avatar.png"

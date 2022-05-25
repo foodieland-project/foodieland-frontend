@@ -1,10 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
   AboutUs,
@@ -28,18 +23,7 @@ import {
   Register,
 } from "./routes/panel";
 
-import {
-  SettingsAccountForm,
-  SettingsSecurity,
-  SettingsInfo,
-  PostDashboardList,
-  ArticleDashboardList,
-  NewArticleForm,
-  NewRecipeForm,
-  LoginBox,
-  ForgotPassword,
-  ResetPassword,
-} from "./routes/components";
+import { LoginBox, ForgotPassword, ResetPassword } from "./routes/components";
 import { useDispatch, useSelector } from "react-redux";
 import { checkIsLogged } from "./features/auth/auth-actions";
 import PrivateRoute from "./routes/privateRoute";
@@ -54,7 +38,7 @@ function App() {
 
   useEffect(() => {
     dispatch(checkIsLogged(idToken, expirationTime));
-  }, []);
+  }, [idToken, expirationTime]);
 
   useEffect(() => {
     async function fetchData() {
@@ -79,40 +63,30 @@ function App() {
           <Route path="/recipe/:id" element={<Recipe />} />
           <Route path="*" element={<NotFound />} />
           <Route
-            path="panel/posts/*"
+            path="panel/posts/"
             element={
               <PrivateRoute isLogged={isLogged}>
                 <Posts />
               </PrivateRoute>
             }
-          >
-            <Route path="recipe" element={<PostDashboardList />} />
-            <Route path="article" element={<ArticleDashboardList />} />
-          </Route>
+          />
           <Route
-            path="panel/newPost/*"
+            path="panel/newPost/"
             element={
               <PrivateRoute isLogged={isLogged}>
                 <NewPost />
               </PrivateRoute>
             }
-          >
-            <Route path="recipe" element={<NewRecipeForm />} />
-            <Route path="article" element={<NewArticleForm />} />
-          </Route>
+          />
           <Route path="panel/notice" element={<Notice />} />
           <Route
-            path="panel/settings/*"
+            path="panel/settings/"
             element={
               <PrivateRoute isLogged={isLogged}>
                 <Settings />
               </PrivateRoute>
             }
-          >
-            <Route path="account" element={<SettingsAccountForm />} />
-            <Route path="security" element={<SettingsSecurity />} />
-            <Route path="info" element={<SettingsInfo />} />
-          </Route>
+          />
 
           <Route
             path="panel/statistic"

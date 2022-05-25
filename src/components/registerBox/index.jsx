@@ -64,7 +64,7 @@ function RegisterBox() {
 
       dispatch(login({ token: data.idToken, expirationTime }));
       setIsLoading(false);
-      navigate("/panel/posts/recipe", { replace: true });
+      navigate("/panel/posts", { replace: true });
     } catch (error) {
       setIsLoading(false);
       console.log(error);
