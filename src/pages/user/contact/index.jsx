@@ -10,7 +10,10 @@ const Contact = () => {
         <div className="w-11/12 sm:container mx-auto sm:px-4">
           <ContactSection />
           <SubscribeCard />
-          <RecommendedRecipesData />
+          <RecommendedRecipesData
+            title={"You may like these recipes too "}
+            length={4}
+          />
         </div>
       </UserLayout>
     </>
