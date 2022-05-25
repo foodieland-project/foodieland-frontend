@@ -65,7 +65,7 @@ function FormPasswords() {
       </div>
       <div className="hidden lg:block lg:basis-1/2">
         <img
-          src="/images/panel/pose_m1.png"
+          src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/panel%2Fpose_m1.png?alt=media&token=b18c687e-3369-4aca-ac1d-b6184c2eecf6"
           alt="pose"
           className="mx-auto w-[140px]"
         />

@@ -27,7 +27,7 @@ function AboutUsInfo() {
         </div>
         <div className="basis[100%] lg:basis-[46%]">
           <img
-            src="./images/our-experience.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/others%2Four-experience.jpg?alt=media&token=74cd67db-988c-4e05-8926-994d65a7e277"
             alt="experience-img"
             className="rounded-xl object-cover h-full"
           />

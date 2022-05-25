@@ -3,7 +3,7 @@ function UploadImage() {
     <div className="flex gap-6 mt-4 ">
       <div>
         <img
-          src="/images/panel/blue-avatar.png"
+          src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/panel%2Fblue-avatar.png?alt=media&token=e6785fc7-5ef7-432f-a761-edb9db90437d"
           alt="avatar"
           className="w-36 rounded-[50%]"
         />
