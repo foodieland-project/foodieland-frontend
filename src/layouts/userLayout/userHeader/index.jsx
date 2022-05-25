@@ -40,14 +40,26 @@ const UserHeader = () => {
       <div className="flex py-[46px] lg:justify-between sm:flex-row-reverse  flex-col sm:justify-between sm:items-center mx-[80px] ">
         <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px]  mb-[40px] font-semibold">
           {isLogged && (
-            <Link to="/" onClick={logoutHandler}>
-              <span
-                className="flex justify-center ml-[10px] header-icon cursor-pointer border-2 border-black px-2 py-0.5
+            <Fragment>
+              <Link to="/panel/posts/recipe">
+                <div className="ml-4 relative">
+                  <img
+                    src="/images/panel/blue-avatar.png"
+                    alt="avatar"
+                    className="w-10 h-10 rounded-3xl"
+                  />
+                  <span className="bg-green-500 rounded-3xl absolute bottom-0 right-0 w-[12px] h-[12px] border-2 border-white"></span>
+                </div>
+              </Link>
+              <Link to="/" onClick={logoutHandler}>
+                <span
+                  className="flex justify-center ml-[15px] header-icon cursor-pointer border-2 border-black px-2 py-0.5
              bg-lameBlue rounded-md hover:bg-darkBlue transition-all"
-              >
-                Logout
-              </span>
-            </Link>
+                >
+                  Logout
+                </span>
+              </Link>
+            </Fragment>
           )}
           {!isLogged && (
             <Fragment>
