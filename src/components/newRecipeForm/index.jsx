@@ -119,8 +119,8 @@ function NewRecipeForm() {
             onChange={(e) => setUploadVideo(e.target.value)}
           />
         </div>
-        <div className="flex justify-between my-3">
-          <div className="flex flex-col mt-4 basis-[30%]">
+        <div className="flex justify-between flex-wrap my-3">
+          <div className="flex flex-col mt-4 basis-full md:basis-[30%]">
             <label htmlFor="" className="pb-2 pl-2">
               cook time (m)
             </label>
@@ -132,7 +132,7 @@ function NewRecipeForm() {
               onChange={(e) => setCookTime(e.target.value)}
             />
           </div>
-          <div className="flex flex-col mt-4 basis-[30%]">
+          <div className="flex flex-col mt-4 basis-full md:basis-[30%]">
             <label htmlFor="" className="pb-2 pl-2">
               prep time (m)
             </label>
@@ -145,8 +145,8 @@ function NewRecipeForm() {
             />{" "}
           </div>
         </div>
-        <div className="flex justify-between">
-          <div className="flex flex-col mt-4 basis-[40%]">
+        <div className="flex justify-between flex-wrap">
+          <div className="flex flex-col mt-4 basis-full md:basis-[40%]">
             <label htmlFor="" className="pb-2 pl-2">
               chef
             </label>
@@ -162,7 +162,7 @@ function NewRecipeForm() {
               <option value="Robert H. Houston">Robert H. Houston</option>
             </select>
           </div>
-          <div className="flex flex-col mt-4 basis-[40%]">
+          <div className="flex flex-col mt-4 basis-full md:basis-[40%]">
             <label htmlFor="" className="pb-2 pl-2">
               category
             </label>

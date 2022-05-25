@@ -7,7 +7,7 @@ const NewPost = () => {
   return (
     <PanelLayout>
       <>
-        <nav className="border-b-2 border-slate-300 py-3">
+        <nav className="border-b-2 border-slate-300 py-3 h-12">
           <ul className="flex justify-start">
             <NavLink
               to="recipe"

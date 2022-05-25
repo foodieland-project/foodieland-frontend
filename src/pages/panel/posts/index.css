@@ -4,7 +4,7 @@
 
 .nav__links:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0px 1px 0px #0ec9f1;
+  border-bottom: 1px solid #0ec9f1;
 }
 
 .nav__links:hover span {
