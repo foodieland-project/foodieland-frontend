@@ -6,6 +6,7 @@ import axios from "axios";
 import { fetchRecipes } from "../../features/recipe/recipeSlice";
 import { useNavigate } from "react-router-dom";
 import { chefsData } from "../../services/utils/data";
+import Spinner from "../login/components/spinner";
 
 function NewRecipeForm() {
   const { recipes } = useSelector((state) => state.recipes);
@@ -19,10 +20,12 @@ function NewRecipeForm() {
   const [prepTime, setPrepTime] = useState(0);
   const [selectedChef, setSelectedChef] = useState("Marcellus H. Waddell");
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   async function submitHandler(event) {
     event.preventDefault();
 
+    setIsLoading(true);
     const [selectedChefData] = chefsData.filter(
       (item) => item.name === selectedChef
     );
@@ -63,10 +66,12 @@ function NewRecipeForm() {
           },
         }
       );
+      setIsLoading(false);
 
       dispatch(fetchRecipes(data));
       navigate("/", { replace: true });
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
     }
   }
@@ -179,9 +184,9 @@ function NewRecipeForm() {
         <div className="mt-4 flex justify-end">
           <button
             type="submit"
-            className="bg-mainBlue text-white py-2 px-6 rounded-xl cursor-pointer mr-2 w-full sm:w-auto"
+            className="bg-mainBlue hover:bg-darkerBlue text-white py-2 basis-full md:basis-[14%] rounded-xl cursor-pointer mr-2 w-full sm:w-auto"
           >
-            Submit
+            {isLoading ? <Spinner /> : "Submit"}
           </button>
         </div>
       </form>
