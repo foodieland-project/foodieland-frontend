@@ -4,9 +4,11 @@ import { icons } from "../../services/utils/icons";
 import { posts } from "../../services/utils/data";
 import Search from "./search";
 import "./posts.css";
+import { useSelector } from "react-redux";
 
 const PostDashboardList = () => {
-  const [FormData, setFormData] = useState(posts);
+  const { recipes } = useSelector((state) => state.recipes);
+  const [FormData, setFormData] = useState(recipes);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage] = useState(6);
   const [valueSearch, setValueSearch] = useState("");
@@ -18,24 +20,24 @@ const PostDashboardList = () => {
 
   useEffect(() => {
     if (valueSearch.length > 0) {
-      const items = posts.filter(({ title }) => {
+      const items = recipes.filter(({ title }) => {
         return title.includes(valueSearch);
       });
       setFormData(items);
     } else {
-      setFormData(posts);
+      setFormData(recipes);
     }
   }, [valueSearch]);
 
   useEffect(() => {
     if (categoryOp.length > 0) {
-      const items = posts.filter(({ category }) => {
+      const items = recipes.filter(({ category }) => {
         // return category === categoryOp;
         return category.includes(categoryOp);
       });
       setFormData(items);
     } else {
-      setFormData(posts);
+      setFormData(recipes);
     }
   }, [categoryOp]);
 
@@ -110,21 +112,23 @@ const PostDashboardList = () => {
           <p className="sm:w-[20%] md:[10%] text-center sm:block hidden">
             category
           </p>
-          <p className="md:w-[40%] text-center md:block hidden">time</p>
-          <p className="w-[10%] text-center xl:block hidden">view</p>
+          <p className="md:w-[40%] text-center md:block hidden">upload date</p>
+          <p className="w-[10%] text-center xl:block hidden">likes</p>
           <p className="w-[10%] text-center xl:block hidden">comments</p>
         </div>
-        {slicedData.map(({ id, title, category, time, view, comments }) => (
-          <PostItem
-            key={id}
-            id={id}
-            title={title}
-            category={category}
-            time={time}
-            view={view}
-            comments={comments}
-          />
-        ))}
+        {slicedData.map(
+          ({ id, title, category, uploadDate, liked, comments }) => (
+            <PostItem
+              key={id}
+              id={id}
+              title={title}
+              category={category}
+              time={uploadDate}
+              likes={liked}
+              comments={comments.length}
+            />
+          )
+        )}
       </div>
     </>
   );
