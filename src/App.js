@@ -61,8 +61,8 @@ function App() {
       const { data } = await axios.get(
         "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json"
       );
-      console.log(data["-N2XVCZbEyWG1eQnVrFV"]);
-      dispatch(fetchRecipes(data["-N2XVCZbEyWG1eQnVrFV"]));
+      console.log(data);
+      dispatch(fetchRecipes(data));
     }
     fetchData();
   }, []);

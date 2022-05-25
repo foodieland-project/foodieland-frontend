@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PostItem from "./postItem";
 import { icons } from "../../services/utils/icons";
-import { posts } from "../../services/utils/data";
 import Search from "./search";
 import "./posts.css";
 import { useSelector } from "react-redux";
