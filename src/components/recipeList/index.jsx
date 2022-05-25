@@ -69,7 +69,7 @@ function RecipeList() {
             <h2 className="font-semibold text-2xl md:text-4xl mb-4">
               Categories
             </h2>
-            <div className="flex flex-row lg:flex-col items-start gap-4 lg:gap-0 flex-wrap  ">
+            <ul className="flex flex-row lg:flex-col w-3/5 md:w-full justify-center items-start gap-4 lg:gap-0 flex-wrap  ">
               {categoriesData.map(({ id, name }) => (
                 <CategoryFilter
                   key={id}
@@ -78,7 +78,7 @@ function RecipeList() {
                   checkHandler={checkHandler}
                 />
               ))}
-            </div>
+            </ul>
           </div>
         </div>
         <div className="basis-[80%] flex gap-6 justify-center w-[70%] mx-auto xl:justify-start items-center md:w-full flex-wrap min-h-[600px]">
