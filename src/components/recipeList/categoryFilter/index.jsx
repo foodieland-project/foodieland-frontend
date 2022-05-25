@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { icons } from "../../../services/utils/icons";
 
 function CategoryFilter({ name, checkHandler, id }) {
@@ -10,7 +10,7 @@ function CategoryFilter({ name, checkHandler, id }) {
           type="checkbox"
           name="category"
           id={id}
-          className="w-6 h-6 absolute opacity-0 cursor-pointer"
+          className="w-6 h-6 absolute opacity-0 cursor-pointer "
           onClick={() => checkHandler(name)}
           onChange={() => setChecked((prev) => !prev)}
         />

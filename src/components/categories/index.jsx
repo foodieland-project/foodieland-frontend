@@ -19,6 +19,7 @@ function Categories() {
           {categoriesData.map(({ id, name, imageUrl, bgColor }) => (
             <Category
               key={id}
+              id={id}
               name={name}
               imageUrl={imageUrl}
               bgColor={bgColor}

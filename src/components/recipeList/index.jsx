@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { categoriesData } from "../../services/utils/data";
 import BlogSearchBox from "../blog/components/blogSearchBox";
 import Pagination from "../blog/pagination";
@@ -13,6 +14,8 @@ function RecipeList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [recipesPerPage] = useState(8);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const location = useLocation();
+  const categoryListRef = useRef();
 
   const indexOfLastRecipe = currentPage * recipesPerPage;
   const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
@@ -52,6 +55,19 @@ function RecipeList() {
     setRecipes(filteredRecipes);
   };
 
+  useEffect(() => {
+    const update = () => {
+      const params = new URLSearchParams(location.search);
+      const categoryId = params.get("category");
+
+      if (categoryId) {
+        const inputList = document.querySelectorAll("ul input");
+        inputList[categoryId - 1].click();
+      }
+    };
+    update();
+  }, [location]);
+
   return (
     <div className="mt-16 mb-32 font-inter">
       <div className="mb-14">
@@ -69,7 +85,10 @@ function RecipeList() {
             <h2 className="font-semibold text-2xl md:text-4xl mb-4">
               Categories
             </h2>
-            <ul className="flex flex-row lg:flex-col w-3/5 md:w-full justify-center items-start gap-4 lg:gap-0 flex-wrap  ">
+            <ul
+              className="flex flex-row lg:flex-col w-3/5 md:w-full justify-center items-start gap-4 lg:gap-0 flex-wrap  "
+              ref={categoryListRef}
+            >
               {categoriesData.map(({ id, name }) => (
                 <CategoryFilter
                   key={id}
