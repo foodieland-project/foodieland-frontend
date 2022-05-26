@@ -1,0 +1,6 @@
+.article-description-paragraph {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden !important;
+  -webkit-line-clamp: 2;
+}

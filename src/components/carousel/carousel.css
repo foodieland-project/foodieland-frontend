@@ -1,7 +1,12 @@
 .slider {
   transition: all 200ms ease-out;
 }
-
+.carousel-description-paragraph {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden !important;
+  -webkit-line-clamp: 3;
+}
 .carousel-arrow {
   transform: translateY(-50%);
   background-color: rgba(256, 256, 256, 0.6);

@@ -5,20 +5,31 @@ import BlogContent from "./blogPostContent";
 import "./blog-post.css";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+let month = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "June",
+  "July",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 const BlogPostCp = () => {
   const { articles } = useSelector((state) => state.articles);
 
   const params = useParams();
-  const {
-    title,
-    description,
-    author,
-    profile,
-    img,
-    created_date: date,
-  } = articles.filter((item) => item.id === params.id)[0];
+  const { title, description, author, profile, img, created_date } =
+    articles.filter((item) => item.id === params.id)[0];
 
+  const date = new Date(created_date);
+  const dateString = `${date.getDay()} ${
+    month[date.getMonth()]
+  } ${date.getFullYear()}`;
   return (
     <div className="font-inter">
       <h1 className="font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl mt-24 text-center">
@@ -36,7 +47,7 @@ const BlogPostCp = () => {
           <p className="flex ml-[15px] justify-center font-bold">{author}</p>
         </div>
         <div className="flex items-center 2sm:border-l-[1px] justify-center 2sm:border-r-gray-100 2sm:ml-[61px] px-[24px]">
-          <p className="font-medium text-sm  text-secondary">{date}</p>
+          <p className="font-medium text-sm  text-secondary">{dateString}</p>
         </div>
       </div>
       <p className="text-center m-auto w-[80%] mb-[71px] text-secondary">

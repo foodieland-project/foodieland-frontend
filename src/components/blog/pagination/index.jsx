@@ -16,8 +16,8 @@ function Pagination({
   }
 
   return (
-    <div className="w-full h-20   flex justify-center items-center  mt-6">
-      <ul className="xl:w-1/2 w-full h-1/2 bg-white flex ml-10 justify-center">
+    <div className="w-full h-20   flex justify-end items-center  mt-6">
+      <ul className="xl:w-1/2 w-full h-1/2 bg-white flex ml-10 justify-center  lg:justify-end xl:justify-center ">
         <li
           onClick={() => setCurrentPage(currentPage - 1)}
           className={`${

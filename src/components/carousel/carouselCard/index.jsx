@@ -49,7 +49,7 @@ function CarouselCard({
             {title}
           </h2>
         </div>
-        <div className="text-secondary text-xs lg:text-sm max-h-[60px] overflow-hidden">
+        <div className="text-secondary text-xs lg:text-sm carousel-description-paragraph ">
           <p>{description} </p>
         </div>
         <div className=" flex lg:text-sm text-xs  font-medium mt-4 mb-0 sm:mb-8 lg:mt-8 lg:mb-14 xl:mb-20">

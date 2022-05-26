@@ -40,28 +40,40 @@ const Blog = () => {
       <div className="">
         <section className="w-11/12 xl:w-full mx-auto flex flex-wrap lg:flex-nowrap gap-10 font-inter my-10 lg:my-20  ">
           <div className=" basis-[100%] lg:basis-[66%] relative ">
-            {currentPosts.map(
-              ({
-                id,
-                title,
-                description,
-                img,
-                created_date,
-                author,
-                profile,
-              }) => (
-                <BlogCard
-                  key={id}
-                  id={id}
-                  title={title}
-                  description={description}
-                  img={img}
-                  date={created_date}
-                  author={author}
-                  profile={profile}
-                />
-              )
-            )}
+            <div>
+              {currentPosts.map(
+                ({
+                  id,
+                  title,
+                  description,
+                  img,
+                  created_date,
+                  author,
+                  profile,
+                }) => (
+                  <BlogCard
+                    key={id}
+                    id={id}
+                    title={title}
+                    description={description}
+                    img={img}
+                    createdDate={created_date}
+                    author={author}
+                    profile={profile}
+                  />
+                )
+              )}
+            </div>
+
+            <div className="w-auto">
+              <Pagination
+                postPerPage={PostPerPage}
+                totalPosts={posts.length}
+                paginate={paginate}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+              />
+            </div>
           </div>
 
           <OtherRecipes
@@ -70,15 +82,6 @@ const Blog = () => {
             title={"Tasty Recipes"}
           />
         </section>
-        <div className="w-auto">
-          <Pagination
-            postPerPage={PostPerPage}
-            totalPosts={posts.length}
-            paginate={paginate}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-          />
-        </div>
 
         <SubscribeCard />
       </div>
