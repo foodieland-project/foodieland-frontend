@@ -1,6 +1,6 @@
 export const articleData = [
   {
-    id: 1,
+    id: "1",
     title: "7 Desi Sandwich Recipes For An Easy And Masaledaar Breakfast ",
     description:
       "We have created a list of easy sandwich recipes you can make for breakfast. But the highlight of these recipes is that they come with a desi twist ",
@@ -11,7 +11,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpriyaja-bakshi.png?alt=media&token=6b202ab3-0587-413e-bd92-246e3291c813",
   },
   {
-    id: 2,
+    id: "2",
     title: "High Protein: 5 Protein-Rich Dinner Recipes",
     description:
       "We bring you a list of 5 protein-rich dinner recipes that you can rustle up in just 20 minutes.",
@@ -22,7 +22,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fgauri-rohtagi.png?alt=media&token=3f66ee8a-8cdb-47bd-ab2b-b30680c8517c",
   },
   {
-    id: 3,
+    id: "3",
     title: "Mango Pickle, Onion Pickle And More: 5 Instant Pickle Recipes ",
     description:
       "Here we bring you a list of pickle recipes that you can make in a matter of minutes. They need just 15-20 minutes to get ready. So, what are you waiting for? Let's get started with the list ",
@@ -33,7 +33,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fgauri-rohtagi.png?alt=media&token=3f66ee8a-8cdb-47bd-ab2b-b30680c8517c",
   },
   {
-    id: 4,
+    id: "4",
     title: "Indian Cooking Tips: 5 Desi Egg-Based Snack Recipes",
     description:
       "Looking for unique party snack recipes? We have found five egg-based delicious snacks that have an Indian/desi tadka",
@@ -44,7 +44,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpriyaja-bakshi.png?alt=media&token=6b202ab3-0587-413e-bd92-246e3291c813",
   },
   {
-    id: 5,
+    id: "5",
     title: "Weight Loss: 5 Delicious Low Cal Egg Salad Recipes",
     description:
       "Struggling to lose those extra kilos? We have some amazing recipes for you. These eggs salad recipes are not only healthy but also delicious!",
@@ -55,7 +55,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpriyaja-bakshi.png?alt=media&token=6b202ab3-0587-413e-bd92-246e3291c813",
   },
   {
-    id: 6,
+    id: "6",
     title: "Healthy Lunchbox Recipes: Delicious Dishes  ",
     description:
       "Lunchbox Recipes: With colleges and offices opening up rapidly, you might be in the search of delicious and interesting lunch box ideas. Here are 5 easy, healthy, and quick recipes that you can pack in the coming days.",
@@ -66,7 +66,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpragya-subedy.png?alt=media&token=63fce17d-8adb-4f5a-817b-3503b2033354",
   },
   {
-    id: 7,
+    id: "7",
     title: "Watch: How To Make Chocolate Sauce In 5 Mins ",
     description:
       "We found a super easy chocolate sauce recipe that is not only fuss-free but also takes just five minutes for preparation.   ",
@@ -77,7 +77,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fsomdatta-saha.png?alt=media&token=6c4439d0-dadb-4d68-893b-3c1ffea8b650",
   },
   {
-    id: 8,
+    id: "8",
     title: "How To Make Egg And Potato Salad For A Quick Meal  ",
     description:
       "This egg-potato salad recipe is light, wholesome and takes less than 30 minutes for preparation. Find the recipe inside.",
@@ -88,7 +88,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fsomdatta-saha.png?alt=media&token=6c4439d0-dadb-4d68-893b-3c1ffea8b650",
   },
   {
-    id: 9,
+    id: "9",
     title: "5 Things You Can Use Instead Of Breadcrumbs To Coat Fried Foods",
     description:
       "Ran out of breadcrumbs? Use these 5 food items which work the same for coating fried foods and snacks.",
@@ -99,7 +99,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpragya-subedy.png?alt=media&token=63fce17d-8adb-4f5a-817b-3503b2033354",
   },
   {
-    id: 10,
+    id: "10",
     title: "How To Make Garlic Bread Without Using An Oven ",
     description:
       "If you love garlic bread as much as we do, here we have something special for you. We have found one recipe for making restaurant-style garlic bread at home and that too without an oven.",
@@ -110,7 +110,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fgauri-rohtagi.png?alt=media&token=3f66ee8a-8cdb-47bd-ab2b-b30680c8517c",
   },
   {
-    id: 11,
+    id: "11",
     title: "Afghani Tikka, Pulao And More: 7 Afghani Recipes  ",
     description:
       "If you are a true foodie and love to try and experiment with food, you are at the right place. Here we bring you a list of 7 Afghani recipes you can try making at home.",
@@ -121,7 +121,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fgauri-rohtagi.png?alt=media&token=3f66ee8a-8cdb-47bd-ab2b-b30680c8517c",
   },
   {
-    id: 12,
+    id: "12",
     title: "5 Crispy Non-Vegetarian Snacks To Indulge On A Rainy Day",
     description:
       "We have found the recipes for crispy non-vegetarian snacks that shall soothe our rainy-day desires for something crunchy, meaty and delicious. ",
@@ -132,7 +132,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpriyaja-bakshi.png?alt=media&token=6b202ab3-0587-413e-bd92-246e3291c813",
   },
   {
-    id: 13,
+    id: "13",
     title: "A Lip-Smacking Recipe That Will Fire Up Your Meals",
     description:
       "The onion chutney is all things flavourful and has a taste that you have never had before. It is comforting, spicy, and makes for a perfect side dish ",
@@ -143,7 +143,7 @@ export const articleData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fsomdatta-saha.png?alt=media&token=6c4439d0-dadb-4d68-893b-3c1ffea8b650",
   },
   {
-    id: 14,
+    id: "14",
     title: "Summer Special: Mango Sandwich Is The Recent Trend",
     description:
       "Made with just about 2-3 major ingredients, the mango sandwich is another fun way to include mango in your diet. Use chilled ingredients for the best experience!",

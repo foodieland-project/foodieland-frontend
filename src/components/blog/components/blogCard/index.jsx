@@ -1,16 +1,22 @@
-function BlogCard({ img, title, writer, profile, date }) {
+import { Link } from "react-router-dom";
+
+function BlogCard({ id, img, title, author, profile, date }) {
   return (
     <article className="flex flex-col md:flex-row mt-8 gap-4">
       <div className=" basis-[35%] ">
-        <img
-          src={`${img}`}
-          alt="food"
-          className="w-full h-full rounded-[15px] object-cover"
-        />
+        <Link to={`/blog/${id}`}>
+          <img
+            src={`${img}`}
+            alt="food"
+            className="w-full h-full rounded-[15px] object-cover"
+          />
+        </Link>
       </div>
       <div className="basis-[65%] relative">
         <div className="text-center md:text-left">
-          <h4 className="text-xl xl:text-2xl font-bold ">{title}</h4>
+          <Link to={`/blog/${id}`}>
+            <h4 className="text-xl xl:text-2xl font-bold ">{title}</h4>
+          </Link>
           <p className="text-secondary mt-3 md:mt-2 text-xs xl:text-base ">
             Lorem, ipsum dol Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Et provident error repellendus tenetur.
@@ -24,7 +30,7 @@ function BlogCard({ img, title, writer, profile, date }) {
                 className="w-8 h-8  rounded-[50%]"
               />
 
-              <p className="m-[2px] ml-2 font-semibold text-sm">{writer}</p>
+              <p className="m-[2px] ml-2 font-semibold text-sm">{author}</p>
             </div>
             <p className="ml-6 text-gray-500 text-xs text-center ">{date} </p>
           </div>
