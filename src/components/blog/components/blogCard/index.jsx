@@ -4,7 +4,7 @@ function BlogCard({ id, img, title, author, profile, date }) {
   return (
     <article className="flex flex-col md:flex-row mt-8 gap-4">
       <div className=" basis-[35%] ">
-        <Link to={`/blog/${id}`}>
+        <Link to={`/blogPost/${id}`}>
           <img
             src={`${img}`}
             alt="food"
@@ -14,7 +14,7 @@ function BlogCard({ id, img, title, author, profile, date }) {
       </div>
       <div className="basis-[65%] relative">
         <div className="text-center md:text-left">
-          <Link to={`/blog/${id}`}>
+          <Link to={`/blogPost/${id}`}>
             <h4 className="text-xl xl:text-2xl font-bold ">{title}</h4>
           </Link>
           <p className="text-secondary mt-3 md:mt-2 text-xs xl:text-base ">

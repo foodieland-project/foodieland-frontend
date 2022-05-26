@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Pagination from "./pagination";
 import SubscribeCard from "../subscribeCard";
 import OtherRecipes from "../ingredients/components/otherRecipes";
@@ -51,17 +50,16 @@ const Blog = () => {
                 author,
                 profile,
               }) => (
-                <Link key={id} to={`/blog/${id}`}>
-                  <BlogCard
-                    id={id}
-                    title={title}
-                    description={description}
-                    img={img}
-                    date={created_date}
-                    author={author}
-                    profile={profile}
-                  />
-                </Link>
+                <BlogCard
+                  key={id}
+                  id={id}
+                  title={title}
+                  description={description}
+                  img={img}
+                  date={created_date}
+                  author={author}
+                  profile={profile}
+                />
               )
             )}
           </div>

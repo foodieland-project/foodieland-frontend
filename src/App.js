@@ -29,6 +29,7 @@ import { checkIsLogged } from "./features/auth/auth-actions";
 import PrivateRoute from "./routes/privateRoute";
 import { fetchRecipes } from "./features/recipe/recipeSlice";
 import axios from "axios";
+import { fetchArticles } from "./features/article/articleSlice";
 
 function App() {
   const { idToken, expirationTime, isLogged } = useSelector(
@@ -38,18 +39,24 @@ function App() {
 
   useEffect(() => {
     dispatch(checkIsLogged(idToken, expirationTime));
-  }, [idToken, expirationTime]);
+  }, [dispatch, idToken, expirationTime]);
 
   useEffect(() => {
     async function fetchData() {
-      const { data } = await axios.get(
+      const recipeResponse = await axios.get(
         "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json"
       );
-      console.log(data);
-      dispatch(fetchRecipes(data));
+      const articleResponse = await axios.get(
+        "https://foodieland-3b1ed-default-rtdb.firebaseio.com/articles.json"
+      );
+      console.log(recipeResponse);
+      console.log(articleResponse);
+      dispatch(fetchRecipes(recipeResponse.data));
+      dispatch(fetchArticles(articleResponse.data));
     }
     fetchData();
-  }, []);
+  }, [dispatch]);
+
   return (
     <>
       <Router>
@@ -57,7 +64,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/blogPost/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/recipe/:id" element={<Recipe />} />
