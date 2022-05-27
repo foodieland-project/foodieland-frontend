@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "./recipe-form.css";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { fetchRecipes } from "../../features/recipe/recipeSlice";

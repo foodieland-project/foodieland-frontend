@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { icons } from "../../services/utils/icons";
 import ArticleItem from "./articleItem";
 import ArticleListPagination from "./articleListPagination";
 import ArticleSearchBox from "./articleSearchBox";

@@ -1,9 +1,66 @@
+import { useState } from "react";
 import TextEditor from "./textEditor";
+import { v4 as uuidv4 } from "uuid";
+import Spinner from "../login/components/spinner";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchArticles } from "../../features/article/articleSlice";
+import { authorData } from "../../services/utils/data";
 
 function NewArticleForm() {
+  const { articles } = useSelector((state) => state.articles);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [uploadPoster, setUploadPoster] = useState("");
+  const [selectedAuthor, setSelectedAuthor] = useState("Somdatta Saha");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  async function submitHandler(event) {
+    event.preventDefault();
+    setIsLoading(true);
+
+    const [selectedAuthorData] = authorData.filter(
+      (item) => item.author === selectedAuthor
+    );
+
+    const article = {
+      id: uuidv4(),
+      title,
+      description,
+      img: uploadPoster,
+      author: selectedAuthor,
+      profile: selectedAuthor.profile,
+      uploadDate: new Date().toISOString(),
+    };
+
+    const nerArticles = [...articles];
+    nerArticles.push(article);
+    try {
+      const { data } = await axios.put(
+        "https://foodieland-3b1ed-default-rtdb.firebaseio.com/articles.json",
+        JSON.stringify(nerArticles),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      setIsLoading(false);
+
+      dispatch(fetchArticles(data));
+      navigate("/", { replace: true });
+    } catch (error) {
+      setIsLoading(false);
+      console.log(error);
+    }
+  }
+
   return (
     <div className="p-4">
-      <form action="">
+      <form onSubmit={submitHandler}>
         <div className="flex flex-col">
           <label htmlFor="title" className="pb-2 pl-2">
             Title
@@ -12,32 +69,47 @@ function NewArticleForm() {
             type="text"
             name="title"
             className={` md:w-[60%] lg:w-[40%] border border-gray-500  rounded-2xl py-2 px-6 `}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </div>
         <div className="flex flex-col mt-4">
           <TextEditor />
         </div>
         <div className="flex flex-col sm:flex-row  sm:justify-between">
-          <div className="flex flex-col w-full sm:w-1/2 mt-4">
+          <div className="flex flex-col w-full mt-4">
             <label htmlFor="" className="pb-2 pl-2">
-              Upload Cooking image
+              add poster url
             </label>
-            <input type="file" className="pl-2" />
+            <input
+              type="text"
+              className=" border border-gray-500  rounded-2xl py-2 px-6"
+              onChange={(e) => setUploadPoster(e.target.value)}
+            />
           </div>
-          <div className="flex flex-col w-full sm:w-1/2 mt-4">
-            <label htmlFor="" className="pb-2 pl-2">
-              Upload date of publication
-            </label>
-            <input type="date" className="pl-2" />
-          </div>
+        </div>
+        <div className="flex flex-col mt-4 basis-full md:w-[40%]">
+          <label htmlFor="" className="pb-2 pl-2">
+            author
+          </label>
+          <select
+            id="author"
+            name="author"
+            className="border border-gray-500  rounded-2xl py-2 px-6  "
+            onChange={(e) => setSelectedAuthor(e.target.value)}
+          >
+            <option value="Somdatta Saha">Somdatta Saha</option>
+            <option value="Pragya Subedy">Ronald W. Robison</option>
+            <option value="Gauri Rohatgi">Gauri Rohatgi</option>
+            <option value="Priyaja Bakshi">Priyaja Bakshi</option>
+          </select>
         </div>
 
         <div className="mt-4 flex justify-end">
           <button
             type="submit"
-            className="bg-mainBlue text-white py-2 px-6 rounded-xl cursor-pointer mr-2 w-full sm:w-auto"
+            className="bg-mainBlue hover:bg-darkerBlue text-white py-2 basis-full md:basis-[14%] rounded-xl cursor-pointer mr-2 w-full sm:w-auto"
           >
-            Submit
+            {isLoading ? <Spinner /> : "Submit"}
           </button>
         </div>
       </form>

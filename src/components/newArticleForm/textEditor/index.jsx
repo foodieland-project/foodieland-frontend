@@ -3,10 +3,12 @@ import { Editor } from "react-draft-wysiwyg";
 import { EditorState } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "./text-editor.css";
+
 function TextEditor() {
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
+
   useEffect(() => {
     console.log(editorState);
   }, [editorState]);

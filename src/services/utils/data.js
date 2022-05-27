@@ -1437,7 +1437,28 @@ export const recipeData = [
     ],
   },
 ];
-
+export const authorData = [
+  {
+    author: "Pragya Subedy",
+    profile:
+      "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpragya-subedy.png?alt=media&token=63fce17d-8adb-4f5a-817b-3503b2033354",
+  },
+  {
+    author: "Somdatta Saha",
+    profile:
+      "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fsomdatta-saha.png?alt=media&token=6c4439d0-dadb-4d68-893b-3c1ffea8b650",
+  },
+  {
+    author: "Gauri Rohatgi",
+    profile:
+      "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fgauri-rohtagi.png?alt=media&token=3f66ee8a-8cdb-47bd-ab2b-b30680c8517c",
+  },
+  {
+    author: "Priyaja Bakshi",
+    profile:
+      "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpriyaja-bakshi.png?alt=media&token=6b202ab3-0587-413e-bd92-246e3291c813",
+  },
+];
 export const carouselData = [
   {
     title: "Spicy delicious chicken wings",
