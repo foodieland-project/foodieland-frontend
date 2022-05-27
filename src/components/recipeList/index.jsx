@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
+import { resetCategories } from "../../features/recipe/recipeSlice";
 import { categoriesData } from "../../services/utils/data";
 import BlogSearchBox from "../blog/components/blogSearchBox";
 import Pagination from "../blog/pagination";
@@ -10,12 +11,16 @@ import "./recipe-list.css";
 
 function RecipeList() {
   const recipesList = useSelector((state) => state.recipes.recipes);
+  const categories = useSelector((state) => state.recipes.categories);
+
   const [recipes, setRecipes] = useState(recipesList);
   const [currentPage, setCurrentPage] = useState(1);
   const [recipesPerPage] = useState(8);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [categoryChecked, setCategoryChecked] = useState(categories);
+
   const location = useLocation();
-  const categoryListRef = useRef();
+  const dispatch = useDispatch();
 
   const indexOfLastRecipe = currentPage * recipesPerPage;
   const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
@@ -51,6 +56,10 @@ function RecipeList() {
     if (filteredRecipes.length === 0) {
       filteredRecipes = [...recipesList];
     }
+
+    console.log(categoryChecked);
+    setCategoryChecked((prevCat) => ({ ...prevCat, [name]: !prevCat[name] }));
+    console.log(categoryChecked);
     setSelectedCategories(categories);
     setRecipes(filteredRecipes);
   };
@@ -61,13 +70,14 @@ function RecipeList() {
       const categoryId = params.get("category");
 
       if (categoryId) {
-        const inputList = document.querySelectorAll("ul input");
-        inputList[categoryId - 1].click();
+        dispatch(resetCategories());
+        checkHandler(categoryId);
       }
     };
     update();
   }, [location]);
 
+  console.log(categoryChecked);
   return (
     <div className="mt-16 mb-32 font-inter">
       <div className="mb-14">
@@ -85,16 +95,14 @@ function RecipeList() {
             <h2 className="font-semibold text-2xl md:text-4xl mb-4">
               Categories
             </h2>
-            <ul
-              className="flex flex-row lg:flex-col w-3/5 md:w-full justify-center items-start gap-4 lg:gap-0 flex-wrap  "
-              ref={categoryListRef}
-            >
+            <ul className="flex flex-row lg:flex-col w-3/5 md:w-full justify-center items-start gap-4 lg:gap-0 flex-wrap  ">
               {categoriesData.map(({ id, name }) => (
                 <CategoryFilter
                   key={id}
                   name={name}
                   id={id}
                   checkHandler={checkHandler}
+                  checked={categoryChecked[name]}
                 />
               ))}
             </ul>
