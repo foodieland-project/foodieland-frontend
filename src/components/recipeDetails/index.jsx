@@ -3,21 +3,8 @@ import NutritionInfoCard from "./components/nutritionInfoCard";
 import { icons } from "../../services/utils/icons";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { getDate } from "../carousel/carouselCard";
 
-let month = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
-];
 function RecipeDetails() {
   const { recipes } = useSelector((state) => state.recipes);
   const { timer, fork, knife, printer, share } = icons;
@@ -36,10 +23,7 @@ function RecipeDetails() {
     chefImg,
   } = recipes.filter((item) => item.id === id)[0];
 
-  const date = new Date(uploadDate);
-  const dateString = `${date.getDay()} ${
-    month[date.getMonth()]
-  } ${date.getFullYear()}`;
+  const date = getDate(uploadDate);
 
   return (
     <section>
@@ -64,7 +48,7 @@ function RecipeDetails() {
                   {chef}
                 </span>
                 <span className="carousel-gray-text-color text-2xs xl:text-xs  font-medium">
-                  {dateString}
+                  {date}
                 </span>
               </div>
             </div>

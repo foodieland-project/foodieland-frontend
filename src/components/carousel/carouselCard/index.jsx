@@ -2,20 +2,25 @@ import "./carousel-item.css";
 import React from "react";
 import { icons } from "../../../services/utils/icons";
 import { Link } from "react-router-dom";
-let month = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
-];
+
+export function getDate(uploadDate) {
+  let month = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const date = new Date(uploadDate);
+  return `${date.getDay()} ${month[date.getMonth()]} ${date.getFullYear()}`;
+}
 function CarouselCard({
   title,
   banner,
@@ -28,9 +33,8 @@ function CarouselCard({
   cookTime,
 }) {
   const { timer, fork, knife, playCircle } = icons;
-  const date = `${new Date(uploadDate).getDay()} ${
-    month[new Date(uploadDate).getMonth()]
-  } ${new Date(uploadDate).getFullYear()}`;
+  const date = getDate(uploadDate);
+
   return (
     <div className="carousel-item flex rounded-3xl w-[92vw] sm:w-[38em] md:w-[46em] lg:w-[62em] xl:w-[78em] 2xl:w-[92.9em]  overflow-hidden font-inter ">
       <div className="md:basis-1/2 bg-lameBlue p-5 sm:p-7 lg:p-9">

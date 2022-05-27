@@ -1,19 +1,7 @@
 import { Link } from "react-router-dom";
+import { getDate } from "../../../carousel/carouselCard";
 import "./blog-card.css";
-let month = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
-];
+
 function BlogCard({
   id,
   img,
@@ -23,10 +11,7 @@ function BlogCard({
   profile,
   createdDate,
 }) {
-  const date = new Date(createdDate);
-  const dateString = `${date.getDay()} ${
-    month[date.getMonth()]
-  } ${date.getFullYear()}`;
+  const date = getDate(createdDate);
   return (
     <article className="flex flex-col md:flex-row mt-8 gap-4">
       <div className=" basis-[35%] ">
@@ -47,7 +32,7 @@ function BlogCard({
             {description}
           </p>
 
-          <div className="flex items-center justify-center md:justify-start mt-4 md:mt-2">
+          <div className="flex items-center justify-center md:justify-start mt-4 md:mt-0 absolute bottom-2">
             <div className="flex items-center   ">
               <img
                 src={`${profile}`}
@@ -57,9 +42,7 @@ function BlogCard({
 
               <p className=" m-[2px] ml-2 font-semibold text-sm  ">{author}</p>
             </div>
-            <p className="ml-6 text-gray-500 text-xs text-center ">
-              {dateString}{" "}
-            </p>
+            <p className="ml-6 text-gray-500 text-xs text-center ">{date} </p>
           </div>
         </div>
       </div>
