@@ -31,7 +31,6 @@ const PostDashboardList = () => {
   useEffect(() => {
     if (categoryOp.length > 0) {
       const items = recipes.filter(({ category }) => {
-        // return category === categoryOp;
         return category.includes(categoryOp);
       });
       setFormData(items);
