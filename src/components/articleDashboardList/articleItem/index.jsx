@@ -10,8 +10,6 @@ function ArticleItem({ title, createdDate, author, id }) {
       <p className="sm:w-[20%] md:w-[20%] text-center sm:block hidden">
         {author}
       </p>
-      {/* <p className="w-[10%] text-center xl:block hidden">{likes}</p>
-      <p className="w-[10%] text-center xl:block hidden">{comments}</p> */}
     </div>
   );
 }

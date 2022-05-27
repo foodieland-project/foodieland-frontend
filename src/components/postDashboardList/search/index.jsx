@@ -20,7 +20,7 @@ function Search({ setValueSearch }) {
           {icons.search()}
         </button>
         <input
-          className="text-left w-[70%]"
+          className="text-left w-[70%]4 outline-none"
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={(e) => {
             handleSubmit(e);

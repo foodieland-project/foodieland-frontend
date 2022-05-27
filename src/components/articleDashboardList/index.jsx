@@ -3,11 +3,12 @@ import { useSelector } from "react-redux";
 import { icons } from "../../services/utils/icons";
 import ArticleItem from "./articleItem";
 import ArticleListPagination from "./articleListPagination";
+import ArticleSearchBox from "./articleSearchBox";
 
 function ArticleDashboardList() {
   const articleList = useSelector((state) => state.articles.articles);
   const [articles, setArticles] = useState(articleList);
-  const [articlesPerPage, setArticlesPerPage] = useState(6);
+  const [articlesPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastArticle = currentPage * articlesPerPage;
@@ -17,16 +18,21 @@ function ArticleDashboardList() {
     indexOfLastArticle
   );
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const searchHandler = (event) => {
+    let keyword = event.target.value;
+    let data = articleList.filter((item) => {
+      return item.title.toLowerCase().includes(keyword);
+    });
+    setArticles(data);
+  };
 
   return (
     <>
-      <div className="flex flex-col xl:flex-row xl:justify-between  text-[14px]  items-center m-[10px]">
-        {/* <Search setValueSearch={setValueSearch} /> */}
+      <div className="flex flex-col lg:flex-row xl:justify-between  text-[14px]  items-center m-[10px]">
+        <ArticleSearchBox searchHandler={searchHandler} />
         <ArticleListPagination
           articlesPerPage={articlesPerPage}
           totalArticles={articles.length}
-          paginate={paginate}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />

@@ -4,7 +4,6 @@ function ArticleListPagination({
   articlesPerPage,
   totalArticles,
   currentPage,
-  paginate,
   setCurrentPage,
 }) {
   const pageNumber = [];
@@ -15,8 +14,8 @@ function ArticleListPagination({
   }
 
   return (
-    <div className="w-full h-20   flex justify-end items-center  mt-6">
-      <ul className="xl:w-1/2 w-full h-1/2 bg-white flex ml-10 items-center justify-center  lg:justify-end xl:justify-center ">
+    <div className="w-full h-20   flex justify-end items-center  mt-3">
+      <ul className="xl:w-1/2 w-full h-1/2 bg-white flex  items-center justify-center  lg:justify-end xl:justify-center ">
         <li
           onClick={() => setCurrentPage(currentPage > 1 ? currentPage - 1 : 1)}
           className={`posts-arrow bg-lameBlue text-mainBlue hover:bg-darkBlue transition-all cursor-pointer rounded-md border-[1px] border-gray-400 w-[30px] h-[30px] flex justify-center items-center p-[5px]`}
