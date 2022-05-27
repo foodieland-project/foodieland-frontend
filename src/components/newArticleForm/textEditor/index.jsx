@@ -1,24 +1,22 @@
-import { useEffect, useState } from "react";
-import { Editor } from "react-draft-wysiwyg";
-import { EditorState } from "draft-js";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import "./text-editor.css";
 
-function TextEditor() {
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
-  );
-
-  useEffect(() => {
-    console.log(editorState);
-  }, [editorState]);
+function TextEditor({ textHandler }) {
   return (
     <div>
       <h1 className="mb-3 ml-2">Description</h1>
-      <div className="h-[400px] border border-black rounded-xl overflow-hidden ">
-        <Editor
-          editorState={editorState}
-          onEditorStateChange={setEditorState}
+      <div className=" border border-black rounded-xl overflow-hidden ">
+        <CKEditor
+          editor={ClassicEditor}
+          data="<p></p>"
+          onReady={(editor) => {
+            console.log("Editor is ready to use!", editor);
+          }}
+          onChange={(event, editor) => {
+            const data = editor.getData();
+            textHandler(data);
+          }}
         />
       </div>
     </div>

@@ -23,7 +23,7 @@ function BlogCard({
           />
         </Link>
       </div>
-      <div className="basis-[65%] relative">
+      <div className="basis-[65%] relative pb-12">
         <div className="text-center md:text-left">
           <Link to={`/blogPost/${id}`}>
             <h4 className="text-xl xl:text-2xl font-bold ">{title}</h4>
@@ -32,7 +32,7 @@ function BlogCard({
             {description}
           </p>
 
-          <div className="flex items-center justify-center md:justify-start mt-4 md:mt-0 absolute bottom-2">
+          <div className="flex items-center justify-center md:justify-start mt-4 md:mt-0 w-full absolute bottom-2">
             <div className="flex items-center   ">
               <img
                 src={`${profile}`}

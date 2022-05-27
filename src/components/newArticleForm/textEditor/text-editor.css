@@ -1,3 +1,6 @@
 .rdw-editor-main {
   padding: 0 10px;
 }
+.ck.ck-content {
+  height: 300px !important;
+}

@@ -18,6 +18,10 @@ function NewArticleForm() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  function textHandler(data) {
+    setDescription(data.replace(/<\/?p>/g, ""));
+  }
+
   async function submitHandler(event) {
     event.preventDefault();
     setIsLoading(true);
@@ -32,7 +36,7 @@ function NewArticleForm() {
       description,
       img: uploadPoster,
       author: selectedAuthor,
-      profile: selectedAuthor.profile,
+      profile: selectedAuthorData.profile,
       uploadDate: new Date().toISOString(),
     };
 
@@ -73,7 +77,7 @@ function NewArticleForm() {
           />
         </div>
         <div className="flex flex-col mt-4">
-          <TextEditor />
+          <TextEditor textHandler={textHandler} />
         </div>
         <div className="flex flex-col sm:flex-row  sm:justify-between">
           <div className="flex flex-col w-full mt-4">
@@ -98,7 +102,7 @@ function NewArticleForm() {
             onChange={(e) => setSelectedAuthor(e.target.value)}
           >
             <option value="Somdatta Saha">Somdatta Saha</option>
-            <option value="Pragya Subedy">Ronald W. Robison</option>
+            <option value="Pragya Subedy">Pragya Subedy</option>
             <option value="Gauri Rohatgi">Gauri Rohatgi</option>
             <option value="Priyaja Bakshi">Priyaja Bakshi</option>
           </select>
