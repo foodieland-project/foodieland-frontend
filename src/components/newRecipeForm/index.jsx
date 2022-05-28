@@ -6,6 +6,7 @@ import { fetchRecipes } from "../../features/recipe/recipeSlice";
 import { useNavigate } from "react-router-dom";
 import { chefsData } from "../../services/utils/data";
 import Spinner from "../login/components/spinner";
+import UploadMedia from "./uploadMedia";
 
 function NewRecipeForm() {
   const { recipes } = useSelector((state) => state.recipes);
@@ -98,26 +99,10 @@ function NewRecipeForm() {
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
-        <div className="flex flex-col mt-4">
-          <label htmlFor="" className="pb-2 pl-2">
-            Add poster url
-          </label>
-          <input
-            type="text"
-            className="md:w-[60%] lg:w-[100%] border border-gray-500  rounded-2xl py-2 px-6  "
-            onChange={(e) => setUploadPoster(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col mt-4">
-          <label htmlFor="" className="pb-2 pl-2">
-            Upload Cooking Video
-          </label>
-          <input
-            type="text"
-            className="md:w-[60%] lg:w-[100%] border border-gray-500  rounded-2xl py-2 px-6"
-            onChange={(e) => setUploadVideo(e.target.value)}
-          />
-        </div>
+        <UploadMedia
+          setUploadVideo={setUploadVideo}
+          setUploadPoster={setUploadPoster}
+        />
         <div className="flex justify-between flex-wrap my-3">
           <div className="flex flex-col mt-4 basis-full md:basis-[30%]">
             <label htmlFor="" className="pb-2 pl-2">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import TextEditor from "./textEditor";
 import { v4 as uuidv4 } from "uuid";
 import Spinner from "../login/components/spinner";
@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchArticles } from "../../features/article/articleSlice";
 import { authorData } from "../../services/utils/data";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { storage } from "../../services/firebase";
 
 function NewArticleForm() {
   const { articles } = useSelector((state) => state.articles);
@@ -15,11 +17,21 @@ function NewArticleForm() {
   const [uploadPoster, setUploadPoster] = useState("");
   const [selectedAuthor, setSelectedAuthor] = useState("Somdatta Saha");
   const [isLoading, setIsLoading] = useState(false);
+  const uploadPosterRef = useRef();
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   function textHandler(data) {
     setDescription(data.replace(/<\/?p>/g, ""));
+  }
+
+  async function uploadPosterHandler(event) {
+    const poster = event.target.files[0];
+    const posterRef = ref(storage, `articles/${poster.name + uuidv4()}`);
+    const res = await uploadBytes(posterRef, poster);
+    const url = await getDownloadURL(res.ref);
+    setUploadPoster(url);
   }
 
   async function submitHandler(event) {
@@ -79,17 +91,20 @@ function NewArticleForm() {
         <div className="flex flex-col mt-4">
           <TextEditor textHandler={textHandler} />
         </div>
-        <div className="flex flex-col sm:flex-row  sm:justify-between">
-          <div className="flex flex-col w-full mt-4">
-            <label htmlFor="" className="pb-2 pl-2">
-              add poster url
-            </label>
-            <input
-              type="text"
-              className=" border border-gray-500  rounded-2xl py-2 px-6"
-              onChange={(e) => setUploadPoster(e.target.value)}
-            />
-          </div>
+        <div className="flex flex-col mt-4">
+          <input
+            type="file"
+            className="md:w-[60%] lg:w-[100%] border border-gray-500  rounded-2xl py-2 px-6  hidden"
+            onChange={uploadPosterHandler}
+            ref={uploadPosterRef}
+          />
+          <button
+            type="button"
+            className="bg-lameBlue  text-mainBlue py-2 basis-full md:basis-[14%] px-4  rounded-xl cursor-pointer mr-2 w-full sm:w-auto"
+            onClick={() => uploadPosterRef.current.click()}
+          >
+            upload poster
+          </button>
         </div>
         <div className="flex flex-col mt-4 basis-full md:w-[40%]">
           <label htmlFor="" className="pb-2 pl-2">
