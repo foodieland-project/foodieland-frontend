@@ -10,7 +10,7 @@ const RecipeCard = ({ title, img, category, id }) => {
     bg-gradient-to-b from-white to-blue-50 rounded-3xl p-[16px] font-inter relative"
     >
       <Link to={`/recipe/${id}`}>
-        <div className="w-full">
+        <div className="w-full hover:scale-105 transition-all">
           <img className="w-full rounded-3xl mb-6" src={img} alt="" />
         </div>
       </Link>

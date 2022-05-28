@@ -34,7 +34,7 @@ function FoodieLandInstagram() {
           ))}
         </div>
         <div className="mt-16 pb-20">
-          <button className="text-white bg-black text-xs md:text-base py-4 items-center md:py-5 px-4 md:px-6 mx-auto rounded-2xl flex ">
+          <button className="text-white bg-black text-xs md:text-base py-4 items-center md:py-5 px-4 md:px-6 mx-auto rounded-2xl flex hover:bg-gray-900 transition-all">
             <span>Visit Our Instagram</span>
             <span className="ml-4">{instagramIcon}</span>
           </button>

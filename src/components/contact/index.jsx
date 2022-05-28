@@ -123,7 +123,7 @@ const Contact = (props) => {
             label="MESSAGES"
             placeholder="Enter your Messages..."
           />
-          <button className="flex justify-center items-center w-36 md:w-[180px] h-12 md:h-[60px] bg-black text-white rounded-2xl font-semibold ">
+          <button className="flex justify-center items-center w-36 md:w-[180px] h-12 md:h-[60px] bg-black text-white rounded-2xl font-semibold hover:bg-gray-900 transition-all">
             Submit
           </button>
         </form>

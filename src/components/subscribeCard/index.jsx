@@ -24,7 +24,7 @@ const SubscribeCard = () => {
             placeholder="Your Email Address ..."
             className="placeholder:text-sm md:placeholder:text-base w-full h-full pl-4 sm:pl-8 py-4 sm:py-8 rounded-2xl text-[17px] tracking-[-0.02em] leading-[17px] text-[rgba(0,0,0,0.4)]"
           />
-          <button className="w-28 sm:w-40 h-[45px] sm:h-[60px] rounded-2xl bg-black text-white absolute top-auto right-0 my-1 sm:my-2.5 mr-2.5">
+          <button className="w-28 sm:w-40 h-[45px] sm:h-[60px] rounded-2xl bg-black text-white absolute top-auto right-0 my-1 sm:my-2.5 mr-2.5 hover:bg-gray-900 transition-all">
             {" "}
             subscribe
           </button>
