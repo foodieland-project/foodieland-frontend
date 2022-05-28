@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { selectCategory } from "../../../features/recipe/recipeSlice";
 
-function Category({ id, imageUrl, name, bgColor }) {
+function Category({ id, imageUrl, name, bgColor, hoverBg }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -12,7 +12,8 @@ function Category({ id, imageUrl, name, bgColor }) {
     navigate(`/recipes?category=${catName}`);
   }
   return (
-    <div className="basis-[24%] lg:basis-[14%] h-[160px] md:h-[190px] xl:h-[200px] cursor-pointer rounded-3xl overflow-hidden my-4 hover:scale-110 transition-all">
+    <div className={`basis-[24%] lg:basis-[14%] h-[160px] md:h-[190px] xl:h-[200px] cursor-pointer rounded-3xl overflow-hidden my-4 hover:${hoverBg} transition-all`}>
+      {console.log(hoverBg)}
       <div onClick={() => categoryHandler(name)}>
         <img
           src={`${imageUrl}`}
