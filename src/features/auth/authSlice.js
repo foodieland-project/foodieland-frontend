@@ -4,6 +4,7 @@ const initialState = {
   idToken: localStorage.getItem("token") || "",
   isLogged: !!localStorage.getItem("token"),
   expirationTime: localStorage.getItem("expTime") || null,
+  userPhoto: "",
 };
 
 const authSlice = createSlice({
@@ -25,9 +26,12 @@ const authSlice = createSlice({
       localStorage.removeItem("expTime");
       state.isLogged = false;
     },
+    setUserPhoto(state, actions) {
+      state.userPhoto = actions.payload;
+    },
   },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, setUserPhoto } = authSlice.actions;
 
 export default authSlice.reducer;

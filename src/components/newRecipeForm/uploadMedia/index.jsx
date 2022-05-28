@@ -14,9 +14,8 @@ function UploadMedia({ setUploadPoster, setUploadVideo }) {
     const url = await getDownloadURL(res.ref);
     setUploadPoster(url);
   }
-  async function uploadVideoHandler(event) {
-    console.log(event.target.files[0]);
 
+  async function uploadVideoHandler(event) {
     const video = event.target.files[0];
     const videoRef = ref(storage, `videos/${video.name + uuidv4()}`);
     const res = await uploadBytes(videoRef, video);
