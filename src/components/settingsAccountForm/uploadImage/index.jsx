@@ -3,14 +3,16 @@ import { useState, useRef } from "react";
 import { storage } from "../../../services/firebase";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { icons } from "../../../services/utils/icons";
 import "./upload-img.css";
+import { setUserPhoto } from "../../../features/auth/authSlice";
 
 function UploadImage() {
   const userPhoto = useSelector((state) => state.auth.userPhoto);
 
   const [image, setImage] = useState(userPhoto);
+  const dispatch = useDispatch();
 
   const idToken = useSelector((state) => state.auth.idToken);
   const uploadImageInputRef = useRef();
@@ -37,6 +39,7 @@ function UploadImage() {
       }
     );
     setImage(data.photoUrl);
+    dispatch(setUserPhoto(data.photoUrl));
   };
 
   return (

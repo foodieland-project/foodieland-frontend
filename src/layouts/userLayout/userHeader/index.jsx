@@ -3,33 +3,33 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { logout } from "../../../features/auth/authSlice";
 
-const UserHeader = () => {
-  const [open, setOpen] = useState(false);
-  const isLogged = useSelector((state) => state.auth.isLogged);
-  const dispatch = useDispatch();
+const manu = [
+  {
+    name: "Home",
+    to: "/",
+  },
+  {
+    name: "Recipes",
+    to: "/recipes",
+  },
+  {
+    name: "Blog",
+    to: "/blog",
+  },
+  {
+    name: "Contact",
+    to: "/contact",
+  },
+  {
+    name: "About Us",
+    to: "/aboutUs",
+  },
+];
 
-  const manu = [
-    {
-      name: "Home",
-      to: "/",
-    },
-    {
-      name: "Recipes",
-      to: "/recipes",
-    },
-    {
-      name: "Blog",
-      to: "/blog",
-    },
-    {
-      name: "Contact",
-      to: "/contact",
-    },
-    {
-      name: "About Us",
-      to: "/aboutUs",
-    },
-  ];
+const UserHeader = () => {
+  const { userPhoto, isLogged } = useSelector((state) => state.auth);
+  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
 
   const logoutHandler = () => {
     dispatch(logout());
@@ -44,9 +44,9 @@ const UserHeader = () => {
               <Link to="/panel/posts">
                 <div className="ml-4 relative">
                   <img
-                    src="/images/panel/blue-avatar.png"
+                    src={`${userPhoto}`}
                     alt="avatar"
-                    className="w-10 h-10 rounded-3xl"
+                    className="w-10 h-10 rounded-3xl object-cover"
                   />
                   <span className="bg-green-500 rounded-3xl absolute bottom-0 right-0 w-[12px] h-[12px] border-2 border-white"></span>
                 </div>

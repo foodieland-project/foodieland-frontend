@@ -62,7 +62,7 @@ function RegisterBox() {
 
       let expirationTime = new Date().getTime() + 3600000;
 
-      dispatch(login({ token: data.idToken, expirationTime }));
+      dispatch(login({ token: data.idToken, expirationTime,enteredPassword }));
       setIsLoading(false);
       navigate("/panel/posts", { replace: true });
     } catch (error) {

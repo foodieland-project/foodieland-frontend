@@ -30,6 +30,7 @@ function SidebarHeader() {
 
     getUserData();
   }, []);
+
   return (
     <div className="flex  justify-between items-center py-3  mx-auto md:w-full pl-4 lg:pl-6  font-lobster">
       <Link to="/" className="font-bold text-2xl ">
