@@ -59,12 +59,7 @@ function NewRecipeForm() {
     try {
       const { data } = await axios.put(
         "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json",
-        JSON.stringify(newRecipes),
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        JSON.stringify(newRecipes)
       );
       setIsLoading(false);
 

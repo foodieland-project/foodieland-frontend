@@ -31,12 +31,7 @@ function UploadImage() {
     const user = { idToken, displayName: "", photoUrl: image };
     const { data } = await axios.post(
       "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
-      JSON.stringify(user),
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
+      JSON.stringify(user)
     );
     setImage(data.photoUrl);
     dispatch(setUserPhoto(data.photoUrl));

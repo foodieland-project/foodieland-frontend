@@ -72,12 +72,7 @@ function SettingsSecurity() {
     try {
       const { data } = await axios.post(
         "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
-        JSON.stringify({ idToken, password: newPassword }),
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        JSON.stringify({ idToken, password: newPassword })
       );
       dispatch(setUserPassword({ userPassword: newPassword }));
       setIsLoading(false);

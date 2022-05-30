@@ -24,12 +24,7 @@ function LoginBox() {
       const user = { email: enteredEmail, password: enteredPassword };
       const { data } = await axios.post(
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
-        JSON.stringify(user),
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        JSON.stringify(user)
       );
       console.log(data);
 

@@ -14,12 +14,7 @@ export const checkIsLogged = (idToken, expirationTime) => {
     if (remainingTime > 60000) {
       const { data } = await axios.post(
         "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
-        JSON.stringify({ idToken }),
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        JSON.stringify({ idToken })
       );
 
       dispatch(

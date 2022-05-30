@@ -57,12 +57,7 @@ function NewArticleForm() {
     try {
       const { data } = await axios.put(
         "https://foodieland-3b1ed-default-rtdb.firebaseio.com/articles.json",
-        JSON.stringify(nerArticles),
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        JSON.stringify(nerArticles)
       );
       setIsLoading(false);
 
