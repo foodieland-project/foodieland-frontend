@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { icons } from "../../../services/utils/icons";
 import "./pagination.css";
 
@@ -9,6 +10,7 @@ function Pagination({
   currentPage,
   setCurrentPage,
 }) {
+  const { pathname } = useLocation();
   const pageNumber = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
@@ -17,7 +19,13 @@ function Pagination({
 
   return (
     <div className="w-full h-20   flex justify-end items-center  mt-6">
-      <ul className="xl:w-1/2 w-full h-1/2 bg-white flex ml-10 justify-center  lg:justify-end xl:justify-center ">
+      <ul
+        className={`${
+          pathname == "/recipes"
+            ? " xl:justify-start"
+            : "lg:justify-end xl:justify-center"
+        } xl:w-1/2 w-full h-1/2 bg-white flex ml-10 justify-center   `}
+      >
         <li
           onClick={() => setCurrentPage(currentPage - 1)}
           className={`${
