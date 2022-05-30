@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   idToken: localStorage.getItem("token") || "",
   isLogged: !!localStorage.getItem("token"),
-  userPassword: "",
+  userPassword: null,
   expirationTime: localStorage.getItem("expTime") || null,
   userPhoto:
     "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/panel%2Fblue-avatar.png?alt=media&token=e6785fc7-5ef7-432f-a761-edb9db90437d",
@@ -14,12 +14,10 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     login(state, actions) {
-      const { token, expirationTime, userPassword, userPhoto } =
-        actions.payload;
+      const { token, expirationTime, userPhoto } = actions.payload;
       state.idToken = token;
       state.userPhoto = userPhoto;
       state.expirationTime = expirationTime;
-      state.userPassword = userPassword;
       state.isLogged = !!token;
       localStorage.setItem("token", token);
       localStorage.setItem("expTime", expirationTime);
@@ -34,9 +32,13 @@ const authSlice = createSlice({
     setUserPhoto(state, actions) {
       state.userPhoto = actions.payload;
     },
+    setUserPassword(state, actions) {
+      state.userPassword = actions.payload.userPassword;
+    },
   },
 });
 
-export const { login, logout, setUserPhoto } = authSlice.actions;
+export const { login, logout, setUserPhoto, setUserPassword } =
+  authSlice.actions;
 
 export default authSlice.reducer;

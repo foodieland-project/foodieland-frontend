@@ -7,7 +7,7 @@ export const checkIsLogged = (idToken, expirationTime) => {
     let exp = new Date(+expirationTime).getTime();
     let remainingTime = exp - currentTime;
 
-    if (remainingTime > 0 && remainingTime <= 60000) {
+    if (remainingTime <= 60000) {
       dispatch(logout());
     }
 

@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { setUserPassword } from "../../features/auth/authSlice";
 import { icons } from "../../services/utils/icons";
 import SaveButtons from "../settingsAccountForm/saveButtons";
-import FormPasswords from "./formPasswords";
 import TwoFactorAuth from "./twoFactorAuth";
 
 function SettingsSecurity() {
@@ -17,8 +17,9 @@ function SettingsSecurity() {
   const [currentInputType, setCurrentInputType] = useState("password");
   const [newInputType, setNewInputType] = useState("password");
   const [confirmInputType, setConfirmInputType] = useState("password");
+  const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
 
-  console.log(userPassword);
   let confirmPasswordIsValid = newPassword === confirmPassword;
 
   let newPasswordError = ["password should contain at least"];
@@ -54,24 +55,37 @@ function SettingsSecurity() {
   }
   async function submitHandler(event) {
     event.preventDefault();
-
+    setIsLoading(true);
     if (!newPasswordIsValid && !confirmPasswordIsValid) {
       return;
     }
-    if (currentPassword !== userPassword) {
+    if (currentPassword != userPassword) {
       setCurrentPasswordIsValid(false);
     }
-    const user = { idToken, password: "" };
-    const { data } = await axios.post(
-      "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
-      JSON.stringify({ idToken }),
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    console.log(data);
+    const resetInputs = () => {
+      setConfirmPasswordTouched(false);
+      setNewPasswordTouched(false);
+      setCurrentPassword("");
+      setNewPassword("");
+      setConfirmPassword("");
+    };
+    try {
+      const { data } = await axios.post(
+        "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
+        JSON.stringify({ idToken, password: newPassword }),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      dispatch(setUserPassword({ userPassword: newPassword }));
+      setIsLoading(false);
+      resetInputs();
+    } catch (error) {
+      console.log(error);
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -85,6 +99,7 @@ function SettingsSecurity() {
                 placeholder="Current Password"
                 className="border-2 border-gray-300 rounded-md py-2.5 w-full outline-none pl-2 pr-6"
                 onChange={(event) => setCurrentPassword(event.target.value)}
+                value={currentPassword}
               />
               <span
                 className="absolute right-3 top-4 cursor-pointer"
@@ -105,6 +120,7 @@ function SettingsSecurity() {
                 className="border-2 border-gray-300 rounded-md py-2.5 w-full outline-none pl-2 pr-6"
                 onChange={(event) => setNewPassword(event.target.value)}
                 onBlur={() => setNewPasswordTouched(true)}
+                value={newPassword}
               />
               <span
                 className="absolute right-3 top-4 cursor-pointer"
@@ -124,6 +140,7 @@ function SettingsSecurity() {
                 placeholder="Confirm New Password"
                 className="border-2 border-gray-300 rounded-md py-2.5 w-full outline-none pl-2 pr-6"
                 onChange={(event) => setConfirmPassword(event.target.value)}
+                value={confirmPassword}
                 onBlur={() => setConfirmPasswordTouched(true)}
               />
               <span
@@ -148,7 +165,7 @@ function SettingsSecurity() {
           </div>
         </div>
         <TwoFactorAuth />
-        <SaveButtons />
+        <SaveButtons isLoading={isLoading} />
       </form>
     </section>
   );

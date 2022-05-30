@@ -6,7 +6,7 @@ import LoginLogo from "../components/loginLogo";
 import LoginHeader from "../components/loginHeader";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { login } from "../../../features/auth/authSlice";
+import { login, setUserPassword } from "../../../features/auth/authSlice";
 import Spinner from "../components/spinner";
 
 function LoginBox() {
@@ -35,14 +35,15 @@ function LoginBox() {
 
       let expirationTime = new Date().getTime() + 3600000;
 
+      console.log(enteredPassword);
       dispatch(
         login({
           token: data.idToken,
           expirationTime,
-          userPassword: enteredPassword,
           userPhot: data.profilePicture,
         })
       );
+      dispatch(setUserPassword({ userPassword: enteredPassword }));
       setIsLoading(false);
       navigate("/panel/posts", { replace: true });
     } catch (error) {
