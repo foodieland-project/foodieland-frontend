@@ -10,8 +10,8 @@ import { login, setUserPassword } from "../../../features/auth/authSlice";
 import Spinner from "../components/spinner";
 
 function LoginBox() {
-  const [enteredEmail, setEnteredEmail] = useState("tohidebra@gmail.com");
-  const [enteredPassword, setEnteredPassword] = useState("Tohid12345");
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
   const [showError, setShowError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -68,6 +68,7 @@ function LoginBox() {
             </div>
             <div className="mb-3">
               <input
+                type="password"
                 className="w-full border-2 rounded-md p-3 outline-none"
                 placeholder="password"
                 value={enteredPassword}
