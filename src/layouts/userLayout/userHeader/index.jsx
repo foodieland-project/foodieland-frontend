@@ -114,7 +114,7 @@ const UserHeader = () => {
                 key={index}
                 to={`${to}`}
                 className={
-                  " user-header-option flex lg:ml-[60px] lg:py-[0px]  ml-[0px]   py-[20px] lg:w-auto  w-[250px] justify-center hover:scale-110 hover:text-blue-500 transition-all"
+                  " user-header-option flex lg:ml-[60px] lg:py-[0px]  ml-[0px]   py-[20px] lg:w-auto  w-[250px] justify-center hover:scale-125 hover:text-blue-500 transition-all"
                 }
               >
                 {name}{" "}

@@ -13,7 +13,7 @@ function BlogCard({
 }) {
   const date = getDate(createdDate);
   return (
-    <article className="flex flex-col md:flex-row mt-8 gap-4">
+    <article className="flex flex-col md:flex-row mt-8 gap-4 hover:bg-gray-100 rounded-xl cursor-pointer  ">
       <div className=" basis-[35%] ">
         <Link to={`/blogPost/${id}`}>
           <img

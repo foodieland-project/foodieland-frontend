@@ -12,7 +12,7 @@ function Cooker() {
             <div className="flex flex-col mb-24 md:mb-40 justify-center items-center lg:items-start" >
                 <h1 className="font-inter font-semibold text-4xl lg:text-4xl xl:text-5xl w-auto lg:w-[450px] xl:w-[526px]  tracking-tighter mb-[24px] text-center lg:text-left" >Everyone can be a chef in their own kitchen</h1>
                 <p className="font-inter font-normal text-secondary text-sm md:text-base w-auto lg:w-[400px] xl:w-[500px] mb-[72px] text-center lg:text-left" >Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
-                <button className="flex justify-center items-center w-36 md:w-[180px] h-12 md:h-[60px] bg-black text-white rounded-2xl hover:bg-gray-900 transition-all" >Learn More</button>
+                <button className="flex justify-center items-center w-36 md:w-[180px] h-12 md:h-[60px] bg-black text-white rounded-2xl hover:scale-105  hover:font-semibold transition-all" >Learn More</button>
             </div>
             <div className='w-auto md:w-[651px] h-[600px] lg:h-[500px] xl:h-[600px] bg-gradient-to-b from-white to-blue-50 relative rounded-3xl'>
                 <img className="absolute object-cover bottom-0  h-[597px] lg:h-[500px] xl:h-[600px] W-[660px]" src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/cooker%2Fimage-220.png?alt=media&token=acdfc1a1-ed68-4828-a969-cf76a35273d6" alt="cooker" />
