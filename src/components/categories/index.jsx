@@ -16,14 +16,13 @@ function Categories() {
           </div>
         </div>
         <div className="flex justify-between gap-4 xl:gap-8 px-2  flex-wrap">
-          {categoriesData.map(({ id, name, imageUrl, bgColor, hoverBg }) => (
+          {categoriesData.map(({ id, name, imageUrl, bgColor }) => (
             <Category
               key={id}
               id={id}
               name={name}
               imageUrl={imageUrl}
               bgColor={bgColor}
-              hoverBg={hoverBg}
             />
           ))}
         </div>

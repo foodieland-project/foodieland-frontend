@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { selectCategory } from "../../../features/recipe/recipeSlice";
 
-function Category({ id, imageUrl, name, bgColor, hoverBg }) {
+function Category({ id, imageUrl, name, bgColor }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -11,9 +11,11 @@ function Category({ id, imageUrl, name, bgColor, hoverBg }) {
     dispatch(selectCategory(catName));
     navigate(`/recipes?category=${catName}`);
   }
+
   return (
-    <div className={`basis-[24%] lg:basis-[14%] h-[160px] md:h-[190px] xl:h-[200px] cursor-pointer rounded-3xl overflow-hidden my-4 hover:${hoverBg} transition-all`}>
-      {console.log(hoverBg)}
+    <div
+      className={`basis-[24%] lg:basis-[14%] h-[160px] md:h-[190px] xl:h-[200px]  ${bgColor} transition-all hover:scale-110 cursor-pointer category-bg rounded-3xl overflow-hidden my-4 `}
+    >
       <div onClick={() => categoryHandler(name)}>
         <img
           src={`${imageUrl}`}
@@ -21,7 +23,9 @@ function Category({ id, imageUrl, name, bgColor, hoverBg }) {
           className="mx-auto w-[80px] md:w-[100px] lg:w-[80px] xl:w-[100px]"
         />
       </div>
-      <div className={`${bgColor}   text-center font-semibold text-lg py-11 `}>
+      <div
+        className={` transition-all  text-center font-semibold text-lg py-11 `}
+      >
         <span className="capitalize">{name}</span>
       </div>
     </div>
