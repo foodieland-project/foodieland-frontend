@@ -7,7 +7,7 @@ function BlogSearchBox({ searchHandler, placeholder }) {
           className=" w-full h-full outline-none xl:p-8 2sm:p-3 rounded-[20px]"
           placeholder={placeholder}
         />
-        <button className="w-[25%] h-3/4 bg-black text-white rounded-2xl absolute right-2 hover:bg-gray-900 text-center  top-[9px] xl:text-md text-sm font-semibold">
+        <button className="w-[25%] h-3/4 bg-black text-white rounded-2xl absolute right-2 hover:scale-105 hover:font-semibold  transition-all text-center  top-[9px] xl:text-md text-sm font-semibold">
           Search
         </button>
       </div>

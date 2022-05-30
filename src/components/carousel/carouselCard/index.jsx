@@ -90,8 +90,8 @@ function CarouselCard({
             </div>
           </div>
           <Link to={`recipe/${id}`}>
-            <div className="bg-black text-white rounded-2xl h-full px-3 lg:px-6 text-xs lg:text-sm flex items-center cursor-pointer ">
-              <span className="font-semibold">View Recipes</span>
+            <div className="bg-black text-white hover:pr-10 transition-all rounded-2xl h-full px-3 lg:px-6 text-xs lg:text-sm flex items-center cursor-pointer ">
+              <span className="font-semibold ">View Recipes</span>
               <span className="ml-1 lg:ml-2">{playCircle()}</span>
             </div>
           </Link>

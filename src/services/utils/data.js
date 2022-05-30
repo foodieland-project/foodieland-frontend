@@ -1459,43 +1459,6 @@ export const authorData = [
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/author%2Fpriyaja-bakshi.png?alt=media&token=6b202ab3-0587-413e-bd92-246e3291c813",
   },
 ];
-export const carouselData = [
-  {
-    title: "Spicy delicious chicken wings",
-    imageUrl: "/images/carousel/food-1.png",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delenitiplaceat facere quaerat aperiam molestiae est sed quisquam animi quia numquam.",
-    id: 1,
-  },
-  {
-    title: "Spicy delicious chicken wings",
-    imageUrl: "/images/carousel/food-2.png",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delenitiplaceat facere quaerat aperiam molestiae est sed quisquam animi quia numquam.",
-    id: 2,
-  },
-  {
-    title: "Spicy delicious chicken wings",
-    imageUrl: "/images/carousel/food-3.png",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delenitiplaceat facere quaerat aperiam molestiae est sed quisquam animi quia numquam.",
-    id: 3,
-  },
-  {
-    title: "Spicy delicious chicken wings",
-    imageUrl: "/images/carousel/food-4.png",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delenitiplaceat facere quaerat aperiam molestiae est sed quisquam animi quia numquam.",
-    id: 4,
-  },
-  {
-    title: "Spicy delicious chicken wings",
-    imageUrl: "/images/carousel/food-5.png",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delenitiplaceat facere quaerat aperiam molestiae est sed quisquam animi quia numquam.",
-    id: 5,
-  },
-];
 
 export const categoriesData = [
   {
@@ -1503,42 +1466,42 @@ export const categoriesData = [
     name: "breakfast",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/categories%2Fbreakfast.png?alt=media&token=59c693cb-ef21-4a3f-94c0-03053b8d24a6",
-    bgColor: "bg-gradient-grey",
+    bgColor: "bg-gradient-gray hover:bg-gradient-darkGray",
   },
   {
     id: 2,
     name: "vegan",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/categories%2Fvegan.png?alt=media&token=22cc6fb6-9e20-40a0-a946-335550df9dd7",
-    bgColor: "bg-gradient-green",
+    bgColor: "bg-gradient-green hover:bg-gradient-darkGreen",
   },
   {
     id: 3,
     name: "meat",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/categories%2Fmeat.png?alt=media&token=32823bed-87c3-4c93-85db-901e8de87795",
-    bgColor: "bg-gradient-red",
+    bgColor: "bg-gradient-red hover:bg-gradient-darkRed",
   },
   {
     id: 4,
     name: "dessert",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/categories%2Fdessert.png?alt=media&token=7bd5f1f7-ab2d-4708-81bf-6bb324aee326",
-    bgColor: "bg-gradient-yellow",
+    bgColor: "bg-gradient-yellow hover:bg-gradient-darkYellow",
   },
   {
     id: 5,
     name: "lunch",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/categories%2Flunch.png?alt=media&token=39a4de43-34f4-4370-9c84-d56ed59ffd36",
-    bgColor: "bg-gradient-white",
+    bgColor: "bg-gradient-white hover:bg-gradient-darkWhite",
   },
   {
     id: 6,
     name: "chocolate",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/categories%2Fchocolate.png?alt=media&token=66538d13-293e-44a0-ac1e-b28efd5d4b03",
-    bgColor: "bg-gradient-brown",
+    bgColor: "bg-gradient-brown hover:bg-gradient-darkBrown",
   },
 ];
 
@@ -1603,19 +1566,19 @@ export const directionsData = [
 
 export const ingredientsData = [
   {
-    id: 1,
-    text: " Lorem ipsum dolor sit amet",
-  },
-  {
-    id: 2,
-    text: " Lorem ipsum dolor sit amet",
-  },
-  {
-    id: 3,
-    text: " Lorem ipsum dolor sit amet",
-  },
-  {
     id: 4,
+    text: " Lorem ipsum dolor sit amet",
+  },
+  {
+    id: 5,
+    text: " Lorem ipsum dolor sit amet",
+  },
+  {
+    id: 6,
+    text: " Lorem ipsum dolor sit amet",
+  },
+  {
+    id: 7,
     text: " Lorem ipsum dolor sit amet",
   },
 ];
@@ -1652,248 +1615,6 @@ export const foodielandInstagramData = [
     caption:
       "Steak never be wrong, it’s suitable for you who want romantic dinner",
     date: "September 15",
-  },
-];
-
-export const MoreRecipeData = [
-  {
-    category: "product",
-    id: 1,
-    title: "Mixed Tropical Fruit Salad with Superfood Boosts",
-    img: "images/delicious-recipe/food-1.png",
-    Meal: "Healthy",
-    time: "30 Minutes",
-    liked: false,
-  },
-  {
-    category: "product",
-    id: 2,
-    title: "Big and Juicy Wagyu Beef Cheeseburger",
-    img: "images/delicious-recipe/food-2.png",
-    Meal: "Western",
-    time: "30 Minutes",
-    liked: false,
-  },
-  {
-    category: "product",
-    id: 3,
-    title: "Healthy Japanese Fried Rice with Asparagus",
-    img: "images/delicious-recipe/food-3.png",
-    Meal: "Healthy",
-    time: "30 Minutes",
-    liked: false,
-  },
-  {
-    category: "product",
-    id: 4,
-    title: "Cauliflower Walnut Vegetarian Taco Meet",
-    img: "images/delicious-recipe/food-4.png",
-    Meal: "Eastern",
-    time: "30 Minutes",
-    liked: false,
-  },
-  {
-    category: "product",
-    id: 5,
-    title: "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
-    img: "images/delicious-recipe/food-5.png",
-    Meal: "Healthy",
-    time: "30 Minutes",
-    liked: false,
-  },
-  {
-    category: "product",
-    id: 6,
-    title: "Barbeque Spicy Sandwiches with Chips",
-    img: "images/delicious-recipe/food-6.png",
-    Meal: "Snack",
-    time: "30 Minutes",
-    liked: false,
-  },
-  {
-    category: "product",
-    id: 7,
-    title: "FireCracker Vegan Lettuce Wraps-Spicy!",
-    img: "images/delicious-recipe/food-7.png",
-    Meal: "Seafood",
-    time: "30 Minutes",
-    liked: false,
-  },
-  {
-    category: "product",
-    id: 8,
-    title: "Chicken Ramen soup with Mushroom",
-    img: "images/recipes/food-20.png",
-    Meal: "Japanese",
-    time: "30 Minutes",
-    liked: false,
-  },
-];
-
-export const posts = [
-  {
-    id: 1,
-    title: "Full Guide to Becoming a Professional Chef",
-    category: "Food",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 2,
-    title: "sky Guide to Becoming a Professional Chef",
-    category: "Water",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 3,
-    title: "Full Guide to Becoming a Professional Chef",
-    category: "Water",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 4,
-    title: "Full Guide to Becoming a Professional Chef",
-    category: "Food",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 5,
-    title: "Full Guide to Becoming a Professional Chef",
-    category: "Food",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 6,
-    title: "Full Guide to Becoming a Professional Chef",
-    category: "Food",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 7,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 8,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 9,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 10,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 11,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 12,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 13,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 13,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 14,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 15,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-  {
-    id: 16,
-    title: "simple text for my Website",
-    category: "Recipe",
-    time: "2017/01/31 - 10:12",
-    view: "15",
-    comments: "15",
-  },
-];
-
-export const nutritionInfo = [
-  {
-    id: 1,
-    name: "Calories",
-    weight: "219.9 kcal",
-  },
-  {
-    id: 2,
-    name: "Total Fat",
-    weight: "10.7 g",
-  },
-  {
-    id: 3,
-    name: "Protein",
-    weight: "7.9 g",
-  },
-  {
-    id: 4,
-    name: "Carbohydrate",
-    weight: "22.3 g",
-  },
-  {
-    id: 5,
-    name: "Cholesterol",
-    weight: "37.4 mg",
   },
 ];
 
