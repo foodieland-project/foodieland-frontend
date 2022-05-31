@@ -43,16 +43,19 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      const recipeResponse = await axios.get(
-        "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json"
-      );
-      const articleResponse = await axios.get(
-        "https://foodieland-3b1ed-default-rtdb.firebaseio.com/articles.json"
-      );
-      console.log(recipeResponse);
-      console.log(articleResponse);
-      dispatch(fetchRecipes(recipeResponse.data));
-      dispatch(fetchArticles(articleResponse.data));
+      try {
+        const recipeResponse = await axios.get(
+          "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json"
+        );
+        const articleResponse = await axios.get(
+          "https://foodieland-3b1ed-default-rtdb.firebaseio.com/articles.json"
+        );
+
+        dispatch(fetchRecipes(recipeResponse.data));
+        dispatch(fetchArticles(articleResponse.data));
+      } catch (error) {
+        console.log(error);
+      }
     }
     fetchData();
   }, [dispatch]);

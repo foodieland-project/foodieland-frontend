@@ -25,6 +25,8 @@ const authSlice = createSlice({
     logout(state) {
       state.idToken = "";
       state.password = "";
+      state.userPhoto =
+        "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/panel%2Fblue-avatar.png?alt=media&token=e6785fc7-5ef7-432f-a761-edb9db90437d";
       localStorage.removeItem("token");
       localStorage.removeItem("expTime");
       state.isLogged = false;
