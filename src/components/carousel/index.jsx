@@ -35,12 +35,12 @@ function Carousel() {
     <div className="my-10 overflow-x-hidden  " ref={widthRef}>
       <div
         onClick={prevSlide}
-        className="carousel-arrow absolute top-[430px] sm:top-[330px] md:top-[360px] lg:top-[420px] xl:top-[460px] left-0 md:left-1 cursor-pointer z-10 bg-white rounded-[50%] px-2.5 lg:px-4"
+        className="carousel-arrow absolute top-[270px] sm:top-[330px] md:top-[360px] lg:top-[420px] xl:top-[460px] left-0 md:left-1 cursor-pointer z-10 bg-white rounded-[50%] px-2.5 lg:px-4"
       >
         {arrowLeft}
       </div>
       <div
-        className="carousel-arrow absolute top-[430px] sm:top-[330px] md:top-[360px] lg:top-[420px] xl:top-[460px]  right-0 md:right-1 cursor-pointer z-10 bg-white rounded-[50%] px-2.5 lg:px-4"
+        className="carousel-arrow absolute top-[270px] sm:top-[330px] md:top-[360px] lg:top-[420px] xl:top-[460px]  right-0 md:right-1 cursor-pointer z-10 bg-white rounded-[50%] px-2.5 lg:px-4"
         onClick={nextSlide}
       >
         {arrowRight}

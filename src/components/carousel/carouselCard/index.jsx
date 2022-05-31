@@ -36,8 +36,8 @@ function CarouselCard({
   const date = getDate(uploadDate);
 
   return (
-    <div className="carousel-item flex rounded-3xl w-[92vw] sm:w-[38em] md:w-[46em] lg:w-[62em] xl:w-[78em] 2xl:w-[92.9em]  overflow-hidden font-inter ">
-      <div className="md:basis-1/2 bg-lameBlue p-5 sm:p-7 lg:p-9">
+    <div className="carousel-item flex rounded-3xl w-[89vw] sm:w-[38em] md:w-[46em] lg:w-[62em] xl:w-[78em] 2xl:w-[92.9em]  overflow-hidden font-inter ">
+      <div className="hidden md:block basis-1/2 bg-lameBlue p-5 sm:p-7 lg:p-9">
         <div className="bg-white w-32 lg:w-36 rounded-2xl p-2 text-center">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/others%2Fimage%2014.png?alt=media&token=089dd2c8-d3f3-4558-ad20-362bfdc9a646"
@@ -90,7 +90,7 @@ function CarouselCard({
             </div>
           </div>
           <Link to={`recipe/${id}`}>
-            <div className="bg-black text-white hover:pr-10 transition-all rounded-2xl h-full px-3 lg:px-6 text-xs lg:text-sm flex items-center cursor-pointer ">
+            <div className="bg-black text-white lg:hover:pr-10 transition-all rounded-2xl h-full px-3 lg:px-6 text-xs lg:text-sm flex items-center cursor-pointer ">
               <span className="font-semibold ">View Recipes</span>
               <span className="ml-1 lg:ml-2">{playCircle()}</span>
             </div>
@@ -98,13 +98,15 @@ function CarouselCard({
         </div>
       </div>
 
-      <div className="hidden md:block basis-1/2">
-        <div
-          className="carousel-bg bg-no-repeat bg-cover w-full h-full bg-center 2xl:h-[600px]"
-          style={{
-            backgroundImage: `url(${banner})`,
-          }}
-        ></div>
+      <div className="basis-full md:basis-1/2 h-72 sm:h-[350px] md:h-auto">
+        <Link to={`recipe/${id}`}>
+          <div
+            className="carousel-bg bg-no-repeat bg-cover w-full h-full bg-center 2xl:h-[600px]"
+            style={{
+              backgroundImage: `url(${banner})`,
+            }}
+          ></div>
+        </Link>
       </div>
     </div>
   );
